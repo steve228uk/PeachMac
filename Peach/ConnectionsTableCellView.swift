@@ -9,11 +9,11 @@
 import Cocoa
 
 class ConnectionsTableCellView: NSTableCellView {
-
-    override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
-
-        // Drawing code here.
-    }
+    
+    @IBOutlet weak var name: NSTextField!
+    
+    @IBOutlet weak var avatar: NSImageView!
+    
+    @IBOutlet weak var post: NSTextField!
     
 }

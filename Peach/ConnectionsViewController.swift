@@ -19,9 +19,10 @@ class ConnectionsViewController: PeachViewController, NSTableViewDelegate, NSTab
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.sizeLastColumnToFit()
+        
         Peach.getStreams { streams, error in
             self.streams = streams
-            Swift.print(streams)
             self.tableView.reloadData()
         }
         
@@ -33,11 +34,31 @@ class ConnectionsViewController: PeachViewController, NSTableViewDelegate, NSTab
         return streams.count
     }
     
-    func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
-        if let name = streams[row].displayName {
-            return name
+    
+    func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let v = tableView.makeViewWithIdentifier("connectionCell", owner: self) as! ConnectionsTableCellView
+        let stream = streams[row]
+        
+        if let name = stream.displayName {
+            v.name.stringValue = name
         }
-        return ""
+        
+        if stream.posts.count > 0 {
+            let post = stream.posts[0]
+            if post.message[0].type == .Text {
+                if let text = post.message[0].text {
+                    v.post.stringValue = text
+                }
+            } else {
+                v.post.stringValue = ""
+            }
+        }
+        
+        stream.getAvatar { image in
+            v.avatar.image = image
+        }
+        
+        return v
     }
     
 }

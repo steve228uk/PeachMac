@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 public struct Message {
     
@@ -35,5 +36,37 @@ public enum MessageType {
     case Shout
     case Video
     case Drawing
+    
+}
+
+extension Peach {
+    
+    /**
+     Parse messages from a post
+     
+     - parameter json: The raw JSON
+     
+     - returns: The parsed message
+     */
+    internal class func parseMessage(json: JSON) -> Message {
+        var msg = Message()
+        
+        if let type = json["type"].string {
+            switch type {
+                case "gif":
+                    msg.type = .GIF
+                    msg.src = json["src"].string
+                case "image":
+                    msg.type = .Image
+                    msg.src = json["src"].string
+                default:
+                    msg.type = .Text
+                    msg.text = json["text"].string
+                    break
+            }
+        }
+        
+        return msg
+    }
     
 }

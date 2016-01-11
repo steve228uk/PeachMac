@@ -34,7 +34,28 @@ public struct Stream {
     public var followsYou: Bool = false
     
     /// Array of `Post`s
-    public var posts: [Post] = []
+    private var _posts: [Post] = []
+    
+    public var posts: [Post] {
+        get {
+            return _posts.sort { $0.createdTime > $1.createdTime }
+        }
+    }
+    
+    public func getAvatar(callback: (NSImage) -> Void) {
+        
+        if let src = avatarSrc {
+            Alamofire.request(.GET, src)
+                .responseData { response in
+                    if response.result.isSuccess {
+                        if let img = NSImage(data: response.result.value!) {
+                            callback(img)
+                        }
+                    }
+                }
+        }
+        
+    }
     
 }
 
@@ -76,7 +97,7 @@ extension Peach {
      
      - returns: Parsed `Stream`
      */
-    private class func parseStream(json: JSON) -> Stream {
+    internal class func parseStream(json: JSON) -> Stream {
         var stream = Stream()
         stream.id = json["id"].string
         stream.name = json["name"].string
@@ -93,6 +114,10 @@ extension Peach {
         
         if let followsYou = json["followsYou"].bool {
             stream.followsYou = followsYou
+        }
+        
+        if let posts = json["posts"].array {
+            stream._posts = posts.map(parsePost)
         }
         
         return stream

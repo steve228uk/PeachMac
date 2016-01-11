@@ -7,14 +7,12 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 public struct Post {
     
     /// Unique ID of the post
     public var id: String?
-    
-    /// ID of the stream the post belongs to
-    public var streamID: String?
     
     /// Array of messages relating to the post
     public var message: [Message] = []
@@ -39,5 +37,29 @@ public struct Post {
     
     /// When was this post updated
     public var updatedTime: Int64?
+    
+}
+
+extension Peach {
+    
+    internal class func parsePost(json: JSON) -> Post {
+        var post = Post()
+        
+        post.id = json["id"].string
+        post.commentCount = json["commentCount"].int
+        post.updatedTime = json["updatedTime"].int64
+        post.createdTime = json["createdTime"].int64
+        post.likeCount = json["likeCount"].int
+        
+        if let isUnread = json["isUnread"].bool {
+            post.isUnread = isUnread
+        }
+        
+        if let msg = json["message"].array {
+            post.message = msg.map(parseMessage)
+        }
+        
+        return post
+    }
     
 }
