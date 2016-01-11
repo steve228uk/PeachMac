@@ -15,6 +15,7 @@
 		282D92DE1C42CDD900B83109 /* PeachKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 282D92D61C42CDD800B83109 /* PeachKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		282D92E41C42CDE600B83109 /* Peach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D92E31C42CDE600B83109 /* Peach.swift */; };
 		282D92E71C42D08F00B83109 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D92E61C42D08F00B83109 /* Activity.swift */; };
+		285C75E61C441FE400FC8435 /* ConnectionsTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C75E51C441FE400FC8435 /* ConnectionsTableCellView.swift */; };
 		2874F71D1C42D3FA00D06D34 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F71C1C42D3FA00D06D34 /* User.swift */; };
 		2874F7201C42D73400D06D34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F71F1C42D73400D06D34 /* LoginViewController.swift */; };
 		2874F7221C42DC9700D06D34 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F7211C42DC9700D06D34 /* API.swift */; };
@@ -71,6 +72,7 @@
 		282D92DA1C42CDD900B83109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		282D92E31C42CDE600B83109 /* Peach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peach.swift; sourceTree = "<group>"; };
 		282D92E61C42D08F00B83109 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		285C75E51C441FE400FC8435 /* ConnectionsTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableCellView.swift; sourceTree = "<group>"; };
 		2874F71C1C42D3FA00D06D34 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2874F71F1C42D73400D06D34 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2874F7211C42DC9700D06D34 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				28DBACFC1C43023800CC66CB /* ConnectionsViewController.swift */,
 				28DBACFE1C43055F00CC66CB /* ConnectionsView.swift */,
 				28DBAD081C431A0900CC66CB /* ProfileBannerView.swift */,
+				285C75E51C441FE400FC8435 /* ConnectionsTableCellView.swift */,
 			);
 			name = Connections;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				2874F72F1C42E9BB00D06D34 /* LoginButton.swift in Sources */,
 				2874F7291C42E60500D06D34 /* PeachViewController.swift in Sources */,
 				2874F7261C42E57700D06D34 /* LoginView.swift in Sources */,
+				285C75E61C441FE400FC8435 /* ConnectionsTableCellView.swift in Sources */,
 				28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */,
 				2874F7311C42EE5800D06D34 /* LoginTextField.swift in Sources */,
 				28DBACFD1C43023800CC66CB /* ConnectionsViewController.swift in Sources */,
@@ -569,6 +573,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Peach/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.wearecocoon.Peach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -585,6 +590,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Peach/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.wearecocoon.Peach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

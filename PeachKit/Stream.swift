@@ -51,9 +51,51 @@ extension Peach {
         
         Alamofire.request(API.Connections)
             .responseJSON { response in
-                print(response.result.value)
+                if response.result.isSuccess {
+                    if let value = response.result.value {
+                        let json = JSON(value)
+                        if let data = json["data"].dictionary {
+                            if let connections = data["connections"]?.array {
+                                let streams = connections.map(parseStream)
+                                callback(streams, response.result.error)
+                                return
+                            }
+                        }
+                    }
+                }
+                
+                callback([], response.result.error)
             }
         
+    }
+    
+    /**
+     Parse the raw JSON into a beautiful peachy stream
+     
+     - parameter json: Raw SwifyJSON
+     
+     - returns: Parsed `Stream`
+     */
+    private class func parseStream(json: JSON) -> Stream {
+        var stream = Stream()
+        stream.id = json["id"].string
+        stream.name = json["name"].string
+        stream.displayName = json["displayName"].string
+        stream.avatarSrc = json["avatarSrc"].string
+        
+        if let isPublic = json["isPublic"].bool {
+            stream.isPublic = isPublic
+        }
+        
+        if let youFollow = json["youFollow"].bool {
+            stream.youFollow = youFollow
+        }
+        
+        if let followsYou = json["followsYou"].bool {
+            stream.followsYou = followsYou
+        }
+        
+        return stream
     }
     
     /**
@@ -77,7 +119,7 @@ extension Peach {
             .responseJSON { response in
                 
                 if response.result.isSuccess {
-                    print(response.result.value)
+                    Swift.print(response.result.value)
                 } else {
                     callback(nil, response.result.error)
                 }

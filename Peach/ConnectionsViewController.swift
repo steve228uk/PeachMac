@@ -9,15 +9,35 @@
 import Cocoa
 import PeachKit
 
-class ConnectionsViewController: PeachViewController {
+class ConnectionsViewController: PeachViewController, NSTableViewDelegate, NSTableViewDataSource {
 
-    override func viewDidAppear() {
-        super.viewDidAppear()
+    @IBOutlet weak var tableView: NSTableView!
     
-        Peach.getStreamByID(streamID!) { stream, error in
-            
+    /// The streams that were fetched from Peach
+    var streams: [Stream] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        Peach.getStreams { streams, error in
+            self.streams = streams
+            Swift.print(streams)
+            self.tableView.reloadData()
         }
         
+    }
+    
+    // MARK: - NSTableViewDataSource
+    
+    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
+        return streams.count
+    }
+    
+    func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
+        if let name = streams[row].displayName {
+            return name
+        }
+        return ""
     }
     
 }
