@@ -13,8 +13,8 @@ class PeachTabViewController: NSTabViewController {
     override func viewDidAppear() {
         super.viewDidAppear()
         
-        view.window?.titlebarAppearsTransparent = true
-        view.window?.movableByWindowBackground  = true
+//        view.window?.titlebarAppearsTransparent = true
+//        view.window?.movableByWindowBackground  = true
     }
     
 }

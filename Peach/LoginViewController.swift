@@ -31,6 +31,9 @@ class LoginViewController: NSViewController {
                 keychain["token"] = result!.token
                 keychain["streamID"] = result!.streamID
                 
+                Peach.OAuthToken = result!.token
+                Peach.streamID = result!.streamID
+                
                 // TODO: Change this for a segue. Hacky hack!
                 let sb = NSStoryboard(name: "Main", bundle: nil)
                 let vc = sb.instantiateControllerWithIdentifier("connections") as? ConnectionsViewController

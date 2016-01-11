@@ -16,8 +16,8 @@ class ConnectionsViewController: PeachViewController, NSTableViewDelegate, NSTab
     /// The streams that were fetched from Peach
     var streams: [Stream] = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear() {
+        super.viewDidAppear()
         
         tableView.sizeLastColumnToFit()
         
