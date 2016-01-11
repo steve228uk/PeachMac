@@ -35,6 +35,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
     }
+    
+    func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        NSApplication.sharedApplication().windows[0].makeKeyAndOrderFront(self)
+        return true
+    }
 
 }
 
