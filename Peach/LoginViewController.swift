@@ -28,12 +28,13 @@ class LoginViewController: NSViewController {
         
         User.authenticateWithCredentials((email: emailField.stringValue, password: passwordField.stringValue)) { result, error in
             if result != nil {
-                Swift.print(result!.token)
-                
                 keychain["token"] = result!.token
                 keychain["streamID"] = result!.streamID
                 
-                self.performSegueWithIdentifier("login", sender: sender)
+                // TODO: Change this for a segue. Hacky hack!
+                let sb = NSStoryboard(name: "Main", bundle: nil)
+                let vc = sb.instantiateControllerWithIdentifier("connections") as? ConnectionsViewController
+                NSApplication.sharedApplication().windows[0].contentViewController = vc
             } else {
                 // handle login error
             }

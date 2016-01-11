@@ -19,8 +19,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         
-        token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE0NTI0NjU1NDMsInN0cmVhbUlEIjoiOGU0MGI5ZGE0OWYzNDFmNDhiYWJiYmU0OGFkZGY2NzAifQ.VWycg6N-MtptafKdBB_pz99ZNraEiGVmGm1ShzXJqao"
-        streamID = "8e40b9da49f341f48babbbe48addf670"
+        token = keychain["token"]
+        streamID = keychain["streamID"]
         
         if token != nil {
             

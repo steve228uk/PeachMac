@@ -45,13 +45,21 @@ class ConnectionsViewController: PeachViewController, NSTableViewDelegate, NSTab
         
         if stream.posts.count > 0 {
             let post = stream.posts[0]
-            if post.message[0].type == .Text {
-                if let text = post.message[0].text {
-                    v.post.stringValue = text
-                }
-            } else {
-                v.post.stringValue = ""
+            
+            switch post.message[0].type! {
+                case .Image:
+                    v.post.stringValue = "Image"
+                case .GIF:
+                    v.post.stringValue = "GIF"
+                case .Video:
+                    v.post.stringValue = "Video"
+                default:
+                    if let text = post.message[0].text {
+                        v.post.stringValue = text
+                    }
+                    break
             }
+            
         }
         
         stream.getAvatar { image in

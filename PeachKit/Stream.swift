@@ -36,12 +36,18 @@ public struct Stream {
     /// Array of `Post`s
     private var _posts: [Post] = []
     
+    /// Posts sorted in reverse crono order
     public var posts: [Post] {
         get {
             return _posts.sort { $0.createdTime > $1.createdTime }
         }
     }
     
+    /**
+     Fetch the avatar using the src URL
+     
+     - parameter callback: Returns a NSImage if successful
+     */
     public func getAvatar(callback: (NSImage) -> Void) {
         
         if let src = avatarSrc {

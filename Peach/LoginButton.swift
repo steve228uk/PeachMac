@@ -29,7 +29,6 @@ class LoginButton: NSButton {
         
         attributedTitle = NSAttributedString(string: title, attributes: [NSForegroundColorAttributeName: NSColor.whiteColor(), NSFontAttributeName: NSFont.systemFontOfSize(18), NSParagraphStyleAttributeName: para])
     
-        
     }
     
 }
