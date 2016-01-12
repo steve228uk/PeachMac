@@ -645,7 +645,7 @@
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="57o-0f-CIN">
                                 <rect key="frame" x="0.0" y="0.0" width="413" height="578"/>
                                 <connections>
-                                    <segue destination="aLz-Cc-hMA" kind="embed" id="xgp-Ac-rTO"/>
+                                    <segue destination="HVx-Z8-luW" kind="embed" id="mGq-ld-lUV"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -851,6 +851,28 @@
             </objects>
             <point key="canvasLocation" x="1359.5" y="89"/>
         </scene>
+        <!--Connections-->
+        <scene sceneID="GXT-fM-BAI">
+            <objects>
+                <tabViewController title="Connections" selectedTabViewItemIndex="0" tabStyle="bottom" id="HVx-Z8-luW" customClass="PeachTabViewController" customModule="Peach" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem label="Connections" id="qgD-Ky-fxC"/>
+                    </tabViewItems>
+                    <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
+                    <tabView key="tabView" drawsBackground="NO" allowsTruncatedLabels="NO" type="noTabsNoBorder" id="FVB-5H-1Rp">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
+                    <connections>
+                        <segue destination="aLz-Cc-hMA" kind="relationship" relationship="tabItems" id="vAQ-sE-llZ"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="T2a-bz-8je" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="587" y="872"/>
+        </scene>
         <!--Connections View Controller-->
         <scene sceneID="UVz-Ni-5e9">
             <objects>
@@ -982,7 +1004,7 @@
                 </viewController>
                 <customObject id="RR7-Ct-nzu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="689" y="844.5"/>
+            <point key="canvasLocation" x="1176" y="873.5"/>
         </scene>
     </scenes>
     <resources>
