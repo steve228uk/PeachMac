@@ -854,12 +854,12 @@
         <!--Connections-->
         <scene sceneID="GXT-fM-BAI">
             <objects>
-                <tabViewController title="Connections" selectedTabViewItemIndex="0" tabStyle="bottom" id="HVx-Z8-luW" customClass="PeachTabViewController" customModule="Peach" customModuleProvider="target" sceneMemberID="viewController">
+                <tabViewController title="Connections" selectedTabViewItemIndex="0" tabStyle="unspecified" id="HVx-Z8-luW" customClass="PeachTabViewController" customModule="Peach" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem label="Connections" id="qgD-Ky-fxC"/>
                     </tabViewItems>
                     <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
-                    <tabView key="tabView" drawsBackground="NO" allowsTruncatedLabels="NO" type="noTabsNoBorder" id="FVB-5H-1Rp">
+                    <tabView key="tabView" drawsBackground="NO" allowsTruncatedLabels="NO" id="FVB-5H-1Rp">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="message"/>
@@ -871,7 +871,7 @@
                 </tabViewController>
                 <customObject id="T2a-bz-8je" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="587" y="872"/>
+            <point key="canvasLocation" x="590" y="859"/>
         </scene>
         <!--Connections View Controller-->
         <scene sceneID="UVz-Ni-5e9">
@@ -888,14 +888,14 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" selectionHighlightStyle="none" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="84" viewBased="YES" id="ici-X7-EyC">
-                                            <rect key="frame" x="0.0" y="0.0" width="299" height="0.0"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="450" height="549"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                             <color key="gridColor" red="0.94117647058823528" green="0.93725490196078431" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                                             <tableColumns>
-                                                <tableColumn editable="NO" width="296" minWidth="40" maxWidth="1000" id="24W-ja-5Mu">
+                                                <tableColumn editable="NO" width="447" minWidth="40" maxWidth="1000" id="24W-ja-5Mu">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -909,7 +909,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="connectionCell" id="xpm-f2-RVd" customClass="ConnectionsTableCellView" customModule="Peach" customModuleProvider="target">
-                                                            <rect key="frame" x="1" y="1" width="296" height="80"/>
+                                                            <rect key="frame" x="1" y="1" width="447" height="80"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DvR-3V-aI4">
@@ -924,7 +924,7 @@
                                                                     </connections>
                                                                 </imageView>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="cUm-S2-nXB">
-                                                                    <rect key="frame" x="84" y="47" width="211" height="22"/>
+                                                                    <rect key="frame" x="84" y="47" width="362" height="22"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="22" id="NPq-Rd-aud"/>
                                                                     </constraints>
@@ -938,11 +938,11 @@
                                                                     </connections>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wwe-JZ-LNI">
-                                                                    <rect key="frame" x="84" y="31" width="211" height="17"/>
+                                                                    <rect key="frame" x="84" y="31" width="355" height="17"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="17" id="L3m-8A-NJu"/>
                                                                     </constraints>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="1MU-v9-Nxy">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Label" usesSingleLineMode="YES" id="1MU-v9-Nxy">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -956,7 +956,7 @@
                                                                 <constraint firstAttribute="trailing" secondItem="cUm-S2-nXB" secondAttribute="trailing" constant="3" id="Z2M-Bt-ZNc"/>
                                                                 <constraint firstItem="DvR-3V-aI4" firstAttribute="leading" secondItem="xpm-f2-RVd" secondAttribute="leading" constant="11" id="eQp-YE-l4U"/>
                                                                 <constraint firstItem="cUm-S2-nXB" firstAttribute="leading" secondItem="DvR-3V-aI4" secondAttribute="trailing" constant="16" id="iJq-BD-VCc"/>
-                                                                <constraint firstAttribute="trailing" secondItem="Wwe-JZ-LNI" secondAttribute="trailing" constant="3" id="qZ9-gC-Je9"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Wwe-JZ-LNI" secondAttribute="trailing" constant="10" id="qZ9-gC-Je9"/>
                                                                 <constraint firstItem="Wwe-JZ-LNI" firstAttribute="top" secondItem="xpm-f2-RVd" secondAttribute="top" constant="32" id="vbk-Qv-Mag"/>
                                                             </constraints>
                                                             <connections>
@@ -1004,7 +1004,7 @@
                 </viewController>
                 <customObject id="RR7-Ct-nzu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1176" y="873.5"/>
+            <point key="canvasLocation" x="1169" y="686.5"/>
         </scene>
     </scenes>
     <resources>
