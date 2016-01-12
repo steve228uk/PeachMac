@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftyJSON
+import Alamofire
 
 public struct Post {
     
@@ -42,6 +43,13 @@ public struct Post {
 
 extension Peach {
     
+    /**
+     Map a post from raw JSON to the Peach Post
+     
+     - parameter json: SwiftyJSON
+     
+     - returns: A Peach Post
+     */
     internal class func parsePost(json: JSON) -> Post {
         var post = Post()
         
@@ -60,6 +68,17 @@ extension Peach {
         }
         
         return post
+    }
+    
+    public class func createPost(messages: [Message], callback: (NSError?) -> Void) {
+        
+        let msgs = ["message": messages.map { $0.dictionary }]
+        
+        Alamofire.request(API.CreatePost(msgs))
+            .responseJSON { response in
+                callback(response.result.error)
+            }
+        
     }
     
 }

@@ -26,6 +26,17 @@ public struct Message {
     /// Height of any image
     public var height: Int?
     
+    internal var dictionary: [String:String] {
+        get {
+            return [
+                "type": "text",
+                "text": (text != nil) ? text! : ""
+            ]
+        }
+    }
+    
+    public init() { }
+    
 }
 
 public enum MessageType {

@@ -613,7 +613,7 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <toolbar key="toolbar" implicitIdentifier="8AFC1928-D2E3-401B-A658-6DC4D5EE32D2" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="nsZ-mn-cKV">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="1AADF151-493D-46AB-99F5-F6BB3E9903AE" explicitItemIdentifier="compose" label="Compose" paletteLabel="Compose" tag="-1" image="compose" id="GCl-2r-rEh">
+                                <toolbarItem implicitItemIdentifier="1AADF151-493D-46AB-99F5-F6BB3E9903AE" explicitItemIdentifier="compose" label="Compose" paletteLabel="Compose" tag="1" image="compose" id="GCl-2r-rEh">
                                     <connections>
                                         <segue destination="ei8-I2-5bg" kind="show" id="mZK-Wq-YWu"/>
                                     </connections>
@@ -627,7 +627,7 @@
                         </toolbar>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="xMt-K8-OSn"/>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="7Bl-QX-6u5"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -662,7 +662,7 @@
                 </viewController>
                 <customObject id="9Vt-Sz-t1l" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="73.5" y="845"/>
+            <point key="canvasLocation" x="73.5" y="859"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -672,24 +672,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="481"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7yj-nh-o50">
-                                <rect key="frame" x="200" y="333" width="81" height="29"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Peach" id="WWu-U7-Tvi">
-                                    <font key="font" metaFont="systemSemibold" size="26"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a0x-2b-0Zq">
-                                <rect key="frame" x="18" y="273" width="444" height="45"/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="See what's new with your favorite people." id="X1k-oD-R1o">
-                                    <font key="font" metaFont="system" size="16"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <secureTextField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YQR-Tl-Ha9">
+                            <secureTextField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YQR-Tl-Ha9">
                                 <rect key="frame" x="20" y="187" width="440" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="GBq-yA-LVW"/>
+                                </constraints>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="9HY-ru-4X4">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -702,8 +689,11 @@
                                     <action selector="login:" target="XfG-lQ-9wD" id="LpK-S6-qmi"/>
                                 </connections>
                             </secureTextField>
-                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R7f-zt-qHh" customClass="LoginTextField" customModule="Peach" customModuleProvider="target">
+                            <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="R7f-zt-qHh" customClass="LoginTextField" customModule="Peach" customModuleProvider="target">
                                 <rect key="frame" x="20" y="239" width="440" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="ZCf-wK-CrT"/>
+                                </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" focusRingType="none" alignment="left" placeholderString="Email" drawsBackground="YES" id="Oiy-Dv-dDL" customClass="LoginTextFieldCell" customModule="Peach" customModuleProvider="target">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -713,7 +703,7 @@
                                     <action selector="login:" target="XfG-lQ-9wD" id="HG3-cN-Ygp"/>
                                 </connections>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T2Z-Tt-mfq" customClass="LoginButton" customModule="Peach" customModuleProvider="target">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="T2Z-Tt-mfq" customClass="LoginButton" customModule="Peach" customModuleProvider="target">
                                 <rect key="frame" x="14" y="96" width="454" height="32"/>
                                 <buttonCell key="cell" type="push" title="Sign In" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Nvb-0l-cGt">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -723,7 +713,46 @@
                                     <action selector="login:" target="XfG-lQ-9wD" id="60s-eM-38z"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7yj-nh-o50">
+                                <rect key="frame" x="200" y="355" width="81" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="mad-BE-1eL"/>
+                                    <constraint firstAttribute="height" constant="29" id="pEP-3W-4DC"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Peach" id="WWu-U7-Tvi">
+                                    <font key="font" metaFont="systemSemibold" size="26"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="a0x-2b-0Zq">
+                                <rect key="frame" x="18" y="295" width="444" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="3k2-ET-0Hx"/>
+                                </constraints>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="See what's new with your favorite people." id="X1k-oD-R1o">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="T2Z-Tt-mfq" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="0Cl-ab-rQZ"/>
+                            <constraint firstItem="7yj-nh-o50" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="31u-NO-K1I"/>
+                            <constraint firstItem="YQR-Tl-Ha9" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="9Cl-wV-Ggp"/>
+                            <constraint firstAttribute="trailing" secondItem="R7f-zt-qHh" secondAttribute="trailing" constant="20" id="DHd-UR-zGe"/>
+                            <constraint firstAttribute="trailing" secondItem="T2Z-Tt-mfq" secondAttribute="trailing" constant="18" id="GHT-wR-ErZ"/>
+                            <constraint firstItem="R7f-zt-qHh" firstAttribute="top" secondItem="a0x-2b-0Zq" secondAttribute="bottom" constant="17" id="JYW-o4-Lc1"/>
+                            <constraint firstItem="7yj-nh-o50" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="97" id="V7A-ec-xgh"/>
+                            <constraint firstAttribute="trailing" secondItem="YQR-Tl-Ha9" secondAttribute="trailing" constant="20" id="cBg-mb-nXK"/>
+                            <constraint firstItem="YQR-Tl-Ha9" firstAttribute="top" secondItem="R7f-zt-qHh" secondAttribute="bottom" constant="10" id="dmZ-42-RNE"/>
+                            <constraint firstItem="a0x-2b-0Zq" firstAttribute="top" secondItem="7yj-nh-o50" secondAttribute="bottom" constant="15" id="gZ5-s6-KWl"/>
+                            <constraint firstAttribute="trailing" secondItem="a0x-2b-0Zq" secondAttribute="trailing" constant="20" id="qND-iI-woB"/>
+                            <constraint firstItem="a0x-2b-0Zq" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="wXh-Q1-Je9"/>
+                            <constraint firstItem="R7f-zt-qHh" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="whf-Dn-g5Z"/>
+                            <constraint firstItem="T2Z-Tt-mfq" firstAttribute="top" secondItem="YQR-Tl-Ha9" secondAttribute="bottom" constant="63" id="xFC-jh-VJb"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="emailField" destination="R7f-zt-qHh" id="Ab7-Ih-pbh"/>
@@ -732,25 +761,29 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-440" y="824.5"/>
+            <point key="canvasLocation" x="-440" y="810.5"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="GY9-9B-oiX">
             <objects>
-                <windowController id="ei8-I2-5bg" sceneMemberID="viewController">
+                <windowController id="ei8-I2-5bg" customClass="ComposeWindowController" customModule="Peach" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Gie-ui-QaU">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="425" y="461" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
-                        <toolbar key="toolbar" implicitIdentifier="CAADA75E-5700-405A-B342-EE09933DAE94" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="Gq2-q0-yTt">
+                        <toolbar key="toolbar" implicitIdentifier="909EA612-926B-47C3-B7BA-5FE4681862BB" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="dgF-1k-72v">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="OgE-m9-cbq"/>
-                                <toolbarItem implicitItemIdentifier="ABE9F4FA-3E26-4F87-B03E-3F0E9C52251D" label="Save" paletteLabel="Save" tag="-1" image="compose" id="QTy-uM-qoQ"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="v6p-zc-XVb"/>
+                                <toolbarItem implicitItemIdentifier="ABE9F4FA-3E26-4F87-B03E-3F0E9C52251D" explicitItemIdentifier="save" label="Save" paletteLabel="Save" image="compose" id="BAE-he-pHB">
+                                    <connections>
+                                        <action selector="save:" target="ei8-I2-5bg" id="5SB-P7-h5h"/>
+                                    </connections>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
-                                <toolbarItem reference="OgE-m9-cbq"/>
-                                <toolbarItem reference="QTy-uM-qoQ"/>
+                                <toolbarItem reference="v6p-zc-XVb"/>
+                                <toolbarItem reference="BAE-he-pHB"/>
                             </defaultToolbarItems>
                         </toolbar>
                     </window>
@@ -810,6 +843,9 @@
                             <constraint firstItem="qP2-CL-Q0k" firstAttribute="leading" secondItem="9VL-Ht-YRb" secondAttribute="leading" id="xji-Af-gln"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="WZY-2c-YpF" id="z8b-Oy-kQP"/>
+                    </connections>
                 </viewController>
                 <customObject id="DXS-l1-FSb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -953,6 +989,6 @@
         <image name="compose" width="96" height="99"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fVU-UT-70q"/>
+        <segue reference="mZK-Wq-YWu"/>
     </inferredMetricsTieBreakers>
 </document>

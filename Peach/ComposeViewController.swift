@@ -7,8 +7,22 @@
 //
 
 import Cocoa
+import PeachKit
 
 class ComposeViewController: PeachViewController {
-
+    
+    @IBOutlet var textView: NSTextView!
+    
+    func save() {
+        
+        var msg = Message()
+        msg.text = textView.string
+        
+        Peach.createPost([msg]) { error in
+        }
+        
+        view.window?.close()
+        
+    }
     
 }

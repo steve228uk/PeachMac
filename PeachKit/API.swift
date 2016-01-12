@@ -16,6 +16,7 @@ enum API: URLRequestConvertible {
     case Activity
     case Connections
     case Stream(String)
+    case CreatePost([String:AnyObject]?)
     
     // MARK: - URLRequestConvertible
     
@@ -23,7 +24,7 @@ enum API: URLRequestConvertible {
     
     var method: Alamofire.Method {
         switch self {
-            case .Authenticate:
+            case .Authenticate, .CreatePost:
                 return .POST
             default:
                 return .GET
@@ -40,6 +41,8 @@ enum API: URLRequestConvertible {
                 return "/connections"
             case .Stream(let id):
                 return "/stream/id/\(id)"
+            case .CreatePost:
+                return "/post"
         }
     }
     
@@ -56,6 +59,8 @@ enum API: URLRequestConvertible {
         switch self {
             case .Authenticate(let email, let password):
                 return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: ["email": email, "password": password]).0
+            case .CreatePost(let parameters):
+                return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: parameters).0
             default:
                 return mutableURLRequest
         }

@@ -27,6 +27,7 @@
 		28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1DA691C456B18004198A0 /* PeachContainerViewController.swift */; };
 		28A1DA6E1C4570E7004198A0 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */; };
 		28A1DA721C457165004198A0 /* PeachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1DA701C457165004198A0 /* PeachViewController.swift */; };
+		28A8C0311C457F1F006DA6FC /* ComposeWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A8C0301C457F1F006DA6FC /* ComposeWindowController.swift */; };
 		28DBACFD1C43023800CC66CB /* ConnectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBACFC1C43023800CC66CB /* ConnectionsViewController.swift */; };
 		28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBACFE1C43055F00CC66CB /* ConnectionsView.swift */; };
 		28DBAD031C430BA800CC66CB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD021C430BA800CC66CB /* Post.swift */; };
@@ -85,6 +86,7 @@
 		28A1DA691C456B18004198A0 /* PeachContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachContainerViewController.swift; sourceTree = "<group>"; };
 		28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		28A1DA701C457165004198A0 /* PeachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachViewController.swift; sourceTree = "<group>"; };
+		28A8C0301C457F1F006DA6FC /* ComposeWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeWindowController.swift; sourceTree = "<group>"; };
 		28DBACFC1C43023800CC66CB /* ConnectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsViewController.swift; sourceTree = "<group>"; };
 		28DBACFE1C43055F00CC66CB /* ConnectionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsView.swift; sourceTree = "<group>"; };
 		28DBAD021C430BA800CC66CB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */,
+				28A8C0301C457F1F006DA6FC /* ComposeWindowController.swift */,
 			);
 			name = Compose;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				285C75E61C441FE400FC8435 /* ConnectionsTableCellView.swift in Sources */,
 				28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */,
 				2874F7311C42EE5800D06D34 /* LoginTextField.swift in Sources */,
+				28A8C0311C457F1F006DA6FC /* ComposeWindowController.swift in Sources */,
 				28DBACFD1C43023800CC66CB /* ConnectionsViewController.swift in Sources */,
 				2874F7201C42D73400D06D34 /* LoginViewController.swift in Sources */,
 				2874F7331C42F13C00D06D34 /* LoginTextFieldCell.swift in Sources */,
@@ -580,6 +584,7 @@
 			baseConfigurationReference = 29B9474D3E7C8CFB943A64C0 /* Pods-Peach.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -588,7 +593,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.wearecocoon.Peach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "ada7cc6b-2e3e-42f6-a93a-e87915809df5";
 			};
 			name = Debug;
 		};
@@ -597,6 +602,7 @@
 			baseConfigurationReference = D6630702E23B1971EE74CF9E /* Pods-Peach.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -605,7 +611,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.wearecocoon.Peach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "ada7cc6b-2e3e-42f6-a93a-e87915809df5";
 			};
 			name = Release;
 		};

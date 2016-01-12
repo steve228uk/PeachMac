@@ -18,6 +18,10 @@ class LoginViewController: NSViewController {
     override func viewDidAppear() {
         super.viewDidAppear()
         
+        view.window?.titlebarAppearsTransparent = true
+        view.window?.movableByWindowBackground  = true
+        view.window?.toolbar?.visible = false
+        
         emailField.becomeFirstResponder()
     }
     
@@ -34,7 +38,13 @@ class LoginViewController: NSViewController {
                 // TODO: Change this for a segue. Hacky hack!
                 let sb = NSStoryboard(name: "Main", bundle: nil)
                 let vc = sb.instantiateControllerWithIdentifier("connections") as? ConnectionsViewController
-                NSApplication.sharedApplication().windows[0].contentViewController = vc
+                let window = NSApplication.sharedApplication().windows[0]
+                window.contentViewController = vc
+                window.titleVisibility = .Hidden
+                window.titlebarAppearsTransparent = false
+                window.movableByWindowBackground  = false
+                window.toolbar?.visible = true
+                
             } else {
                 // handle login error
             }
