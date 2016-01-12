@@ -32,8 +32,8 @@
 		28DBAD051C430CB700CC66CB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD041C430CB700CC66CB /* Comment.swift */; };
 		28DBAD071C430CD900CC66CB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD061C430CD900CC66CB /* Message.swift */; };
 		28DBAD091C431A0900CC66CB /* ProfileBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD081C431A0900CC66CB /* ProfileBannerView.swift */; };
-		C2AF3E8F9B4791AE9F6A1BBD /* Pods_PeachKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F54939EAC1209294B998C01 /* Pods_PeachKit.framework */; };
-		F42FFD397FCA1912F5461EDC /* Pods_Peach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C32A9650EDDE09BD36AFBF9 /* Pods_Peach.framework */; };
+		4DA2601533C28E980B96A863 /* Pods_Peach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E22E0C5D18D00CEFEECF45 /* Pods_Peach.framework */; };
+		D87C12684BE7DD5934FC2E85 /* Pods_PeachKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C1416E93ADBA91CBFC1592 /* Pods_PeachKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +61,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0E634BDF6D8A8F3EBBF028E5 /* Pods-Peach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peach.release.xcconfig"; path = "Pods/Target Support Files/Pods-Peach/Pods-Peach.release.xcconfig"; sourceTree = "<group>"; };
 		282D92BF1C42CCAF00B83109 /* Peach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		282D92C21C42CCAF00B83109 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		282D92C61C42CCAF00B83109 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,11 +89,12 @@
 		28DBAD041C430CB700CC66CB /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		28DBAD061C430CD900CC66CB /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		28DBAD081C431A0900CC66CB /* ProfileBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBannerView.swift; sourceTree = "<group>"; };
-		4C32A9650EDDE09BD36AFBF9 /* Pods_Peach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Peach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		91EBA9150092F933581B2E6E /* Pods-Peach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Peach/Pods-Peach.debug.xcconfig"; sourceTree = "<group>"; };
-		9F54939EAC1209294B998C01 /* Pods_PeachKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeachKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4741D53F34C32099EAF9548 /* Pods-PeachKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeachKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeachKit/Pods-PeachKit.release.xcconfig"; sourceTree = "<group>"; };
-		EC2C12FE21248DA69F6D84F7 /* Pods-PeachKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeachKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeachKit/Pods-PeachKit.debug.xcconfig"; sourceTree = "<group>"; };
+		29B9474D3E7C8CFB943A64C0 /* Pods-Peach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Peach/Pods-Peach.debug.xcconfig"; sourceTree = "<group>"; };
+		29E22E0C5D18D00CEFEECF45 /* Pods_Peach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Peach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9821358EE296C7391DCEACD2 /* Pods-PeachKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeachKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeachKit/Pods-PeachKit.debug.xcconfig"; sourceTree = "<group>"; };
+		9EF90352638971C5A335C842 /* Pods-PeachKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeachKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeachKit/Pods-PeachKit.release.xcconfig"; sourceTree = "<group>"; };
+		A4C1416E93ADBA91CBFC1592 /* Pods_PeachKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeachKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6630702E23B1971EE74CF9E /* Pods-Peach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peach.release.xcconfig"; path = "Pods/Target Support Files/Pods-Peach/Pods-Peach.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				282D92DD1C42CDD900B83109 /* PeachKit.framework in Frameworks */,
-				F42FFD397FCA1912F5461EDC /* Pods_Peach.framework in Frameworks */,
+				4DA2601533C28E980B96A863 /* Pods_Peach.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,20 +111,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2AF3E8F9B4791AE9F6A1BBD /* Pods_PeachKit.framework in Frameworks */,
+				D87C12684BE7DD5934FC2E85 /* Pods_PeachKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		209F14F91CBEE478061B8105 /* Frameworks */ = {
+		0F5830214DA42C3866A389BF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4C32A9650EDDE09BD36AFBF9 /* Pods_Peach.framework */,
-				9F54939EAC1209294B998C01 /* Pods_PeachKit.framework */,
+				29B9474D3E7C8CFB943A64C0 /* Pods-Peach.debug.xcconfig */,
+				D6630702E23B1971EE74CF9E /* Pods-Peach.release.xcconfig */,
+				9821358EE296C7391DCEACD2 /* Pods-PeachKit.debug.xcconfig */,
+				9EF90352638971C5A335C842 /* Pods-PeachKit.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		282D92B61C42CCAF00B83109 = {
@@ -133,8 +135,8 @@
 				282D92C11C42CCAF00B83109 /* Peach */,
 				282D92D71C42CDD800B83109 /* PeachKit */,
 				282D92C01C42CCAF00B83109 /* Products */,
-				5CB05DEDA8886EE6CA412721 /* Pods */,
-				209F14F91CBEE478061B8105 /* Frameworks */,
+				0F5830214DA42C3866A389BF /* Pods */,
+				9ECED47B12594D2416A13B86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -219,15 +221,13 @@
 			name = Connections;
 			sourceTree = "<group>";
 		};
-		5CB05DEDA8886EE6CA412721 /* Pods */ = {
+		9ECED47B12594D2416A13B86 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				91EBA9150092F933581B2E6E /* Pods-Peach.debug.xcconfig */,
-				0E634BDF6D8A8F3EBBF028E5 /* Pods-Peach.release.xcconfig */,
-				EC2C12FE21248DA69F6D84F7 /* Pods-PeachKit.debug.xcconfig */,
-				D4741D53F34C32099EAF9548 /* Pods-PeachKit.release.xcconfig */,
+				29E22E0C5D18D00CEFEECF45 /* Pods_Peach.framework */,
+				A4C1416E93ADBA91CBFC1592 /* Pods_PeachKit.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,13 +248,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 282D92CE1C42CCAF00B83109 /* Build configuration list for PBXNativeTarget "Peach" */;
 			buildPhases = (
-				5C0C213EE1C26B9E0F0EDC78 /* Check Pods Manifest.lock */,
+				CE1A04433F7EBEF9CB00B7DC /* Check Pods Manifest.lock */,
 				282D92BB1C42CCAF00B83109 /* Sources */,
 				282D92BC1C42CCAF00B83109 /* Frameworks */,
 				282D92BD1C42CCAF00B83109 /* Resources */,
 				282D92E21C42CDD900B83109 /* Embed Frameworks */,
-				3250C2A052B238C7925AF037 /* Embed Pods Frameworks */,
-				20BECFB85CBEB7DA9DB4FF28 /* Copy Pods Resources */,
+				2A73129D9BC740AE77274653 /* Embed Pods Frameworks */,
+				F78146E6B1FDB65A3B291568 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,12 +270,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 282D92DF1C42CDD900B83109 /* Build configuration list for PBXNativeTarget "PeachKit" */;
 			buildPhases = (
-				690D9BFE752CDAC4FFE84545 /* Check Pods Manifest.lock */,
+				0EB3ADB30952C58157357124 /* Check Pods Manifest.lock */,
 				282D92D11C42CDD800B83109 /* Sources */,
 				282D92D21C42CDD800B83109 /* Frameworks */,
 				282D92D31C42CDD800B83109 /* Headers */,
 				282D92D41C42CDD800B83109 /* Resources */,
-				C9A631C6825DE7AE4A0A30DF /* Copy Pods Resources */,
+				D16764E41054A5C487EBF63B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -301,7 +301,7 @@
 						DevelopmentTeam = B598AEF9ZM;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -349,22 +349,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		20BECFB85CBEB7DA9DB4FF28 /* Copy Pods Resources */ = {
+		0EB3ADB30952C58157357124 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Peach/Pods-Peach-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		3250C2A052B238C7925AF037 /* Embed Pods Frameworks */ = {
+		2A73129D9BC740AE77274653 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -379,7 +379,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Peach/Pods-Peach-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5C0C213EE1C26B9E0F0EDC78 /* Check Pods Manifest.lock */ = {
+		CE1A04433F7EBEF9CB00B7DC /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -394,22 +394,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		690D9BFE752CDAC4FFE84545 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C9A631C6825DE7AE4A0A30DF /* Copy Pods Resources */ = {
+		D16764E41054A5C487EBF63B /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -422,6 +407,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeachKit/Pods-PeachKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F78146E6B1FDB65A3B291568 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Peach/Pods-Peach-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -565,11 +565,9 @@
 		};
 		282D92CF1C42CCAF00B83109 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91EBA9150092F933581B2E6E /* Pods-Peach.debug.xcconfig */;
+			baseConfigurationReference = 29B9474D3E7C8CFB943A64C0 /* Pods-Peach.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Peach/Peach.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -584,11 +582,9 @@
 		};
 		282D92D01C42CCAF00B83109 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E634BDF6D8A8F3EBBF028E5 /* Pods-Peach.release.xcconfig */;
+			baseConfigurationReference = D6630702E23B1971EE74CF9E /* Pods-Peach.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Peach/Peach.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -603,7 +599,7 @@
 		};
 		282D92E01C42CDD900B83109 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC2C12FE21248DA69F6D84F7 /* Pods-PeachKit.debug.xcconfig */;
+			baseConfigurationReference = 9821358EE296C7391DCEACD2 /* Pods-PeachKit.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -627,7 +623,7 @@
 		};
 		282D92E11C42CDD900B83109 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4741D53F34C32099EAF9548 /* Pods-PeachKit.release.xcconfig */;
+			baseConfigurationReference = 9EF90352638971C5A335C842 /* Pods-PeachKit.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;

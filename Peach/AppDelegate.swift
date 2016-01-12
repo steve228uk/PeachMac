@@ -28,7 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             Peach.streamID = streamID
             
             let sb = NSStoryboard(name: "Main", bundle: nil)
-            let vc = sb.instantiateControllerWithIdentifier("connections") as? ConnectionsViewController
+            let vc = sb.instantiateControllerWithIdentifier("main") as? ConnectionsViewController
             
             NSApplication.sharedApplication().windows[0].contentViewController = vc
             

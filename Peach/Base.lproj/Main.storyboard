@@ -658,12 +658,60 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="ghs-Wi-LWB"/>
+                        <segue destination="znL-nU-peJ" kind="relationship" relationship="window.shadowedContentViewController" id="nVj-IP-Zyd"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tYa-zj-u5x">
+            <objects>
+                <viewController storyboardIdentifier="main" id="znL-nU-peJ" sceneMemberID="viewController">
+                    <view key="view" id="OCC-DC-cKD">
+                        <rect key="frame" x="0.0" y="0.0" width="413" height="578"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="fN0-77-uBv">
+                                <rect key="frame" x="0.0" y="0.0" width="413" height="578"/>
+                                <connections>
+                                    <segue destination="fmA-jq-KoR" kind="embed" id="Swm-pc-Dqz"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fN0-77-uBv" secondAttribute="trailing" id="21B-4x-20T"/>
+                            <constraint firstAttribute="bottom" secondItem="fN0-77-uBv" secondAttribute="bottom" id="K7f-4h-Ju0"/>
+                            <constraint firstItem="fN0-77-uBv" firstAttribute="top" secondItem="OCC-DC-cKD" secondAttribute="top" id="gZS-2K-11W"/>
+                            <constraint firstItem="fN0-77-uBv" firstAttribute="leading" secondItem="OCC-DC-cKD" secondAttribute="leading" id="kxd-FH-wTU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="9Vt-Sz-t1l" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75.5" y="811"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="RDQ-8U-M1L">
+            <objects>
+                <tabViewController selectedTabViewItemIndex="0" id="fmA-jq-KoR" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem id="NJG-7Q-TLo"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="Buv-D0-CkZ">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
+                    <connections>
+                        <segue destination="aLz-Cc-hMA" kind="relationship" relationship="tabItems" id="vnA-Vw-ln9"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="MLg-eu-qwW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662" y="811"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -733,7 +781,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="807.5"/>
+            <point key="canvasLocation" x="-433" y="742.5"/>
         </scene>
         <!--Connections View Controller-->
         <scene sceneID="UVz-Ni-5e9">
@@ -866,7 +914,7 @@
                 </viewController>
                 <customObject id="RR7-Ct-nzu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="635" y="389.5"/>
+            <point key="canvasLocation" x="1276" y="810.5"/>
         </scene>
     </scenes>
 </document>
