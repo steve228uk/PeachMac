@@ -59,61 +59,16 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="File" id="bib-Uj-vzu">
                                     <items>
-                                        <menuItem title="New" keyEquivalent="n" id="Was-JA-tGl">
+                                        <menuItem title="New Post" state="on" keyEquivalent="n" id="Was-JA-tGl">
                                             <connections>
                                                 <action selector="newDocument:" target="Ady-hI-5gd" id="4Si-XN-c54"/>
+                                                <segue destination="ei8-I2-5bg" kind="show" id="fVU-UT-70q"/>
                                             </connections>
-                                        </menuItem>
-                                        <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
-                                            <connections>
-                                                <action selector="openDocument:" target="Ady-hI-5gd" id="bVn-NM-KNZ"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Open Recent" id="tXI-mr-wws">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="oas-Oc-fiZ">
-                                                <items>
-                                                    <menuItem title="Clear Menu" id="vNY-rz-j42">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="clearRecentDocuments:" target="Ady-hI-5gd" id="Daa-9d-B3U"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                </items>
-                                            </menu>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="m54-Is-iLE"/>
                                         <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
                                             <connections>
                                                 <action selector="performClose:" target="Ady-hI-5gd" id="HmO-Ls-i7Q"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Save…" keyEquivalent="s" id="pxx-59-PXV">
-                                            <connections>
-                                                <action selector="saveDocument:" target="Ady-hI-5gd" id="teZ-XB-qJY"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Save As…" keyEquivalent="S" id="Bw7-FT-i3A">
-                                            <connections>
-                                                <action selector="saveDocumentAs:" target="Ady-hI-5gd" id="mDf-zr-I0C"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Revert to Saved" id="KaW-ft-85H">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="revertDocumentToSaved:" target="Ady-hI-5gd" id="iJ3-Pv-kwq"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="aJh-i4-bef"/>
-                                        <menuItem title="Page Setup…" keyEquivalent="P" id="qIS-W8-SiK">
-                                            <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="runPageLayout:" target="Ady-hI-5gd" id="Din-rz-gC5"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Print…" keyEquivalent="p" id="aTl-1u-JFS">
-                                            <connections>
-                                                <action selector="print:" target="Ady-hI-5gd" id="qaZ-4w-aoO"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -656,67 +611,63 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <toolbar key="toolbar" implicitIdentifier="8AFC1928-D2E3-401B-A658-6DC4D5EE32D2" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="nsZ-mn-cKV">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="1AADF151-493D-46AB-99F5-F6BB3E9903AE" explicitItemIdentifier="compose" label="Compose" paletteLabel="Compose" tag="-1" image="compose" id="GCl-2r-rEh">
+                                    <connections>
+                                        <segue destination="ei8-I2-5bg" kind="show" id="mZK-Wq-YWu"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="4ta-ja-G4n"/>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="4ta-ja-G4n"/>
+                                <toolbarItem reference="GCl-2r-rEh"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                     </window>
                     <connections>
-                        <segue destination="znL-nU-peJ" kind="relationship" relationship="window.shadowedContentViewController" id="nVj-IP-Zyd"/>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="xMt-K8-OSn"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Peach Container View Controller-->
         <scene sceneID="tYa-zj-u5x">
             <objects>
-                <viewController storyboardIdentifier="main" id="znL-nU-peJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" id="znL-nU-peJ" customClass="PeachContainerViewController" customModule="Peach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="OCC-DC-cKD">
                         <rect key="frame" x="0.0" y="0.0" width="413" height="578"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="fN0-77-uBv">
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="57o-0f-CIN">
                                 <rect key="frame" x="0.0" y="0.0" width="413" height="578"/>
                                 <connections>
-                                    <segue destination="fmA-jq-KoR" kind="embed" id="Swm-pc-Dqz"/>
+                                    <segue destination="aLz-Cc-hMA" kind="embed" id="xgp-Ac-rTO"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="fN0-77-uBv" secondAttribute="trailing" id="21B-4x-20T"/>
-                            <constraint firstAttribute="bottom" secondItem="fN0-77-uBv" secondAttribute="bottom" id="K7f-4h-Ju0"/>
-                            <constraint firstItem="fN0-77-uBv" firstAttribute="top" secondItem="OCC-DC-cKD" secondAttribute="top" id="gZS-2K-11W"/>
-                            <constraint firstItem="fN0-77-uBv" firstAttribute="leading" secondItem="OCC-DC-cKD" secondAttribute="leading" id="kxd-FH-wTU"/>
+                            <constraint firstItem="57o-0f-CIN" firstAttribute="leading" secondItem="OCC-DC-cKD" secondAttribute="leading" id="0iz-9b-rZ2"/>
+                            <constraint firstAttribute="trailing" secondItem="57o-0f-CIN" secondAttribute="trailing" id="hho-d8-CpE"/>
+                            <constraint firstAttribute="bottom" secondItem="57o-0f-CIN" secondAttribute="bottom" id="lSs-Gc-LBS"/>
+                            <constraint firstItem="57o-0f-CIN" firstAttribute="top" secondItem="OCC-DC-cKD" secondAttribute="top" id="r7c-hl-Dwj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="container" destination="57o-0f-CIN" id="NY4-HY-7gQ"/>
+                    </connections>
                 </viewController>
                 <customObject id="9Vt-Sz-t1l" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75.5" y="811"/>
-        </scene>
-        <!--Tab View Controller-->
-        <scene sceneID="RDQ-8U-M1L">
-            <objects>
-                <tabViewController selectedTabViewItemIndex="0" id="fmA-jq-KoR" sceneMemberID="viewController">
-                    <tabViewItems>
-                        <tabViewItem id="NJG-7Q-TLo"/>
-                    </tabViewItems>
-                    <tabView key="tabView" type="noTabsNoBorder" id="Buv-D0-CkZ">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <font key="font" metaFont="message"/>
-                        <tabViewItems/>
-                    </tabView>
-                    <connections>
-                        <segue destination="aLz-Cc-hMA" kind="relationship" relationship="tabItems" id="vnA-Vw-ln9"/>
-                    </connections>
-                </tabViewController>
-                <customObject id="MLg-eu-qwW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="662" y="811"/>
+            <point key="canvasLocation" x="73.5" y="845"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="LoginViewController" customModule="Peach" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="XfG-lQ-9wD" customClass="LoginViewController" customModule="Peach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl" customClass="LoginView" customModule="Peach" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="481"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -781,7 +732,88 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-433" y="742.5"/>
+            <point key="canvasLocation" x="-440" y="824.5"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="GY9-9B-oiX">
+            <objects>
+                <windowController id="ei8-I2-5bg" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Gie-ui-QaU">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="425" y="461" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                        <toolbar key="toolbar" implicitIdentifier="CAADA75E-5700-405A-B342-EE09933DAE94" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="Gq2-q0-yTt">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="OgE-m9-cbq"/>
+                                <toolbarItem implicitItemIdentifier="ABE9F4FA-3E26-4F87-B03E-3F0E9C52251D" label="Save" paletteLabel="Save" tag="-1" image="compose" id="QTy-uM-qoQ"/>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="OgE-m9-cbq"/>
+                                <toolbarItem reference="QTy-uM-qoQ"/>
+                            </defaultToolbarItems>
+                        </toolbar>
+                    </window>
+                    <connections>
+                        <segue destination="kaE-7v-6VR" kind="relationship" relationship="window.shadowedContentViewController" id="T0J-6h-oEF"/>
+                    </connections>
+                </windowController>
+                <customObject id="Iuc-An-uaH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="823" y="124"/>
+        </scene>
+        <!--Compose-->
+        <scene sceneID="BkA-xq-U4M">
+            <objects>
+                <viewController title="Compose" id="kaE-7v-6VR" customClass="ComposeViewController" customModule="Peach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="9VL-Ht-YRb">
+                        <rect key="frame" x="0.0" y="0.0" width="307" height="168"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="qP2-CL-Q0k">
+                                <rect key="frame" x="0.0" y="0.0" width="307" height="168"/>
+                                <clipView key="contentView" id="dez-JV-vCZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="307" height="168"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" richText="NO" continuousSpellChecking="YES" allowsUndo="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="WZY-2c-YpF">
+                                            <rect key="frame" x="0.0" y="0.0" width="307" height="168"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="307" height="168"/>
+                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="307" height="168"/>
+                                            <size key="maxSize" width="463" height="10000000"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="168" id="q9S-R0-sdC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="307" id="zuJ-AL-3nZ"/>
+                                </constraints>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="Iqm-uy-opL">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="tfA-Te-aXH">
+                                    <rect key="frame" x="291" y="0.0" width="16" height="168"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="qP2-CL-Q0k" secondAttribute="bottom" id="3w4-a6-nf0"/>
+                            <constraint firstAttribute="trailing" secondItem="qP2-CL-Q0k" secondAttribute="trailing" id="cdl-NQ-RKG"/>
+                            <constraint firstItem="qP2-CL-Q0k" firstAttribute="top" secondItem="9VL-Ht-YRb" secondAttribute="top" id="nkE-yb-ovZ"/>
+                            <constraint firstItem="qP2-CL-Q0k" firstAttribute="leading" secondItem="9VL-Ht-YRb" secondAttribute="leading" id="xji-Af-gln"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="DXS-l1-FSb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1359.5" y="89"/>
         </scene>
         <!--Connections View Controller-->
         <scene sceneID="UVz-Ni-5e9">
@@ -914,7 +946,13 @@
                 </viewController>
                 <customObject id="RR7-Ct-nzu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1276" y="810.5"/>
+            <point key="canvasLocation" x="689" y="844.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="compose" width="96" height="99"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fVU-UT-70q"/>
+    </inferredMetricsTieBreakers>
 </document>

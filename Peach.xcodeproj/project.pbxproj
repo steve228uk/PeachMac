@@ -20,14 +20,15 @@
 		2874F7201C42D73400D06D34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F71F1C42D73400D06D34 /* LoginViewController.swift */; };
 		2874F7221C42DC9700D06D34 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F7211C42DC9700D06D34 /* API.swift */; };
 		2874F7261C42E57700D06D34 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F7251C42E57700D06D34 /* LoginView.swift */; };
-		2874F7291C42E60500D06D34 /* PeachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F7281C42E60500D06D34 /* PeachViewController.swift */; };
 		2874F72F1C42E9BB00D06D34 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F72E1C42E9BB00D06D34 /* LoginButton.swift */; };
 		2874F7311C42EE5800D06D34 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F7301C42EE5800D06D34 /* LoginTextField.swift */; };
 		2874F7331C42F13C00D06D34 /* LoginTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F7321C42F13C00D06D34 /* LoginTextFieldCell.swift */; };
 		2874F7381C42FF7B00D06D34 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F7371C42FF7B00D06D34 /* Stream.swift */; };
+		28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1DA691C456B18004198A0 /* PeachContainerViewController.swift */; };
+		28A1DA6E1C4570E7004198A0 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */; };
+		28A1DA721C457165004198A0 /* PeachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1DA701C457165004198A0 /* PeachViewController.swift */; };
 		28DBACFD1C43023800CC66CB /* ConnectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBACFC1C43023800CC66CB /* ConnectionsViewController.swift */; };
 		28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBACFE1C43055F00CC66CB /* ConnectionsView.swift */; };
-		28DBAD011C43058E00CC66CB /* PeachTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD001C43058E00CC66CB /* PeachTabViewController.swift */; };
 		28DBAD031C430BA800CC66CB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD021C430BA800CC66CB /* Post.swift */; };
 		28DBAD051C430CB700CC66CB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD041C430CB700CC66CB /* Comment.swift */; };
 		28DBAD071C430CD900CC66CB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD061C430CD900CC66CB /* Message.swift */; };
@@ -76,15 +77,16 @@
 		2874F71F1C42D73400D06D34 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2874F7211C42DC9700D06D34 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		2874F7251C42E57700D06D34 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		2874F7281C42E60500D06D34 /* PeachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachViewController.swift; sourceTree = "<group>"; };
 		2874F72E1C42E9BB00D06D34 /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		2874F7301C42EE5800D06D34 /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		2874F7321C42F13C00D06D34 /* LoginTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextFieldCell.swift; sourceTree = "<group>"; };
 		2874F7341C42F93900D06D34 /* Peach.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Peach.entitlements; sourceTree = "<group>"; };
 		2874F7371C42FF7B00D06D34 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		28A1DA691C456B18004198A0 /* PeachContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachContainerViewController.swift; sourceTree = "<group>"; };
+		28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		28A1DA701C457165004198A0 /* PeachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachViewController.swift; sourceTree = "<group>"; };
 		28DBACFC1C43023800CC66CB /* ConnectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsViewController.swift; sourceTree = "<group>"; };
 		28DBACFE1C43055F00CC66CB /* ConnectionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsView.swift; sourceTree = "<group>"; };
-		28DBAD001C43058E00CC66CB /* PeachTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachTabViewController.swift; sourceTree = "<group>"; };
 		28DBAD021C430BA800CC66CB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		28DBAD041C430CB700CC66CB /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		28DBAD061C430CD900CC66CB /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				2874F7341C42F93900D06D34 /* Peach.entitlements */,
+				28A1DA6B1C457047004198A0 /* Compose */,
 				28DBACFB1C4301EA00CC66CB /* Connections */,
 				2874F7271C42E5E100D06D34 /* Global */,
 				2874F71E1C42D71800D06D34 /* Login */,
@@ -204,10 +207,18 @@
 		2874F7271C42E5E100D06D34 /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				2874F7281C42E60500D06D34 /* PeachViewController.swift */,
-				28DBAD001C43058E00CC66CB /* PeachTabViewController.swift */,
+				28A1DA691C456B18004198A0 /* PeachContainerViewController.swift */,
+				28A1DA701C457165004198A0 /* PeachViewController.swift */,
 			);
 			name = Global;
+			sourceTree = "<group>";
+		};
+		28A1DA6B1C457047004198A0 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */,
+			);
+			name = Compose;
 			sourceTree = "<group>";
 		};
 		28DBACFB1C4301EA00CC66CB /* Connections */ = {
@@ -432,17 +443,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2874F72F1C42E9BB00D06D34 /* LoginButton.swift in Sources */,
-				2874F7291C42E60500D06D34 /* PeachViewController.swift in Sources */,
+				28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */,
 				2874F7261C42E57700D06D34 /* LoginView.swift in Sources */,
 				285C75E61C441FE400FC8435 /* ConnectionsTableCellView.swift in Sources */,
 				28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */,
 				2874F7311C42EE5800D06D34 /* LoginTextField.swift in Sources */,
 				28DBACFD1C43023800CC66CB /* ConnectionsViewController.swift in Sources */,
-				28DBAD011C43058E00CC66CB /* PeachTabViewController.swift in Sources */,
 				2874F7201C42D73400D06D34 /* LoginViewController.swift in Sources */,
 				2874F7331C42F13C00D06D34 /* LoginTextFieldCell.swift in Sources */,
 				282D92C31C42CCAF00B83109 /* AppDelegate.swift in Sources */,
+				28A1DA721C457165004198A0 /* PeachViewController.swift in Sources */,
 				28DBAD091C431A0900CC66CB /* ProfileBannerView.swift in Sources */,
+				28A1DA6E1C4570E7004198A0 /* ComposeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

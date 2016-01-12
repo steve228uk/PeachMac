@@ -18,9 +18,6 @@ class LoginViewController: NSViewController {
     override func viewDidAppear() {
         super.viewDidAppear()
         
-        view.window?.titlebarAppearsTransparent = true
-        view.window?.movableByWindowBackground  = true
-        
         emailField.becomeFirstResponder()
     }
     

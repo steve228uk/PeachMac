@@ -9,7 +9,7 @@
 import Cocoa
 import PeachKit
 
-class ConnectionsViewController: PeachViewController, NSTableViewDelegate, NSTableViewDataSource {
+class ConnectionsViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
 
     @IBOutlet weak var tableView: NSTableView!
     
