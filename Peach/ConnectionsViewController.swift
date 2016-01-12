@@ -16,15 +16,18 @@ class ConnectionsViewController: NSViewController, NSTableViewDelegate, NSTableV
     /// The streams that were fetched from Peach
     var streams: [Stream] = []
     
-    override func viewDidAppear() {
-        super.viewDidAppear()
-        
-        tableView.sizeLastColumnToFit()
+    override func viewWillAppear() {
+        super.viewWillAppear()
         
         Peach.getStreams { streams, error in
             self.streams = streams
             self.tableView.reloadData()
         }
+        
+    }
+    
+    override func viewDidLayout() {
+        super.viewDidLayout()
         
     }
     
@@ -67,6 +70,17 @@ class ConnectionsViewController: NSViewController, NSTableViewDelegate, NSTableV
         }
         
         return v
+    }
+    
+    
+    // Called when a table row is clicked
+    // TODO: Implement a slide forward and slide back seque a la iOS.
+    func tableViewSelectionDidChange(notification: NSNotification) {
+        
+        if let tc = parentViewController as? PeachTabViewController {
+            tc.selectedTabViewItemIndex = 1
+        }
+        
     }
     
 }
