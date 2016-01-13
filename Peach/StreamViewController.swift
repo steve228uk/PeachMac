@@ -23,10 +23,13 @@ class StreamViewController: NSViewController, NSTableViewDelegate, NSTableViewDa
         }
     }
     
+    
     override func viewDidAppear() {
         super.viewDidAppear()
         
-        if let window = NSApplication.sharedApplication().windows[0].windowController as? PeachMainWindowController {
+        view.window?.toolbar?.insertItemWithItemIdentifier("back", atIndex: 0)
+        
+        if let window = view.window?.windowController as? PeachMainWindowController {
             window.delegate = self
         }
     }

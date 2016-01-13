@@ -26,6 +26,11 @@ class ConnectionsViewController: NSViewController, NSTableViewDelegate, NSTableV
 
     }
     
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        view.window?.toolbar?.removeItemAtIndex(0)
+    }
+    
     // MARK: - NSTableViewDataSource
     
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {

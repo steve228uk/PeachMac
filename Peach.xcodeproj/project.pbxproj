@@ -10,6 +10,7 @@
 		282CA5891C45BF990075AE9A /* PeachTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282CA5881C45BF990075AE9A /* PeachTableView.swift */; };
 		282CA58C1C45C3A50075AE9A /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282CA58B1C45C3A50075AE9A /* StreamViewController.swift */; };
 		282CA58E1C46F7130075AE9A /* PeachMainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282CA58D1C46F7130075AE9A /* PeachMainWindowController.swift */; };
+		282CA5901C46FD5B0075AE9A /* StreamTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282CA58F1C46FD5B0075AE9A /* StreamTableCellView.swift */; };
 		282D92C31C42CCAF00B83109 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D92C21C42CCAF00B83109 /* AppDelegate.swift */; };
 		282D92C71C42CCAF00B83109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 282D92C61C42CCAF00B83109 /* Assets.xcassets */; };
 		282D92CA1C42CCAF00B83109 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282D92C81C42CCAF00B83109 /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		282CA5881C45BF990075AE9A /* PeachTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachTableView.swift; sourceTree = "<group>"; };
 		282CA58B1C45C3A50075AE9A /* StreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
 		282CA58D1C46F7130075AE9A /* PeachMainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachMainWindowController.swift; sourceTree = "<group>"; };
+		282CA58F1C46FD5B0075AE9A /* StreamTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamTableCellView.swift; sourceTree = "<group>"; };
 		282D92BF1C42CCAF00B83109 /* Peach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		282D92C21C42CCAF00B83109 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		282D92C61C42CCAF00B83109 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				282CA58B1C45C3A50075AE9A /* StreamViewController.swift */,
+				282CA58F1C46FD5B0075AE9A /* StreamTableCellView.swift */,
 			);
 			name = Stream;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 			files = (
 				2874F72F1C42E9BB00D06D34 /* LoginButton.swift in Sources */,
 				28A8C0331C45AD01006DA6FC /* PeachTabViewController.swift in Sources */,
+				282CA5901C46FD5B0075AE9A /* StreamTableCellView.swift in Sources */,
 				28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */,
 				282CA5891C45BF990075AE9A /* PeachTableView.swift in Sources */,
 				2874F7261C42E57700D06D34 /* LoginView.swift in Sources */,
