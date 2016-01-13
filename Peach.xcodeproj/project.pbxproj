@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		282CA5891C45BF990075AE9A /* PeachTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282CA5881C45BF990075AE9A /* PeachTableView.swift */; };
 		282CA58C1C45C3A50075AE9A /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282CA58B1C45C3A50075AE9A /* StreamViewController.swift */; };
+		282CA58E1C46F7130075AE9A /* PeachMainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282CA58D1C46F7130075AE9A /* PeachMainWindowController.swift */; };
 		282D92C31C42CCAF00B83109 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D92C21C42CCAF00B83109 /* AppDelegate.swift */; };
 		282D92C71C42CCAF00B83109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 282D92C61C42CCAF00B83109 /* Assets.xcassets */; };
 		282D92CA1C42CCAF00B83109 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282D92C81C42CCAF00B83109 /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 /* Begin PBXFileReference section */
 		282CA5881C45BF990075AE9A /* PeachTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachTableView.swift; sourceTree = "<group>"; };
 		282CA58B1C45C3A50075AE9A /* StreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
+		282CA58D1C46F7130075AE9A /* PeachMainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachMainWindowController.swift; sourceTree = "<group>"; };
 		282D92BF1C42CCAF00B83109 /* Peach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		282D92C21C42CCAF00B83109 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		282D92C61C42CCAF00B83109 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				28A1DA701C457165004198A0 /* PeachViewController.swift */,
 				28A8C0321C45AD01006DA6FC /* PeachTabViewController.swift */,
 				282CA5881C45BF990075AE9A /* PeachTableView.swift */,
+				282CA58D1C46F7130075AE9A /* PeachMainWindowController.swift */,
 			);
 			name = Global;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				28DBACFD1C43023800CC66CB /* ConnectionsViewController.swift in Sources */,
 				2874F7201C42D73400D06D34 /* LoginViewController.swift in Sources */,
 				2874F7331C42F13C00D06D34 /* LoginTextFieldCell.swift in Sources */,
+				282CA58E1C46F7130075AE9A /* PeachMainWindowController.swift in Sources */,
 				282D92C31C42CCAF00B83109 /* AppDelegate.swift in Sources */,
 				28A1DA721C457165004198A0 /* PeachViewController.swift in Sources */,
 				28DBAD091C431A0900CC66CB /* ProfileBannerView.swift in Sources */,

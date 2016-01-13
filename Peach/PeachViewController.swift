@@ -9,7 +9,7 @@
 import Cocoa
 
 class PeachViewController: NSViewController {
-
+    
     override func viewDidAppear() {
         super.viewDidAppear()
         view.window?.titleVisibility = .Hidden

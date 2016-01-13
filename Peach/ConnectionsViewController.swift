@@ -23,12 +23,7 @@ class ConnectionsViewController: NSViewController, NSTableViewDelegate, NSTableV
             self.streams = streams
             self.tableView.reloadData()
         }
-        
-    }
-    
-    override func viewDidLayout() {
-        super.viewDidLayout()
-        
+
     }
     
     // MARK: - NSTableViewDataSource

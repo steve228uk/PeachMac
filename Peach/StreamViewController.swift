@@ -7,12 +7,32 @@
 //
 
 import Cocoa
+import PeachKit
 
-class StreamViewController: NSViewController {
+class StreamViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource, PeachMainWindowControllerDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
+    @IBOutlet weak var tableView: NSTableView!
+    
+    var streamID: String?
+    
+    var posts: [Post] = []
+    
+    var tabController: PeachTabViewController? {
+        get {
+           return parentViewController as? PeachTabViewController
+        }
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        
+        if let window = NSApplication.sharedApplication().windows[0].windowController as? PeachMainWindowController {
+            window.delegate = self
+        }
+    }
+    
+    func sendNavigationBack(sender: AnyObject?) {
+        tabController?.selectedTabViewItemIndex = 0
     }
     
 }
