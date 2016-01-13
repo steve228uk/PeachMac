@@ -1049,7 +1049,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                            <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
+                                            <color key="gridColor" red="0.94117647059999998" green="0.93725490199999995" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <tableColumns>
                                                 <tableColumn width="435" minWidth="40" maxWidth="1000" id="H56-RK-QZO">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
@@ -1064,9 +1065,28 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="YTO-5Z-Z5w">
+                                                        <tableCellView identifier="streamCell" misplaced="YES" id="YTO-5Z-Z5w" customClass="StreamTableCellView" customModule="Peach" customModuleProvider="target">
                                                             <rect key="frame" x="1" y="1" width="435" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQd-e9-fZI">
+                                                                    <rect key="frame" x="1" y="-6" width="433" height="23"/>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="NH1-s1-1DR">
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="QQd-e9-fZI" secondAttribute="bottom" constant="-6" id="4Nh-VX-RYo"/>
+                                                                <constraint firstAttribute="trailing" secondItem="QQd-e9-fZI" secondAttribute="trailing" constant="3" id="XXP-d4-NvO"/>
+                                                                <constraint firstItem="QQd-e9-fZI" firstAttribute="top" secondItem="YTO-5Z-Z5w" secondAttribute="top" id="gNw-95-AAr"/>
+                                                                <constraint firstItem="QQd-e9-fZI" firstAttribute="leading" secondItem="YTO-5Z-Z5w" secondAttribute="leading" constant="3" id="srG-lO-pN8"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="label" destination="QQd-e9-fZI" id="T4s-pQ-IP5"/>
+                                                            </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
@@ -1079,6 +1099,10 @@
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="420" id="Jac-AK-tgj"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="499" id="n8V-bc-PIO"/>
+                                </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="NIl-tb-kJ1">
                                     <rect key="frame" x="1" y="31" width="46" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>

@@ -7,13 +7,26 @@
 //
 
 import Cocoa
+import PeachKit
 
 class StreamTableCellView: NSTableCellView {
 
-    override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
-
-        // Drawing code here.
+    @IBOutlet weak var label: NSTextField!
+    
+    var post: Post? {
+        didSet {
+            renderMessages()
+        }
+    }
+    
+    func renderMessages() {
+        if let p = post {
+            for message in p.message {
+                if message.type == .Text && message.text != nil {
+                    label.stringValue = message.text!
+                }
+            }
+        }
     }
     
 }

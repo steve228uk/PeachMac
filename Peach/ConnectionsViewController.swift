@@ -78,7 +78,11 @@ class ConnectionsViewController: NSViewController, NSTableViewDelegate, NSTableV
     func tableViewSelectionDidChange(notification: NSNotification) {
         
         if let tc = parentViewController as? PeachTabViewController {
-            tc.selectedTabViewItemIndex = 1
+            if let vc = tc.childViewControllers[1] as? StreamViewController {
+                let stream = streams[tableView.selectedRow]
+                vc.streamID = stream.id
+                tc.selectedTabViewItemIndex = 1
+            }
         }
         
     }
