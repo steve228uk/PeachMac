@@ -19,7 +19,6 @@
 		282D92DE1C42CDD900B83109 /* PeachKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 282D92D61C42CDD800B83109 /* PeachKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		282D92E41C42CDE600B83109 /* Peach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D92E31C42CDE600B83109 /* Peach.swift */; };
 		282D92E71C42D08F00B83109 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D92E61C42D08F00B83109 /* Activity.swift */; };
-		285C75E61C441FE400FC8435 /* ConnectionsTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C75E51C441FE400FC8435 /* ConnectionsTableCellView.swift */; };
 		2874F71D1C42D3FA00D06D34 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F71C1C42D3FA00D06D34 /* User.swift */; };
 		2874F7201C42D73400D06D34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F71F1C42D73400D06D34 /* LoginViewController.swift */; };
 		2874F7221C42DC9700D06D34 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F7211C42DC9700D06D34 /* API.swift */; };
@@ -33,7 +32,11 @@
 		28A1DA721C457165004198A0 /* PeachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1DA701C457165004198A0 /* PeachViewController.swift */; };
 		28A8C0311C457F1F006DA6FC /* ComposeWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A8C0301C457F1F006DA6FC /* ComposeWindowController.swift */; };
 		28A8C0331C45AD01006DA6FC /* PeachTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A8C0321C45AD01006DA6FC /* PeachTabViewController.swift */; };
-		28DBACFD1C43023800CC66CB /* ConnectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBACFC1C43023800CC66CB /* ConnectionsViewController.swift */; };
+		28C7A1E01C4830DE004D8FD0 /* FriendRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C7A1DF1C4830DE004D8FD0 /* FriendRequest.swift */; };
+		28C7A1E21C485396004D8FD0 /* ConnectionsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C7A1E11C485396004D8FD0 /* ConnectionsCollectionViewController.swift */; };
+		28C7A1E41C485702004D8FD0 /* ConnectionCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C7A1E31C485702004D8FD0 /* ConnectionCollectionViewItem.swift */; };
+		28C7A1E81C485B78004D8FD0 /* ConnectionCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28C7A1E71C485B78004D8FD0 /* ConnectionCollectionViewItem.xib */; };
+		28C7A1EA1C485FF3004D8FD0 /* ConnectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C7A1E91C485FF3004D8FD0 /* ConnectionCell.swift */; };
 		28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBACFE1C43055F00CC66CB /* ConnectionsView.swift */; };
 		28DBAD031C430BA800CC66CB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD021C430BA800CC66CB /* Post.swift */; };
 		28DBAD051C430CB700CC66CB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD041C430CB700CC66CB /* Comment.swift */; };
@@ -82,7 +85,6 @@
 		282D92DA1C42CDD900B83109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		282D92E31C42CDE600B83109 /* Peach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peach.swift; sourceTree = "<group>"; };
 		282D92E61C42D08F00B83109 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		285C75E51C441FE400FC8435 /* ConnectionsTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableCellView.swift; sourceTree = "<group>"; };
 		2874F71C1C42D3FA00D06D34 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2874F71F1C42D73400D06D34 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2874F7211C42DC9700D06D34 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -97,7 +99,11 @@
 		28A1DA701C457165004198A0 /* PeachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachViewController.swift; sourceTree = "<group>"; };
 		28A8C0301C457F1F006DA6FC /* ComposeWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeWindowController.swift; sourceTree = "<group>"; };
 		28A8C0321C45AD01006DA6FC /* PeachTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachTabViewController.swift; sourceTree = "<group>"; };
-		28DBACFC1C43023800CC66CB /* ConnectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsViewController.swift; sourceTree = "<group>"; };
+		28C7A1DF1C4830DE004D8FD0 /* FriendRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendRequest.swift; sourceTree = "<group>"; };
+		28C7A1E11C485396004D8FD0 /* ConnectionsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsCollectionViewController.swift; sourceTree = "<group>"; };
+		28C7A1E31C485702004D8FD0 /* ConnectionCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCollectionViewItem.swift; sourceTree = "<group>"; };
+		28C7A1E71C485B78004D8FD0 /* ConnectionCollectionViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionCollectionViewItem.xib; sourceTree = "<group>"; };
+		28C7A1E91C485FF3004D8FD0 /* ConnectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCell.swift; sourceTree = "<group>"; };
 		28DBACFE1C43055F00CC66CB /* ConnectionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsView.swift; sourceTree = "<group>"; };
 		28DBAD021C430BA800CC66CB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		28DBAD041C430CB700CC66CB /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -210,6 +216,7 @@
 				28DBAD021C430BA800CC66CB /* Post.swift */,
 				28DBAD041C430CB700CC66CB /* Comment.swift */,
 				28DBAD061C430CD900CC66CB /* Message.swift */,
+				28C7A1DF1C4830DE004D8FD0 /* FriendRequest.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -250,10 +257,12 @@
 		28DBACFB1C4301EA00CC66CB /* Connections */ = {
 			isa = PBXGroup;
 			children = (
-				28DBACFC1C43023800CC66CB /* ConnectionsViewController.swift */,
 				28DBACFE1C43055F00CC66CB /* ConnectionsView.swift */,
 				28DBAD081C431A0900CC66CB /* ProfileBannerView.swift */,
-				285C75E51C441FE400FC8435 /* ConnectionsTableCellView.swift */,
+				28C7A1E11C485396004D8FD0 /* ConnectionsCollectionViewController.swift */,
+				28C7A1E31C485702004D8FD0 /* ConnectionCollectionViewItem.swift */,
+				28C7A1E71C485B78004D8FD0 /* ConnectionCollectionViewItem.xib */,
+				28C7A1E91C485FF3004D8FD0 /* ConnectionCell.swift */,
 			);
 			name = Connections;
 			sourceTree = "<group>";
@@ -373,6 +382,7 @@
 			files = (
 				282D92C71C42CCAF00B83109 /* Assets.xcassets in Resources */,
 				282D92CA1C42CCAF00B83109 /* Main.storyboard in Resources */,
+				28C7A1E81C485B78004D8FD0 /* ConnectionCollectionViewItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,19 +484,20 @@
 				28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */,
 				282CA5891C45BF990075AE9A /* PeachTableView.swift in Sources */,
 				2874F7261C42E57700D06D34 /* LoginView.swift in Sources */,
-				285C75E61C441FE400FC8435 /* ConnectionsTableCellView.swift in Sources */,
 				28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */,
 				2874F7311C42EE5800D06D34 /* LoginTextField.swift in Sources */,
 				28A8C0311C457F1F006DA6FC /* ComposeWindowController.swift in Sources */,
-				28DBACFD1C43023800CC66CB /* ConnectionsViewController.swift in Sources */,
 				2874F7201C42D73400D06D34 /* LoginViewController.swift in Sources */,
 				2874F7331C42F13C00D06D34 /* LoginTextFieldCell.swift in Sources */,
 				282CA58E1C46F7130075AE9A /* PeachMainWindowController.swift in Sources */,
 				282D92C31C42CCAF00B83109 /* AppDelegate.swift in Sources */,
 				28A1DA721C457165004198A0 /* PeachViewController.swift in Sources */,
 				28DBAD091C431A0900CC66CB /* ProfileBannerView.swift in Sources */,
+				28C7A1E41C485702004D8FD0 /* ConnectionCollectionViewItem.swift in Sources */,
 				282CA58C1C45C3A50075AE9A /* StreamViewController.swift in Sources */,
+				28C7A1E21C485396004D8FD0 /* ConnectionsCollectionViewController.swift in Sources */,
 				28A1DA6E1C4570E7004198A0 /* ComposeViewController.swift in Sources */,
+				28C7A1EA1C485FF3004D8FD0 /* ConnectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +512,7 @@
 				28DBAD031C430BA800CC66CB /* Post.swift in Sources */,
 				28DBAD071C430CD900CC66CB /* Message.swift in Sources */,
 				282D92E41C42CDE600B83109 /* Peach.swift in Sources */,
+				28C7A1E01C4830DE004D8FD0 /* FriendRequest.swift in Sources */,
 				2874F7221C42DC9700D06D34 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

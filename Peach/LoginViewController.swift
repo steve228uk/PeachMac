@@ -36,14 +36,14 @@ class LoginViewController: NSViewController {
                 Peach.streamID = result!.streamID
                 
                 // TODO: Change this for a segue. Hacky hack!
-                let sb = NSStoryboard(name: "Main", bundle: nil)
-                let vc = sb.instantiateControllerWithIdentifier("connections") as? ConnectionsViewController
-                let window = NSApplication.sharedApplication().windows[0]
-                window.contentViewController = vc
-                window.titleVisibility = .Hidden
-                window.titlebarAppearsTransparent = false
-                window.movableByWindowBackground  = false
-                window.toolbar?.visible = true
+//                let sb = NSStoryboard(name: "Main", bundle: nil)
+//                let vc = sb.instantiateControllerWithIdentifier("connections") as? ConnectionsViewController
+//                let window = NSApplication.sharedApplication().windows[0]
+//                window.contentViewController = vc
+//                window.titleVisibility = .Hidden
+//                window.titlebarAppearsTransparent = false
+//                window.movableByWindowBackground  = false
+//                window.toolbar?.visible = true
                 
             } else {
                 // handle login error

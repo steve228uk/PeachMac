@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="ConnectionCell" customModule="Peach" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="125"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SL8-QP-dcv">
+                    <rect key="frame" x="20" y="20" width="85" height="85"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="85" id="Zc4-Hf-QPv"/>
+                        <constraint firstAttribute="width" secondItem="SL8-QP-dcv" secondAttribute="height" multiplier="1:1" id="waG-8K-43C"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSAdvanced" id="frp-RL-OPl"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VYm-Nk-n81">
+                    <rect key="frame" x="111" y="84" width="351" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="rBO-jW-qgq"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Stephen Radford" id="Rp4-KS-ghM">
+                        <font key="font" metaFont="system" size="17"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="SL8-QP-dcv" secondAttribute="bottom" constant="20" id="IEN-Ku-zsW"/>
+                <constraint firstItem="VYm-Nk-n81" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="KfS-Th-zGa"/>
+                <constraint firstItem="SL8-QP-dcv" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="ZhX-DA-dmw"/>
+                <constraint firstAttribute="trailing" secondItem="VYm-Nk-n81" secondAttribute="trailing" constant="20" id="cLh-M1-3bp"/>
+                <constraint firstItem="SL8-QP-dcv" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="wRP-Yv-2c1"/>
+                <constraint firstItem="VYm-Nk-n81" firstAttribute="leading" secondItem="SL8-QP-dcv" secondAttribute="trailing" constant="8" id="wbY-7A-9YR"/>
+            </constraints>
+            <point key="canvasLocation" x="316" y="299.5"/>
+        </customView>
+        <collectionViewItem id="9Vs-Cp-X8C" customClass="ConnectionCollectionViewItem" customModule="Peach" customModuleProvider="target">
+            <connections>
+                <outlet property="image" destination="SL8-QP-dcv" id="CXO-tb-rw7"/>
+                <outlet property="nameLabel" destination="VYm-Nk-n81" id="b7r-fb-kd7"/>
+                <outlet property="view" destination="c22-O7-iKe" id="bbu-10-7aI"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+    <resources>
+        <image name="NSAdvanced" width="32" height="32"/>
+    </resources>
+</document>
