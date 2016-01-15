@@ -19,6 +19,7 @@
 		282D92DE1C42CDD900B83109 /* PeachKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 282D92D61C42CDD800B83109 /* PeachKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		282D92E41C42CDE600B83109 /* Peach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D92E31C42CDE600B83109 /* Peach.swift */; };
 		282D92E71C42D08F00B83109 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D92E61C42D08F00B83109 /* Activity.swift */; };
+		2868BC711C499278007A01B7 /* StreamHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2868BC701C499278007A01B7 /* StreamHeaderView.swift */; };
 		286CBA2B1C48FCF000D3B902 /* ConnectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */; };
 		286CBA2D1C48FCFC00D3B902 /* ConnectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286CBA2C1C48FCFC00D3B902 /* ConnectionHeaderView.xib */; };
 		286CBA301C490A9800D3B902 /* ProfileBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286CBA2F1C490A9800D3B902 /* ProfileBannerView.swift */; };
@@ -103,6 +104,7 @@
 		282D92DA1C42CDD900B83109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		282D92E31C42CDE600B83109 /* Peach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peach.swift; sourceTree = "<group>"; };
 		282D92E61C42D08F00B83109 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		2868BC701C499278007A01B7 /* StreamHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamHeaderView.swift; sourceTree = "<group>"; };
 		286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionHeaderView.swift; sourceTree = "<group>"; };
 		286CBA2C1C48FCFC00D3B902 /* ConnectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionHeaderView.xib; sourceTree = "<group>"; };
 		286CBA2F1C490A9800D3B902 /* ProfileBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBannerView.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				282CA58B1C45C3A50075AE9A /* StreamViewController.swift */,
 				282CA58F1C46FD5B0075AE9A /* StreamTableCellView.swift */,
+				2868BC701C499278007A01B7 /* StreamHeaderView.swift */,
 			);
 			name = Stream;
 			sourceTree = "<group>";
@@ -267,7 +270,6 @@
 				286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */,
 				286CBA2C1C48FCFC00D3B902 /* ConnectionHeaderView.xib */,
 				28C7A1E91C485FF3004D8FD0 /* ConnectionCell.swift */,
-				28C7A1E71C485B78004D8FD0 /* ConnectionCollectionViewItem.xib */,
 				286CBA2F1C490A9800D3B902 /* ProfileBannerView.swift */,
 			);
 			name = Views;
@@ -341,6 +343,7 @@
 				286CBA2E1C49033C00D3B902 /* Views */,
 				28C7A1E11C485396004D8FD0 /* ConnectionsCollectionViewController.swift */,
 				28C7A1E31C485702004D8FD0 /* ConnectionCollectionViewItem.swift */,
+				28C7A1E71C485B78004D8FD0 /* ConnectionCollectionViewItem.xib */,
 			);
 			name = Connections;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				282CA5901C46FD5B0075AE9A /* StreamTableCellView.swift in Sources */,
 				28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */,
 				282CA5891C45BF990075AE9A /* PeachTableView.swift in Sources */,
+				2868BC711C499278007A01B7 /* StreamHeaderView.swift in Sources */,
 				2874F7261C42E57700D06D34 /* LoginView.swift in Sources */,
 				28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */,
 				2874F7311C42EE5800D06D34 /* LoginTextField.swift in Sources */,

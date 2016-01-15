@@ -927,7 +927,7 @@ DQ
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" id="UVS-DC-Z2U">
                                                 <size key="headerReferenceSize" width="350" height="105"/>
-                                                <edgeInsets key="sectionInset" left="15" right="15" top="15" bottom="15"/>
+                                                <edgeInsets key="sectionInset" left="15" right="15" top="15" bottom="45"/>
                                             </collectionViewFlowLayout>
                                             <color key="primaryBackgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                             <connections>
@@ -973,13 +973,36 @@ DQ
             <objects>
                 <viewController storyboardIdentifier="stream" id="B6W-lf-Uy4" customClass="StreamViewController" customModule="Peach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="T3y-PE-HAf">
-                        <rect key="frame" x="0.0" y="0.0" width="438" height="549"/>
+                        <rect key="frame" x="0.0" y="0.0" width="438" height="598"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="siR-Rc-L1t" customClass="StreamHeaderView" customModule="Peach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="503" width="438" height="59"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EMh-sf-bHx">
+                                        <rect key="frame" x="18" y="20" width="402" height="19"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Stephen Radford" id="AZU-ze-LYU">
+                                            <font key="font" metaFont="systemLight" size="16"/>
+                                            <color key="textColor" white="0.14000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EMh-sf-bHx" firstAttribute="leading" secondItem="siR-Rc-L1t" secondAttribute="leading" constant="20" id="N4F-Dc-UHm"/>
+                                    <constraint firstAttribute="trailing" secondItem="EMh-sf-bHx" secondAttribute="trailing" constant="20" id="WVs-xq-haX"/>
+                                    <constraint firstAttribute="bottom" secondItem="EMh-sf-bHx" secondAttribute="bottom" constant="20" id="akk-nx-Ogf"/>
+                                    <constraint firstAttribute="height" constant="59" id="e3Y-uD-yjg"/>
+                                    <constraint firstItem="EMh-sf-bHx" firstAttribute="top" secondItem="siR-Rc-L1t" secondAttribute="top" constant="20" id="iy4-sr-AYG"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="nameLabel" destination="EMh-sf-bHx" id="AsT-fn-KBd"/>
+                                </connections>
+                            </customView>
                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spz-eb-7HH">
-                                <rect key="frame" x="0.0" y="0.0" width="438" height="549"/>
+                                <rect key="frame" x="0.0" y="0.0" width="438" height="503"/>
                                 <clipView key="contentView" id="CO4-xq-te2">
-                                    <rect key="frame" x="0.0" y="0.0" width="438" height="549"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="438" height="503"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="Zi0-Xc-j7T">
@@ -1052,19 +1075,24 @@ DQ
                             </scrollView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="siR-Rc-L1t" firstAttribute="top" secondItem="T3y-PE-HAf" secondAttribute="top" constant="36" id="3SY-cc-X8F"/>
+                            <constraint firstItem="spz-eb-7HH" firstAttribute="top" secondItem="siR-Rc-L1t" secondAttribute="bottom" id="Ayr-Ib-ueG"/>
+                            <constraint firstItem="spz-eb-7HH" firstAttribute="top" secondItem="siR-Rc-L1t" secondAttribute="bottom" id="JEI-M1-JMN"/>
                             <constraint firstAttribute="trailing" secondItem="spz-eb-7HH" secondAttribute="trailing" id="ZCj-7T-X2V"/>
                             <constraint firstItem="spz-eb-7HH" firstAttribute="leading" secondItem="T3y-PE-HAf" secondAttribute="leading" id="adi-Jo-rr9"/>
-                            <constraint firstItem="spz-eb-7HH" firstAttribute="top" secondItem="T3y-PE-HAf" secondAttribute="top" id="kyi-cX-dVj"/>
+                            <constraint firstAttribute="trailing" secondItem="siR-Rc-L1t" secondAttribute="trailing" id="iDH-UO-Kgi"/>
                             <constraint firstAttribute="bottom" secondItem="spz-eb-7HH" secondAttribute="bottom" id="lBp-pt-0PI"/>
+                            <constraint firstItem="siR-Rc-L1t" firstAttribute="leading" secondItem="T3y-PE-HAf" secondAttribute="leading" id="lVu-Pq-tBP"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="headerView" destination="siR-Rc-L1t" id="b5K-iE-xO7"/>
                         <outlet property="tableView" destination="Zi0-Xc-j7T" id="HAC-Bv-4SF"/>
                     </connections>
                 </viewController>
                 <customObject id="Yj7-oW-K3V" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844" y="1574.5"/>
+            <point key="canvasLocation" x="844" y="1574"/>
         </scene>
     </scenes>
     <resources>

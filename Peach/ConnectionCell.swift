@@ -13,10 +13,29 @@ class ConnectionCell: NSView {
     var bottomBorder: NSBezierPath?
     var leftBorder: NSBezierPath?
     var rightBorder: NSBezierPath?
+    var topBorder: NSBezierPath?
+    
+    /// Is it the first one in the list? If so, get maskin'
+    var isFirst = false {
+        didSet {
+            if isFirst {
+                
+            } else {
+                
+            }
+        }
+    }
+    
+    /// Is it the last one in the list? If so, get maskin'
+    var isLast = false {
+        didSet {
+            Swift.print(isLast)
+        }
+    }
     
     override func drawRect(dirtyRect: NSRect) {
         super.drawRect(dirtyRect)
-
+        
         if let l = layer {
 
             NSColor.peachBorderColor().setStroke()

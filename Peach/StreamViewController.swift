@@ -13,6 +13,8 @@ class StreamViewController: NSViewController, NSTableViewDelegate, NSTableViewDa
 
     @IBOutlet weak var tableView: NSTableView!
     
+    @IBOutlet weak var headerView: StreamHeaderView!
+    
     var streamID: String?
     
     var stream: Stream?
@@ -25,6 +27,19 @@ class StreamViewController: NSViewController, NSTableViewDelegate, NSTableViewDa
         }
     }
     
+    override func viewDidLoad() {
+        tableView.layer?.zPosition = 9
+    }
+    
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        
+        // Wipe the current state
+        stream = nil
+        posts = []
+        tableView.reloadData()
+        headerView.nameLabel.stringValue = ""
+    }
     
     override func viewDidAppear() {
         super.viewDidAppear()
@@ -34,19 +49,20 @@ class StreamViewController: NSViewController, NSTableViewDelegate, NSTableViewDa
             window.delegate = self
         }
         
-        // Wipe the current state
-        stream = nil
-        posts = []
-        tableView.reloadData()
-        
         if let id = streamID {
             Peach.getStreamByID(id) { stream, error in
                 if let s = stream {
                     self.stream = s
+                    if let name = s.displayName {
+                        Swift.print(name)
+                        self.headerView.nameLabel.stringValue = name
+                    }
+                    
                     self.tableView.reloadData()
                 }
             }
         }
+        
     }
     
     func sendNavigationBack(sender: AnyObject?) {

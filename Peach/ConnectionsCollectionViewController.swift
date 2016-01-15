@@ -69,6 +69,15 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
         
         let item = collectionView.makeItemWithIdentifier("connectionItem", forIndexPath: indexPath) as! ConnectionCollectionViewItem
         item.stream = streams[indexPath.item]
+        
+        if let view = item.view as? ConnectionCell {
+            if indexPath.item == 0 {
+                view.isFirst = true
+            } else {
+                view.isFirst = false
+            }
+        }
+        
         return item
         
     }
