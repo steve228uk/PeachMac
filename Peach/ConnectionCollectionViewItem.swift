@@ -21,6 +21,8 @@ class ConnectionCollectionViewItem: NSCollectionViewItem {
         super.viewDidLoad()
         
         image.wantsLayer = true
+        image.layer?.backgroundColor = NSColor.peachBorderColor().CGColor
+        image.image = nil
         image.layer?.cornerRadius = 22
         image.layer?.masksToBounds = true
     }
@@ -34,8 +36,12 @@ class ConnectionCollectionViewItem: NSCollectionViewItem {
                 
                 nameLabel.stringValue = stream!.displayName!
                 
-                stream?.getAvatar { image in
-                    self.image.image = image
+                if stream?.avatarSrc != nil {
+                    stream?.getAvatar { image in
+                        self.image.image = image
+                    }
+                } else {
+                    image.image = NSImage(named: "placeholder")
                 }
                 
                 if s.posts.count > 0 {

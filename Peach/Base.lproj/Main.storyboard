@@ -59,11 +59,16 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="File" id="bib-Uj-vzu">
                                     <items>
-                                        <menuItem title="New Post" state="on" keyEquivalent="n" id="Was-JA-tGl">
+                                        <menuItem title="New Post" tag="1" keyEquivalent="n" id="Was-JA-tGl">
                                             <connections>
                                                 <action selector="newDocument:" target="Ady-hI-5gd" id="4Si-XN-c54"/>
                                                 <segue destination="ei8-I2-5bg" kind="show" id="fVU-UT-70q"/>
                                             </connections>
+                                        </menuItem>
+                                        <menuItem title="Save Post" tag="2" hidden="YES" id="0ub-aG-Tje">
+                                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="m54-Is-iLE"/>
                                         <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
@@ -600,7 +605,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Peach" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="58.5" y="-267"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -1061,6 +1066,6 @@
         <image name="compose" width="96" height="99"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mZK-Wq-YWu"/>
+        <segue reference="fVU-UT-70q"/>
     </inferredMetricsTieBreakers>
 </document>

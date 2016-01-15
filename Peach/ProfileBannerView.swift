@@ -18,7 +18,8 @@ class ProfileBannerView: NSView {
     
     override func drawRect(dirtyRect: NSRect) {
         super.drawRect(dirtyRect)
-
+        
+        avatar.layer?.backgroundColor = NSColor.peachBorderColor().CGColor
         avatar.layer?.cornerRadius = 22
         avatar.layer?.masksToBounds = true
         

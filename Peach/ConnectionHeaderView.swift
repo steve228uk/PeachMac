@@ -18,12 +18,18 @@ class ConnectionHeaderView: NSView {
     var stream: Stream? = nil {
         didSet {
             
+            self.profileBanner.avatar.image = nil
+            
             if let s = stream {
                 
                 profileBanner.nameLabel.stringValue = s.displayName!
                 
-                s.getAvatar { image in
-                    self.profileBanner.avatar.image = image
+                if s.avatarSrc != nil {
+                    s.getAvatar { image in
+                        self.profileBanner.avatar.image = image
+                    }
+                } else {
+                    self.profileBanner.avatar.image = NSImage(named: "placeholder")
                 }
                 
                 if s.posts.count > 0 {
