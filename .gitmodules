@@ -1,3 +1,6 @@
 [submodule "PeachKit"]
 	path = PeachKit
 	url = https://github.com/steve228uk/PeachKit.git
+[submodule "GiphyKit"]
+	path = GiphyKit
+	url = https://github.com/steve228uk/GiphyKit.git
