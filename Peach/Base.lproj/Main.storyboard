@@ -917,11 +917,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="450" height="549"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <collectionView id="Spo-4T-tX4">
+                                        <collectionView selectable="YES" id="Spo-4T-tX4">
                                             <rect key="frame" x="0.0" y="0.0" width="450" height="549"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="zT6-VD-VQq">
-                                                <size key="itemSize" width="500" height="85"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" id="UVS-DC-Z2U">
+                                                <size key="itemSize" width="350" height="70"/>
                                                 <edgeInsets key="sectionInset" left="15" right="15" top="15" bottom="15"/>
                                             </collectionViewFlowLayout>
                                             <color key="primaryBackgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>

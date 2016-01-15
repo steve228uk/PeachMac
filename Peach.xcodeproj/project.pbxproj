@@ -37,6 +37,7 @@
 		28C7A1E41C485702004D8FD0 /* ConnectionCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C7A1E31C485702004D8FD0 /* ConnectionCollectionViewItem.swift */; };
 		28C7A1E81C485B78004D8FD0 /* ConnectionCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28C7A1E71C485B78004D8FD0 /* ConnectionCollectionViewItem.xib */; };
 		28C7A1EA1C485FF3004D8FD0 /* ConnectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C7A1E91C485FF3004D8FD0 /* ConnectionCell.swift */; };
+		28C7A1EC1C4863E3004D8FD0 /* NSColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C7A1EB1C4863E3004D8FD0 /* NSColor+CustomColors.swift */; };
 		28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBACFE1C43055F00CC66CB /* ConnectionsView.swift */; };
 		28DBAD031C430BA800CC66CB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD021C430BA800CC66CB /* Post.swift */; };
 		28DBAD051C430CB700CC66CB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD041C430CB700CC66CB /* Comment.swift */; };
@@ -104,6 +105,7 @@
 		28C7A1E31C485702004D8FD0 /* ConnectionCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCollectionViewItem.swift; sourceTree = "<group>"; };
 		28C7A1E71C485B78004D8FD0 /* ConnectionCollectionViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionCollectionViewItem.xib; sourceTree = "<group>"; };
 		28C7A1E91C485FF3004D8FD0 /* ConnectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCell.swift; sourceTree = "<group>"; };
+		28C7A1EB1C4863E3004D8FD0 /* NSColor+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+CustomColors.swift"; sourceTree = "<group>"; };
 		28DBACFE1C43055F00CC66CB /* ConnectionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsView.swift; sourceTree = "<group>"; };
 		28DBAD021C430BA800CC66CB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		28DBAD041C430CB700CC66CB /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		282D92C11C42CCAF00B83109 /* Peach */ = {
 			isa = PBXGroup;
 			children = (
+				28C7A1ED1C48691D004D8FD0 /* Extensions */,
 				2874F7341C42F93900D06D34 /* Peach.entitlements */,
 				282CA58A1C45C2E50075AE9A /* Stream */,
 				28A1DA6B1C457047004198A0 /* Compose */,
@@ -252,6 +255,14 @@
 				28A8C0301C457F1F006DA6FC /* ComposeWindowController.swift */,
 			);
 			name = Compose;
+			sourceTree = "<group>";
+		};
+		28C7A1ED1C48691D004D8FD0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				28C7A1EB1C4863E3004D8FD0 /* NSColor+CustomColors.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		28DBACFB1C4301EA00CC66CB /* Connections */ = {
@@ -479,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2874F72F1C42E9BB00D06D34 /* LoginButton.swift in Sources */,
+				28C7A1EC1C4863E3004D8FD0 /* NSColor+CustomColors.swift in Sources */,
 				28A8C0331C45AD01006DA6FC /* PeachTabViewController.swift in Sources */,
 				282CA5901C46FD5B0075AE9A /* StreamTableCellView.swift in Sources */,
 				28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */,

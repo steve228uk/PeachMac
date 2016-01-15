@@ -22,6 +22,12 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
         collectionView.registerNib(NSNib(nibNamed: "ConnectionCollectionViewItem", bundle: nil), forItemWithIdentifier: "connectionItem")
     }
     
+    override func viewDidLayout() {
+        super.viewDidLayout()
+
+        
+    }
+    
     override func viewDidAppear() {
         super.viewDidAppear()
         
@@ -49,7 +55,19 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
         let item = collectionView.makeItemWithIdentifier("connectionItem", forIndexPath: indexPath) as! ConnectionCollectionViewItem
         item.stream = streams[indexPath.item]
         return item
-        
+    }
+    
+    func collectionView(collectionView: NSCollectionView, didSelectItemsAtIndexPaths indexPaths: Set<NSIndexPath>) {
+        if indexPaths.count == 1 {
+            if let tc = parentViewController as? PeachTabViewController {
+                if let vc = tc.childViewControllers[1] as? StreamViewController {
+                    let item = indexPaths[indexPaths.startIndex].item
+                    let stream = streams[item]
+                    vc.streamID = stream.id
+                    tc.selectedTabViewItemIndex = 1
+                }
+            }
+        }
     }
     
 }
