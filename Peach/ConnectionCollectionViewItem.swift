@@ -15,13 +15,52 @@ class ConnectionCollectionViewItem: NSCollectionViewItem {
     
     @IBOutlet weak var nameLabel: NSTextField!
     
+    @IBOutlet weak var postLabel: NSTextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        image.wantsLayer = true
+        image.layer?.cornerRadius = 22
+        image.layer?.masksToBounds = true
+    }
+    
     var stream: Stream? {
         didSet {
-            nameLabel.stringValue = stream!.displayName!
+            
             image.image = nil
-            stream?.getAvatar { image in
-                self.image.image = image
+            
+            if let s = stream {
+                
+                nameLabel.stringValue = stream!.displayName!
+                
+                stream?.getAvatar { image in
+                    self.image.image = image
+                }
+                
+                if s.posts.count > 0 {
+                    let post = s.posts[0]
+                    if post.message.count > 0 {
+                        switch post.message[0].type! {
+                        case .Text:
+                            if let text = post.message[0].text {
+                                postLabel.stringValue = text
+                            } else {
+                                postLabel.stringValue = post.message[0].type!.stringValue
+                            }
+                        default:
+                            postLabel.stringValue = post.message[0].type!.stringValue
+                        }
+                    } else {
+                        postLabel.stringValue = ""
+                    }
+                } else {
+                    postLabel.stringValue = ""
+                }
+                
             }
+            
+            
         }
     }
     

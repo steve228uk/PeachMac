@@ -9,42 +9,57 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe" customClass="ConnectionCell" customModule="Peach" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="95"/>
+            <rect key="frame" x="0.0" y="0.0" width="480" height="83"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SL8-QP-dcv">
-                    <rect key="frame" x="5" y="5" width="85" height="85"/>
+                    <rect key="frame" x="20" y="20" width="43" height="43"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="85" id="Zc4-Hf-QPv"/>
+                        <constraint firstAttribute="height" constant="43" id="Td2-uT-dvo"/>
+                        <constraint firstAttribute="width" constant="43" id="sk3-yd-yro"/>
                     </constraints>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSAdvanced" id="frp-RL-OPl"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VYm-Nk-n81">
-                    <rect key="frame" x="96" y="69" width="381" height="21"/>
+                    <rect key="frame" x="76" y="42" width="386" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="rBO-jW-qgq"/>
+                        <constraint firstAttribute="height" constant="21" id="TRF-Bc-jg3"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Stephen Radford" id="Rp4-KS-ghM">
-                        <font key="font" metaFont="system" size="17"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Stephen Radford" id="Rp4-KS-ghM">
+                        <font key="font" metaFont="systemLight" size="16"/>
+                        <color key="textColor" white="0.12036819679999999" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KzK-gW-3DD">
+                    <rect key="frame" x="76" y="18" width="386" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="UHH-Dy-Jqa"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="This is the post label" id="CrN-AX-HGb">
+                        <font key="font" metaFont="system" size="12"/>
+                        <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="SL8-QP-dcv" secondAttribute="bottom" constant="5" id="IEN-Ku-zsW"/>
-                <constraint firstItem="VYm-Nk-n81" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="5" id="KfS-Th-zGa"/>
-                <constraint firstItem="SL8-QP-dcv" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="5" id="ZhX-DA-dmw"/>
-                <constraint firstAttribute="trailing" secondItem="VYm-Nk-n81" secondAttribute="trailing" constant="5" id="cLh-M1-3bp"/>
-                <constraint firstItem="SL8-QP-dcv" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="5" id="wRP-Yv-2c1"/>
-                <constraint firstItem="VYm-Nk-n81" firstAttribute="leading" secondItem="SL8-QP-dcv" secondAttribute="trailing" constant="8" id="wbY-7A-9YR"/>
+                <constraint firstAttribute="trailing" secondItem="KzK-gW-3DD" secondAttribute="trailing" constant="20" id="1Ll-TG-4rq"/>
+                <constraint firstAttribute="bottom" secondItem="KzK-gW-3DD" secondAttribute="bottom" constant="18" id="1Wt-g4-6DT"/>
+                <constraint firstItem="VYm-Nk-n81" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="OHy-NW-V9G"/>
+                <constraint firstItem="VYm-Nk-n81" firstAttribute="leading" secondItem="SL8-QP-dcv" secondAttribute="trailing" constant="15" id="Tab-nW-VNO"/>
+                <constraint firstAttribute="trailing" secondItem="VYm-Nk-n81" secondAttribute="trailing" constant="20" id="Tq7-hm-0Fh"/>
+                <constraint firstItem="KzK-gW-3DD" firstAttribute="leading" secondItem="SL8-QP-dcv" secondAttribute="trailing" constant="15" id="jb4-n1-vRk"/>
+                <constraint firstItem="SL8-QP-dcv" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="oWb-F7-tA1"/>
+                <constraint firstItem="SL8-QP-dcv" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="tbK-Uj-My4"/>
             </constraints>
-            <point key="canvasLocation" x="500" y="442.5"/>
+            <point key="canvasLocation" x="500" y="428.5"/>
         </customView>
         <collectionViewItem id="9Vs-Cp-X8C" customClass="ConnectionCollectionViewItem" customModule="Peach" customModuleProvider="target">
             <connections>
                 <outlet property="image" destination="SL8-QP-dcv" id="CXO-tb-rw7"/>
                 <outlet property="nameLabel" destination="VYm-Nk-n81" id="b7r-fb-kd7"/>
+                <outlet property="postLabel" destination="KzK-gW-3DD" id="Q0M-3B-yWG"/>
                 <outlet property="view" destination="c22-O7-iKe" id="bbu-10-7aI"/>
             </connections>
         </collectionViewItem>

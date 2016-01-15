@@ -8,6 +8,7 @@
 
 import Cocoa
 import PeachKit
+import GiphyKit
 
 class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, ConnectionHeaderViewDelegate {
 

@@ -27,9 +27,8 @@
                             <rect key="frame" x="69" y="41" width="348" height="19"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="19" id="1Hn-zh-e2x"/>
-                                <constraint firstAttribute="width" constant="344" id="LDB-Ks-aS6"/>
                             </constraints>
-                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Stephen Radford" id="KTe-UV-a68">
+                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Stephen Radford" id="KTe-UV-a68">
                                 <font key="font" metaFont="systemLight" size="16"/>
                                 <color key="textColor" white="0.12036819677603872" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -49,6 +48,7 @@
                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vtf-lw-Cmb">
                             <rect key="frame" x="12" y="16" width="44" height="44"/>
                             <constraints>
+                                <constraint firstAttribute="height" constant="44" id="Irm-PA-Ytx"/>
                                 <constraint firstAttribute="width" constant="44" id="js7-vu-ufB"/>
                             </constraints>
                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSEveryone" id="93d-EU-tfd"/>
@@ -58,7 +58,6 @@
                         <constraint firstAttribute="trailing" secondItem="Aae-lJ-Fps" secondAttribute="trailing" constant="15" id="GFN-hT-d25"/>
                         <constraint firstItem="Vtf-lw-Cmb" firstAttribute="top" secondItem="SOY-Ah-rZ6" secondAttribute="top" constant="16" id="MR4-Cl-fzt"/>
                         <constraint firstItem="xPe-6n-z9J" firstAttribute="leading" secondItem="Vtf-lw-Cmb" secondAttribute="trailing" constant="15" id="UVG-S1-Z16"/>
-                        <constraint firstAttribute="bottom" secondItem="Vtf-lw-Cmb" secondAttribute="bottom" constant="16" id="UyI-lS-TP6"/>
                         <constraint firstItem="Aae-lJ-Fps" firstAttribute="centerY" secondItem="SOY-Ah-rZ6" secondAttribute="centerY" id="akr-Ed-PTn"/>
                         <constraint firstItem="arh-Bd-Oer" firstAttribute="leading" secondItem="Vtf-lw-Cmb" secondAttribute="trailing" constant="15" id="c64-iu-HVS"/>
                         <constraint firstAttribute="bottom" secondItem="xPe-6n-z9J" secondAttribute="bottom" constant="19" id="dvU-8W-FfU"/>

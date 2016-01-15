@@ -39,7 +39,11 @@ class ConnectionHeaderView: NSView {
                             default:
                                 profileBanner.postLabel.stringValue = post.message[0].type!.stringValue
                         }
+                    } else {
+                        profileBanner.postLabel.stringValue = ""
                     }
+                } else {
+                    profileBanner.postLabel.stringValue = ""
                 }
                 
             }
