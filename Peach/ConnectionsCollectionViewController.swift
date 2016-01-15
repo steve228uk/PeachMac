@@ -14,7 +14,7 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
 
     @IBOutlet weak var collectionView: NSCollectionView!
     
-    @IBOutlet weak var collectionViewLayout: ConnectionsFlowLayout!
+    @IBOutlet weak var collectionViewLayout: NSCollectionViewFlowLayout!
     
     /// The streams that were fetched from Peach
     var streams: [Stream] = []
@@ -64,6 +64,7 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
     func collectionView(collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
         return streams.count
     }
+    
     
     func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {
         
