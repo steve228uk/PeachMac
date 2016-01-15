@@ -12,27 +12,82 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="106"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LOV-uY-qDS">
-                    <rect key="frame" x="18" y="47" width="444" height="39"/>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="SOY-Ah-rZ6" customClass="ProfileBannerView" customModule="Peach" customModuleProvider="target">
+                    <rect key="frame" x="18" y="15" width="442" height="76"/>
+                    <subviews>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aae-lJ-Fps">
+                            <rect key="frame" x="416" y="27" width="11" height="23"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="23" id="7Oo-xg-tOY"/>
+                                <constraint firstAttribute="width" constant="11" id="J93-RU-Hzi"/>
+                            </constraints>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSRightFacingTriangleTemplate" id="2RQ-39-VcC"/>
+                        </imageView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="arh-Bd-Oer">
+                            <rect key="frame" x="69" y="41" width="348" height="19"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="19" id="1Hn-zh-e2x"/>
+                                <constraint firstAttribute="width" constant="344" id="LDB-Ks-aS6"/>
+                            </constraints>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Stephen Radford" id="KTe-UV-a68">
+                                <font key="font" metaFont="systemLight" size="16"/>
+                                <color key="textColor" white="0.12036819677603872" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xPe-6n-z9J">
+                            <rect key="frame" x="69" y="19" width="348" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="17" id="Kqb-TZ-XNn"/>
+                            </constraints>
+                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="This is a single like post about something." id="E5u-Hv-7WN">
+                                <font key="font" metaFont="system" size="12"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vtf-lw-Cmb">
+                            <rect key="frame" x="12" y="16" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="js7-vu-ufB"/>
+                            </constraints>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSEveryone" id="93d-EU-tfd"/>
+                        </imageView>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="39" id="qas-7M-YCJ"/>
+                        <constraint firstAttribute="trailing" secondItem="Aae-lJ-Fps" secondAttribute="trailing" constant="15" id="GFN-hT-d25"/>
+                        <constraint firstItem="Vtf-lw-Cmb" firstAttribute="top" secondItem="SOY-Ah-rZ6" secondAttribute="top" constant="16" id="MR4-Cl-fzt"/>
+                        <constraint firstItem="xPe-6n-z9J" firstAttribute="leading" secondItem="Vtf-lw-Cmb" secondAttribute="trailing" constant="15" id="UVG-S1-Z16"/>
+                        <constraint firstAttribute="bottom" secondItem="Vtf-lw-Cmb" secondAttribute="bottom" constant="16" id="UyI-lS-TP6"/>
+                        <constraint firstItem="Aae-lJ-Fps" firstAttribute="centerY" secondItem="SOY-Ah-rZ6" secondAttribute="centerY" id="akr-Ed-PTn"/>
+                        <constraint firstItem="arh-Bd-Oer" firstAttribute="leading" secondItem="Vtf-lw-Cmb" secondAttribute="trailing" constant="15" id="c64-iu-HVS"/>
+                        <constraint firstAttribute="bottom" secondItem="xPe-6n-z9J" secondAttribute="bottom" constant="19" id="dvU-8W-FfU"/>
+                        <constraint firstItem="Aae-lJ-Fps" firstAttribute="leading" secondItem="arh-Bd-Oer" secondAttribute="trailing" constant="1" id="eQN-pU-N0v"/>
+                        <constraint firstItem="arh-Bd-Oer" firstAttribute="top" secondItem="SOY-Ah-rZ6" secondAttribute="top" constant="16" id="nJi-AQ-e1b"/>
+                        <constraint firstItem="Aae-lJ-Fps" firstAttribute="leading" secondItem="xPe-6n-z9J" secondAttribute="trailing" constant="1" id="wjd-MF-9kT"/>
+                        <constraint firstItem="Vtf-lw-Cmb" firstAttribute="leading" secondItem="SOY-Ah-rZ6" secondAttribute="leading" constant="12" id="yrt-w9-1O8"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="DvS-dn-1ve">
-                        <font key="font" metaFont="system" size="17"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
+                    <connections>
+                        <outlet property="avatar" destination="Vtf-lw-Cmb" id="X1c-N7-xge"/>
+                        <outlet property="nameLabel" destination="arh-Bd-Oer" id="ORX-GX-GLR"/>
+                        <outlet property="postLabel" destination="xPe-6n-z9J" id="1xE-z5-FvI"/>
+                    </connections>
+                </customView>
             </subviews>
             <constraints>
-                <constraint firstItem="LOV-uY-qDS" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="2e8-fy-sA4"/>
-                <constraint firstAttribute="trailing" secondItem="LOV-uY-qDS" secondAttribute="trailing" constant="20" id="AbF-Vq-Wee"/>
-                <constraint firstItem="LOV-uY-qDS" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="LLO-qU-Htc"/>
+                <constraint firstAttribute="trailing" secondItem="SOY-Ah-rZ6" secondAttribute="trailing" constant="20" id="3Dt-RW-tIU"/>
+                <constraint firstAttribute="bottom" secondItem="SOY-Ah-rZ6" secondAttribute="bottom" constant="15" id="bcq-09-iQx"/>
+                <constraint firstItem="SOY-Ah-rZ6" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="15" id="f9e-bg-dHO"/>
+                <constraint firstItem="SOY-Ah-rZ6" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="18" id="jZk-LI-I6Z"/>
             </constraints>
             <connections>
-                <outlet property="nameLabel" destination="LOV-uY-qDS" id="QXG-PQ-dHA"/>
+                <outlet property="profileBanner" destination="SOY-Ah-rZ6" id="VAB-no-D6h"/>
             </connections>
-            <point key="canvasLocation" x="558" y="520"/>
+            <point key="canvasLocation" x="106" y="436"/>
         </customView>
     </objects>
+    <resources>
+        <image name="NSEveryone" width="32" height="32"/>
+        <image name="NSRightFacingTriangleTemplate" width="9" height="12"/>
+    </resources>
 </document>

@@ -21,6 +21,7 @@
 		282D92E71C42D08F00B83109 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D92E61C42D08F00B83109 /* Activity.swift */; };
 		286CBA2B1C48FCF000D3B902 /* ConnectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */; };
 		286CBA2D1C48FCFC00D3B902 /* ConnectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286CBA2C1C48FCFC00D3B902 /* ConnectionHeaderView.xib */; };
+		286CBA301C490A9800D3B902 /* ProfileBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286CBA2F1C490A9800D3B902 /* ProfileBannerView.swift */; };
 		2874F71D1C42D3FA00D06D34 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F71C1C42D3FA00D06D34 /* User.swift */; };
 		2874F7201C42D73400D06D34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F71F1C42D73400D06D34 /* LoginViewController.swift */; };
 		2874F7221C42DC9700D06D34 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F7211C42DC9700D06D34 /* API.swift */; };
@@ -89,6 +90,7 @@
 		282D92E61C42D08F00B83109 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionHeaderView.swift; sourceTree = "<group>"; };
 		286CBA2C1C48FCFC00D3B902 /* ConnectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionHeaderView.xib; sourceTree = "<group>"; };
+		286CBA2F1C490A9800D3B902 /* ProfileBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBannerView.swift; sourceTree = "<group>"; };
 		2874F71C1C42D3FA00D06D34 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2874F71F1C42D73400D06D34 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2874F7211C42DC9700D06D34 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				286CBA2C1C48FCFC00D3B902 /* ConnectionHeaderView.xib */,
 				28C7A1E91C485FF3004D8FD0 /* ConnectionCell.swift */,
 				28C7A1E71C485B78004D8FD0 /* ConnectionCollectionViewItem.xib */,
+				286CBA2F1C490A9800D3B902 /* ProfileBannerView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				2874F7261C42E57700D06D34 /* LoginView.swift in Sources */,
 				28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */,
 				2874F7311C42EE5800D06D34 /* LoginTextField.swift in Sources */,
+				286CBA301C490A9800D3B902 /* ProfileBannerView.swift in Sources */,
 				28A8C0311C457F1F006DA6FC /* ComposeWindowController.swift in Sources */,
 				2874F7201C42D73400D06D34 /* LoginViewController.swift in Sources */,
 				2874F7331C42F13C00D06D34 /* LoginTextFieldCell.swift in Sources */,

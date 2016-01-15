@@ -10,38 +10,45 @@ import Cocoa
 import PeachKit
 
 protocol ConnectionHeaderViewDelegate {
-    
-    func headerViewMouseDown(theEvent: NSEvent)
-    
+    func profileMouseUp(theEvent: NSEvent)
 }
 
 class ConnectionHeaderView: NSView {
 
     var stream: Stream? = nil {
         didSet {
+            
             if let s = stream {
-                nameLabel.stringValue = s.displayName!
+                
+                profileBanner.nameLabel.stringValue = s.displayName!
+                
+                s.getAvatar { image in
+                    self.profileBanner.avatar.image = image
+                }
+                
+                if s.posts.count > 0 {
+                    let post = s.posts[0]
+                    if post.message.count > 0 {
+                        switch post.message[0].type! {
+                            case .Text:
+                                if let text = post.message[0].text {
+                                    profileBanner.postLabel.stringValue = text
+                                } else {
+                                    profileBanner.postLabel.stringValue = post.message[0].type!.stringValue
+                                }
+                            default:
+                                profileBanner.postLabel.stringValue = post.message[0].type!.stringValue
+                        }
+                    }
+                }
+                
             }
+            
         }
     }
     
     var delegate: ConnectionHeaderViewDelegate?
     
-    @IBOutlet weak var nameLabel: NSTextField!
-    
-    override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
-        
-        layer?.backgroundColor = NSColor.whiteColor().CGColor
-        layer?.borderColor = NSColor.peachBorderColor().CGColor
-        layer?.borderWidth = 2
-        layer?.cornerRadius = 8
-        
-    }
-    
-    override func mouseDown(theEvent: NSEvent) {
-        super.mouseDown(theEvent)
-        delegate?.headerViewMouseDown(theEvent)
-    }
+    @IBOutlet weak var profileBanner: ProfileBannerView!
     
 }

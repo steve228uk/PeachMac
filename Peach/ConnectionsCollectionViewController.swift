@@ -96,7 +96,7 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
     
     // MARK: - ConnectionHeaderViewDelegate
     
-    func headerViewMouseDown(theEvent: NSEvent) {
+    func profileMouseUp(theEvent: NSEvent) {
         if let tc = parentViewController as? PeachTabViewController {
             if let vc = tc.childViewControllers[1] as? StreamViewController {
                 if let stream = userStream {
