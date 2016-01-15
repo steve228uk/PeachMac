@@ -102,6 +102,7 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
     func collectionView(collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> NSSize {
         return CGSizeMake(collectionView.frame.size.width-40, 80)
     }
+
     
     
     // MARK: - ConnectionHeaderViewDelegate

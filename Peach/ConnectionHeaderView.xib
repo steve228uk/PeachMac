@@ -40,7 +40,7 @@
                                 <constraint firstAttribute="height" constant="17" id="Kqb-TZ-XNn"/>
                             </constraints>
                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="This is a single like post about something." id="E5u-Hv-7WN">
-                                <font key="font" metaFont="system" size="12"/>
+                                <font key="font" metaFont="cellTitle"/>
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>

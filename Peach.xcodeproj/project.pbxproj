@@ -918,6 +918,7 @@
 				286CBA431C491B3500D3B902 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
