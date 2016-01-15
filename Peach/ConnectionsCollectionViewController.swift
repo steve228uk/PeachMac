@@ -9,22 +9,26 @@
 import Cocoa
 import PeachKit
 
-class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource {
+class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, ConnectionHeaderViewDelegate {
 
     @IBOutlet weak var collectionView: NSCollectionView!
     
     /// The streams that were fetched from Peach
     var streams: [Stream] = []
     
+    /// The currently logged in user stream
+    var userStream: Stream?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.registerNib(NSNib(nibNamed: "ConnectionCollectionViewItem", bundle: nil), forItemWithIdentifier: "connectionItem")
+        collectionView.registerNib(NSNib(nibNamed: "ConnectionHeaderView", bundle: nil), forSupplementaryViewOfKind: NSCollectionElementKindSectionHeader, withIdentifier: "connectionHeader")
+        
     }
     
     override func viewDidLayout() {
         super.viewDidLayout()
-
         
     }
     
@@ -34,6 +38,13 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
         Peach.getStreams { streams, error in
             self.streams = streams
             self.collectionView.reloadData()
+        }
+        
+        if let id = Peach.streamID {
+            Peach.getStreamByID(id) { stream, error in
+                self.userStream = stream
+                self.collectionView.reloadData()
+            }
         }
         
         view.window?.toolbar?.removeItemAtIndex(0)
@@ -55,6 +66,7 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
         let item = collectionView.makeItemWithIdentifier("connectionItem", forIndexPath: indexPath) as! ConnectionCollectionViewItem
         item.stream = streams[indexPath.item]
         return item
+        
     }
     
     func collectionView(collectionView: NSCollectionView, didSelectItemsAtIndexPaths indexPaths: Set<NSIndexPath>) {
@@ -68,6 +80,32 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
                 }
             }
         }
+    }
+    
+    
+    func collectionView(collectionView: NSCollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> NSView {
+        let view = collectionView.makeSupplementaryViewOfKind(NSCollectionElementKindSectionHeader, withIdentifier: "connectionHeader", forIndexPath: indexPath) as! ConnectionHeaderView
+        
+        view.delegate = self
+        
+        if let stream = userStream {
+            view.stream = stream
+        }
+        return view
+    }
+    
+    // MARK: - ConnectionHeaderViewDelegate
+    
+    func headerViewMouseDown(theEvent: NSEvent) {
+        if let tc = parentViewController as? PeachTabViewController {
+            if let vc = tc.childViewControllers[1] as? StreamViewController {
+                if let stream = userStream {
+                    vc.streamID = stream.id
+                    tc.selectedTabViewItemIndex = 1
+                }
+            }
+        }
+
     }
     
 }

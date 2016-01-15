@@ -39,7 +39,7 @@
                 <constraint firstItem="SL8-QP-dcv" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="5" id="wRP-Yv-2c1"/>
                 <constraint firstItem="VYm-Nk-n81" firstAttribute="leading" secondItem="SL8-QP-dcv" secondAttribute="trailing" constant="8" id="wbY-7A-9YR"/>
             </constraints>
-            <point key="canvasLocation" x="316" y="299.5"/>
+            <point key="canvasLocation" x="500" y="442.5"/>
         </customView>
         <collectionViewItem id="9Vs-Cp-X8C" customClass="ConnectionCollectionViewItem" customModule="Peach" customModuleProvider="target">
             <connections>
