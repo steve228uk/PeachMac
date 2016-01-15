@@ -32,7 +32,6 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
     
     override func viewDidLayout() {
         super.viewDidLayout()
-        Swift.print("layout")
         collectionViewLayout.invalidateLayout()
     }
     

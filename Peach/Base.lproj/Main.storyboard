@@ -937,6 +937,11 @@ DQ
                                         </collectionView>
                                     </subviews>
                                 </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="4Hy-Eo-0FC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="dZ7-1U-Ec7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="mpQ-7m-0OC"/>
+                                </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="XAx-yR-fbV">
                                     <rect key="frame" x="1" y="144" width="233" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>

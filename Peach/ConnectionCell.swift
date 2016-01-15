@@ -34,21 +34,6 @@ class ConnectionCell: NSView {
             rightBorder?.stroke()
             
             l.backgroundColor = NSColor.whiteColor().CGColor
-//
-//            bottomBorder.frame =
-//            bottomBorder.backgroundColor = NSColor.peachBorderColor().CGColor
-//            
-//            leftBorder.frame = CGRect(x: 0, y: 0, width: 2, height: l.frame.size.height)
-//            leftBorder.backgroundColor = NSColor.peachBorderColor().CGColor
-//            
-//            rightBorder.frame = CGRect(x: l.frame.size.width-2, y: 0, width: 2, height: l.frame.size.height)
-//            rightBorder.backgroundColor = NSColor.peachBorderColor().CGColor
-//            
-//            l.sublayers?.appendContentsOf([
-//                bottomBorder,
-//                leftBorder,
-//                rightBorder
-//            ])
             
         }
         
