@@ -926,7 +926,6 @@ DQ
                                             <rect key="frame" x="0.0" y="0.0" width="450" height="549"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" id="UVS-DC-Z2U">
-                                                <size key="itemSize" width="350" height="80"/>
                                                 <size key="headerReferenceSize" width="350" height="105"/>
                                                 <edgeInsets key="sectionInset" left="15" right="15" top="15" bottom="15"/>
                                             </collectionViewFlowLayout>
@@ -957,6 +956,7 @@ DQ
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Spo-4T-tX4" id="vAw-DZ-La8"/>
+                        <outlet property="collectionViewLayout" destination="UVS-DC-Z2U" id="dQe-Lo-IAK"/>
                     </connections>
                 </viewController>
                 <customObject id="L1U-MA-RxV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

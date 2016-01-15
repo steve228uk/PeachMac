@@ -69,5 +69,5 @@ class ConnectionCollectionViewItem: NSCollectionViewItem {
             
         }
     }
-    
+
 }

@@ -10,9 +10,11 @@ import Cocoa
 import PeachKit
 import GiphyKit
 
-class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, ConnectionHeaderViewDelegate {
+class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDelegateFlowLayout, NSCollectionViewDataSource, ConnectionHeaderViewDelegate {
 
     @IBOutlet weak var collectionView: NSCollectionView!
+    
+    @IBOutlet weak var collectionViewLayout: ConnectionsFlowLayout!
     
     /// The streams that were fetched from Peach
     var streams: [Stream] = []
@@ -30,7 +32,8 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
     
     override func viewDidLayout() {
         super.viewDidLayout()
-        
+        Swift.print("layout")
+        collectionViewLayout.invalidateLayout()
     }
     
     override func viewDidAppear() {
@@ -94,6 +97,11 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
         }
         return view
     }
+    
+    func collectionView(collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> NSSize {
+        return CGSizeMake(collectionView.frame.size.width-40, 80)
+    }
+    
     
     // MARK: - ConnectionHeaderViewDelegate
     
