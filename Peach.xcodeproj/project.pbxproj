@@ -18,6 +18,10 @@
 		282D92DE1C42CDD900B83109 /* PeachKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 282D92D61C42CDD800B83109 /* PeachKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		282D92E41C42CDE600B83109 /* Peach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D92E31C42CDE600B83109 /* Peach.swift */; };
 		282D92E71C42D08F00B83109 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D92E61C42D08F00B83109 /* Activity.swift */; };
+		28515A891C49CD1500F0ABE8 /* PostTextItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515A881C49CD1500F0ABE8 /* PostTextItem.xib */; };
+		28515A8D1C49CE4900F0ABE8 /* PostImageItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515A8C1C49CE4900F0ABE8 /* PostImageItem.xib */; };
+		28515A8F1C49CE5A00F0ABE8 /* PostImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28515A8E1C49CE5A00F0ABE8 /* PostImageItem.swift */; };
+		28515A921C49D04A00F0ABE8 /* PostTextCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28515A911C49D04A00F0ABE8 /* PostTextCollectionViewItem.swift */; };
 		2868BC711C499278007A01B7 /* StreamHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2868BC701C499278007A01B7 /* StreamHeaderView.swift */; };
 		286CBA2B1C48FCF000D3B902 /* ConnectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */; };
 		286CBA2D1C48FCFC00D3B902 /* ConnectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286CBA2C1C48FCFC00D3B902 /* ConnectionHeaderView.xib */; };
@@ -102,6 +106,10 @@
 		282D92DA1C42CDD900B83109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		282D92E31C42CDE600B83109 /* Peach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peach.swift; sourceTree = "<group>"; };
 		282D92E61C42D08F00B83109 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		28515A881C49CD1500F0ABE8 /* PostTextItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTextItem.xib; sourceTree = "<group>"; };
+		28515A8C1C49CE4900F0ABE8 /* PostImageItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostImageItem.xib; sourceTree = "<group>"; };
+		28515A8E1C49CE5A00F0ABE8 /* PostImageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageItem.swift; sourceTree = "<group>"; };
+		28515A911C49D04A00F0ABE8 /* PostTextCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTextCollectionViewItem.swift; sourceTree = "<group>"; };
 		2868BC701C499278007A01B7 /* StreamHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamHeaderView.swift; sourceTree = "<group>"; };
 		286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionHeaderView.swift; sourceTree = "<group>"; };
 		286CBA2C1C48FCFC00D3B902 /* ConnectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionHeaderView.xib; sourceTree = "<group>"; };
@@ -188,6 +196,8 @@
 		282CA58A1C45C2E50075AE9A /* Stream */ = {
 			isa = PBXGroup;
 			children = (
+				28515A931C49D0EA00F0ABE8 /* Image */,
+				28515A901C49D03200F0ABE8 /* Text */,
 				282CA58B1C45C3A50075AE9A /* StreamViewController.swift */,
 				2868BC701C499278007A01B7 /* StreamHeaderView.swift */,
 			);
@@ -258,6 +268,24 @@
 				28C7A1DF1C4830DE004D8FD0 /* FriendRequest.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		28515A901C49D03200F0ABE8 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				28515A881C49CD1500F0ABE8 /* PostTextItem.xib */,
+				28515A911C49D04A00F0ABE8 /* PostTextCollectionViewItem.swift */,
+			);
+			name = Text;
+			sourceTree = "<group>";
+		};
+		28515A931C49D0EA00F0ABE8 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				28515A8C1C49CE4900F0ABE8 /* PostImageItem.xib */,
+				28515A8E1C49CE5A00F0ABE8 /* PostImageItem.swift */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 		286CBA2E1C49033C00D3B902 /* Views */ = {
@@ -490,9 +518,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28515A8D1C49CE4900F0ABE8 /* PostImageItem.xib in Resources */,
 				282D92C71C42CCAF00B83109 /* Assets.xcassets in Resources */,
 				286CBA2D1C48FCFC00D3B902 /* ConnectionHeaderView.xib in Resources */,
 				282D92CA1C42CCAF00B83109 /* Main.storyboard in Resources */,
+				28515A891C49CD1500F0ABE8 /* PostTextItem.xib in Resources */,
 				28C7A1E81C485B78004D8FD0 /* ConnectionCollectionViewItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,6 +639,7 @@
 				286CBA301C490A9800D3B902 /* ProfileBannerView.swift in Sources */,
 				28A8C0311C457F1F006DA6FC /* ComposeWindowController.swift in Sources */,
 				2874F7201C42D73400D06D34 /* LoginViewController.swift in Sources */,
+				28515A8F1C49CE5A00F0ABE8 /* PostImageItem.swift in Sources */,
 				2874F7331C42F13C00D06D34 /* LoginTextFieldCell.swift in Sources */,
 				282CA58E1C46F7130075AE9A /* PeachMainWindowController.swift in Sources */,
 				282D92C31C42CCAF00B83109 /* AppDelegate.swift in Sources */,
@@ -617,6 +648,7 @@
 				282CA58C1C45C3A50075AE9A /* StreamViewController.swift in Sources */,
 				28C7A1E21C485396004D8FD0 /* ConnectionsCollectionViewController.swift in Sources */,
 				28A1DA6E1C4570E7004198A0 /* ComposeViewController.swift in Sources */,
+				28515A921C49D04A00F0ABE8 /* PostTextCollectionViewItem.swift in Sources */,
 				28C7A1EA1C485FF3004D8FD0 /* ConnectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

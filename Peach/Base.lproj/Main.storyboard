@@ -1008,7 +1008,14 @@ DQ
                                         <collectionView id="VtE-az-cqC">
                                             <rect key="frame" x="0.0" y="0.0" width="438" height="503"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" id="Es3-Om-NYf">
+                                                <edgeInsets key="sectionInset" left="0.0" right="0.0" top="0.0" bottom="15"/>
+                                            </collectionViewFlowLayout>
                                             <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="B6W-lf-Uy4" id="aOB-pD-sik"/>
+                                                <outlet property="delegate" destination="B6W-lf-Uy4" id="Rad-1l-K07"/>
+                                            </connections>
                                         </collectionView>
                                     </subviews>
                                 </clipView>
@@ -1033,6 +1040,8 @@ DQ
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="VtE-az-cqC" id="sdo-nQ-fNI"/>
+                        <outlet property="collectionViewLayout" destination="Es3-Om-NYf" id="CAI-DN-4sc"/>
                         <outlet property="headerView" destination="siR-Rc-L1t" id="b5K-iE-xO7"/>
                     </connections>
                 </viewController>
