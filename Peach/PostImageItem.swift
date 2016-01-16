@@ -20,6 +20,7 @@ class PostImageItem: NSCollectionViewItem {
         didSet {
             
             webView.mainFrame.loadRequest(blankRequest)
+            webView.mainFrame.frameView.allowsScrolling = false
             
             if let url = imageURL {
                 do {
