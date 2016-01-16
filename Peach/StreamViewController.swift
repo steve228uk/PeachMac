@@ -9,11 +9,7 @@
 import Cocoa
 import PeachKit
 
-class StreamViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource, PeachMainWindowControllerDelegate {
-
-    @IBOutlet weak var tableView: NSTableView!
-    
-    @IBOutlet weak var headerView: StreamHeaderView!
+class StreamViewController: NSViewController, PeachMainWindowControllerDelegate {
     
     var streamID: String?
     
@@ -27,19 +23,8 @@ class StreamViewController: NSViewController, NSTableViewDelegate, NSTableViewDa
         }
     }
     
-    override func viewDidLoad() {
-        tableView.layer?.zPosition = 9
-    }
+    @IBOutlet weak var headerView: StreamHeaderView!
     
-    override func viewWillAppear() {
-        super.viewWillAppear()
-        
-        // Wipe the current state
-        stream = nil
-        posts = []
-        tableView.reloadData()
-        headerView.nameLabel.stringValue = ""
-    }
     
     override func viewDidAppear() {
         super.viewDidAppear()
@@ -49,6 +34,11 @@ class StreamViewController: NSViewController, NSTableViewDelegate, NSTableViewDa
             window.delegate = self
         }
         
+        loadStream()
+        
+    }
+    
+    func loadStream() {
         if let id = streamID {
             Peach.getStreamByID(id) { stream, error in
                 if let s = stream {
@@ -57,31 +47,14 @@ class StreamViewController: NSViewController, NSTableViewDelegate, NSTableViewDa
                         Swift.print(name)
                         self.headerView.nameLabel.stringValue = name
                     }
-                    
-                    self.tableView.reloadData()
                 }
             }
         }
-        
     }
     
     func sendNavigationBack(sender: AnyObject?) {
         tabController?.selectedTabViewItemIndex = 0
     }
     
-    // MARK: - NSTableViewDataSource
-    
-    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
-        if let s = stream {
-            return s.posts.count
-        }
-        return 0
-    }
-    
-    func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let v = tableView.makeViewWithIdentifier("streamCell", owner: self) as! StreamTableCellView
-        v.post = stream!.posts[row]
-        return v
-    }
     
 }

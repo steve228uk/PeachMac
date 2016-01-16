@@ -19,7 +19,7 @@ class ConnectionCell: NSView {
     var isFirst = false {
         didSet {
             if isFirst {
-                
+ 
             } else {
                 
             }
