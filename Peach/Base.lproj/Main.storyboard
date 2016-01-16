@@ -1047,6 +1047,7 @@ DQ
                         <outlet property="collectionView" destination="VtE-az-cqC" id="sdo-nQ-fNI"/>
                         <outlet property="collectionViewLayout" destination="Es3-Om-NYf" id="CAI-DN-4sc"/>
                         <outlet property="headerView" destination="siR-Rc-L1t" id="b5K-iE-xO7"/>
+                        <outlet property="scrollView" destination="5vR-Id-jS0" id="5MR-zr-eBH"/>
                     </connections>
                 </viewController>
                 <customObject id="Yj7-oW-K3V" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

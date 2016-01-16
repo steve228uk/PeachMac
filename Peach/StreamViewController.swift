@@ -15,15 +15,6 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
     
     @IBOutlet weak var collectionViewLayout: NSCollectionViewFlowLayout!
     
-    var streamID: String? {
-        didSet {
-            headerView.nameLabel.stringValue = ""
-            stream = nil
-            collectionView.reloadData()
-            loadStream()
-        }
-    }
-    
     var stream: Stream?
     
     var posts: [Post] {
@@ -43,6 +34,9 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
     
     @IBOutlet weak var headerView: StreamHeaderView!
     
+    @IBOutlet weak var scrollView: NSScrollView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,7 +50,6 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
         
         if let name = stream?.displayName {
             headerView.nameLabel.stringValue = name
-            collectionView.reloadData()
         }
     }
     
@@ -67,6 +60,15 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
         if let window = view.window?.windowController as? PeachMainWindowController {
             window.delegate = self
         }
+        
+        dispatch_async(dispatch_get_main_queue()) {
+            self.collectionView.reloadData()
+        }
+        
+        dispatch_async(dispatch_get_main_queue()) {
+            self.scrollView.contentView.scrollPoint(NSPoint(x: 0, y: self.collectionView.frame.height))
+        }
+        
     }
     
     override func viewDidDisappear() {
@@ -80,15 +82,8 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
         collectionViewLayout.invalidateLayout()
     }
     
-    func loadStream() {
-        if let id = streamID {
-            Peach.getStreamByID(id) { stream, error in
-                if let s = stream {
-                    self.stream = s
-                }
-            }
-        }
-    }
+    
+    // MARK: - PeachMainWindowControllerDelegate
     
     func sendNavigationBack(sender: AnyObject?) {
         tabController?.selectedTabViewItemIndex = 0
@@ -155,5 +150,7 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
         
         
     }
+    
+    
     
 }
