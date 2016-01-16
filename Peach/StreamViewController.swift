@@ -87,7 +87,24 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
     }
     
     func collectionView(collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> NSSize {
-        return CGSizeMake(collectionView.frame.size.width, 80)
+        
+        let message = stream!.posts[indexPath.section].message[indexPath.item]
+        switch message.type! {
+        case .Image, .GIF:
+            
+            guard message.width != nil else {
+                return CGSizeMake(collectionView.frame.size.width, 80)
+            }
+            
+            let width = CGFloat(message.width!)
+            let height = CGFloat(message.height!)
+            let calculatedHeight = (collectionView.frame.size.width + 20) * height / width
+            
+            return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
+        default:
+            return CGSizeMake(collectionView.frame.size.width, 80)
+        }
+        
     }
     
     func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {

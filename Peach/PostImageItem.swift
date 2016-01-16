@@ -24,7 +24,6 @@ class PostImageItem: NSCollectionViewItem {
             if let url = imageURL {
                 do {
                     if let fp = path {
-                        Swift.print(fp)
                         let content = try String(contentsOfFile: fp)
                         let replaced = content.stringByReplacingOccurrencesOfString("%IMAGEURL%", withString: url)
                         webView.mainFrame.loadHTMLString(replaced, baseURL: NSURL(string: fp.URLString))
