@@ -88,7 +88,7 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
                 if let vc = tc.childViewControllers[1] as? StreamViewController {
                     let item = indexPaths[indexPaths.startIndex].item
                     let stream = streams[item]
-                    vc.streamID = stream.id
+                    vc.stream = stream
                     tc.selectedTabViewItemIndex = 1
                 }
             }
@@ -119,7 +119,7 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
         if let tc = parentViewController as? PeachTabViewController {
             if let vc = tc.childViewControllers[1] as? StreamViewController {
                 if let stream = userStream {
-                    vc.streamID = stream.id
+                    vc.stream = stream
                     tc.selectedTabViewItemIndex = 1
                 }
             }

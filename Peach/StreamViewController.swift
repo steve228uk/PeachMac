@@ -15,7 +15,14 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
     
     @IBOutlet weak var collectionViewLayout: NSCollectionViewFlowLayout!
     
-    var streamID: String?
+    var streamID: String? {
+        didSet {
+            headerView.nameLabel.stringValue = ""
+            stream = nil
+            collectionView.reloadData()
+            loadStream()
+        }
+    }
     
     var stream: Stream?
     
@@ -44,6 +51,15 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
         collectionView.registerNib(NSNib(nibNamed: "PostGIFItem", bundle: nil), forItemWithIdentifier: "GIFItem")
     }
     
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        
+        if let name = stream?.displayName {
+            headerView.nameLabel.stringValue = name
+            collectionView.reloadData()
+        }
+    }
+    
     override func viewDidAppear() {
         super.viewDidAppear()
         
@@ -51,9 +67,12 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
         if let window = view.window?.windowController as? PeachMainWindowController {
             window.delegate = self
         }
-        
-        loadStream()
-        
+    }
+    
+    override func viewDidDisappear() {
+        stream = nil
+        collectionView.reloadData()
+        headerView.nameLabel.stringValue = ""
     }
     
     override func viewDidLayout() {
@@ -66,10 +85,6 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
             Peach.getStreamByID(id) { stream, error in
                 if let s = stream {
                     self.stream = s
-                    self.collectionView.reloadData()
-                    if let name = s.displayName {
-                        self.headerView.nameLabel.stringValue = name
-                    }
                 }
             }
         }
