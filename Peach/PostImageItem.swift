@@ -10,4 +10,9 @@ import Cocoa
 
 class PostImageItem: NSCollectionViewItem {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        imageView?.layer?.backgroundColor = NSColor.peachBorderColor().CGColor
+    }
+    
 }

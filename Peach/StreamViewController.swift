@@ -124,6 +124,7 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
             return item
         case .Image:
             let item = collectionView.makeItemWithIdentifier("imageItem", forIndexPath: indexPath) as! PostImageItem
+            item.imageView?.image = nil
             message.getImage { image in
                 item.imageView?.image = image
             }
