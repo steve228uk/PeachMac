@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="9531"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner"/>
@@ -13,24 +12,22 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <webView maintainsBackForwardList="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arb-ws-v2a">
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mKr-Dt-Aoq">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
-                    <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0" plugInsEnabled="NO" javaEnabled="NO" javaScriptEnabled="NO" javaScriptCanOpenWindowsAutomatically="NO">
-                        <nil key="identifier"/>
-                    </webPreferences>
-                </webView>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="Mhb-F0-9b1"/>
+                </imageView>
             </subviews>
             <constraints>
-                <constraint firstItem="arb-ws-v2a" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="1Dl-le-P6U"/>
-                <constraint firstItem="arb-ws-v2a" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="Ech-qV-mBm"/>
-                <constraint firstAttribute="bottom" secondItem="arb-ws-v2a" secondAttribute="bottom" id="aTj-0D-Ks1"/>
-                <constraint firstAttribute="trailing" secondItem="arb-ws-v2a" secondAttribute="trailing" id="jGM-l0-Cb6"/>
+                <constraint firstItem="mKr-Dt-Aoq" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="0WP-qN-MtS"/>
+                <constraint firstItem="mKr-Dt-Aoq" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="D5K-dY-d8d"/>
+                <constraint firstAttribute="bottom" secondItem="mKr-Dt-Aoq" secondAttribute="bottom" id="Rel-gy-Qb6"/>
+                <constraint firstAttribute="trailing" secondItem="mKr-Dt-Aoq" secondAttribute="trailing" id="wxA-GY-O59"/>
             </constraints>
         </customView>
         <collectionViewItem id="hhv-SK-0oJ" customClass="PostImageItem" customModule="Peach" customModuleProvider="target">
             <connections>
+                <outlet property="imageView" destination="mKr-Dt-Aoq" id="tUD-e4-ZJY"/>
                 <outlet property="view" destination="c22-O7-iKe" id="n4B-YN-5Pi"/>
-                <outlet property="webView" destination="arb-ws-v2a" id="8lO-4J-ehT"/>
             </connections>
         </collectionViewItem>
     </objects>

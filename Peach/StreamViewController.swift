@@ -19,6 +19,15 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
     
     var stream: Stream?
     
+    var posts: [Post] {
+        get {
+            if stream != nil {
+                return stream!.posts.reverse()
+            }
+            return []
+        }
+    }
+    
     var tabController: PeachTabViewController? {
         get {
            return parentViewController as? PeachTabViewController
@@ -32,6 +41,7 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
         
         collectionView.registerNib(NSNib(nibNamed: "PostTextItem", bundle: nil), forItemWithIdentifier: "textItem")
         collectionView.registerNib(NSNib(nibNamed: "PostImageItem", bundle: nil), forItemWithIdentifier: "imageItem")
+        collectionView.registerNib(NSNib(nibNamed: "PostGIFItem", bundle: nil), forItemWithIdentifier: "GIFItem")
     }
     
     override func viewDidAppear() {
@@ -73,22 +83,16 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
     // MARK: - NSCollectionViewDatasource & Delegate
     
     func numberOfSectionsInCollectionView(collectionView: NSCollectionView) -> Int {
-        if stream != nil {
-            return stream!.posts.count
-        }
-        return 0
+        return posts.count
     }
     
     func collectionView(collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        if stream != nil {
-            return stream!.posts[section].message.count
-        }
-        return 0
+        return posts[section].message.count
     }
     
     func collectionView(collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> NSSize {
         
-        let message = stream!.posts[indexPath.section].message[indexPath.item]
+        let message = posts[indexPath.section].message[indexPath.item]
         switch message.type! {
         case .Image, .GIF:
             
@@ -109,7 +113,7 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
     
     func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {
         
-        let message = stream!.posts[indexPath.section].message[indexPath.item]
+        let message = posts[indexPath.section].message[indexPath.item]
         
         switch message.type! {
         case .Text:
@@ -118,8 +122,14 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
                 item.textLabel.stringValue = text
             }
             return item
-        case .Image, .GIF:
+        case .Image:
             let item = collectionView.makeItemWithIdentifier("imageItem", forIndexPath: indexPath) as! PostImageItem
+            message.getImage { image in
+                item.imageView?.image = image
+            }
+            return item
+        case .GIF:
+            let item = collectionView.makeItemWithIdentifier("GIFItem", forIndexPath: indexPath) as! PostGIFItem
             item.imageURL = message.src
             return item
         default:

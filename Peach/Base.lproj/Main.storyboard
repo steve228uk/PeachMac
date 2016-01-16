@@ -999,7 +999,7 @@ DQ
                                     <outlet property="nameLabel" destination="EMh-sf-bHx" id="AsT-fn-KBd"/>
                                 </connections>
                             </customView>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vR-Id-jS0">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="allowed" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="5vR-Id-jS0">
                                 <rect key="frame" x="0.0" y="0.0" width="438" height="503"/>
                                 <clipView key="contentView" id="UJN-kF-nWi">
                                     <rect key="frame" x="0.0" y="0.0" width="438" height="503"/>
