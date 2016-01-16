@@ -98,7 +98,7 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
             
             let width = CGFloat(message.width!)
             let height = CGFloat(message.height!)
-            let calculatedHeight = (collectionView.frame.size.width + 20) * height / width
+            let calculatedHeight = (collectionView.frame.size.width) * height / width
             
             return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
         default:

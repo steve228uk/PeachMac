@@ -14,17 +14,17 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <webView maintainsBackForwardList="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arb-ws-v2a">
-                    <rect key="frame" x="20" y="20" width="440" height="232"/>
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
                     <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0" plugInsEnabled="NO" javaEnabled="NO" javaScriptEnabled="NO" javaScriptCanOpenWindowsAutomatically="NO">
                         <nil key="identifier"/>
                     </webPreferences>
                 </webView>
             </subviews>
             <constraints>
-                <constraint firstItem="arb-ws-v2a" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="1Dl-le-P6U"/>
-                <constraint firstItem="arb-ws-v2a" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="Ech-qV-mBm"/>
-                <constraint firstAttribute="bottom" secondItem="arb-ws-v2a" secondAttribute="bottom" constant="20" id="aTj-0D-Ks1"/>
-                <constraint firstAttribute="trailing" secondItem="arb-ws-v2a" secondAttribute="trailing" constant="20" id="jGM-l0-Cb6"/>
+                <constraint firstItem="arb-ws-v2a" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="1Dl-le-P6U"/>
+                <constraint firstItem="arb-ws-v2a" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="Ech-qV-mBm"/>
+                <constraint firstAttribute="bottom" secondItem="arb-ws-v2a" secondAttribute="bottom" id="aTj-0D-Ks1"/>
+                <constraint firstAttribute="trailing" secondItem="arb-ws-v2a" secondAttribute="trailing" id="jGM-l0-Cb6"/>
             </constraints>
         </customView>
         <collectionViewItem id="hhv-SK-0oJ" customClass="PostImageItem" customModule="Peach" customModuleProvider="target">
