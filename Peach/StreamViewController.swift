@@ -103,9 +103,7 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
             return item
         case .Image, .GIF:
             let item = collectionView.makeItemWithIdentifier("imageItem", forIndexPath: indexPath) as! PostImageItem
-            message.getImage { image in
-                item.imageView?.image = image
-            }
+            item.imageURL = message.src
             return item
         default:
             let item = collectionView.makeItemWithIdentifier("textItem", forIndexPath: indexPath) as! PostTextItem

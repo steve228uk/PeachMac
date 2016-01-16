@@ -7,7 +7,24 @@
 //
 
 import Cocoa
+import WebKit
 
 class PostImageItem: NSCollectionViewItem {
+    
+    let blankRequest = NSURLRequest(URL: NSURL(string: "about:blank")!)
+    
+    @IBOutlet weak var webView: WebView!
+    
+    var imageURL: String? {
+        didSet {
+            
+            webView.mainFrame.loadRequest(blankRequest)
+            
+            if let url = imageURL {
+                let request = NSURLRequest(URL: NSURL(string: url)!)
+                webView.mainFrame.loadRequest(request)
+            }
+        }
+    }
     
 }
