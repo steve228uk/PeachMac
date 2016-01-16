@@ -999,7 +999,7 @@ DQ
                                     <outlet property="nameLabel" destination="EMh-sf-bHx" id="AsT-fn-KBd"/>
                                 </connections>
                             </customView>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="allowed" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="5vR-Id-jS0">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="5vR-Id-jS0">
                                 <rect key="frame" x="0.0" y="0.0" width="438" height="503"/>
                                 <clipView key="contentView" id="UJN-kF-nWi">
                                     <rect key="frame" x="0.0" y="0.0" width="438" height="503"/>
@@ -1008,8 +1008,8 @@ DQ
                                         <collectionView id="VtE-az-cqC">
                                             <rect key="frame" x="0.0" y="0.0" width="438" height="503"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" id="Es3-Om-NYf">
-                                                <edgeInsets key="sectionInset" left="0.0" right="0.0" top="0.0" bottom="15"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="Es3-Om-NYf">
+                                                <edgeInsets key="sectionInset" left="15" right="15" top="15" bottom="0.0"/>
                                             </collectionViewFlowLayout>
                                             <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <connections>
@@ -1027,8 +1027,8 @@ DQ
                                     <rect key="frame" x="1" y="144" width="233" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="yzx-Bz-fdS">
-                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="yzx-Bz-fdS">
+                                    <rect key="frame" x="422" y="0.0" width="16" height="488"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
