@@ -26,6 +26,8 @@
 		28515A961C4A7D5C00F0ABE8 /* PostGIFTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 28515A941C4A79E000F0ABE8 /* PostGIFTemplate.html */; };
 		28515A9C1C4AC81D00F0ABE8 /* PostGIFItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515A9B1C4AC81D00F0ABE8 /* PostGIFItem.xib */; };
 		28515A9E1C4AC84700F0ABE8 /* PostGIFItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28515A9D1C4AC84700F0ABE8 /* PostGIFItem.swift */; };
+		28515AA11C4ADF1E00F0ABE8 /* PostActionsItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515AA01C4ADF1D00F0ABE8 /* PostActionsItem.xib */; };
+		28515AA41C4AE02000F0ABE8 /* PostActionsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28515AA21C4AE02000F0ABE8 /* PostActionsItem.swift */; };
 		2868BC711C499278007A01B7 /* StreamHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2868BC701C499278007A01B7 /* StreamHeaderView.swift */; };
 		286CBA2B1C48FCF000D3B902 /* ConnectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */; };
 		286CBA2D1C48FCFC00D3B902 /* ConnectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286CBA2C1C48FCFC00D3B902 /* ConnectionHeaderView.xib */; };
@@ -117,6 +119,8 @@
 		28515A941C4A79E000F0ABE8 /* PostGIFTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = PostGIFTemplate.html; sourceTree = "<group>"; };
 		28515A9B1C4AC81D00F0ABE8 /* PostGIFItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostGIFItem.xib; sourceTree = "<group>"; };
 		28515A9D1C4AC84700F0ABE8 /* PostGIFItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostGIFItem.swift; sourceTree = "<group>"; };
+		28515AA01C4ADF1D00F0ABE8 /* PostActionsItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostActionsItem.xib; sourceTree = "<group>"; };
+		28515AA21C4AE02000F0ABE8 /* PostActionsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostActionsItem.swift; sourceTree = "<group>"; };
 		2868BC701C499278007A01B7 /* StreamHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamHeaderView.swift; sourceTree = "<group>"; };
 		286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionHeaderView.swift; sourceTree = "<group>"; };
 		286CBA2C1C48FCFC00D3B902 /* ConnectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionHeaderView.xib; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 		282CA58A1C45C2E50075AE9A /* Stream */ = {
 			isa = PBXGroup;
 			children = (
+				28515A9F1C4ADEF000F0ABE8 /* Actions */,
 				28515A9A1C4AC80E00F0ABE8 /* GIF */,
 				28515A931C49D0EA00F0ABE8 /* Image */,
 				28515A901C49D03200F0ABE8 /* Text */,
@@ -304,6 +309,15 @@
 				28515A941C4A79E000F0ABE8 /* PostGIFTemplate.html */,
 			);
 			name = GIF;
+			sourceTree = "<group>";
+		};
+		28515A9F1C4ADEF000F0ABE8 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				28515AA01C4ADF1D00F0ABE8 /* PostActionsItem.xib */,
+				28515AA21C4AE02000F0ABE8 /* PostActionsItem.swift */,
+			);
+			name = Actions;
 			sourceTree = "<group>";
 		};
 		286CBA2E1C49033C00D3B902 /* Views */ = {
@@ -540,6 +554,7 @@
 				28515A8D1C49CE4900F0ABE8 /* PostImageItem.xib in Resources */,
 				282D92C71C42CCAF00B83109 /* Assets.xcassets in Resources */,
 				28515A9C1C4AC81D00F0ABE8 /* PostGIFItem.xib in Resources */,
+				28515AA11C4ADF1E00F0ABE8 /* PostActionsItem.xib in Resources */,
 				286CBA2D1C48FCFC00D3B902 /* ConnectionHeaderView.xib in Resources */,
 				282D92CA1C42CCAF00B83109 /* Main.storyboard in Resources */,
 				28515A891C49CD1500F0ABE8 /* PostTextItem.xib in Resources */,
@@ -649,6 +664,7 @@
 				2874F72F1C42E9BB00D06D34 /* LoginButton.swift in Sources */,
 				28C7A1EC1C4863E3004D8FD0 /* NSColor+CustomColors.swift in Sources */,
 				28A8C0331C45AD01006DA6FC /* PeachTabViewController.swift in Sources */,
+				28515AA41C4AE02000F0ABE8 /* PostActionsItem.swift in Sources */,
 				286CBA2B1C48FCF000D3B902 /* ConnectionHeaderView.swift in Sources */,
 				28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */,
 				282CA5891C45BF990075AE9A /* PeachTableView.swift in Sources */,

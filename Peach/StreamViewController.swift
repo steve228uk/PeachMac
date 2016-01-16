@@ -43,6 +43,7 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
         collectionView.registerNib(NSNib(nibNamed: "PostTextItem", bundle: nil), forItemWithIdentifier: "textItem")
         collectionView.registerNib(NSNib(nibNamed: "PostImageItem", bundle: nil), forItemWithIdentifier: "imageItem")
         collectionView.registerNib(NSNib(nibNamed: "PostGIFItem", bundle: nil), forItemWithIdentifier: "GIFItem")
+        collectionView.registerNib(NSNib(nibNamed: "PostActionsItem", bundle: nil), forItemWithIdentifier: "actionsItem")
     }
     
     override func viewWillAppear() {
@@ -60,6 +61,9 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
         if let window = view.window?.windowController as? PeachMainWindowController {
             window.delegate = self
         }
+        
+        // This feels really hacky… But it works!
+        // http://stackoverflow.com/questions/14020027/how-do-i-know-that-the-uicollectionview-has-been-loaded-completely
         
         dispatch_async(dispatch_get_main_queue()) {
             self.collectionView.reloadData()
@@ -97,10 +101,14 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
     }
     
     func collectionView(collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return posts[section].message.count
+        return posts[section].message.count + 1
     }
     
     func collectionView(collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> NSSize {
+        
+        guard indexPath.item != posts[indexPath.section].message.count else {
+            return CGSizeMake(collectionView.frame.size.width-30, 50)
+        }
         
         let message = posts[indexPath.section].message[indexPath.item]
         switch message.type! {
@@ -122,6 +130,13 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
     }
     
     func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {
+        
+        guard indexPath.item != posts[indexPath.section].message.count else {
+            let item = collectionView.makeItemWithIdentifier("actionsItem", forIndexPath: indexPath) as! PostActionsItem
+            item.post = posts[indexPath.section]
+            return item
+        }
+
         
         let message = posts[indexPath.section].message[indexPath.item]
         
