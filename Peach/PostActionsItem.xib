@@ -13,7 +13,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dYo-HP-DrS">
-                    <rect key="frame" x="11" y="10" width="37" height="19"/>
+                    <rect key="frame" x="20" y="10" width="37" height="19"/>
                     <buttonCell key="cell" type="roundRect" title="Like" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WcV-rR-w6t">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="cellTitle"/>
@@ -25,7 +25,7 @@
             </subviews>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="dYo-HP-DrS" secondAttribute="bottom" constant="11" id="HJo-eZ-6lQ"/>
-                <constraint firstItem="dYo-HP-DrS" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="11" id="cUi-gW-8lS"/>
+                <constraint firstItem="dYo-HP-DrS" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="cUi-gW-8lS"/>
                 <constraint firstItem="dYo-HP-DrS" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="11" id="xCe-Y1-thv"/>
             </constraints>
             <point key="canvasLocation" x="446" y="243"/>

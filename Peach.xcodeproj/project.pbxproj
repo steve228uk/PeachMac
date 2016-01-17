@@ -28,6 +28,7 @@
 		28515A9E1C4AC84700F0ABE8 /* PostGIFItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28515A9D1C4AC84700F0ABE8 /* PostGIFItem.swift */; };
 		28515AA11C4ADF1E00F0ABE8 /* PostActionsItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515AA01C4ADF1D00F0ABE8 /* PostActionsItem.xib */; };
 		28515AA41C4AE02000F0ABE8 /* PostActionsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28515AA21C4AE02000F0ABE8 /* PostActionsItem.swift */; };
+		28630CB91C4B151C002906F3 /* String+EstimatedHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28630CB81C4B151C002906F3 /* String+EstimatedHeight.swift */; };
 		2868BC711C499278007A01B7 /* StreamHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2868BC701C499278007A01B7 /* StreamHeaderView.swift */; };
 		286CBA2B1C48FCF000D3B902 /* ConnectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */; };
 		286CBA2D1C48FCFC00D3B902 /* ConnectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286CBA2C1C48FCFC00D3B902 /* ConnectionHeaderView.xib */; };
@@ -62,6 +63,7 @@
 		28DBAD031C430BA800CC66CB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD021C430BA800CC66CB /* Post.swift */; };
 		28DBAD051C430CB700CC66CB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD041C430CB700CC66CB /* Comment.swift */; };
 		28DBAD071C430CD900CC66CB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD061C430CD900CC66CB /* Message.swift */; };
+		2D71EE244C17D63F4EFB25CC /* Pods_GiphyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD8ED98CC3162765C81FD46 /* Pods_GiphyKit.framework */; };
 		4DA2601533C28E980B96A863 /* Pods_Peach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E22E0C5D18D00CEFEECF45 /* Pods_Peach.framework */; };
 		D87C12684BE7DD5934FC2E85 /* Pods_PeachKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C1416E93ADBA91CBFC1592 /* Pods_PeachKit.framework */; };
 /* End PBXBuildFile section */
@@ -99,6 +101,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		282829758513A60968535014 /* Pods-GiphyKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GiphyKit/Pods-GiphyKit.debug.xcconfig"; sourceTree = "<group>"; };
 		282CA5881C45BF990075AE9A /* PeachTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachTableView.swift; sourceTree = "<group>"; };
 		282CA58B1C45C3A50075AE9A /* StreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
 		282CA58D1C46F7130075AE9A /* PeachMainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachMainWindowController.swift; sourceTree = "<group>"; };
@@ -121,6 +124,7 @@
 		28515A9D1C4AC84700F0ABE8 /* PostGIFItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostGIFItem.swift; sourceTree = "<group>"; };
 		28515AA01C4ADF1D00F0ABE8 /* PostActionsItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostActionsItem.xib; sourceTree = "<group>"; };
 		28515AA21C4AE02000F0ABE8 /* PostActionsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostActionsItem.swift; sourceTree = "<group>"; };
+		28630CB81C4B151C002906F3 /* String+EstimatedHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+EstimatedHeight.swift"; sourceTree = "<group>"; };
 		2868BC701C499278007A01B7 /* StreamHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamHeaderView.swift; sourceTree = "<group>"; };
 		286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionHeaderView.swift; sourceTree = "<group>"; };
 		286CBA2C1C48FCFC00D3B902 /* ConnectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionHeaderView.xib; sourceTree = "<group>"; };
@@ -158,7 +162,9 @@
 		28DBAD061C430CD900CC66CB /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		29B9474D3E7C8CFB943A64C0 /* Pods-Peach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Peach/Pods-Peach.debug.xcconfig"; sourceTree = "<group>"; };
 		29E22E0C5D18D00CEFEECF45 /* Pods_Peach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Peach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA88244C05E57D92E436D2C /* Pods-GiphyKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiphyKit/Pods-GiphyKit.release.xcconfig"; sourceTree = "<group>"; };
 		9821358EE296C7391DCEACD2 /* Pods-PeachKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeachKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeachKit/Pods-PeachKit.debug.xcconfig"; sourceTree = "<group>"; };
+		9AD8ED98CC3162765C81FD46 /* Pods_GiphyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GiphyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EF90352638971C5A335C842 /* Pods-PeachKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeachKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeachKit/Pods-PeachKit.release.xcconfig"; sourceTree = "<group>"; };
 		A4C1416E93ADBA91CBFC1592 /* Pods_PeachKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeachKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6630702E23B1971EE74CF9E /* Pods-Peach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peach.release.xcconfig"; path = "Pods/Target Support Files/Pods-Peach/Pods-Peach.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D71EE244C17D63F4EFB25CC /* Pods_GiphyKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +207,8 @@
 				D6630702E23B1971EE74CF9E /* Pods-Peach.release.xcconfig */,
 				9821358EE296C7391DCEACD2 /* Pods-PeachKit.debug.xcconfig */,
 				9EF90352638971C5A335C842 /* Pods-PeachKit.release.xcconfig */,
+				282829758513A60968535014 /* Pods-GiphyKit.debug.xcconfig */,
+				2CA88244C05E57D92E436D2C /* Pods-GiphyKit.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -390,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				28C7A1EB1C4863E3004D8FD0 /* NSColor+CustomColors.swift */,
+				28630CB81C4B151C002906F3 /* String+EstimatedHeight.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -410,6 +420,7 @@
 			children = (
 				29E22E0C5D18D00CEFEECF45 /* Pods_Peach.framework */,
 				A4C1416E93ADBA91CBFC1592 /* Pods_PeachKit.framework */,
+				9AD8ED98CC3162765C81FD46 /* Pods_GiphyKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -483,10 +494,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 286CBA411C491B3500D3B902 /* Build configuration list for PBXNativeTarget "GiphyKit" */;
 			buildPhases = (
+				E707EADC29513FF174B9BC8C /* Check Pods Manifest.lock */,
 				286CBA331C491B3500D3B902 /* Sources */,
 				286CBA341C491B3500D3B902 /* Frameworks */,
 				286CBA351C491B3500D3B902 /* Headers */,
 				286CBA361C491B3500D3B902 /* Resources */,
+				44256C4302B238EFE4E99FAE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -609,6 +622,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Peach/Pods-Peach-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		44256C4302B238EFE4E99FAE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GiphyKit/Pods-GiphyKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CE1A04433F7EBEF9CB00B7DC /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -639,6 +667,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeachKit/Pods-PeachKit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E707EADC29513FF174B9BC8C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		F78146E6B1FDB65A3B291568 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -667,6 +710,7 @@
 				28515AA41C4AE02000F0ABE8 /* PostActionsItem.swift in Sources */,
 				286CBA2B1C48FCF000D3B902 /* ConnectionHeaderView.swift in Sources */,
 				28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */,
+				28630CB91C4B151C002906F3 /* String+EstimatedHeight.swift in Sources */,
 				282CA5891C45BF990075AE9A /* PeachTableView.swift in Sources */,
 				2868BC711C499278007A01B7 /* StreamHeaderView.swift in Sources */,
 				2874F7261C42E57700D06D34 /* LoginView.swift in Sources */,
@@ -908,6 +952,7 @@
 		};
 		286CBA421C491B3500D3B902 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 282829758513A60968535014 /* Pods-GiphyKit.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -931,6 +976,7 @@
 		};
 		286CBA431C491B3500D3B902 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CA88244C05E57D92E436D2C /* Pods-GiphyKit.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;

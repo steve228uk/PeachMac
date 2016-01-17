@@ -972,7 +972,7 @@ DQ
         <scene sceneID="bZp-T3-xsZ">
             <objects>
                 <viewController storyboardIdentifier="stream" id="B6W-lf-Uy4" customClass="StreamViewController" customModule="Peach" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="T3y-PE-HAf">
+                    <view key="view" id="T3y-PE-HAf" customClass="ConnectionsView" customModule="Peach" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="438" height="598"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -1009,7 +1009,7 @@ DQ
                                             <rect key="frame" x="0.0" y="0.0" width="438" height="503"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="Es3-Om-NYf">
-                                                <edgeInsets key="sectionInset" left="15" right="15" top="15" bottom="0.0"/>
+                                                <edgeInsets key="sectionInset" left="0.0" right="0.0" top="15" bottom="0.0"/>
                                             </collectionViewFlowLayout>
                                             <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <connections>
@@ -1018,6 +1018,7 @@ DQ
                                             </connections>
                                         </collectionView>
                                     </subviews>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="7Gq-Mk-XdZ"/>

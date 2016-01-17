@@ -10,6 +10,10 @@ import Cocoa
 
 extension NSColor {
     
+    class func peachBackgroundColor() -> NSColor {
+        return NSColor(calibratedHue:0.07, saturation:0.09, brightness:0.99, alpha:1)
+    }
+    
     class func peachBorderColor() -> NSColor {
         return NSColor(calibratedHue:0.07, saturation:0.08, brightness:0.94, alpha:1)
     }

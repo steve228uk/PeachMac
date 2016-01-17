@@ -107,26 +107,35 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
     func collectionView(collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> NSSize {
         
         guard indexPath.item != posts[indexPath.section].message.count else {
-            return CGSizeMake(collectionView.frame.size.width-30, 50)
+            return CGSizeMake(collectionView.frame.size.width, 50)
         }
         
         let message = posts[indexPath.section].message[indexPath.item]
+        
         switch message.type! {
+        case .Text:
+            if let text = message.text {
+                // Not sure why a font size of double is required?
+                let calculatedHeight = text.calculatedHeightForFont(NSFont.systemFontOfSize(14), width: collectionView.frame.size.width-40)
+                return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
+            }
         case .Image, .GIF:
             
             guard message.width != nil else {
-                return CGSizeMake(collectionView.frame.size.width-30, 80)
+                return CGSizeMake(collectionView.frame.size.width, 80)
             }
             
             let width = CGFloat(message.width!)
             let height = CGFloat(message.height!)
-            let calculatedHeight = (collectionView.frame.size.width-30) * height / width
+            let calculatedHeight = (collectionView.frame.size.width) * height / width
             
-            return CGSizeMake(collectionView.frame.size.width-30, calculatedHeight)
+            return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
         default:
-            return CGSizeMake(collectionView.frame.size.width-30, 80)
+            return CGSizeMake(collectionView.frame.size.width, 20)
         }
         
+        // final catch
+        return CGSizeMake(collectionView.frame.size.width, 20)
     }
     
     func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {
