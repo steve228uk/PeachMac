@@ -9,12 +9,18 @@
 import Cocoa
 import WebKit
 
-class PostGIFItem: NSCollectionViewItem {
+class PostGIFItem: NSCollectionViewItem, WebUIDelegate {
 
     let blankRequest = NSURLRequest(URL: NSURL(string: "about:blank")!)
     let path = NSBundle.mainBundle().pathForResource("PostGIFTemplate", ofType: "html")
     
     @IBOutlet weak var webView: WebView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        webView.UIDelegate = self
+        webView.editingDelegate = self
+    }
     
     var imageURL: String? {
         didSet {
@@ -35,6 +41,24 @@ class PostGIFItem: NSCollectionViewItem {
             }
             
         }
+    }
+    
+    // MARK: - WebView
+    
+    func webView(sender: WebView!, contextMenuItemsForElement element: [NSObject : AnyObject]!, defaultMenuItems: [AnyObject]!) -> [AnyObject]! {
+        return []
+    }
+    
+    override func webView(webView: WebView!, shouldChangeSelectedDOMRange currentRange: DOMRange!, toDOMRange proposedRange: DOMRange!, affinity selectionAffinity: NSSelectionAffinity, stillSelecting flag: Bool) -> Bool {
+        return false
+    }
+    
+    func webView(webView: WebView!, dragSourceActionMaskForPoint point: NSPoint) -> Int {
+        return 0
+    }
+    
+    func webView(webView: WebView!, dragDestinationActionMaskForDraggingInfo draggingInfo: NSDraggingInfo!) -> Int {
+        return 0
     }
     
 }
