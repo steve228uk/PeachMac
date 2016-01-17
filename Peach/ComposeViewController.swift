@@ -15,7 +15,7 @@ class ComposeViewController: PeachViewController {
     
     func save() {
         
-        var msg = Message()
+        let msg = TextMessage()
         msg.text = textView.string
         
         Peach.createPost([msg]) { error in

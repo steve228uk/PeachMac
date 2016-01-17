@@ -48,6 +48,12 @@
 		2874F7311C42EE5800D06D34 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F7301C42EE5800D06D34 /* LoginTextField.swift */; };
 		2874F7331C42F13C00D06D34 /* LoginTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F7321C42F13C00D06D34 /* LoginTextFieldCell.swift */; };
 		2874F7381C42FF7B00D06D34 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F7371C42FF7B00D06D34 /* Stream.swift */; };
+		2879B8831C4C1BA600BC7058 /* TextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879B8821C4C1BA600BC7058 /* TextMessage.swift */; };
+		2879B8851C4C1C1D00BC7058 /* ImageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879B8841C4C1C1D00BC7058 /* ImageMessage.swift */; };
+		289D3F0D1C4C261300E96321 /* VideoMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289D3F0C1C4C261300E96321 /* VideoMessage.swift */; };
+		289D3F0F1C4C296100E96321 /* MusicMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289D3F0E1C4C296100E96321 /* MusicMessage.swift */; };
+		289D3F111C4C2CC300E96321 /* LocationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289D3F101C4C2CC300E96321 /* LocationMessage.swift */; };
+		289D3F131C4C314600E96321 /* LinkMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289D3F121C4C314600E96321 /* LinkMessage.swift */; };
 		28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1DA691C456B18004198A0 /* PeachContainerViewController.swift */; };
 		28A1DA6E1C4570E7004198A0 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */; };
 		28A1DA721C457165004198A0 /* PeachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1DA701C457165004198A0 /* PeachViewController.swift */; };
@@ -145,6 +151,12 @@
 		2874F7321C42F13C00D06D34 /* LoginTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextFieldCell.swift; sourceTree = "<group>"; };
 		2874F7341C42F93900D06D34 /* Peach.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Peach.entitlements; sourceTree = "<group>"; };
 		2874F7371C42FF7B00D06D34 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		2879B8821C4C1BA600BC7058 /* TextMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMessage.swift; sourceTree = "<group>"; };
+		2879B8841C4C1C1D00BC7058 /* ImageMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMessage.swift; sourceTree = "<group>"; };
+		289D3F0C1C4C261300E96321 /* VideoMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoMessage.swift; sourceTree = "<group>"; };
+		289D3F0E1C4C296100E96321 /* MusicMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicMessage.swift; sourceTree = "<group>"; };
+		289D3F101C4C2CC300E96321 /* LocationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMessage.swift; sourceTree = "<group>"; };
+		289D3F121C4C314600E96321 /* LinkMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkMessage.swift; sourceTree = "<group>"; };
 		28A1DA691C456B18004198A0 /* PeachContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachContainerViewController.swift; sourceTree = "<group>"; };
 		28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		28A1DA701C457165004198A0 /* PeachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachViewController.swift; sourceTree = "<group>"; };
@@ -281,12 +293,12 @@
 		282D92E51C42CF5200B83109 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2879B8811C4C1AE900BC7058 /* Message */,
 				282D92E61C42D08F00B83109 /* Activity.swift */,
 				2874F71C1C42D3FA00D06D34 /* User.swift */,
 				2874F7371C42FF7B00D06D34 /* Stream.swift */,
 				28DBAD021C430BA800CC66CB /* Post.swift */,
 				28DBAD041C430CB700CC66CB /* Comment.swift */,
-				28DBAD061C430CD900CC66CB /* Message.swift */,
 				28C7A1DF1C4830DE004D8FD0 /* FriendRequest.swift */,
 			);
 			name = Models;
@@ -384,6 +396,28 @@
 				282CA58D1C46F7130075AE9A /* PeachMainWindowController.swift */,
 			);
 			name = Global;
+			sourceTree = "<group>";
+		};
+		2879B8811C4C1AE900BC7058 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				289D3F0B1C4C1F0900E96321 /* Subtypes */,
+				28DBAD061C430CD900CC66CB /* Message.swift */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		289D3F0B1C4C1F0900E96321 /* Subtypes */ = {
+			isa = PBXGroup;
+			children = (
+				2879B8821C4C1BA600BC7058 /* TextMessage.swift */,
+				2879B8841C4C1C1D00BC7058 /* ImageMessage.swift */,
+				289D3F0C1C4C261300E96321 /* VideoMessage.swift */,
+				289D3F0E1C4C296100E96321 /* MusicMessage.swift */,
+				289D3F101C4C2CC300E96321 /* LocationMessage.swift */,
+				289D3F121C4C314600E96321 /* LinkMessage.swift */,
+			);
+			name = Subtypes;
 			sourceTree = "<group>";
 		};
 		28A1DA6B1C457047004198A0 /* Compose */ = {
@@ -739,6 +773,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				289D3F0F1C4C296100E96321 /* MusicMessage.swift in Sources */,
+				2879B8831C4C1BA600BC7058 /* TextMessage.swift in Sources */,
+				289D3F0D1C4C261300E96321 /* VideoMessage.swift in Sources */,
+				2879B8851C4C1C1D00BC7058 /* ImageMessage.swift in Sources */,
 				2874F71D1C42D3FA00D06D34 /* User.swift in Sources */,
 				282D92E71C42D08F00B83109 /* Activity.swift in Sources */,
 				2874F7381C42FF7B00D06D34 /* Stream.swift in Sources */,
@@ -747,6 +785,8 @@
 				28DBAD071C430CD900CC66CB /* Message.swift in Sources */,
 				282D92E41C42CDE600B83109 /* Peach.swift in Sources */,
 				28C7A1E01C4830DE004D8FD0 /* FriendRequest.swift in Sources */,
+				289D3F131C4C314600E96321 /* LinkMessage.swift in Sources */,
+				289D3F111C4C2CC300E96321 /* LocationMessage.swift in Sources */,
 				2874F7221C42DC9700D06D34 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

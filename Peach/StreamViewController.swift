@@ -112,24 +112,28 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
         
         let message = posts[indexPath.section].message[indexPath.item]
         
-        switch message.type! {
+        switch message.type {
         case .Text:
-            if let text = message.text {
-                // Not sure why a font size of double is required?
-                let calculatedHeight = text.calculatedHeightForFont(NSFont.systemFontOfSize(14), width: collectionView.frame.size.width-40)
-                return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
+            if let textMessage = message as? TextMessage {
+                if let text = textMessage.text {
+                    // Not sure why a font size of double is required?
+                    let calculatedHeight = text.calculatedHeightForFont(NSFont.systemFontOfSize(14), width: collectionView.frame.size.width-40)
+                    return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
+                }
             }
         case .Image, .GIF:
             
-            guard message.width != nil else {
-                return CGSizeMake(collectionView.frame.size.width, 80)
+            if let imageMessage = message as? ImageMessage {
+                guard imageMessage.width != nil else {
+                    return CGSizeMake(collectionView.frame.size.width, 80)
+                }
+                
+                let width = CGFloat(imageMessage.width!)
+                let height = CGFloat(imageMessage.height!)
+                let calculatedHeight = (collectionView.frame.size.width) * height / width
+                
+                return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
             }
-            
-            let width = CGFloat(message.width!)
-            let height = CGFloat(message.height!)
-            let calculatedHeight = (collectionView.frame.size.width) * height / width
-            
-            return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
         default:
             return CGSizeMake(collectionView.frame.size.width, 20)
         }
@@ -149,24 +153,28 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
         
         let message = posts[indexPath.section].message[indexPath.item]
         
-        switch message.type! {
+        switch message.type {
         case .Text:
             let item = collectionView.makeItemWithIdentifier("textItem", forIndexPath: indexPath) as! PostTextItem
-            if let text = message.text {
+            let textMessage = message as! TextMessage
+            if let text = textMessage.text {
                 item.textLabel.stringValue = text
             }
             return item
         case .Image:
             let item = collectionView.makeItemWithIdentifier("imageItem", forIndexPath: indexPath) as! PostImageItem
+            let imageMessage = message as! ImageMessage
             item.imageView?.image = nil
-            message.getImage { image in
+            imageMessage.getImage { image in
                 item.imageView?.image = image
             }
             return item
         case .GIF:
             let item = collectionView.makeItemWithIdentifier("GIFItem", forIndexPath: indexPath) as! PostGIFItem
-            item.imageURL = message.src
+            let imageMessage = message as! ImageMessage
+            item.imageURL = imageMessage.src
             return item
+
         default:
             let item = collectionView.makeItemWithIdentifier("textItem", forIndexPath: indexPath) as! PostTextItem
             return item

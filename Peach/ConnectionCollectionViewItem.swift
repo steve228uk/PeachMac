@@ -47,15 +47,30 @@ class ConnectionCollectionViewItem: NSCollectionViewItem {
                 if s.posts.count > 0 {
                     let post = s.posts[0]
                     if post.message.count > 0 {
-                        switch post.message[0].type! {
+                        switch post.message[0].type {
                         case .Text:
-                            if let text = post.message[0].text {
+                            let textMessage = post.message[0] as! TextMessage
+                            if let text = textMessage.text {
                                 postLabel.stringValue = text
                             } else {
-                                postLabel.stringValue = post.message[0].type!.stringValue
+                                postLabel.stringValue = post.message[0].type.stringValue
+                            }
+                        case .Location:
+                            let locationMessage = post.message[0] as! LocationMessage
+                            if let name = locationMessage.name {
+                                postLabel.stringValue = name
+                            } else {
+                                postLabel.stringValue = post.message[0].type.stringValue
+                            }
+                        case .Music:
+                            let musicMessage = post.message[0] as! MusicMessage
+                            if let name = musicMessage.title {
+                                postLabel.stringValue = name
+                            } else {
+                                postLabel.stringValue = post.message[0].type.stringValue
                             }
                         default:
-                            postLabel.stringValue = post.message[0].type!.stringValue
+                            postLabel.stringValue = post.message[0].type.stringValue
                         }
                     } else {
                         postLabel.stringValue = ""
