@@ -19,7 +19,8 @@ class ConnectionCell: NSView {
     var isFirst = false {
         didSet {
             if isFirst {
- 
+
+                
             } else {
                 
             }
@@ -53,6 +54,25 @@ class ConnectionCell: NSView {
             rightBorder?.stroke()
             
             l.backgroundColor = NSColor.whiteColor().CGColor
+            
+            let cornerRadius: CGFloat = 10
+            let path = NSBezierPath()
+            path.moveToPoint(NSMakePoint(NSMinX(bounds), NSMinY(bounds)))
+            
+            let trc = NSMakePoint(NSMaxX(bounds), NSMinY(bounds))
+            path.lineToPoint(NSMakePoint(NSMaxX(bounds) - cornerRadius, NSMinY(bounds)))
+            path.curveToPoint(NSMakePoint(NSMaxX(bounds), NSMinY(bounds) + cornerRadius), controlPoint1: trc, controlPoint2: trc)
+            
+            path.lineToPoint(NSMakePoint(NSMaxX(bounds), NSMaxY(bounds)))
+            path.lineToPoint(NSMakePoint(NSMinX(bounds), NSMaxY(bounds)))
+            path.lineToPoint(NSMakePoint(NSMinX(bounds), NSMinY(bounds)))
+            
+            let maskLayer = CAShapeLayer()
+            maskLayer.frame = bounds
+            maskLayer.path = path.toCGPath()
+            
+            l.mask = maskLayer
+            
             
         }
         

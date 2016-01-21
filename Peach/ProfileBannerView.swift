@@ -37,7 +37,7 @@ class ProfileBannerView: NSView {
     }
     
     override func mouseDown(theEvent: NSEvent) {
-        layer?.backgroundColor = NSColor.peachBorderColor().CGColor
+        layer?.backgroundColor = NSColor(calibratedHue:0.02, saturation:0.02, brightness:1, alpha:1).CGColor
     }
     
 }

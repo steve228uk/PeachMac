@@ -20,16 +20,22 @@ extension String {
      */
     func calculatedHeightForFont(font: NSFont, width: CGFloat) -> CGFloat {
         let textStorage = NSTextStorage(string: self)
-        let textContainer = NSTextContainer()
+        let textContainer = NSTextContainer(size: CGSize(width: width, height: CGFloat(FLT_MAX)))
         let layoutManager = NSLayoutManager()
+        
         
         layoutManager.addTextContainer(textContainer)
         textStorage.addLayoutManager(layoutManager)
         textStorage.addAttribute(NSFontAttributeName, value: font, range: NSMakeRange(0, textStorage.length))
+        
+        let paraStyle = NSMutableParagraphStyle()
+        paraStyle.lineSpacing = 1
+        textStorage.addAttribute(NSParagraphStyleAttributeName, value: paraStyle, range: NSMakeRange(0, textStorage.length))
+        
         textContainer.lineFragmentPadding = 0
         
         layoutManager.glyphRangeForTextContainer(textContainer)
-        Swift.print(layoutManager.usedRectForTextContainer(textContainer).size.height)
+        
         
         return layoutManager.usedRectForTextContainer(textContainer).size.height
     }

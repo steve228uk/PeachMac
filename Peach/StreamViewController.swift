@@ -116,8 +116,8 @@ class StreamViewController: NSViewController, NSCollectionViewDataSource, NSColl
         case .Text:
             if let textMessage = message as? TextMessage {
                 if let text = textMessage.text {
-                    // Not sure why a font size of double is required?
                     let calculatedHeight = text.calculatedHeightForFont(NSFont.systemFontOfSize(14), width: collectionView.frame.size.width-40)
+                    
                     return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
                 }
             }

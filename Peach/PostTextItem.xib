@@ -14,7 +14,7 @@
             <subviews>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="RD5-mZ-qW6">
                     <rect key="frame" x="18" y="0.0" width="444" height="18"/>
-                    <textFieldCell key="cell" selectable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Multiline Label" id="33E-65-tvT">
+                    <textFieldCell key="cell" selectable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Multiline Label" allowsEditingTextAttributes="YES" id="33E-65-tvT">
                         <font key="font" metaFont="system" size="14"/>
                         <color key="textColor" red="0.1391571999" green="0.1391571999" blue="0.1391571999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
