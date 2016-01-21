@@ -51,6 +51,18 @@ extension StreamViewController: NSCollectionViewDataSource {
                 
                 return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
             }
+        case .Video :
+            if let videoMessage = message as? VideoMessage {
+                guard videoMessage.width != nil else {
+                    return CGSizeMake(collectionView.frame.size.width, 80)
+                }
+                
+                let width = CGFloat(videoMessage.width!)
+                let height = CGFloat(videoMessage.height!)
+                let calculatedHeight = (collectionView.frame.size.width) * height / width
+                
+                return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
+            }
         default:
             return CGSizeMake(collectionView.frame.size.width, 20)
         }
@@ -58,6 +70,8 @@ extension StreamViewController: NSCollectionViewDataSource {
         // final catch
         return CGSizeMake(collectionView.frame.size.width, 20)
     }
+    
+    
     
     // MARK: - Cell Content
     
@@ -77,6 +91,10 @@ extension StreamViewController: NSCollectionViewDataSource {
             return imageCellForIndexPath(indexPath)
         case .GIF:
             return gifCellForIndexPath(indexPath)
+        case .Video, .LoopingPhoto:
+            return videoCellForIndexPath(indexPath)
+        case .Music:
+            return musicCellForIndexPath(indexPath)
         default:
             return textCellForIndexPath(indexPath)
         }
@@ -131,4 +149,33 @@ extension StreamViewController: NSCollectionViewDataSource {
         return item
     }
     
+    /**
+     Make a new PostVideoItem for the indexPath
+     
+     - parameter indexPath: Current indexPath
+     
+     - returns: The item
+     */
+    func videoCellForIndexPath(indexPath: NSIndexPath) -> PostVideoItem {
+        let item = collectionView.makeItemWithIdentifier("videoItem", forIndexPath: indexPath) as! PostVideoItem
+        let videoMessage = posts[indexPath.section].message[indexPath.item] as! VideoMessage
+        item.videoURL = videoMessage.src
+        return item
+    }
+    
+    /**
+     Make a new PostTextItem for the indexPath
+     
+     - parameter indexPath: Current indexPath
+     
+     - returns: The item
+     */
+    func musicCellForIndexPath(indexPath: NSIndexPath) -> PostTextItem {
+        let item = collectionView.makeItemWithIdentifier("textItem", forIndexPath: indexPath) as! PostTextItem
+        let musicMessage = posts[indexPath.section].message[indexPath.item] as! MusicMessage
+        if let title = musicMessage.title {
+            item.textLabel.stringValue = "🎵 \(title)"
+        }
+        return item
+    }
 }

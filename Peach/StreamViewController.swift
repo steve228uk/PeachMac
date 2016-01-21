@@ -44,6 +44,7 @@ class StreamViewController: NSViewController, PeachMainWindowControllerDelegate 
         collectionView.registerNib(NSNib(nibNamed: "PostImageItem", bundle: nil), forItemWithIdentifier: "imageItem")
         collectionView.registerNib(NSNib(nibNamed: "PostGIFItem", bundle: nil), forItemWithIdentifier: "GIFItem")
         collectionView.registerNib(NSNib(nibNamed: "PostActionsItem", bundle: nil), forItemWithIdentifier: "actionsItem")
+        collectionView.registerNib(NSNib(nibNamed: "PostVideoItem", bundle: nil), forItemWithIdentifier: "videoItem")
     }
     
     override func viewWillAppear() {
