@@ -87,7 +87,7 @@ extension StreamViewController: NSCollectionViewDataSource {
         let message = posts[indexPath.section].message[indexPath.item]
         
         switch message.type {
-        case .Image:
+        case .Image, .Shout, .Drawing:
             return imageCellForIndexPath(indexPath)
         case .GIF:
             return gifCellForIndexPath(indexPath)
@@ -95,7 +95,11 @@ extension StreamViewController: NSCollectionViewDataSource {
             return videoCellForIndexPath(indexPath)
         case .Music:
             return musicCellForIndexPath(indexPath)
-        default:
+        case .Location:
+            return locationCellForIndexPath(indexPath)
+        case .Link:
+            return linkCellForIndexPath(indexPath)
+        case .Text:
             return textCellForIndexPath(indexPath)
         }
         
@@ -174,8 +178,33 @@ extension StreamViewController: NSCollectionViewDataSource {
         let item = collectionView.makeItemWithIdentifier("textItem", forIndexPath: indexPath) as! PostTextItem
         let musicMessage = posts[indexPath.section].message[indexPath.item] as! MusicMessage
         if let title = musicMessage.title {
-            item.textLabel.stringValue = "🎵 \(title)"
+            item.textLabel.stringValue = "\(title)"
         }
         return item
     }
+    
+    /**
+     Make a new PostLocationItem for the indexPath
+     
+     - parameter indexPath: Current indexPath
+     
+     - returns: The item
+     */
+    func locationCellForIndexPath(indexPath: NSIndexPath) -> PostLocationItem {
+        let item = collectionView.makeItemWithIdentifier("locationItem", forIndexPath: indexPath) as! PostLocationItem
+        return item
+    }
+    
+    /**
+     Make a new PostLinkItem for the indexPath
+     
+     - parameter indexPath: Current indexPath
+     
+     - returns: The item
+     */
+    func linkCellForIndexPath(indexPath: NSIndexPath) -> PostLinkItem {
+        let item = collectionView.makeItemWithIdentifier("linkItem", forIndexPath: indexPath) as! PostLinkItem
+        return item
+    }
+    
 }
