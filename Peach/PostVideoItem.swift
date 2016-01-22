@@ -12,15 +12,19 @@ import AVFoundation
 
 class PostVideoItem: NSCollectionViewItem {
 
-    @IBOutlet weak var videoPlayer: AVPlayerView!
+    @IBOutlet weak var videoPlayer: PeachPlayerView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     
     var videoURL: String? {
         didSet {
             if let url = NSURL(string: videoURL!) where videoURL != nil {
-                let playerItem = AVPlayerItem(URL: url)
-                videoPlayer.player?.replaceCurrentItemWithPlayerItem(playerItem)
+                videoPlayer.player = AVPlayer(URL: url)
             } else {
-                videoPlayer.player?.replaceCurrentItemWithPlayerItem(nil)
+                videoPlayer.player = nil
             }
         }
     }

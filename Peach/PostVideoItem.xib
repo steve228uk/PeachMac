@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="307" height="178"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <avPlayerView controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="Sh7-KN-HQ2">
+                <avPlayerView controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="Sh7-KN-HQ2" customClass="PeachPlayerView" customModule="Peach" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="307" height="178"/>
                 </avPlayerView>
             </subviews>
