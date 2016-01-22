@@ -1,7 +1,11 @@
 # PeachMac
 Just another peach.cool client for mac
 
-This is far from complete and may never be finished.
+![Screenshot](http://sht.tl/svhVzi)
+
+## Download
+
+A recent signed build can be found [here](http://sht.tl/6kZBSb)
 
 ## Setup
 
