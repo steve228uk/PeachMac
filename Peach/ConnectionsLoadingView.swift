@@ -19,7 +19,7 @@ class ConnectionsLoadingView: ConnectionsView {
     }
     
     func fadeOut(context: NSAnimationContext) {
-        context.duration = 0.5
+        context.duration = 0.3
         animator().alphaValue = 0
     }
     

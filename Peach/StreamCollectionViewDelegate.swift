@@ -38,6 +38,14 @@ extension StreamViewController: NSCollectionViewDataSource {
                     return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
                 }
             }
+        case .Music:
+            if let textMessage = message as? MusicMessage {
+                if let text = textMessage.title {
+                    let calculatedHeight = text.calculatedHeightForFont(NSFont.systemFontOfSize(14), width: collectionView.frame.size.width-40)
+                    
+                    return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
+                }
+            }
         case .Image, .GIF:
             
             if let imageMessage = message as? ImageMessage {
