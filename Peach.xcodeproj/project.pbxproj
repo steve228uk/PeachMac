@@ -36,6 +36,7 @@
 		285DFB891C52C31900C34980 /* PostLinkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285DFB871C52C31900C34980 /* PostLinkItem.swift */; };
 		285DFB8A1C52C31900C34980 /* PostLinkItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 285DFB881C52C31900C34980 /* PostLinkItem.xib */; };
 		285DFB8E1C52D7F500C34980 /* PeachPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285DFB8D1C52D7F500C34980 /* PeachPlayerView.swift */; };
+		285DFB961C52DF1400C34980 /* ConnectionsLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285DFB951C52DF1400C34980 /* ConnectionsLoadingView.swift */; };
 		28630CB91C4B151C002906F3 /* String+EstimatedHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28630CB81C4B151C002906F3 /* String+EstimatedHeight.swift */; };
 		2868BC711C499278007A01B7 /* StreamHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2868BC701C499278007A01B7 /* StreamHeaderView.swift */; };
 		286CBA2B1C48FCF000D3B902 /* ConnectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */; };
@@ -147,6 +148,7 @@
 		285DFB871C52C31900C34980 /* PostLinkItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostLinkItem.swift; sourceTree = "<group>"; };
 		285DFB881C52C31900C34980 /* PostLinkItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostLinkItem.xib; sourceTree = "<group>"; };
 		285DFB8D1C52D7F500C34980 /* PeachPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachPlayerView.swift; sourceTree = "<group>"; };
+		285DFB951C52DF1400C34980 /* ConnectionsLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsLoadingView.swift; sourceTree = "<group>"; };
 		28630CB81C4B151C002906F3 /* String+EstimatedHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+EstimatedHeight.swift"; sourceTree = "<group>"; };
 		2868BC701C499278007A01B7 /* StreamHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamHeaderView.swift; sourceTree = "<group>"; };
 		286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionHeaderView.swift; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 				286CBA2C1C48FCFC00D3B902 /* ConnectionHeaderView.xib */,
 				28C7A1E91C485FF3004D8FD0 /* ConnectionCell.swift */,
 				286CBA2F1C490A9800D3B902 /* ProfileBannerView.swift */,
+				285DFB951C52DF1400C34980 /* ConnectionsLoadingView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -803,6 +806,7 @@
 				2868BC711C499278007A01B7 /* StreamHeaderView.swift in Sources */,
 				2874F7261C42E57700D06D34 /* LoginView.swift in Sources */,
 				28515A9E1C4AC84700F0ABE8 /* PostGIFItem.swift in Sources */,
+				285DFB961C52DF1400C34980 /* ConnectionsLoadingView.swift in Sources */,
 				28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */,
 				2874F7311C42EE5800D06D34 /* LoginTextField.swift in Sources */,
 				286CBA301C490A9800D3B902 /* ProfileBannerView.swift in Sources */,

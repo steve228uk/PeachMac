@@ -29,7 +29,7 @@ extension String {
         textStorage.addAttribute(NSFontAttributeName, value: font, range: NSMakeRange(0, textStorage.length))
         
         let paraStyle = NSMutableParagraphStyle()
-        paraStyle.lineSpacing = 1
+        paraStyle.lineSpacing = 2
         textStorage.addAttribute(NSParagraphStyleAttributeName, value: paraStyle, range: NSMakeRange(0, textStorage.length))
         
         textContainer.lineFragmentPadding = 0

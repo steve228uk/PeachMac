@@ -16,6 +16,8 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
     
     @IBOutlet weak var collectionViewLayout: NSCollectionViewFlowLayout!
     
+    @IBOutlet weak var loadingView: ConnectionsLoadingView!
+    
     /// The streams that were fetched from Peach
     var streams: [Stream] = []
     
@@ -24,6 +26,8 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadingView.loadingIndicator.startAnimation(self)
         
         collectionView.registerNib(NSNib(nibNamed: "ConnectionCollectionViewItem", bundle: nil), forItemWithIdentifier: "connectionItem")
         collectionView.registerNib(NSNib(nibNamed: "ConnectionHeaderView", bundle: nil), forSupplementaryViewOfKind: NSCollectionElementKindSectionHeader, withIdentifier: "connectionHeader")
@@ -41,6 +45,7 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
         Peach.getStreams { streams, error in
             self.streams = streams
             self.collectionView.reloadData()
+            self.loadingView.hideWithAnimation()
         }
         
         if let id = Peach.streamID {

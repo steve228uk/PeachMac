@@ -951,17 +951,41 @@ DQ
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="NEY-Ls-ZD3" customClass="ConnectionsLoadingView" customModule="Peach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="549"/>
+                                <subviews>
+                                    <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="wrd-NE-Amc">
+                                        <rect key="frame" x="209" y="259" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="mH7-7J-hBN"/>
+                                            <constraint firstAttribute="height" constant="32" id="uhK-nQ-4yV"/>
+                                        </constraints>
+                                    </progressIndicator>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wrd-NE-Amc" firstAttribute="centerY" secondItem="NEY-Ls-ZD3" secondAttribute="centerY" id="460-fz-BTb"/>
+                                    <constraint firstItem="wrd-NE-Amc" firstAttribute="centerX" secondItem="NEY-Ls-ZD3" secondAttribute="centerX" id="YYF-Re-lnO"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="loadingIndicator" destination="wrd-NE-Amc" id="X4J-L6-NOr"/>
+                                </connections>
+                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="LgY-Ea-SPf" firstAttribute="leading" secondItem="zUg-MA-OzY" secondAttribute="leading" id="1B6-zv-oxd"/>
+                            <constraint firstAttribute="trailing" secondItem="NEY-Ls-ZD3" secondAttribute="trailing" id="7QN-x0-LRf"/>
                             <constraint firstAttribute="trailing" secondItem="LgY-Ea-SPf" secondAttribute="trailing" id="Hoe-ua-h9V"/>
+                            <constraint firstItem="NEY-Ls-ZD3" firstAttribute="leading" secondItem="zUg-MA-OzY" secondAttribute="leading" id="OQI-Vn-ns6"/>
+                            <constraint firstItem="NEY-Ls-ZD3" firstAttribute="top" secondItem="zUg-MA-OzY" secondAttribute="top" id="XXi-mx-fme"/>
                             <constraint firstItem="LgY-Ea-SPf" firstAttribute="top" secondItem="zUg-MA-OzY" secondAttribute="top" id="eR8-YU-7AT"/>
+                            <constraint firstAttribute="bottom" secondItem="NEY-Ls-ZD3" secondAttribute="bottom" id="hAh-sJ-OnR"/>
                             <constraint firstAttribute="bottom" secondItem="LgY-Ea-SPf" secondAttribute="bottom" id="hpH-aj-8l4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Spo-4T-tX4" id="vAw-DZ-La8"/>
                         <outlet property="collectionViewLayout" destination="UVS-DC-Z2U" id="dQe-Lo-IAK"/>
+                        <outlet property="loadingView" destination="NEY-Ls-ZD3" id="aAT-qb-CUv"/>
                     </connections>
                 </viewController>
                 <customObject id="L1U-MA-RxV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
