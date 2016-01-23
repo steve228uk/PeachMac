@@ -33,7 +33,7 @@ class PostLinkItem: NSCollectionViewItem {
                 imageView?.image = nil
                 
                 l.getImage { image in
-                    self.imageView?.image = image
+                    self.imageView?.image = image.cropToSquare()
                 }
             }
         }

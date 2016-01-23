@@ -38,7 +38,7 @@ class ConnectionCollectionViewItem: NSCollectionViewItem {
                 
                 if stream?.avatarSrc != nil {
                     stream?.getAvatar { image in
-                        self.image.image = image
+                        self.image.image = image.cropToSquare()
                     }
                 } else {
                     image.image = NSImage(named: "placeholder")
