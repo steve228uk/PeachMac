@@ -71,6 +71,8 @@ extension StreamViewController: NSCollectionViewDataSource {
                 
                 return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
             }
+        case .Link :
+            return CGSizeMake(collectionView.frame.size.width, 85)
         default:
             return CGSizeMake(collectionView.frame.size.width, 20)
         }
@@ -212,6 +214,8 @@ extension StreamViewController: NSCollectionViewDataSource {
      */
     func linkCellForIndexPath(indexPath: NSIndexPath) -> PostLinkItem {
         let item = collectionView.makeItemWithIdentifier("linkItem", forIndexPath: indexPath) as! PostLinkItem
+        let linkMessage = posts[indexPath.section].message[indexPath.item] as! LinkMessage
+        item.link = linkMessage
         return item
     }
     
