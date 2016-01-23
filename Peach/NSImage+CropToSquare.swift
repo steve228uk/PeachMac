@@ -19,19 +19,11 @@ extension NSImage {
     
     func cropToSquare() -> NSImage? {
         
-        let originalWidth  = size.width
+        let originalWidth = size.width
         let originalHeight = size.height
-        
-        var edge: CGFloat
-        if originalWidth > originalHeight {
-            edge = originalHeight
-        } else {
-            edge = originalWidth
-        }
-        
-        let posX = (originalWidth  - edge) / 2.0
+        let edge = (originalWidth > originalHeight) ? originalHeight : originalWidth
+        let posX = (originalWidth - edge) / 2.0
         let posY = (originalHeight - edge) / 2.0
-        
         let cropSquare = CGRectMake(posX, posY, edge, edge)
         
         if let imageRef = CGImageCreateWithImageInRect(CGImage, cropSquare) {
