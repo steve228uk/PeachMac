@@ -54,7 +54,10 @@ class ComposeViewController: PeachViewController {
 
             }
             
-            
+        }
+        
+        if requests == 0 {
+            saveMessage()
         }
         
     }
