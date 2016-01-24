@@ -24,21 +24,28 @@ class PeachComposeTextView: NSTextView {
         importsGraphics = true
     }
     
-    func getImages() -> [NSData] {
+    func getFragments() -> [AnyObject] {
         let attString = attributedString()
-        var images: [NSData] = []
+        var fragments: [AnyObject] = []
         
-        attString.enumerateAttribute(NSAttachmentAttributeName, inRange: NSMakeRange(0,attString.length), options: []) { (object, Range, pointer_t) -> Void in
+        attString.enumerateAttribute(NSAttachmentAttributeName, inRange: NSMakeRange(0, attString.length), options: []) { object, range, pointer in
             
-            if let attachment = object as? NSTextAttachment {
-                if let data = attachment.fileWrapper?.regularFileContents {
-                    images.append(data)
+            if object == nil {
+                // if there's no object then this is just text and we can safely extract it at the range
+                fragments.append(attString.attributedSubstringFromRange(range).string)
+            } else {
+                
+                if let attachment = object as? NSTextAttachment {
+                    if let data = attachment.fileWrapper?.regularFileContents {
+                        fragments.append(data)
+                    }
                 }
+                
             }
             
         }
         
-        return images
+        return fragments
     }
     
 }
