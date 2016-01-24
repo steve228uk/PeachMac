@@ -32,7 +32,7 @@ class PeachComposeTextView: NSTextView {
             
             if object == nil {
                 // if there's no object then this is just text and we can safely extract it at the range
-                fragments.append(attString.attributedSubstringFromRange(range).string)
+                fragments.append(attString.attributedSubstringFromRange(range).string.stringByTrimmingCharactersInSet(.whitespaceAndNewlineCharacterSet()))
             } else {
                 
                 if let attachment = object as? NSTextAttachment {
