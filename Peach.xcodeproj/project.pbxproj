@@ -18,6 +18,12 @@
 		282D92DE1C42CDD900B83109 /* PeachKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 282D92D61C42CDD800B83109 /* PeachKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		282D92E41C42CDE600B83109 /* Peach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D92E31C42CDE600B83109 /* Peach.swift */; };
 		282D92E71C42D08F00B83109 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D92E61C42D08F00B83109 /* Activity.swift */; };
+		2833B0AC1C54FE2D00E945A5 /* ImgurKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2833B0AB1C54FE2D00E945A5 /* ImgurKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2833B0B01C54FE2D00E945A5 /* ImgurKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2833B0A91C54FE2D00E945A5 /* ImgurKit.framework */; };
+		2833B0B11C54FE2D00E945A5 /* ImgurKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2833B0A91C54FE2D00E945A5 /* ImgurKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2833B0B61C55000500E945A5 /* Imgur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2833B0B51C55000500E945A5 /* Imgur.swift */; };
+		2833B0B81C5500C900E945A5 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2833B0B71C5500C900E945A5 /* Upload.swift */; };
+		2833B0BA1C55011900E945A5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2833B0B91C55011900E945A5 /* API.swift */; };
 		28515A891C49CD1500F0ABE8 /* PostTextItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515A881C49CD1500F0ABE8 /* PostTextItem.xib */; };
 		28515A8D1C49CE4900F0ABE8 /* PostImageItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515A8C1C49CE4900F0ABE8 /* PostImageItem.xib */; };
 		28515A8F1C49CE5A00F0ABE8 /* PostImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28515A8E1C49CE5A00F0ABE8 /* PostImageItem.swift */; };
@@ -38,6 +44,7 @@
 		285DFB8E1C52D7F500C34980 /* PeachPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285DFB8D1C52D7F500C34980 /* PeachPlayerView.swift */; };
 		285DFB961C52DF1400C34980 /* ConnectionsLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285DFB951C52DF1400C34980 /* ConnectionsLoadingView.swift */; };
 		285DFB9A1C54184B00C34980 /* NSImage+CropToSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285DFB991C54184B00C34980 /* NSImage+CropToSquare.swift */; };
+		285DFB9C1C5446F000C34980 /* PeachComposeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285DFB9B1C5446F000C34980 /* PeachComposeTextView.swift */; };
 		28630CB91C4B151C002906F3 /* String+EstimatedHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28630CB81C4B151C002906F3 /* String+EstimatedHeight.swift */; };
 		2868BC711C499278007A01B7 /* StreamHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2868BC701C499278007A01B7 /* StreamHeaderView.swift */; };
 		286CBA2B1C48FCF000D3B902 /* ConnectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */; };
@@ -93,6 +100,13 @@
 			remoteGlobalIDString = 282D92D51C42CDD800B83109;
 			remoteInfo = PeachKit;
 		};
+		2833B0AE1C54FE2D00E945A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 282D92B71C42CCAF00B83109 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2833B0A81C54FE2D00E945A5;
+			remoteInfo = ImgurKit;
+		};
 		286CBA3D1C491B3500D3B902 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 282D92B71C42CCAF00B83109 /* Project object */;
@@ -109,6 +123,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2833B0B11C54FE2D00E945A5 /* ImgurKit.framework in Embed Frameworks */,
 				282D92DE1C42CDD900B83109 /* PeachKit.framework in Embed Frameworks */,
 				286CBA401C491B3500D3B902 /* GiphyKit.framework in Embed Frameworks */,
 			);
@@ -132,6 +147,12 @@
 		282D92DA1C42CDD900B83109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		282D92E31C42CDE600B83109 /* Peach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peach.swift; sourceTree = "<group>"; };
 		282D92E61C42D08F00B83109 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		2833B0A91C54FE2D00E945A5 /* ImgurKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImgurKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2833B0AB1C54FE2D00E945A5 /* ImgurKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImgurKit.h; sourceTree = "<group>"; };
+		2833B0AD1C54FE2D00E945A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2833B0B51C55000500E945A5 /* Imgur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Imgur.swift; sourceTree = "<group>"; };
+		2833B0B71C5500C900E945A5 /* Upload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
+		2833B0B91C55011900E945A5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		28515A881C49CD1500F0ABE8 /* PostTextItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTextItem.xib; sourceTree = "<group>"; };
 		28515A8C1C49CE4900F0ABE8 /* PostImageItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostImageItem.xib; sourceTree = "<group>"; };
 		28515A8E1C49CE5A00F0ABE8 /* PostImageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageItem.swift; sourceTree = "<group>"; };
@@ -151,6 +172,7 @@
 		285DFB8D1C52D7F500C34980 /* PeachPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachPlayerView.swift; sourceTree = "<group>"; };
 		285DFB951C52DF1400C34980 /* ConnectionsLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsLoadingView.swift; sourceTree = "<group>"; };
 		285DFB991C54184B00C34980 /* NSImage+CropToSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+CropToSquare.swift"; sourceTree = "<group>"; };
+		285DFB9B1C5446F000C34980 /* PeachComposeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachComposeTextView.swift; sourceTree = "<group>"; };
 		28630CB81C4B151C002906F3 /* String+EstimatedHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+EstimatedHeight.swift"; sourceTree = "<group>"; };
 		2868BC701C499278007A01B7 /* StreamHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamHeaderView.swift; sourceTree = "<group>"; };
 		286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionHeaderView.swift; sourceTree = "<group>"; };
@@ -211,6 +233,7 @@
 			files = (
 				282D92DD1C42CDD900B83109 /* PeachKit.framework in Frameworks */,
 				4DA2601533C28E980B96A863 /* Pods_Peach.framework in Frameworks */,
+				2833B0B01C54FE2D00E945A5 /* ImgurKit.framework in Frameworks */,
 				286CBA3F1C491B3500D3B902 /* GiphyKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +243,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D87C12684BE7DD5934FC2E85 /* Pods_PeachKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2833B0A51C54FE2D00E945A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +300,7 @@
 				282D92C11C42CCAF00B83109 /* Peach */,
 				282D92D71C42CDD800B83109 /* PeachKit */,
 				286CBA391C491B3500D3B902 /* GiphyKit */,
+				2833B0AA1C54FE2D00E945A5 /* ImgurKit */,
 				282D92C01C42CCAF00B83109 /* Products */,
 				0F5830214DA42C3866A389BF /* Pods */,
 				9ECED47B12594D2416A13B86 /* Frameworks */,
@@ -282,6 +313,7 @@
 				282D92BF1C42CCAF00B83109 /* Peach.app */,
 				282D92D61C42CDD800B83109 /* PeachKit.framework */,
 				286CBA381C491B3500D3B902 /* GiphyKit.framework */,
+				2833B0A91C54FE2D00E945A5 /* ImgurKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -328,6 +360,18 @@
 				28C7A1DF1C4830DE004D8FD0 /* FriendRequest.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		2833B0AA1C54FE2D00E945A5 /* ImgurKit */ = {
+			isa = PBXGroup;
+			children = (
+				2833B0AB1C54FE2D00E945A5 /* ImgurKit.h */,
+				2833B0AD1C54FE2D00E945A5 /* Info.plist */,
+				2833B0B51C55000500E945A5 /* Imgur.swift */,
+				2833B0B71C5500C900E945A5 /* Upload.swift */,
+				2833B0B91C55011900E945A5 /* API.swift */,
+			);
+			path = ImgurKit;
 			sourceTree = "<group>";
 		};
 		28515A901C49D03200F0ABE8 /* Text */ = {
@@ -480,6 +524,7 @@
 			children = (
 				28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */,
 				28A8C0301C457F1F006DA6FC /* ComposeWindowController.swift */,
+				285DFB9B1C5446F000C34980 /* PeachComposeTextView.swift */,
 			);
 			name = Compose;
 			sourceTree = "<group>";
@@ -527,6 +572,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2833B0A61C54FE2D00E945A5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2833B0AC1C54FE2D00E945A5 /* ImgurKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		286CBA351C491B3500D3B902 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -555,6 +608,7 @@
 			dependencies = (
 				282D92DC1C42CDD900B83109 /* PBXTargetDependency */,
 				286CBA3E1C491B3500D3B902 /* PBXTargetDependency */,
+				2833B0AF1C54FE2D00E945A5 /* PBXTargetDependency */,
 			);
 			name = Peach;
 			productName = Peach;
@@ -579,6 +633,24 @@
 			name = PeachKit;
 			productName = PeachKit;
 			productReference = 282D92D61C42CDD800B83109 /* PeachKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2833B0A81C54FE2D00E945A5 /* ImgurKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2833B0B41C54FE2D00E945A5 /* Build configuration list for PBXNativeTarget "ImgurKit" */;
+			buildPhases = (
+				2833B0A41C54FE2D00E945A5 /* Sources */,
+				2833B0A51C54FE2D00E945A5 /* Frameworks */,
+				2833B0A61C54FE2D00E945A5 /* Headers */,
+				2833B0A71C54FE2D00E945A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImgurKit;
+			productName = ImgurKit;
+			productReference = 2833B0A91C54FE2D00E945A5 /* ImgurKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		286CBA371C491B3500D3B902 /* GiphyKit */ = {
@@ -623,6 +695,10 @@
 					282D92D51C42CDD800B83109 = {
 						CreatedOnToolsVersion = 7.2;
 					};
+					2833B0A81C54FE2D00E945A5 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = B598AEF9ZM;
+					};
 					286CBA371C491B3500D3B902 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = B598AEF9ZM;
@@ -645,6 +721,7 @@
 				282D92BE1C42CCAF00B83109 /* Peach */,
 				282D92D51C42CDD800B83109 /* PeachKit */,
 				286CBA371C491B3500D3B902 /* GiphyKit */,
+				2833B0A81C54FE2D00E945A5 /* ImgurKit */,
 			);
 		};
 /* End PBXProject section */
@@ -670,6 +747,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		282D92D41C42CDD800B83109 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2833B0A71C54FE2D00E945A5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -804,6 +888,7 @@
 				28515AA41C4AE02000F0ABE8 /* PostActionsItem.swift in Sources */,
 				286CBA2B1C48FCF000D3B902 /* ConnectionHeaderView.swift in Sources */,
 				28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */,
+				285DFB9C1C5446F000C34980 /* PeachComposeTextView.swift in Sources */,
 				28630CB91C4B151C002906F3 /* String+EstimatedHeight.swift in Sources */,
 				282CA5891C45BF990075AE9A /* PeachTableView.swift in Sources */,
 				2868BC711C499278007A01B7 /* StreamHeaderView.swift in Sources */,
@@ -859,6 +944,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2833B0A41C54FE2D00E945A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2833B0B81C5500C900E945A5 /* Upload.swift in Sources */,
+				2833B0BA1C55011900E945A5 /* API.swift in Sources */,
+				2833B0B61C55000500E945A5 /* Imgur.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		286CBA331C491B3500D3B902 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -877,6 +972,11 @@
 			isa = PBXTargetDependency;
 			target = 282D92D51C42CDD800B83109 /* PeachKit */;
 			targetProxy = 282D92DB1C42CDD900B83109 /* PBXContainerItemProxy */;
+		};
+		2833B0AF1C54FE2D00E945A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2833B0A81C54FE2D00E945A5 /* ImgurKit */;
+			targetProxy = 2833B0AE1C54FE2D00E945A5 /* PBXContainerItemProxy */;
 		};
 		286CBA3E1C491B3500D3B902 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1058,6 +1158,51 @@
 			};
 			name = Release;
 		};
+		2833B0B21C54FE2D00E945A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ImgurKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.wearecocoon.ImgurKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2833B0B31C54FE2D00E945A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ImgurKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.wearecocoon.ImgurKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		286CBA421C491B3500D3B902 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 282829758513A60968535014 /* Pods-GiphyKit.debug.xcconfig */;
@@ -1134,6 +1279,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		2833B0B41C54FE2D00E945A5 /* Build configuration list for PBXNativeTarget "ImgurKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2833B0B21C54FE2D00E945A5 /* Debug */,
+				2833B0B31C54FE2D00E945A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		286CBA411C491B3500D3B902 /* Build configuration list for PBXNativeTarget "GiphyKit" */ = {
 			isa = XCConfigurationList;

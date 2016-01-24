@@ -4,3 +4,6 @@
 [submodule "GiphyKit"]
 	path = GiphyKit
 	url = https://github.com/steve228uk/GiphyKit.git
+[submodule "ImgurKit"]
+	path = ImgurKit
+	url = https://github.com/steve228uk/ImgurKit.git

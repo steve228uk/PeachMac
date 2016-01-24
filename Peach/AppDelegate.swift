@@ -10,6 +10,7 @@ import Cocoa
 import KeychainAccess
 import PeachKit
 import GiphyKit
+import ImgurKit
 
 let keychain = Keychain(service: "uk.co.wearecocoon.Peach")
 var token: String?
@@ -24,6 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         streamID = keychain["streamID"]
         
         Giphy.APIKey = "dc6zaTOxFJmzC"
+        Imgur.clientID = "f69ce8fb3b0ac47"
         
         if token != nil {
             
