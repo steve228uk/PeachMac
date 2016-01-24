@@ -41,6 +41,7 @@ class ComposeViewController: PeachViewController {
                     
                     if result != nil {
                         let msg = self.messages[index] as! ImageMessage
+                        msg.type = (result!.type == "image/gif") ? .GIF : .Image
                         msg.src = result?.url
                         msg.width = result?.width
                         msg.height = result?.height
@@ -62,9 +63,9 @@ class ComposeViewController: PeachViewController {
     func saveMessage() {
         
         Peach.createPost(messages) { error in
-//             TODO: Handle any error that comes back from Peach
+            // TODO: Handle any error that comes back from Peach
         }
-        
+    
         view.window?.close()
         
     }
