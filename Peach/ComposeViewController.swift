@@ -10,7 +10,7 @@ import Cocoa
 import PeachKit
 import ImgurKit
 
-class ComposeViewController: PeachViewController {
+class ComposeViewController: NSViewController {
     
     @IBOutlet var textView: PeachComposeTextView!
     

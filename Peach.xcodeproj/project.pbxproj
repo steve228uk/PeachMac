@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		282CA5891C45BF990075AE9A /* PeachTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282CA5881C45BF990075AE9A /* PeachTableView.swift */; };
 		282CA58C1C45C3A50075AE9A /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282CA58B1C45C3A50075AE9A /* StreamViewController.swift */; };
-		282CA58E1C46F7130075AE9A /* PeachMainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282CA58D1C46F7130075AE9A /* PeachMainWindowController.swift */; };
 		282D92C31C42CCAF00B83109 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D92C21C42CCAF00B83109 /* AppDelegate.swift */; };
 		282D92C71C42CCAF00B83109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 282D92C61C42CCAF00B83109 /* Assets.xcassets */; };
 		282D92CA1C42CCAF00B83109 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282D92C81C42CCAF00B83109 /* Main.storyboard */; };
@@ -47,9 +46,6 @@
 		285DFB9C1C5446F000C34980 /* PeachComposeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285DFB9B1C5446F000C34980 /* PeachComposeTextView.swift */; };
 		28630CB91C4B151C002906F3 /* String+EstimatedHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28630CB81C4B151C002906F3 /* String+EstimatedHeight.swift */; };
 		2868BC711C499278007A01B7 /* StreamHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2868BC701C499278007A01B7 /* StreamHeaderView.swift */; };
-		286CBA2B1C48FCF000D3B902 /* ConnectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */; };
-		286CBA2D1C48FCFC00D3B902 /* ConnectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286CBA2C1C48FCFC00D3B902 /* ConnectionHeaderView.xib */; };
-		286CBA301C490A9800D3B902 /* ProfileBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286CBA2F1C490A9800D3B902 /* ProfileBannerView.swift */; };
 		286CBA3B1C491B3500D3B902 /* GiphyKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 286CBA3A1C491B3500D3B902 /* GiphyKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		286CBA3F1C491B3500D3B902 /* GiphyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286CBA381C491B3500D3B902 /* GiphyKit.framework */; };
 		286CBA401C491B3500D3B902 /* GiphyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 286CBA381C491B3500D3B902 /* GiphyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -67,6 +63,8 @@
 		2874F7381C42FF7B00D06D34 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F7371C42FF7B00D06D34 /* Stream.swift */; };
 		2879B8831C4C1BA600BC7058 /* TextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879B8821C4C1BA600BC7058 /* TextMessage.swift */; };
 		2879B8851C4C1C1D00BC7058 /* ImageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879B8841C4C1C1D00BC7058 /* ImageMessage.swift */; };
+		2899A75D1C558DD30045C4F9 /* PeachToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2899A75C1C558DD30045C4F9 /* PeachToolbarViewController.swift */; };
+		2899A75F1C558DE00045C4F9 /* PeachToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2899A75E1C558DE00045C4F9 /* PeachToolbarView.swift */; };
 		289D3F0D1C4C261300E96321 /* VideoMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289D3F0C1C4C261300E96321 /* VideoMessage.swift */; };
 		289D3F0F1C4C296100E96321 /* MusicMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289D3F0E1C4C296100E96321 /* MusicMessage.swift */; };
 		289D3F111C4C2CC300E96321 /* LocationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289D3F101C4C2CC300E96321 /* LocationMessage.swift */; };
@@ -138,7 +136,6 @@
 		282829758513A60968535014 /* Pods-GiphyKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GiphyKit/Pods-GiphyKit.debug.xcconfig"; sourceTree = "<group>"; };
 		282CA5881C45BF990075AE9A /* PeachTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachTableView.swift; sourceTree = "<group>"; };
 		282CA58B1C45C3A50075AE9A /* StreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
-		282CA58D1C46F7130075AE9A /* PeachMainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachMainWindowController.swift; sourceTree = "<group>"; };
 		282D92BF1C42CCAF00B83109 /* Peach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		282D92C21C42CCAF00B83109 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		282D92C61C42CCAF00B83109 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,9 +174,6 @@
 		285DFB9B1C5446F000C34980 /* PeachComposeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachComposeTextView.swift; sourceTree = "<group>"; };
 		28630CB81C4B151C002906F3 /* String+EstimatedHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+EstimatedHeight.swift"; sourceTree = "<group>"; };
 		2868BC701C499278007A01B7 /* StreamHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamHeaderView.swift; sourceTree = "<group>"; };
-		286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionHeaderView.swift; sourceTree = "<group>"; };
-		286CBA2C1C48FCFC00D3B902 /* ConnectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionHeaderView.xib; sourceTree = "<group>"; };
-		286CBA2F1C490A9800D3B902 /* ProfileBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBannerView.swift; sourceTree = "<group>"; };
 		286CBA381C491B3500D3B902 /* GiphyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GiphyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		286CBA3A1C491B3500D3B902 /* GiphyKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GiphyKit.h; sourceTree = "<group>"; };
 		286CBA3C1C491B3500D3B902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -198,6 +192,8 @@
 		2874F7371C42FF7B00D06D34 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		2879B8821C4C1BA600BC7058 /* TextMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMessage.swift; sourceTree = "<group>"; };
 		2879B8841C4C1C1D00BC7058 /* ImageMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMessage.swift; sourceTree = "<group>"; };
+		2899A75C1C558DD30045C4F9 /* PeachToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachToolbarViewController.swift; sourceTree = "<group>"; };
+		2899A75E1C558DE00045C4F9 /* PeachToolbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachToolbarView.swift; sourceTree = "<group>"; };
 		289D3F0C1C4C261300E96321 /* VideoMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoMessage.swift; sourceTree = "<group>"; };
 		289D3F0E1C4C296100E96321 /* MusicMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicMessage.swift; sourceTree = "<group>"; };
 		289D3F101C4C2CC300E96321 /* LocationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMessage.swift; sourceTree = "<group>"; };
@@ -450,10 +446,7 @@
 			isa = PBXGroup;
 			children = (
 				28DBACFE1C43055F00CC66CB /* ConnectionsView.swift */,
-				286CBA2A1C48FCF000D3B902 /* ConnectionHeaderView.swift */,
-				286CBA2C1C48FCFC00D3B902 /* ConnectionHeaderView.xib */,
 				28C7A1E91C485FF3004D8FD0 /* ConnectionCell.swift */,
-				286CBA2F1C490A9800D3B902 /* ProfileBannerView.swift */,
 				285DFB951C52DF1400C34980 /* ConnectionsLoadingView.swift */,
 			);
 			name = Views;
@@ -495,11 +488,11 @@
 		2874F7271C42E5E100D06D34 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				2899A75B1C558DB90045C4F9 /* Toolbar */,
 				28A1DA691C456B18004198A0 /* PeachContainerViewController.swift */,
 				28A1DA701C457165004198A0 /* PeachViewController.swift */,
 				28A8C0321C45AD01006DA6FC /* PeachTabViewController.swift */,
 				282CA5881C45BF990075AE9A /* PeachTableView.swift */,
-				282CA58D1C46F7130075AE9A /* PeachMainWindowController.swift */,
 			);
 			name = Global;
 			sourceTree = "<group>";
@@ -511,6 +504,15 @@
 				28DBAD061C430CD900CC66CB /* Message.swift */,
 			);
 			name = Message;
+			sourceTree = "<group>";
+		};
+		2899A75B1C558DB90045C4F9 /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				2899A75C1C558DD30045C4F9 /* PeachToolbarViewController.swift */,
+				2899A75E1C558DE00045C4F9 /* PeachToolbarView.swift */,
+			);
+			name = Toolbar;
 			sourceTree = "<group>";
 		};
 		289D3F0B1C4C1F0900E96321 /* Subtypes */ = {
@@ -747,7 +749,6 @@
 				282D92C71C42CCAF00B83109 /* Assets.xcassets in Resources */,
 				28515A9C1C4AC81D00F0ABE8 /* PostGIFItem.xib in Resources */,
 				28515AA11C4ADF1E00F0ABE8 /* PostActionsItem.xib in Resources */,
-				286CBA2D1C48FCFC00D3B902 /* ConnectionHeaderView.xib in Resources */,
 				282D92CA1C42CCAF00B83109 /* Main.storyboard in Resources */,
 				285DFB8A1C52C31900C34980 /* PostLinkItem.xib in Resources */,
 				28515A891C49CD1500F0ABE8 /* PostTextItem.xib in Resources */,
@@ -926,10 +927,10 @@
 				28C7A1EC1C4863E3004D8FD0 /* NSColor+CustomColors.swift in Sources */,
 				28A8C0331C45AD01006DA6FC /* PeachTabViewController.swift in Sources */,
 				28515AA41C4AE02000F0ABE8 /* PostActionsItem.swift in Sources */,
-				286CBA2B1C48FCF000D3B902 /* ConnectionHeaderView.swift in Sources */,
 				28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */,
 				285DFB9C1C5446F000C34980 /* PeachComposeTextView.swift in Sources */,
 				28630CB91C4B151C002906F3 /* String+EstimatedHeight.swift in Sources */,
+				2899A75D1C558DD30045C4F9 /* PeachToolbarViewController.swift in Sources */,
 				282CA5891C45BF990075AE9A /* PeachTableView.swift in Sources */,
 				2868BC711C499278007A01B7 /* StreamHeaderView.swift in Sources */,
 				2874F7261C42E57700D06D34 /* LoginView.swift in Sources */,
@@ -937,15 +938,14 @@
 				285DFB961C52DF1400C34980 /* ConnectionsLoadingView.swift in Sources */,
 				28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */,
 				2874F7311C42EE5800D06D34 /* LoginTextField.swift in Sources */,
-				286CBA301C490A9800D3B902 /* ProfileBannerView.swift in Sources */,
 				28A8C0311C457F1F006DA6FC /* ComposeWindowController.swift in Sources */,
 				285DFB891C52C31900C34980 /* PostLinkItem.swift in Sources */,
 				2874F7201C42D73400D06D34 /* LoginViewController.swift in Sources */,
 				28515A951C4A79E000F0ABE8 /* PostGIFTemplate.html in Sources */,
 				28515A8F1C49CE5A00F0ABE8 /* PostImageItem.swift in Sources */,
 				2874F7331C42F13C00D06D34 /* LoginTextFieldCell.swift in Sources */,
-				282CA58E1C46F7130075AE9A /* PeachMainWindowController.swift in Sources */,
 				282D92C31C42CCAF00B83109 /* AppDelegate.swift in Sources */,
+				2899A75F1C558DE00045C4F9 /* PeachToolbarView.swift in Sources */,
 				285DFB9A1C54184B00C34980 /* NSImage+CropToSquare.swift in Sources */,
 				28A1DA721C457165004198A0 /* PeachViewController.swift in Sources */,
 				28C7A1E41C485702004D8FD0 /* ConnectionCollectionViewItem.swift in Sources */,

@@ -9,11 +9,15 @@
 import Cocoa
 import PeachKit
 
-class StreamViewController: NSViewController, PeachMainWindowControllerDelegate {
+class StreamViewController: PeachViewController, PeachNavigationDelegate {
     
     @IBOutlet weak var collectionView: NSCollectionView!
     
     @IBOutlet weak var collectionViewLayout: NSCollectionViewFlowLayout!
+    
+    @IBOutlet weak var headerView: StreamHeaderView!
+    
+    @IBOutlet weak var scrollView: NSScrollView!
     
     var stream: Stream?
     
@@ -25,16 +29,6 @@ class StreamViewController: NSViewController, PeachMainWindowControllerDelegate 
             return []
         }
     }
-    
-    var tabController: PeachTabViewController? {
-        get {
-           return parentViewController as? PeachTabViewController
-        }
-    }
-    
-    @IBOutlet weak var headerView: StreamHeaderView!
-    
-    @IBOutlet weak var scrollView: NSScrollView!
     
     
     override func viewDidLoad() {
@@ -52,6 +46,9 @@ class StreamViewController: NSViewController, PeachMainWindowControllerDelegate 
     override func viewWillAppear() {
         super.viewWillAppear()
         
+        container?.toolbar?.backButton.hidden = false
+        container?.toolbar?.delegate = self
+        
         if let name = stream?.displayName {
             headerView.nameLabel.stringValue = name
         }
@@ -61,9 +58,8 @@ class StreamViewController: NSViewController, PeachMainWindowControllerDelegate 
         super.viewDidAppear()
         
         view.window?.toolbar?.insertItemWithItemIdentifier("back", atIndex: 0)
-        if let window = view.window?.windowController as? PeachMainWindowController {
-            window.delegate = self
-        }
+        
+//        container?.toolbar?.delegate = self
         
         // This feels really hacky… But it works!
         // http://stackoverflow.com/questions/14020027/how-do-i-know-that-the-uicollectionview-has-been-loaded-completely

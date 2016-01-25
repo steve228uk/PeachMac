@@ -13,6 +13,11 @@ class ComposeWindowController: NSWindowController {
     override func windowDidLoad() {
         super.windowDidLoad()
         
+        window?.titleVisibility = .Hidden
+        window?.titlebarAppearsTransparent = true
+        window?.movableByWindowBackground  = false
+        window?.toolbar?.visible = true
+        
         NSApplication.sharedApplication().menu?.itemWithTag(2)?.hidden = false
     }
     

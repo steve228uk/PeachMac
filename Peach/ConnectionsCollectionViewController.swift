@@ -10,7 +10,7 @@ import Cocoa
 import PeachKit
 import GiphyKit
 
-class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDelegateFlowLayout, NSCollectionViewDataSource, ConnectionHeaderViewDelegate {
+class ConnectionsCollectionViewController: PeachViewController, NSCollectionViewDelegateFlowLayout, NSCollectionViewDataSource {
 
     @IBOutlet weak var collectionView: NSCollectionView!
     
@@ -21,16 +21,12 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
     /// The streams that were fetched from Peach
     var streams: [Stream] = []
     
-    /// The currently logged in user stream
-    var userStream: Stream?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loadingView.loadingIndicator.startAnimation(self)
-        
+
         collectionView.registerNib(NSNib(nibNamed: "ConnectionCollectionViewItem", bundle: nil), forItemWithIdentifier: "connectionItem")
-        collectionView.registerNib(NSNib(nibNamed: "ConnectionHeaderView", bundle: nil), forSupplementaryViewOfKind: NSCollectionElementKindSectionHeader, withIdentifier: "connectionHeader")
         
     }
     
@@ -42,17 +38,12 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
     override func viewDidAppear() {
         super.viewDidAppear()
         
+        container?.toolbar?.backButton.hidden = true
+        
         Peach.getStreams { streams, error in
             self.streams = streams
             self.collectionView.reloadData()
             self.loadingView.hideWithAnimation()
-        }
-        
-        if let id = Peach.streamID {
-            Peach.getStreamByID(id) { stream, error in
-                self.userStream = stream
-                self.collectionView.reloadData()
-            }
         }
         
         view.window?.toolbar?.removeItemAtIndex(0)
@@ -75,14 +66,6 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
         let item = collectionView.makeItemWithIdentifier("connectionItem", forIndexPath: indexPath) as! ConnectionCollectionViewItem
         item.stream = streams[indexPath.item]
         
-        if let view = item.view as? ConnectionCell {
-            if indexPath.item == 0 {
-                view.isFirst = true
-            } else {
-                view.isFirst = false
-            }
-        }
-        
         return item
         
     }
@@ -100,36 +83,8 @@ class ConnectionsCollectionViewController: NSViewController, NSCollectionViewDel
         }
     }
     
-    
-    func collectionView(collectionView: NSCollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> NSView {
-        let view = collectionView.makeSupplementaryViewOfKind(NSCollectionElementKindSectionHeader, withIdentifier: "connectionHeader", forIndexPath: indexPath) as! ConnectionHeaderView
-        
-        view.delegate = self
-        
-        if let stream = userStream {
-            view.stream = stream
-        }
-        return view
-    }
-    
     func collectionView(collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> NSSize {
-        return CGSizeMake(collectionView.frame.size.width-40, 80)
-    }
-
-    
-    
-    // MARK: - ConnectionHeaderViewDelegate
-    
-    func profileMouseUp(theEvent: NSEvent) {
-        if let tc = parentViewController as? PeachTabViewController {
-            if let vc = tc.childViewControllers[1] as? StreamViewController {
-                if let stream = userStream {
-                    vc.stream = stream
-                    tc.selectedTabViewItemIndex = 1
-                }
-            }
-        }
-
+        return CGSizeMake(collectionView.frame.size.width, 80)
     }
     
 }

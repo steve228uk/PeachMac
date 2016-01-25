@@ -12,7 +12,7 @@ class ConnectionsView: NSView {
 
     override func drawRect(dirtyRect: NSRect) {
         super.drawRect(dirtyRect)
-        layer?.backgroundColor = NSColor.peachBackgroundColor().CGColor
+        layer?.backgroundColor = NSColor.whiteColor().CGColor
     }
     
 }

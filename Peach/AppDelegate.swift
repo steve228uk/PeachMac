@@ -33,9 +33,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             Peach.streamID = streamID
             
             let sb = NSStoryboard(name: "Main", bundle: nil)
-            let vc = sb.instantiateControllerWithIdentifier("main") as? PeachContainerViewController
-            
-            NSApplication.sharedApplication().windows[0].contentViewController = vc
+            if let vc = sb.instantiateControllerWithIdentifier("main") as? NSViewController {
+                NSApplication.sharedApplication().windows[0].contentViewController = vc
+            }
             
         }
         
