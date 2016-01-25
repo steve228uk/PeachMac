@@ -38,6 +38,38 @@ class PeachContainerViewController: NSViewController {
             }
         }
         
+        if let btn = view.window?.standardWindowButton(.CloseButton) {
+            btn.setFrameOrigin(NSPoint(x: 12, y: -7))
+        }
+        
+    }
+    
+    override func viewDidLayout() {
+        if let btn = view.window?.standardWindowButton(.CloseButton) {
+            btn.removeFromSuperview()
+            btn.setFrameOrigin(NSPoint(x: 12, y: view.frame.size.height-28))
+            view.addSubview(btn)
+        }
+        
+        if let btn = view.window?.standardWindowButton(.MiniaturizeButton) {
+            btn.removeFromSuperview()
+            btn.setFrameOrigin(NSPoint(x: 32, y: view.frame.size.height-28))
+            view.addSubview(btn)
+        }
+        
+        if let btn = view.window?.standardWindowButton(.ZoomButton) {
+            btn.removeFromSuperview()
+            btn.setFrameOrigin(NSPoint(x: 52, y: view.frame.size.height-28))
+            view.addSubview(btn)
+        }
+        
+        if let btn = view.window?.standardWindowButton(.FullScreenButton) {
+            btn.removeFromSuperview()
+            btn.setFrameOrigin(NSPoint(x: 52, y: view.frame.size.height-28))
+            view.addSubview(btn)
+        }
+        
+        super.viewDidLayout()
     }
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {

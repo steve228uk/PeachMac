@@ -12,10 +12,6 @@ class PeachViewController: NSViewController {
     
     override func viewDidAppear() {
         super.viewDidAppear()
-        view.window?.titleVisibility = .Hidden
-        view.window?.titlebarAppearsTransparent = true
-        view.window?.movableByWindowBackground  = true
-        view.window?.toolbar?.visible = false
     }
     
     var tabController: PeachTabViewController? {
