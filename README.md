@@ -16,5 +16,5 @@ pod install
 
 ## Screenshots
 
-![Screenshot 1](http://sht.tl/hr4qMJ)
-![Screenshot 2](http://sht.tl/XH31W2)
+![Screenshot 1](http://sht.tl/AJdLaB)
+![Screenshot 2](http://sht.tl/Ghj6Qc)
