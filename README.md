@@ -1,4 +1,4 @@
-# PeachMac
+# Peach For Mac 🍑
 Just another peach.cool client for mac
 
 ## Download
@@ -13,3 +13,8 @@ cd PeachMac
 git submodule update --init
 pod install
 `````
+
+## Screenshots
+
+![Screenshot 1](http://sht.tl/hr4qMJ)
+![Screenshot 2](http://sht.tl/XH31W2)
