@@ -670,7 +670,7 @@ DQ
                                         </buttonCell>
                                     </button>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="cFK-TR-JGV">
-                                        <rect key="frame" x="20" y="301" width="35" height="35"/>
+                                        <rect key="frame" x="23" y="301" width="29" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="BFD-Gv-vfP"/>
                                         </constraints>
@@ -687,11 +687,11 @@ DQ
                                     <constraint firstAttribute="width" constant="76" id="JPf-5o-XLs"/>
                                     <constraint firstItem="bGZ-kW-xKY" firstAttribute="leading" secondItem="N2B-DR-T8Z" secondAttribute="leading" constant="20" id="SX8-ZD-iFR"/>
                                     <constraint firstItem="bGZ-kW-xKY" firstAttribute="top" secondItem="hTU-Na-IKu" secondAttribute="bottom" constant="30" id="Vbu-v8-voo"/>
-                                    <constraint firstAttribute="trailing" secondItem="cFK-TR-JGV" secondAttribute="trailing" constant="21" id="XBG-DE-h2g"/>
+                                    <constraint firstAttribute="trailing" secondItem="cFK-TR-JGV" secondAttribute="trailing" constant="24" id="XBG-DE-h2g"/>
                                     <constraint firstAttribute="trailing" secondItem="aUt-Lc-eX3" secondAttribute="trailing" constant="14" id="jeV-S7-slA"/>
                                     <constraint firstItem="hTU-Na-IKu" firstAttribute="top" secondItem="aUt-Lc-eX3" secondAttribute="bottom" constant="24" id="oDF-He-0Nd"/>
                                     <constraint firstAttribute="trailing" secondItem="hTU-Na-IKu" secondAttribute="trailing" constant="20" id="pMj-4Q-Szz"/>
-                                    <constraint firstItem="cFK-TR-JGV" firstAttribute="leading" secondItem="N2B-DR-T8Z" secondAttribute="leading" constant="20" id="rYE-2y-1zY"/>
+                                    <constraint firstItem="cFK-TR-JGV" firstAttribute="leading" secondItem="N2B-DR-T8Z" secondAttribute="leading" constant="23" id="rYE-2y-1zY"/>
                                     <constraint firstItem="aUt-Lc-eX3" firstAttribute="top" secondItem="N2B-DR-T8Z" secondAttribute="top" constant="40" id="tFe-9g-CrB"/>
                                     <constraint firstItem="hTU-Na-IKu" firstAttribute="leading" secondItem="N2B-DR-T8Z" secondAttribute="leading" constant="21" id="uAF-H4-kBm"/>
                                 </constraints>
