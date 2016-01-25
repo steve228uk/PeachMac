@@ -47,6 +47,7 @@ class StreamViewController: PeachViewController, PeachNavigationDelegate {
         super.viewWillAppear()
         
         container?.toolbar?.backButton.hidden = false
+        container?.toolbar?.title = ""
         container?.toolbar?.delegate = self
         
         if let name = stream?.displayName {

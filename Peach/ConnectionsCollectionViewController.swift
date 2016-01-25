@@ -39,6 +39,7 @@ class ConnectionsCollectionViewController: PeachViewController, NSCollectionView
         super.viewDidAppear()
         
         container?.toolbar?.backButton.hidden = true
+        container?.toolbar?.title = "Friends"
         
         Peach.getStreams { streams, error in
             self.streams = streams

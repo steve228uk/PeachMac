@@ -14,7 +14,17 @@ protocol PeachNavigationDelegate {
 
 class PeachToolbarViewController: NSViewController {
 
+    override var title: String? {
+        didSet {
+            if let t = title {
+                titleView.stringValue = t
+            }
+        }
+    }
+    
     @IBOutlet weak var backButton: NSButton!
+    
+    @IBOutlet weak var titleView: NSTextField!
     
     var delegate: PeachNavigationDelegate?
     

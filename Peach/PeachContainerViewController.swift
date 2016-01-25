@@ -13,9 +13,15 @@ class PeachContainerViewController: NSViewController {
     
     @IBOutlet weak var container: NSView!
     
+    var toolbar: PeachToolbarViewController?
+    
+    // MARK: - Tab Bar Icons
+    
     @IBOutlet weak var avatar: NSImageView!
     
-    var toolbar: PeachToolbarViewController?
+    @IBOutlet weak var friendsBtn: NSButton!
+    
+    // MARK: - Methods
     
     override func viewDidLoad() {
         
