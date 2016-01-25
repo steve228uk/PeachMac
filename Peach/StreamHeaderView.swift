@@ -23,13 +23,13 @@ class StreamHeaderView: NSView {
             l.masksToBounds = false
             
             let shadow = NSShadow()
-            shadow.shadowColor = NSColor(calibratedHue: 0, saturation: 0, brightness: 0, alpha: 0.35)
+            shadow.shadowColor = NSColor(calibratedHue: 0, saturation: 0, brightness: 0, alpha: 0.2)
             shadow.shadowOffset = CGSize(width: 0, height: 1)
             shadow.shadowBlurRadius = 3
             
             self.shadow = shadow
             
-            NSColor(calibratedHue: 0, saturation: 0, brightness: 0, alpha: 0.15).setStroke()
+            NSColor(calibratedHue:0, saturation:0, brightness:0.79, alpha:1).setStroke()
             
             let bottomBorder = NSBezierPath(rect: CGRect(x: 0, y: 0, width: l.frame.size.width, height: 0))
             bottomBorder.lineWidth = 1

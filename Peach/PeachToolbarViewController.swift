@@ -22,6 +22,15 @@ class PeachToolbarViewController: NSViewController {
         }
     }
     
+    var borderVisible = true {
+        didSet {
+            if let v = view as? PeachToolbarView {
+                v.showBorder = borderVisible
+                v.needsDisplay = true
+            }
+        }
+    }
+    
     @IBOutlet weak var backButton: NSButton!
     
     @IBOutlet weak var titleView: NSTextField!
@@ -35,5 +44,6 @@ class PeachToolbarViewController: NSViewController {
     @IBAction func back(sender: AnyObject?) {
         delegate?.sendNavigationBack(sender)
     }
+    
     
 }
