@@ -12,6 +12,7 @@ class PeachViewController: NSViewController {
     
     override func viewDidAppear() {
         super.viewDidAppear()
+        
     }
     
     var tabController: PeachTabViewController? {
