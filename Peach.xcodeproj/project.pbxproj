@@ -62,6 +62,10 @@
 		2874F7381C42FF7B00D06D34 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F7371C42FF7B00D06D34 /* Stream.swift */; };
 		2879B8831C4C1BA600BC7058 /* TextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879B8821C4C1BA600BC7058 /* TextMessage.swift */; };
 		2879B8851C4C1C1D00BC7058 /* ImageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879B8841C4C1C1D00BC7058 /* ImageMessage.swift */; };
+		288D9B4A1C597584008F6608 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 288D9B491C597584008F6608 /* Login.xib */; };
+		288D9B4C1C5976F9008F6608 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D9B4B1C5976F8008F6608 /* AvatarView.swift */; };
+		288D9B4E1C597768008F6608 /* +MoveButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D9B4D1C597768008F6608 /* +MoveButtons.swift */; };
+		288D9B511C5977D8008F6608 /* +LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D9B501C5977D8008F6608 /* +LoginView.swift */; };
 		2899A75D1C558DD30045C4F9 /* PeachToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2899A75C1C558DD30045C4F9 /* PeachToolbarViewController.swift */; };
 		2899A75F1C558DE00045C4F9 /* PeachToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2899A75E1C558DE00045C4F9 /* PeachToolbarView.swift */; };
 		289D3F0D1C4C261300E96321 /* VideoMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289D3F0C1C4C261300E96321 /* VideoMessage.swift */; };
@@ -191,6 +195,10 @@
 		2874F7371C42FF7B00D06D34 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		2879B8821C4C1BA600BC7058 /* TextMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMessage.swift; sourceTree = "<group>"; };
 		2879B8841C4C1C1D00BC7058 /* ImageMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMessage.swift; sourceTree = "<group>"; };
+		288D9B491C597584008F6608 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
+		288D9B4B1C5976F8008F6608 /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		288D9B4D1C597768008F6608 /* +MoveButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "+MoveButtons.swift"; sourceTree = "<group>"; };
+		288D9B501C5977D8008F6608 /* +LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "+LoginView.swift"; sourceTree = "<group>"; };
 		2899A75C1C558DD30045C4F9 /* PeachToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachToolbarViewController.swift; sourceTree = "<group>"; };
 		2899A75E1C558DE00045C4F9 /* PeachToolbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachToolbarView.swift; sourceTree = "<group>"; };
 		289D3F0C1C4C261300E96321 /* VideoMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoMessage.swift; sourceTree = "<group>"; };
@@ -334,6 +342,7 @@
 				282D92C21C42CCAF00B83109 /* AppDelegate.swift */,
 				282D92C61C42CCAF00B83109 /* Assets.xcassets */,
 				282D92C81C42CCAF00B83109 /* Main.storyboard */,
+				288D9B491C597584008F6608 /* Login.xib */,
 				282D92CB1C42CCAF00B83109 /* Info.plist */,
 			);
 			path = Peach;
@@ -488,8 +497,8 @@
 		2874F7271C42E5E100D06D34 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				288D9B4F1C5977C1008F6608 /* Container View */,
 				2899A75B1C558DB90045C4F9 /* Toolbar */,
-				28A1DA691C456B18004198A0 /* PeachContainerViewController.swift */,
 				28A1DA701C457165004198A0 /* PeachViewController.swift */,
 				28A8C0321C45AD01006DA6FC /* PeachTabViewController.swift */,
 				28D6FA151C56EFC200CCC319 /* MainWindowController.swift */,
@@ -506,11 +515,22 @@
 			name = Message;
 			sourceTree = "<group>";
 		};
+		288D9B4F1C5977C1008F6608 /* Container View */ = {
+			isa = PBXGroup;
+			children = (
+				28A1DA691C456B18004198A0 /* PeachContainerViewController.swift */,
+				288D9B4D1C597768008F6608 /* +MoveButtons.swift */,
+				288D9B501C5977D8008F6608 /* +LoginView.swift */,
+			);
+			name = "Container View";
+			sourceTree = "<group>";
+		};
 		2899A75B1C558DB90045C4F9 /* Toolbar */ = {
 			isa = PBXGroup;
 			children = (
 				2899A75C1C558DD30045C4F9 /* PeachToolbarViewController.swift */,
 				2899A75E1C558DE00045C4F9 /* PeachToolbarView.swift */,
+				288D9B4B1C5976F8008F6608 /* AvatarView.swift */,
 			);
 			name = Toolbar;
 			sourceTree = "<group>";
@@ -754,6 +774,7 @@
 				28515A891C49CD1500F0ABE8 /* PostTextItem.xib in Resources */,
 				28C7A1E81C485B78004D8FD0 /* ConnectionCollectionViewItem.xib in Resources */,
 				285DFB851C52C23E00C34980 /* PostLocationItem.xib in Resources */,
+				288D9B4A1C597584008F6608 /* Login.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -924,8 +945,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2874F72F1C42E9BB00D06D34 /* LoginButton.swift in Sources */,
+				288D9B511C5977D8008F6608 /* +LoginView.swift in Sources */,
 				28C7A1EC1C4863E3004D8FD0 /* NSColor+CustomColors.swift in Sources */,
 				28A8C0331C45AD01006DA6FC /* PeachTabViewController.swift in Sources */,
+				288D9B4E1C597768008F6608 /* +MoveButtons.swift in Sources */,
 				28515AA41C4AE02000F0ABE8 /* PostActionsItem.swift in Sources */,
 				28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */,
 				285DFB9C1C5446F000C34980 /* PeachComposeTextView.swift in Sources */,
@@ -935,6 +958,7 @@
 				2874F7261C42E57700D06D34 /* LoginView.swift in Sources */,
 				28515A9E1C4AC84700F0ABE8 /* PostGIFItem.swift in Sources */,
 				285DFB961C52DF1400C34980 /* ConnectionsLoadingView.swift in Sources */,
+				288D9B4C1C5976F9008F6608 /* AvatarView.swift in Sources */,
 				28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */,
 				2874F7311C42EE5800D06D34 /* LoginTextField.swift in Sources */,
 				28A8C0311C457F1F006DA6FC /* ComposeWindowController.swift in Sources */,

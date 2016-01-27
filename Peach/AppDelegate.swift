@@ -20,25 +20,8 @@ var streamID: String?
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        
-        token = keychain["token"]
-        streamID = keychain["streamID"]
-        
         Giphy.APIKey = "dc6zaTOxFJmzC"
         Imgur.clientID = "f69ce8fb3b0ac47"
-        
-        if token != nil {
-            
-            Peach.OAuthToken = token
-            Peach.streamID = streamID
-            
-            let sb = NSStoryboard(name: "Main", bundle: nil)
-            if let vc = sb.instantiateControllerWithIdentifier("main") as? NSViewController {
-                NSApplication.sharedApplication().windows[0].contentViewController = vc
-            }
-            
-        }
-        
     }
     
     func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {

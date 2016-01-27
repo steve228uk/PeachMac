@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import KeychainAccess
 import PeachKit
 
 class PeachContainerViewController: NSViewController {
@@ -15,9 +16,15 @@ class PeachContainerViewController: NSViewController {
     
     var toolbar: PeachToolbarViewController?
     
+    // MARK: - Login Controller
+    
+    var loginController: LoginViewController?
+    
+    var loginObjects: NSArray? = []
+    
     // MARK: - Tab Bar Icons
     
-    @IBOutlet weak var avatar: NSImageView!
+    @IBOutlet weak var avatar: AvatarView!
     
     @IBOutlet weak var friendsBtn: NSButton!
     
@@ -26,17 +33,24 @@ class PeachContainerViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        avatar.wantsLayer = true
-        avatar.layer?.backgroundColor = NSColor.whiteColor().CGColor
-        avatar.layer?.cornerRadius = 23
-        avatar.layer?.masksToBounds = true
+        token = keychain["token"]
+        streamID = keychain["streamID"]
         
-        if let id = Peach.streamID {
-            Peach.getStreamByID(id) { stream, error in
-                stream?.getAvatar { image in
-                    self.avatar.image = image.cropToSquare()
+        if token != nil {
+            
+            Peach.OAuthToken = token
+            Peach.streamID = streamID
+            
+            if let id = Peach.streamID {
+                Peach.getStreamByID(id) { stream, error in
+                    stream?.getAvatar { image in
+                        self.avatar.image = image.cropToSquare()
+                    }
                 }
             }
+            
+        } else {
+            loadLoginView()
         }
         
     }
@@ -44,32 +58,6 @@ class PeachContainerViewController: NSViewController {
     override func viewDidLayout() {
         super.viewDidLayout()
         moveButtons()
-    }
-    
-    func moveButtons() {
-        if let btn = view.window?.standardWindowButton(.CloseButton) {
-            btn.removeFromSuperview()
-            btn.setFrameOrigin(NSPoint(x: 12, y: view.frame.size.height-28))
-            view.addSubview(btn)
-        }
-        
-        if let btn = view.window?.standardWindowButton(.MiniaturizeButton) {
-            btn.removeFromSuperview()
-            btn.setFrameOrigin(NSPoint(x: 32, y: view.frame.size.height-28))
-            view.addSubview(btn)
-        }
-        
-        if let btn = view.window?.standardWindowButton(.ZoomButton) {
-            btn.removeFromSuperview()
-            btn.setFrameOrigin(NSPoint(x: 52, y: view.frame.size.height-28))
-            view.addSubview(btn)
-        }
-        
-        if let btn = view.window?.standardWindowButton(.FullScreenButton) {
-            btn.removeFromSuperview()
-            btn.setFrameOrigin(NSPoint(x: 52, y: view.frame.size.height-28))
-            view.addSubview(btn)
-        }
     }
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
