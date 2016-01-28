@@ -12,28 +12,36 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="40"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dYo-HP-DrS">
-                    <rect key="frame" x="20" y="10" width="37" height="19"/>
-                    <buttonCell key="cell" type="roundRect" title="Like" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WcV-rR-w6t">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="cellTitle"/>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="LDP-ci-hbK">
+                    <rect key="frame" x="12" y="10" width="17" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="5T8-Nl-Xus"/>
+                        <constraint firstAttribute="width" constant="17" id="iGy-X6-DVx"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="heart-off" imagePosition="only" alignment="center" alternateImage="heart-on" imageScaling="proportionallyUpOrDown" inset="2" id="b6P-6x-Rx1">
+                        <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="likePost:" target="ZhZ-pz-0LN" id="KoE-fI-FUC"/>
+                        <action selector="likePost:" target="ZhZ-pz-0LN" id="sPp-bs-Oqv"/>
                     </connections>
                 </button>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="dYo-HP-DrS" secondAttribute="bottom" constant="11" id="HJo-eZ-6lQ"/>
-                <constraint firstItem="dYo-HP-DrS" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="cUi-gW-8lS"/>
-                <constraint firstItem="dYo-HP-DrS" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="11" id="xCe-Y1-thv"/>
+                <constraint firstItem="LDP-ci-hbK" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="12" id="Bbf-mq-cRg"/>
+                <constraint firstItem="LDP-ci-hbK" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="13" id="qQJ-qz-iHU"/>
             </constraints>
             <point key="canvasLocation" x="446" y="243"/>
         </customView>
         <collectionViewItem id="ZhZ-pz-0LN" customClass="PostActionsItem" customModule="Peach" customModuleProvider="target">
             <connections>
+                <outlet property="likeBtn" destination="LDP-ci-hbK" id="LeW-Nd-fBL"/>
                 <outlet property="view" destination="c22-O7-iKe" id="nAJ-GZ-jtV"/>
             </connections>
         </collectionViewItem>
     </objects>
+    <resources>
+        <image name="heart-off" width="20" height="18"/>
+        <image name="heart-on" width="20" height="18"/>
+    </resources>
 </document>
