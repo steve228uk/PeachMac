@@ -9,11 +9,17 @@
 import Cocoa
 import PeachKit
 
+protocol LoginDelegate {
+    func loggedInSuccessfully()
+}
+
 class LoginViewController: NSViewController {
 
     @IBOutlet weak var emailField: NSTextField!
     
     @IBOutlet weak var passwordField: NSSecureTextField!
+    
+    var delegate: LoginDelegate?
     
     override func viewDidAppear() {
         super.viewDidAppear()
@@ -30,11 +36,7 @@ class LoginViewController: NSViewController {
                 Peach.OAuthToken = result!.token
                 Peach.streamID = result!.streamID
                 
-                // TODO: Change this for a segue. Hacky hack!
-                let sb = NSStoryboard(name: "Main", bundle: nil)
-                let vc = sb.instantiateControllerWithIdentifier("main") as? PeachContainerViewController
-                let window = NSApplication.sharedApplication().windows[0]
-                window.contentViewController = vc
+                self.delegate?.loggedInSuccessfully()
                 
             } else {
                 // handle login error

@@ -10,7 +10,7 @@ import Cocoa
 import PeachKit
 import GiphyKit
 
-class ConnectionsCollectionViewController: PeachViewController, NSCollectionViewDelegateFlowLayout, NSCollectionViewDataSource {
+class ConnectionsCollectionViewController: PeachViewController, PeachContainerDelegate, NSCollectionViewDelegateFlowLayout, NSCollectionViewDataSource {
 
     @IBOutlet weak var collectionView: NSCollectionView!
     
@@ -27,7 +27,6 @@ class ConnectionsCollectionViewController: PeachViewController, NSCollectionView
         loadingView.loadingIndicator.startAnimation(self)
 
         collectionView.registerNib(NSNib(nibNamed: "ConnectionCollectionViewItem", bundle: nil), forItemWithIdentifier: "connectionItem")
-        
     }
     
     override func viewDidLayout() {
@@ -41,14 +40,25 @@ class ConnectionsCollectionViewController: PeachViewController, NSCollectionView
         container?.toolbar?.backButton.hidden = true
         container?.toolbar?.title = "Friends"
         container?.toolbar?.borderVisible = true
+        container?.delegate = self
         
+        loadStreams()
+        
+        view.window?.toolbar?.removeItemAtIndex(0)
+    }
+    
+    func successfullyLoggedIn() {
+        loadStreams()
+    }
+    
+    func loadStreams() {
         Peach.getStreams { streams, error in
             self.streams = streams
             self.collectionView.reloadData()
-            self.loadingView.hideWithAnimation()
+            if error == nil {
+                self.loadingView.hideWithAnimation()
+            }
         }
-        
-        view.window?.toolbar?.removeItemAtIndex(0)
     }
     
     

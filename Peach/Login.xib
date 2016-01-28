@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="emailField" destination="ICp-hb-cvv" id="G3l-D2-7KP"/>
                 <outlet property="passwordField" destination="PnT-UD-iyB" id="pv0-iS-fRG"/>
+                <outlet property="view" destination="c22-O7-iKe" id="x0J-Vt-uP8"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>

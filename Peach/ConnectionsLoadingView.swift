@@ -11,16 +11,5 @@ import Cocoa
 class ConnectionsLoadingView: ConnectionsView {
 
     @IBOutlet weak var loadingIndicator: NSProgressIndicator!
-    
-    func hideWithAnimation() {
-        NSAnimationContext.runAnimationGroup(fadeOut) {
-            self.hidden = true
-        }
-    }
-    
-    func fadeOut(context: NSAnimationContext) {
-        context.duration = 0.3
-        animator().alphaValue = 0
-    }
-    
+
 }

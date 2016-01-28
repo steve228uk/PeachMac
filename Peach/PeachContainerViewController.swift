@@ -10,11 +10,17 @@ import Cocoa
 import KeychainAccess
 import PeachKit
 
+@objc protocol PeachContainerDelegate {
+    optional func successfullyLoggedIn()
+}
+
 class PeachContainerViewController: NSViewController {
     
     @IBOutlet weak var container: NSView!
     
     var toolbar: PeachToolbarViewController?
+    
+    var delegate: PeachContainerDelegate?
     
     // MARK: - Login Controller
     
@@ -41,19 +47,14 @@ class PeachContainerViewController: NSViewController {
             Peach.OAuthToken = token
             Peach.streamID = streamID
             
-            if let id = Peach.streamID {
-                Peach.getStreamByID(id) { stream, error in
-                    stream?.getAvatar { image in
-                        self.avatar.image = image.cropToSquare()
-                    }
-                }
-            }
+            loadUserStream()
             
         } else {
             loadLoginView()
         }
         
     }
+    
     
     override func viewDidLayout() {
         super.viewDidLayout()
@@ -63,6 +64,18 @@ class PeachContainerViewController: NSViewController {
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
         if let vc = segue.destinationController as? PeachToolbarViewController {
             toolbar = vc
+        }
+    }
+    
+    // MARK: - Network
+    
+    func loadUserStream() {
+        if let id = Peach.streamID {
+            Peach.getStreamByID(id) { stream, error in
+                stream?.getAvatar { image in
+                    self.avatar.image = image.cropToSquare()
+                }
+            }
         }
     }
     

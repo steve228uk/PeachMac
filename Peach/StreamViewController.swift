@@ -59,10 +59,6 @@ class StreamViewController: PeachViewController, PeachNavigationDelegate {
     override func viewDidAppear() {
         super.viewDidAppear()
         
-        view.window?.toolbar?.insertItemWithItemIdentifier("back", atIndex: 0)
-        
-//        container?.toolbar?.delegate = self
-        
         // This feels really hacky… But it works!
         // http://stackoverflow.com/questions/14020027/how-do-i-know-that-the-uicollectionview-has-been-loaded-completely
         
