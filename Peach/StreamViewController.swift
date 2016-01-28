@@ -19,7 +19,11 @@ class StreamViewController: PeachViewController, PeachNavigationDelegate {
     
     @IBOutlet weak var scrollView: NSScrollView!
     
-    var stream: Stream?
+    var stream: Stream? {
+        didSet {
+            stream?.markAsRead()
+        }
+    }
     
     var posts: [Post] {
         get {
