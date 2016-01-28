@@ -18,9 +18,7 @@ class PostActionsItem: NSCollectionViewItem {
     var post: Post? {
         didSet {
             if let p = post {
-                if p.likedByMe {
-                    likeBtn.state = 1
-                }
+                likeBtn.state =  (p.likedByMe) ? 1 : 0
                 if let count = p.likeCount {
                     likeCount.stringValue = "\(count)"
                     likeCount.sizeToFit()
