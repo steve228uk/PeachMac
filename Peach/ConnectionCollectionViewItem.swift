@@ -36,10 +36,8 @@ class ConnectionCollectionViewItem: NSCollectionViewItem {
                 
                 nameLabel.stringValue = stream!.displayName!
                 
-                if stream?.avatarSrc != nil {
-                    stream?.getAvatar { image in
-                        self.image.image = image.cropToSquare()
-                    }
+                if let avatarSrc = stream?.avatarSrc {
+                    self.image.image = NSImage(byReferencingURL: NSURL(string: avatarSrc)!).cropToSquare()
                 } else {
                     image.image = NSImage(named: "placeholder")
                 }

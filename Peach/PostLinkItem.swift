@@ -32,9 +32,10 @@ class PostLinkItem: NSCollectionViewItem {
                 
                 imageView?.image = nil
                 
-                l.getImage { image in
-                    self.imageView?.image = image.cropToSquare()
+                if let src = l.imageURL {
+                    self.imageView?.image = NSImage(byReferencingURL: NSURL(string: src)!).cropToSquare()
                 }
+
             }
         }
     }

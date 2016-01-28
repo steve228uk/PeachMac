@@ -74,8 +74,8 @@ class PeachContainerViewController: NSViewController {
     func loadUserStream() {
         if let id = Peach.streamID {
             Peach.getStreamByID(id) { stream, error in
-                stream?.getAvatar { image in
-                    self.avatar.image = image.cropToSquare()
+                if let src = stream?.avatarSrc {
+                    self.avatar.image = NSImage(byReferencingURL: NSURL(string: src)!).cropToSquare()
                 }
             }
         }

@@ -143,8 +143,8 @@ extension StreamViewController: NSCollectionViewDataSource {
         let item = collectionView.makeItemWithIdentifier("imageItem", forIndexPath: indexPath) as! PostImageItem
         let imageMessage = posts[indexPath.section].message[indexPath.item] as! ImageMessage
         item.imageView?.image = nil
-        imageMessage.getImage { image in
-            item.imageView?.image = image
+        if let src = imageMessage.src {
+            item.imageView?.image = NSImage(byReferencingURL: NSURL(string: src)!)
         }
         return item
     }
