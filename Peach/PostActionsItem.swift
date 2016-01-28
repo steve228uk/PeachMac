@@ -12,6 +12,8 @@ import PeachKit
 class PostActionsItem: NSCollectionViewItem {
     
     @IBOutlet weak var likeBtn: NSButton!
+    
+    @IBOutlet weak var likeCount: NSTextField!
 
     var post: Post? {
         didSet {
@@ -19,12 +21,22 @@ class PostActionsItem: NSCollectionViewItem {
                 if p.likedByMe {
                     likeBtn.state = 1
                 }
+                if let count = p.likeCount {
+                    likeCount.stringValue = "\(count)"
+                    likeCount.sizeToFit()
+                }
             }
         }
     }
     
     @IBAction func likePost(sender: AnyObject) {
-        post?.like()
+        if let p = post {
+            p.like { error in
+                if let count = self.post?.likeCount {
+                    self.likeCount.stringValue = "\(count)"
+                }
+            }
+        }
     }
     
 }

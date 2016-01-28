@@ -13,7 +13,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <button translatesAutoresizingMaskIntoConstraints="NO" id="LDP-ci-hbK">
-                    <rect key="frame" x="12" y="10" width="17" height="17"/>
+                    <rect key="frame" x="20" y="10" width="17" height="17"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="5T8-Nl-Xus"/>
                         <constraint firstAttribute="width" constant="17" id="iGy-X6-DVx"/>
@@ -26,16 +26,31 @@
                         <action selector="likePost:" target="ZhZ-pz-0LN" id="sPp-bs-Oqv"/>
                     </connections>
                 </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eyo-nE-VvD">
+                    <rect key="frame" x="41" y="11" width="13" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="9" id="2pL-An-hRK"/>
+                        <constraint firstAttribute="height" constant="17" id="BZ2-ak-GTf"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0" id="ip6-qm-znP">
+                        <font key="font" metaFont="systemLight" size="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="LDP-ci-hbK" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="12" id="Bbf-mq-cRg"/>
+                <constraint firstItem="LDP-ci-hbK" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="Bbf-mq-cRg"/>
+                <constraint firstItem="eyo-nE-VvD" firstAttribute="leading" secondItem="LDP-ci-hbK" secondAttribute="trailing" constant="6" id="Vev-nS-HrL"/>
                 <constraint firstItem="LDP-ci-hbK" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="13" id="qQJ-qz-iHU"/>
+                <constraint firstItem="eyo-nE-VvD" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="12" id="wJa-3S-bCM"/>
             </constraints>
             <point key="canvasLocation" x="446" y="243"/>
         </customView>
         <collectionViewItem id="ZhZ-pz-0LN" customClass="PostActionsItem" customModule="Peach" customModuleProvider="target">
             <connections>
                 <outlet property="likeBtn" destination="LDP-ci-hbK" id="LeW-Nd-fBL"/>
+                <outlet property="likeCount" destination="eyo-nE-VvD" id="KiT-IG-JhV"/>
                 <outlet property="view" destination="c22-O7-iKe" id="nAJ-GZ-jtV"/>
             </connections>
         </collectionViewItem>
