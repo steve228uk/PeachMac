@@ -75,7 +75,13 @@ class PeachContainerViewController: NSViewController {
         if let id = Peach.streamID {
             Peach.getStreamByID(id) { stream, error in
                 if let src = stream?.avatarSrc {
-                    self.avatar.image = NSImage(byReferencingURL: NSURL(string: src)!).cropToSquare()
+                    let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+                    dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                        let image = NSImage(byReferencingURL: NSURL(string: src)!).cropToSquare()
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.avatar.image = image
+                        }
+                    }
                 }
             }
         }
