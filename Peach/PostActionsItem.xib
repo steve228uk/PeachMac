@@ -8,12 +8,12 @@
         <customObject id="-2" userLabel="File's Owner"/>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="40"/>
+        <customView id="c22-O7-iKe" customClass="PostActionsView" customModule="Peach" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="32"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <button translatesAutoresizingMaskIntoConstraints="NO" id="LDP-ci-hbK">
-                    <rect key="frame" x="20" y="10" width="17" height="17"/>
+                    <rect key="frame" x="20" y="7" width="17" height="17"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="5T8-Nl-Xus"/>
                         <constraint firstAttribute="width" constant="17" id="iGy-X6-DVx"/>
@@ -27,7 +27,7 @@
                     </connections>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eyo-nE-VvD">
-                    <rect key="frame" x="41" y="11" width="13" height="17"/>
+                    <rect key="frame" x="41" y="8" width="13" height="17"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="9" id="2pL-An-hRK"/>
                         <constraint firstAttribute="height" constant="17" id="BZ2-ak-GTf"/>
@@ -42,10 +42,10 @@
             <constraints>
                 <constraint firstItem="LDP-ci-hbK" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="Bbf-mq-cRg"/>
                 <constraint firstItem="eyo-nE-VvD" firstAttribute="leading" secondItem="LDP-ci-hbK" secondAttribute="trailing" constant="6" id="Vev-nS-HrL"/>
-                <constraint firstItem="LDP-ci-hbK" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="13" id="qQJ-qz-iHU"/>
-                <constraint firstItem="eyo-nE-VvD" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="12" id="wJa-3S-bCM"/>
+                <constraint firstItem="LDP-ci-hbK" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="8" id="qQJ-qz-iHU"/>
+                <constraint firstItem="eyo-nE-VvD" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="7" id="wJa-3S-bCM"/>
             </constraints>
-            <point key="canvasLocation" x="446" y="243"/>
+            <point key="canvasLocation" x="446" y="244"/>
         </customView>
         <collectionViewItem id="ZhZ-pz-0LN" customClass="PostActionsItem" customModule="Peach" customModuleProvider="target">
             <connections>

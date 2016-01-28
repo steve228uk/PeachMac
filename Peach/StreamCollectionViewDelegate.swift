@@ -24,7 +24,7 @@ extension StreamViewController: NSCollectionViewDataSource {
     func collectionView(collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> NSSize {
         
         guard indexPath.item != posts[indexPath.section].message.count else {
-            return CGSizeMake(collectionView.frame.size.width, 50)
+            return CGSizeMake(collectionView.frame.size.width, 40)
         }
         
         let message = posts[indexPath.section].message[indexPath.item]
@@ -74,11 +74,11 @@ extension StreamViewController: NSCollectionViewDataSource {
         case .Link :
             return CGSizeMake(collectionView.frame.size.width, 85)
         default:
-            return CGSizeMake(collectionView.frame.size.width, 20)
+            return CGSizeMake(collectionView.frame.size.width, 32)
         }
         
         // final catch
-        return CGSizeMake(collectionView.frame.size.width, 20)
+        return CGSizeMake(collectionView.frame.size.width, 32)
     }
     
     
