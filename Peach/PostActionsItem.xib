@@ -38,17 +38,48 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="Ip5-6H-Wi7">
+                    <rect key="frame" x="70" y="7" width="17" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="F1s-f1-MWf"/>
+                        <constraint firstAttribute="width" constant="17" id="j3B-pl-n04"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="comment" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="X45-XS-MPF">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="likePost:" target="ZhZ-pz-0LN" id="y5d-AB-GuH"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fmt-ol-xw8">
+                    <rect key="frame" x="93" y="7" width="13" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="AkR-p4-hBJ"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="9" id="fK4-MI-KSl"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0" id="wQ1-b4-cOD">
+                        <font key="font" metaFont="systemLight" size="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
+                <constraint firstItem="fmt-ol-xw8" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="8" id="Ahg-Hp-tCJ"/>
                 <constraint firstItem="LDP-ci-hbK" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="Bbf-mq-cRg"/>
                 <constraint firstItem="eyo-nE-VvD" firstAttribute="leading" secondItem="LDP-ci-hbK" secondAttribute="trailing" constant="6" id="Vev-nS-HrL"/>
+                <constraint firstItem="fmt-ol-xw8" firstAttribute="leading" secondItem="Ip5-6H-Wi7" secondAttribute="trailing" constant="8" id="jho-4x-Ilg"/>
+                <constraint firstItem="Ip5-6H-Wi7" firstAttribute="leading" secondItem="eyo-nE-VvD" secondAttribute="trailing" constant="18" id="nsm-bF-HPg"/>
                 <constraint firstItem="LDP-ci-hbK" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="8" id="qQJ-qz-iHU"/>
                 <constraint firstItem="eyo-nE-VvD" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="7" id="wJa-3S-bCM"/>
+                <constraint firstItem="Ip5-6H-Wi7" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="8" id="wNa-AQ-fK9"/>
             </constraints>
             <point key="canvasLocation" x="446" y="244"/>
         </customView>
         <collectionViewItem id="ZhZ-pz-0LN" customClass="PostActionsItem" customModule="Peach" customModuleProvider="target">
             <connections>
+                <outlet property="commentCount" destination="fmt-ol-xw8" id="0Br-Oa-mRn"/>
                 <outlet property="likeBtn" destination="LDP-ci-hbK" id="LeW-Nd-fBL"/>
                 <outlet property="likeCount" destination="eyo-nE-VvD" id="KiT-IG-JhV"/>
                 <outlet property="view" destination="c22-O7-iKe" id="nAJ-GZ-jtV"/>
@@ -56,6 +87,7 @@
         </collectionViewItem>
     </objects>
     <resources>
+        <image name="comment" width="25" height="25"/>
         <image name="heart-off" width="20" height="18"/>
         <image name="heart-on" width="20" height="18"/>
     </resources>

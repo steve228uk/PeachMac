@@ -15,6 +15,8 @@ class PostActionsItem: NSCollectionViewItem {
     
     @IBOutlet weak var likeCount: NSTextField!
 
+    @IBOutlet weak var commentCount: NSTextField!
+    
     var post: Post? {
         didSet {
             if let p = post {
@@ -23,6 +25,12 @@ class PostActionsItem: NSCollectionViewItem {
                     likeCount.stringValue = "\(count)"
                     likeCount.sizeToFit()
                 }
+                
+                if let count = p.commentCount {
+                    commentCount.stringValue = "\(count)"
+                    commentCount.sizeToFit()
+                }
+                
             }
         }
     }
