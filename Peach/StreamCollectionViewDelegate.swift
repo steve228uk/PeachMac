@@ -144,7 +144,15 @@ extension StreamViewController: NSCollectionViewDataSource {
         let imageMessage = posts[indexPath.section].message[indexPath.item] as! ImageMessage
         item.imageView?.image = nil
         if let src = imageMessage.src {
-            item.imageView?.image = NSImage(byReferencingURL: NSURL(string: src)!)
+            
+            let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+            dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                let image = NSImage(byReferencingURL: NSURL(string: src)!)
+                dispatch_async(dispatch_get_main_queue()) {
+                    item.imageView?.image = image
+                }
+            }
+            
         }
         return item
     }
