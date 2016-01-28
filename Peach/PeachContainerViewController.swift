@@ -81,4 +81,14 @@ class PeachContainerViewController: NSViewController {
         }
     }
     
+    // MARK: - Tab Bar Actions
+    
+    @IBAction func showFriends(sender: AnyObject) {
+    }
+    
+    @IBAction func showActivity(sender: AnyObject) {
+    }
+    
+    @IBAction func showProfile(sender: AnyObject) {
+    }
 }

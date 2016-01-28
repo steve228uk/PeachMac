@@ -651,6 +651,9 @@ DQ
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="showFriends:" target="znL-nU-peJ" id="odr-4v-3Jd"/>
+                                        </connections>
                                     </button>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="bGZ-kW-xKY">
                                         <rect key="frame" x="20" y="371" width="36" height="35"/>
@@ -661,6 +664,9 @@ DQ
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="showActivity:" target="znL-nU-peJ" id="Gfg-gs-wJh"/>
+                                        </connections>
                                     </button>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="cFK-TR-JGV">
                                         <rect key="frame" x="23" y="311" width="29" height="35"/>
@@ -671,6 +677,9 @@ DQ
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="showProfile:" target="znL-nU-peJ" id="MLc-B3-AVC"/>
+                                        </connections>
                                     </button>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aUt-Lc-eX3" customClass="AvatarView" customModule="Peach" customModuleProvider="target">
                                         <rect key="frame" x="14" y="490" width="48" height="48"/>
@@ -1021,7 +1030,7 @@ DQ
                 </viewController>
                 <customObject id="Yj7-oW-K3V" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844" y="1574"/>
+            <point key="canvasLocation" x="844" y="1599"/>
         </scene>
         <!--Peach Toolbar View Controller-->
         <scene sceneID="Jhb-kI-hLv">
