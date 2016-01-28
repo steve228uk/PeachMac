@@ -44,8 +44,7 @@ class PeachContainerViewController: NSViewController {
         token = keychain["token"]
         streamID = keychain["streamID"]
         
-        // CHANGE BACK TO !=
-        if token == nil {
+        if token != nil {
             
             Peach.OAuthToken = token
             Peach.streamID = streamID

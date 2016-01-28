@@ -17,7 +17,7 @@ extension NSView {
     }
     
     func fadeOut(context: NSAnimationContext) {
-        context.duration = 0.3
+        context.duration = 0.5
         animator().alphaValue = 0
     }
     

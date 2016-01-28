@@ -36,9 +36,10 @@ extension PeachContainerViewController: LoginDelegate {
         delegate?.successfullyLoggedIn?()
         
         if let vc = loginController {
-            vc.view.hideWithAnimation()
-            vc.view.removeFromSuperview()
-            loginController = nil
+            NSAnimationContext.runAnimationGroup(vc.view.fadeOut) {
+                vc.view.removeFromSuperview()
+                self.loginController = nil
+            }
         }
     }
     
