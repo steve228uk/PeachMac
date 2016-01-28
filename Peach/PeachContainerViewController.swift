@@ -18,6 +18,8 @@ class PeachContainerViewController: NSViewController {
     
     @IBOutlet weak var container: NSView!
     
+    @IBOutlet weak var tabBar: NSVisualEffectView!
+    
     var toolbar: PeachToolbarViewController?
     
     var delegate: PeachContainerDelegate?
@@ -42,7 +44,8 @@ class PeachContainerViewController: NSViewController {
         token = keychain["token"]
         streamID = keychain["streamID"]
         
-        if token != nil {
+        // CHANGE BACK TO !=
+        if token == nil {
             
             Peach.OAuthToken = token
             Peach.streamID = streamID

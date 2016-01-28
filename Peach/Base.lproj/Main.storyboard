@@ -723,6 +723,7 @@ DQ
                         <outlet property="avatar" destination="aUt-Lc-eX3" id="GBZ-6n-5nP"/>
                         <outlet property="container" destination="57o-0f-CIN" id="NY4-HY-7gQ"/>
                         <outlet property="friendsBtn" destination="hTU-Na-IKu" id="aIk-Cn-4MC"/>
+                        <outlet property="tabBar" destination="N2B-DR-T8Z" id="dQY-av-Hk1"/>
                     </connections>
                 </viewController>
                 <customObject id="9Vt-Sz-t1l" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
