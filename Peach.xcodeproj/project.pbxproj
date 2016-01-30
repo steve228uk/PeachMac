@@ -74,7 +74,6 @@
 		289D3F0F1C4C296100E96321 /* MusicMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289D3F0E1C4C296100E96321 /* MusicMessage.swift */; };
 		289D3F111C4C2CC300E96321 /* LocationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289D3F101C4C2CC300E96321 /* LocationMessage.swift */; };
 		289D3F131C4C314600E96321 /* LinkMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289D3F121C4C314600E96321 /* LinkMessage.swift */; };
-		289D3F181C4C4A5B00E96321 /* NSBezierPath+CGPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289D3F171C4C4A5B00E96321 /* NSBezierPath+CGPath.swift */; };
 		28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1DA691C456B18004198A0 /* PeachContainerViewController.swift */; };
 		28A1DA6E1C4570E7004198A0 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */; };
 		28A1DA721C457165004198A0 /* PeachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1DA701C457165004198A0 /* PeachViewController.swift */; };
@@ -209,7 +208,6 @@
 		289D3F0E1C4C296100E96321 /* MusicMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicMessage.swift; sourceTree = "<group>"; };
 		289D3F101C4C2CC300E96321 /* LocationMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMessage.swift; sourceTree = "<group>"; };
 		289D3F121C4C314600E96321 /* LinkMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkMessage.swift; sourceTree = "<group>"; };
-		289D3F171C4C4A5B00E96321 /* NSBezierPath+CGPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBezierPath+CGPath.swift"; sourceTree = "<group>"; };
 		28A1DA691C456B18004198A0 /* PeachContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachContainerViewController.swift; sourceTree = "<group>"; };
 		28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		28A1DA701C457165004198A0 /* PeachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachViewController.swift; sourceTree = "<group>"; };
@@ -568,7 +566,6 @@
 			children = (
 				28C7A1EB1C4863E3004D8FD0 /* NSColor+CustomColors.swift */,
 				28630CB81C4B151C002906F3 /* String+EstimatedHeight.swift */,
-				289D3F171C4C4A5B00E96321 /* NSBezierPath+CGPath.swift */,
 				285DFB991C54184B00C34980 /* NSImage+CropToSquare.swift */,
 				288D9B521C5A4197008F6608 /* NSView+HideWithAnimation.swift */,
 			);
@@ -982,7 +979,6 @@
 				28D6FA161C56EFC200CCC319 /* MainWindowController.swift in Sources */,
 				28C7A1E21C485396004D8FD0 /* ConnectionsCollectionViewController.swift in Sources */,
 				285DFB7B1C518DF600C34980 /* StreamCollectionViewDelegate.swift in Sources */,
-				289D3F181C4C4A5B00E96321 /* NSBezierPath+CGPath.swift in Sources */,
 				28A1DA6E1C4570E7004198A0 /* ComposeViewController.swift in Sources */,
 				28515A921C49D04A00F0ABE8 /* PostTextCollectionViewItem.swift in Sources */,
 				282DD0B11C5ACA1B004AE18D /* PostActionsView.swift in Sources */,
