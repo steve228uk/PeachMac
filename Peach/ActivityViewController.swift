@@ -14,6 +14,10 @@ class ActivityViewController: PeachViewController {
     override func viewDidAppear() {
         super.viewDidAppear()
         container?.toolbar?.title = "Activity"
+        
+        Peach.getActivityFeed { activity, error in
+
+        }
     }
     
 }
