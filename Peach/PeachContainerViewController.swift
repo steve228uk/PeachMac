@@ -22,6 +22,8 @@ class PeachContainerViewController: NSViewController {
     
     var toolbar: PeachToolbarViewController?
     
+    var tabView: PeachTabViewController?
+    
     var delegate: PeachContainerDelegate?
     
     // MARK: - Login Controller
@@ -67,6 +69,10 @@ class PeachContainerViewController: NSViewController {
         if let vc = segue.destinationController as? PeachToolbarViewController {
             toolbar = vc
         }
+        
+        if let vc = segue.destinationController as? PeachTabViewController {
+            tabView = vc
+        }
     }
     
     // MARK: - Network
@@ -90,9 +96,11 @@ class PeachContainerViewController: NSViewController {
     // MARK: - Tab Bar Actions
     
     @IBAction func showFriends(sender: AnyObject) {
+        tabView?.selectedTabViewItemIndex = 0
     }
     
     @IBAction func showActivity(sender: AnyObject) {
+        tabView?.selectedTabViewItemIndex = 2
     }
     
     @IBAction func showProfile(sender: AnyObject) {

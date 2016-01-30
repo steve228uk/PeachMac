@@ -31,6 +31,7 @@
 		28515A9E1C4AC84700F0ABE8 /* PostGIFItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28515A9D1C4AC84700F0ABE8 /* PostGIFItem.swift */; };
 		28515AA11C4ADF1E00F0ABE8 /* PostActionsItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515AA01C4ADF1D00F0ABE8 /* PostActionsItem.xib */; };
 		28515AA41C4AE02000F0ABE8 /* PostActionsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28515AA21C4AE02000F0ABE8 /* PostActionsItem.swift */; };
+		2856A0A21C5D5EDC00B2BB21 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856A0A11C5D5EDC00B2BB21 /* ActivityViewController.swift */; };
 		285DFB7B1C518DF600C34980 /* StreamCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285DFB7A1C518DF600C34980 /* StreamCollectionViewDelegate.swift */; };
 		285DFB7E1C518F4F00C34980 /* PostVideoItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 285DFB7D1C518F4F00C34980 /* PostVideoItem.xib */; };
 		285DFB801C518FA400C34980 /* PostVideoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285DFB7F1C518FA400C34980 /* PostVideoItem.swift */; };
@@ -164,6 +165,7 @@
 		28515A9D1C4AC84700F0ABE8 /* PostGIFItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostGIFItem.swift; sourceTree = "<group>"; };
 		28515AA01C4ADF1D00F0ABE8 /* PostActionsItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostActionsItem.xib; sourceTree = "<group>"; };
 		28515AA21C4AE02000F0ABE8 /* PostActionsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostActionsItem.swift; sourceTree = "<group>"; };
+		2856A0A11C5D5EDC00B2BB21 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		285DFB7A1C518DF600C34980 /* StreamCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		285DFB7D1C518F4F00C34980 /* PostVideoItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostVideoItem.xib; sourceTree = "<group>"; };
 		285DFB7F1C518FA400C34980 /* PostVideoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVideoItem.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 		282D92C11C42CCAF00B83109 /* Peach */ = {
 			isa = PBXGroup;
 			children = (
+				2856A0A01C5D5E8800B2BB21 /* Activity */,
 				28C7A1ED1C48691D004D8FD0 /* Extensions */,
 				2874F7341C42F93900D06D34 /* Peach.entitlements */,
 				282CA58A1C45C2E50075AE9A /* Stream */,
@@ -422,6 +425,14 @@
 				282DD0B01C5ACA1B004AE18D /* PostActionsView.swift */,
 			);
 			name = Actions;
+			sourceTree = "<group>";
+		};
+		2856A0A01C5D5E8800B2BB21 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				2856A0A11C5D5EDC00B2BB21 /* ActivityViewController.swift */,
+			);
+			name = Activity;
 			sourceTree = "<group>";
 		};
 		285DFB7C1C518F3E00C34980 /* Video */ = {
@@ -960,6 +971,7 @@
 				28515A9E1C4AC84700F0ABE8 /* PostGIFItem.swift in Sources */,
 				285DFB961C52DF1400C34980 /* ConnectionsLoadingView.swift in Sources */,
 				288D9B4C1C5976F9008F6608 /* AvatarView.swift in Sources */,
+				2856A0A21C5D5EDC00B2BB21 /* ActivityViewController.swift in Sources */,
 				28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */,
 				2874F7311C42EE5800D06D34 /* LoginTextField.swift in Sources */,
 				28A8C0311C457F1F006DA6FC /* ComposeWindowController.swift in Sources */,

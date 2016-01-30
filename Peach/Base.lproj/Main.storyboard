@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
@@ -845,6 +845,7 @@ DQ
                     <tabViewItems>
                         <tabViewItem id="EVD-Y7-XEN"/>
                         <tabViewItem id="eJi-Ib-Qyg"/>
+                        <tabViewItem id="Bx6-lu-uMH"/>
                     </tabViewItems>
                     <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
                     <tabView key="tabView" drawsBackground="NO" allowsTruncatedLabels="NO" id="FVB-5H-1Rp">
@@ -856,6 +857,7 @@ DQ
                     <connections>
                         <segue destination="kW8-u5-YCa" kind="relationship" relationship="tabItems" id="vIb-gV-VqN"/>
                         <segue destination="B6W-lf-Uy4" kind="relationship" relationship="tabItems" id="tHx-dm-1Yd"/>
+                        <segue destination="J3L-sW-t61" kind="relationship" relationship="tabItems" id="SYA-Le-jj7"/>
                     </connections>
                 </tabViewController>
                 <customObject id="T2a-bz-8je" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -944,6 +946,19 @@ DQ
                 <customObject id="L1U-MA-RxV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="352" y="1574.5"/>
+        </scene>
+        <!--Activity View Controller-->
+        <scene sceneID="0ny-BF-Fyv">
+            <objects>
+                <viewController id="J3L-sW-t61" customClass="ActivityViewController" customModule="Peach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="3Nr-PD-fCg" customClass="ConnectionsView" customModule="Peach" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="mwY-5V-5YF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="859"/>
         </scene>
         <!--Stream View Controller-->
         <scene sceneID="bZp-T3-xsZ">
