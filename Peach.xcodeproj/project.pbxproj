@@ -27,8 +27,6 @@
 		28515A8D1C49CE4900F0ABE8 /* PostImageItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515A8C1C49CE4900F0ABE8 /* PostImageItem.xib */; };
 		28515A8F1C49CE5A00F0ABE8 /* PostImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28515A8E1C49CE5A00F0ABE8 /* PostImageItem.swift */; };
 		28515A921C49D04A00F0ABE8 /* PostTextCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28515A911C49D04A00F0ABE8 /* PostTextCollectionViewItem.swift */; };
-		28515A951C4A79E000F0ABE8 /* PostGIFTemplate.html in Sources */ = {isa = PBXBuildFile; fileRef = 28515A941C4A79E000F0ABE8 /* PostGIFTemplate.html */; };
-		28515A961C4A7D5C00F0ABE8 /* PostGIFTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 28515A941C4A79E000F0ABE8 /* PostGIFTemplate.html */; };
 		28515A9C1C4AC81D00F0ABE8 /* PostGIFItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515A9B1C4AC81D00F0ABE8 /* PostGIFItem.xib */; };
 		28515A9E1C4AC84700F0ABE8 /* PostGIFItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28515A9D1C4AC84700F0ABE8 /* PostGIFItem.swift */; };
 		28515AA11C4ADF1E00F0ABE8 /* PostActionsItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515AA01C4ADF1D00F0ABE8 /* PostActionsItem.xib */; };
@@ -45,6 +43,7 @@
 		285DFB9A1C54184B00C34980 /* NSImage+CropToSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285DFB991C54184B00C34980 /* NSImage+CropToSquare.swift */; };
 		285DFB9C1C5446F000C34980 /* PeachComposeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285DFB9B1C5446F000C34980 /* PeachComposeTextView.swift */; };
 		28630CB91C4B151C002906F3 /* String+EstimatedHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28630CB81C4B151C002906F3 /* String+EstimatedHeight.swift */; };
+		2867DC261C5CF78200FC0355 /* GIFPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2867DC251C5CF78200FC0355 /* GIFPlayer.swift */; };
 		2868BC711C499278007A01B7 /* StreamHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2868BC701C499278007A01B7 /* StreamHeaderView.swift */; };
 		286CBA3B1C491B3500D3B902 /* GiphyKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 286CBA3A1C491B3500D3B902 /* GiphyKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		286CBA3F1C491B3500D3B902 /* GiphyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286CBA381C491B3500D3B902 /* GiphyKit.framework */; };
@@ -161,7 +160,6 @@
 		28515A8C1C49CE4900F0ABE8 /* PostImageItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostImageItem.xib; sourceTree = "<group>"; };
 		28515A8E1C49CE5A00F0ABE8 /* PostImageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageItem.swift; sourceTree = "<group>"; };
 		28515A911C49D04A00F0ABE8 /* PostTextCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTextCollectionViewItem.swift; sourceTree = "<group>"; };
-		28515A941C4A79E000F0ABE8 /* PostGIFTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = PostGIFTemplate.html; sourceTree = "<group>"; };
 		28515A9B1C4AC81D00F0ABE8 /* PostGIFItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostGIFItem.xib; sourceTree = "<group>"; };
 		28515A9D1C4AC84700F0ABE8 /* PostGIFItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostGIFItem.swift; sourceTree = "<group>"; };
 		28515AA01C4ADF1D00F0ABE8 /* PostActionsItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostActionsItem.xib; sourceTree = "<group>"; };
@@ -178,6 +176,7 @@
 		285DFB991C54184B00C34980 /* NSImage+CropToSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+CropToSquare.swift"; sourceTree = "<group>"; };
 		285DFB9B1C5446F000C34980 /* PeachComposeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachComposeTextView.swift; sourceTree = "<group>"; };
 		28630CB81C4B151C002906F3 /* String+EstimatedHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+EstimatedHeight.swift"; sourceTree = "<group>"; };
+		2867DC251C5CF78200FC0355 /* GIFPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFPlayer.swift; sourceTree = "<group>"; };
 		2868BC701C499278007A01B7 /* StreamHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamHeaderView.swift; sourceTree = "<group>"; };
 		286CBA381C491B3500D3B902 /* GiphyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GiphyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		286CBA3A1C491B3500D3B902 /* GiphyKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GiphyKit.h; sourceTree = "<group>"; };
@@ -410,7 +409,7 @@
 			children = (
 				28515A9B1C4AC81D00F0ABE8 /* PostGIFItem.xib */,
 				28515A9D1C4AC84700F0ABE8 /* PostGIFItem.swift */,
-				28515A941C4A79E000F0ABE8 /* PostGIFTemplate.html */,
+				2867DC251C5CF78200FC0355 /* GIFPlayer.swift */,
 			);
 			name = GIF;
 			sourceTree = "<group>";
@@ -766,7 +765,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28515A961C4A7D5C00F0ABE8 /* PostGIFTemplate.html in Resources */,
 				28515A8D1C49CE4900F0ABE8 /* PostImageItem.xib in Resources */,
 				285DFB7E1C518F4F00C34980 /* PostVideoItem.xib in Resources */,
 				282D92C71C42CCAF00B83109 /* Assets.xcassets in Resources */,
@@ -967,7 +965,6 @@
 				28A8C0311C457F1F006DA6FC /* ComposeWindowController.swift in Sources */,
 				285DFB891C52C31900C34980 /* PostLinkItem.swift in Sources */,
 				2874F7201C42D73400D06D34 /* LoginViewController.swift in Sources */,
-				28515A951C4A79E000F0ABE8 /* PostGIFTemplate.html in Sources */,
 				28515A8F1C49CE5A00F0ABE8 /* PostImageItem.swift in Sources */,
 				2874F7331C42F13C00D06D34 /* LoginTextFieldCell.swift in Sources */,
 				282D92C31C42CCAF00B83109 /* AppDelegate.swift in Sources */,
@@ -981,6 +978,7 @@
 				285DFB7B1C518DF600C34980 /* StreamCollectionViewDelegate.swift in Sources */,
 				28A1DA6E1C4570E7004198A0 /* ComposeViewController.swift in Sources */,
 				28515A921C49D04A00F0ABE8 /* PostTextCollectionViewItem.swift in Sources */,
+				2867DC261C5CF78200FC0355 /* GIFPlayer.swift in Sources */,
 				282DD0B11C5ACA1B004AE18D /* PostActionsView.swift in Sources */,
 				285DFB801C518FA400C34980 /* PostVideoItem.swift in Sources */,
 				28C7A1EA1C485FF3004D8FD0 /* ConnectionCell.swift in Sources */,
@@ -1150,6 +1148,7 @@
 			baseConfigurationReference = 29B9474D3E7C8CFB943A64C0 /* Pods-Peach.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -1159,6 +1158,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.wearecocoon.Peach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1167,6 +1168,7 @@
 			baseConfigurationReference = D6630702E23B1971EE74CF9E /* Pods-Peach.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -1176,6 +1178,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.wearecocoon.Peach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

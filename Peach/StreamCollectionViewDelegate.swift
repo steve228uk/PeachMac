@@ -167,7 +167,7 @@ extension StreamViewController: NSCollectionViewDataSource {
     func gifCellForIndexPath(indexPath: NSIndexPath) -> PostGIFItem {
         let item = collectionView.makeItemWithIdentifier("GIFItem", forIndexPath: indexPath) as! PostGIFItem
         let imageMessage = posts[indexPath.section].message[indexPath.item] as! ImageMessage
-        item.imageURL = imageMessage.src
+        item.message = imageMessage
         return item
     }
     

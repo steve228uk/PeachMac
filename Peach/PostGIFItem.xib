@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="9531"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner"/>
@@ -13,24 +12,21 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <webView translatesAutoresizingMaskIntoConstraints="NO" id="GcR-yZ-fpd">
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="mdN-Jd-7M5" customClass="GIFPlayer" customModule="Peach" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
-                    <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0" plugInsEnabled="NO" javaEnabled="NO" javaScriptEnabled="NO" javaScriptCanOpenWindowsAutomatically="NO">
-                        <nil key="identifier"/>
-                    </webPreferences>
-                </webView>
+                </customView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="GcR-yZ-fpd" secondAttribute="bottom" id="9C3-uA-fnY"/>
-                <constraint firstAttribute="trailing" secondItem="GcR-yZ-fpd" secondAttribute="trailing" id="Lwc-7q-tRa"/>
-                <constraint firstItem="GcR-yZ-fpd" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="qMO-r3-oCt"/>
-                <constraint firstItem="GcR-yZ-fpd" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="vgj-Ja-p2M"/>
+                <constraint firstAttribute="trailing" secondItem="mdN-Jd-7M5" secondAttribute="trailing" id="7oP-he-3Zu"/>
+                <constraint firstItem="mdN-Jd-7M5" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="Eyd-5d-gS3"/>
+                <constraint firstAttribute="bottom" secondItem="mdN-Jd-7M5" secondAttribute="bottom" id="TEZ-xY-a6k"/>
+                <constraint firstItem="mdN-Jd-7M5" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="TFV-zd-4XX"/>
             </constraints>
         </customView>
         <collectionViewItem id="jWR-fW-x0X" customClass="PostGIFItem" customModule="Peach" customModuleProvider="target">
             <connections>
+                <outlet property="gifPlayer" destination="mdN-Jd-7M5" id="Obu-or-DBs"/>
                 <outlet property="view" destination="c22-O7-iKe" id="Ivc-54-OqC"/>
-                <outlet property="webView" destination="GcR-yZ-fpd" id="r13-2k-5Vf"/>
             </connections>
         </collectionViewItem>
     </objects>
