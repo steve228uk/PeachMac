@@ -92,6 +92,7 @@
 		28C7A1E81C485B78004D8FD0 /* ConnectionCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28C7A1E71C485B78004D8FD0 /* ConnectionCollectionViewItem.xib */; };
 		28C7A1EA1C485FF3004D8FD0 /* ConnectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C7A1E91C485FF3004D8FD0 /* ConnectionCell.swift */; };
 		28C7A1EC1C4863E3004D8FD0 /* NSColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C7A1EB1C4863E3004D8FD0 /* NSColor+CustomColors.swift */; };
+		28CC1E541C5E9F53001DD6EC /* MagicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CC1E531C5E9F53001DD6EC /* MagicButton.swift */; };
 		28D6FA161C56EFC200CCC319 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6FA151C56EFC200CCC319 /* MainWindowController.swift */; };
 		28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBACFE1C43055F00CC66CB /* ConnectionsView.swift */; };
 		28DBAD031C430BA800CC66CB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD021C430BA800CC66CB /* Post.swift */; };
@@ -234,6 +235,7 @@
 		28C7A1E71C485B78004D8FD0 /* ConnectionCollectionViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionCollectionViewItem.xib; sourceTree = "<group>"; };
 		28C7A1E91C485FF3004D8FD0 /* ConnectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCell.swift; sourceTree = "<group>"; };
 		28C7A1EB1C4863E3004D8FD0 /* NSColor+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+CustomColors.swift"; sourceTree = "<group>"; };
+		28CC1E531C5E9F53001DD6EC /* MagicButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicButton.swift; sourceTree = "<group>"; };
 		28D6FA151C56EFC200CCC319 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		28DBACFE1C43055F00CC66CB /* ConnectionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsView.swift; sourceTree = "<group>"; };
 		28DBAD021C430BA800CC66CB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 				28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */,
 				281227331C5E752800128D00 /* ComposeViewController+MoveButtons.swift */,
 				281227371C5E770B00128D00 /* ComposeViewController+NSTextStorageDelegate.swift */,
+				28CC1E531C5E9F53001DD6EC /* MagicButton.swift */,
 			);
 			name = ComposeViewController;
 			sourceTree = "<group>";
@@ -1033,6 +1036,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28CC1E541C5E9F53001DD6EC /* MagicButton.swift in Sources */,
 				2874F72F1C42E9BB00D06D34 /* LoginButton.swift in Sources */,
 				288D9B511C5977D8008F6608 /* +LoginView.swift in Sources */,
 				28C7A1EC1C4863E3004D8FD0 /* NSColor+CustomColors.swift in Sources */,

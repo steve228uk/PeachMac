@@ -14,15 +14,15 @@ class ComposeViewController: NSViewController {
     
     @IBOutlet var textView: PeachComposeTextView!
     
-    @IBOutlet weak var magicButton: NSButton!
+    @IBOutlet weak var magicButton: MagicButton!
     
     /// These are the message fragments that will be posted to Peach
     var messages: [Message] = []
     
     let magicWords = [
-        "gif": "Search GIFs",
-        "image": "Search Images",
-        "time": "Current Time"
+        "gif": "Search for a GIF",
+        "image": "Search for images",
+        "time": "Add current time"
     ]
     
     override func viewDidLoad() {

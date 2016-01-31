@@ -805,12 +805,15 @@ DQ
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fRf-Hr-xGO">
+                            <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fRf-Hr-xGO" customClass="MagicButton" customModule="Peach" customModuleProvider="target">
                                 <rect key="frame" x="106" y="2" width="121" height="32"/>
                                 <buttonCell key="cell" type="push" title="Magic Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hT3-it-EPn">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="clickMagicButton:" target="kaE-7v-6VR" id="Mwm-wF-hSw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -826,7 +829,7 @@ DQ
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="magicButton" destination="fRf-Hr-xGO" id="egy-2j-2w0"/>
+                        <outlet property="magicButton" destination="fRf-Hr-xGO" id="xY1-Iu-x1G"/>
                         <outlet property="textView" destination="T8Z-4C-XMr" id="7eF-Za-r9H"/>
                     </connections>
                 </viewController>

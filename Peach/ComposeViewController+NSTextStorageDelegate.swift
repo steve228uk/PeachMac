@@ -56,11 +56,32 @@ extension ComposeViewController: NSTextStorageDelegate {
      */
     func showMagicButtonForWord(word: String) {
         
+        guard magicButton.hidden else {
+            return
+        }
+        
         if let label = magicWords[word] {
-            magicButton.title = label
+            let para = NSMutableParagraphStyle()
+            para.alignment = .Center
+            let attributes = [
+                NSFontAttributeName: NSFont.systemFontOfSize(13, weight: NSFontWeightMedium),
+                NSForegroundColorAttributeName: NSColor(hue:0, saturation:0, brightness:0.45, alpha:1),
+                NSParagraphStyleAttributeName: para
+            ]
+            
+            let attributedTitle = NSAttributedString(string: "\(word): \(label)", attributes: attributes)
+            
+            magicButton.attributedTitle = attributedTitle            
             magicButton.hidden = false
         }
         
+    }
+    
+    @IBAction func clickMagicButton(sender: AnyObject) {
+        let components = magicButton.title.componentsSeparatedByString(":")
+        if let type = components.first {
+            Swift.print(type)
+        }
     }
     
 }
