@@ -13,22 +13,11 @@ class ComposeWindowController: NSWindowController {
     override func windowDidLoad() {
         super.windowDidLoad()
         
-        window?.titleVisibility = .Hidden
         window?.titlebarAppearsTransparent = true
-        window?.movableByWindowBackground  = false
-        window?.toolbar?.visible = true
+        window?.movableByWindowBackground  = true
+        window?.titleVisibility = .Hidden
         
         NSApplication.sharedApplication().menu?.itemWithTag(2)?.hidden = false
-    }
-    
-    override func showWindow(sender: AnyObject?) {
-        super.showWindow(sender)
-        
-    }
-    
-    @IBAction func save(sender: AnyObject?) {
-        let vc = contentViewController as? ComposeViewController
-        vc?.save()
     }
     
 }

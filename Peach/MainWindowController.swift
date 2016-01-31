@@ -15,7 +15,8 @@ class MainWindowController: NSWindowController {
     
         window?.titlebarAppearsTransparent = true
         window?.movableByWindowBackground  = true
-        window?.toolbar?.visible = false
+        window?.titleVisibility = .Hidden
+        
     }
 
 }
