@@ -14,7 +14,11 @@ class ComposeViewController: NSViewController {
     
     @IBOutlet var textView: PeachComposeTextView!
     
+    /// These are the message fragments that will be posted to Peach
     var messages: [Message] = []
+    
+    
+    // MARK: - Save Action
     
     func save(callback: (NSError?) -> Void) {
         
@@ -78,6 +82,8 @@ class ComposeViewController: NSViewController {
         }
         
     }
+    
+    
     
     // MARK: - Moving buttons
     

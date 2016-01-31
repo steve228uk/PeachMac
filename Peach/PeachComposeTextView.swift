@@ -22,8 +22,14 @@ class PeachComposeTextView: NSTextView {
     
     func sharedInit() {
         importsGraphics = true
+        textContainerInset = NSMakeSize(10, 10)
     }
     
+    /**
+     Fetch the attachement fragments from the text view
+     
+     - returns: Array of fragments
+     */
     func getFragments() -> [AnyObject] {
         let attString = attributedString()
         var fragments: [AnyObject] = []

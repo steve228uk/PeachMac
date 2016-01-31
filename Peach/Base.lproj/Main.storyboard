@@ -772,13 +772,13 @@ DQ
                                     <segue destination="Jv3-Ci-LZU" kind="embed" id="Gts-l2-6MR"/>
                                 </connections>
                             </containerView>
-                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nJ-n9-qAv">
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nJ-n9-qAv">
                                 <rect key="frame" x="0.0" y="0.0" width="332" height="187"/>
                                 <clipView key="contentView" id="Ah2-T7-49N">
                                     <rect key="frame" x="0.0" y="0.0" width="332" height="187"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="T8Z-4C-XMr" customClass="PeachComposeTextView" customModule="Peach" customModuleProvider="target">
+                                        <textView importsGraphics="NO" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="T8Z-4C-XMr" customClass="PeachComposeTextView" customModule="Peach" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="332" height="187"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -796,11 +796,11 @@ DQ
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="187" id="Qya-BO-pp9"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="800" id="hnp-PD-z45"/>
                                 </constraints>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="9MR-0p-n7F">
-                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="9MR-0p-n7F">
+                                    <rect key="frame" x="0.0" y="171" width="332" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="3nC-ZW-rRg">
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="0.5" horizontal="NO" id="3nC-ZW-rRg">
                                     <rect key="frame" x="316" y="0.0" width="16" height="187"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
