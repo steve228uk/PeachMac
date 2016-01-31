@@ -337,6 +337,23 @@
 			name = Toolbar;
 			sourceTree = "<group>";
 		};
+		2812272F1C5E700700128D00 /* Window/View */ = {
+			isa = PBXGroup;
+			children = (
+				28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */,
+				28A8C0301C457F1F006DA6FC /* ComposeWindowController.swift */,
+				285DFB9B1C5446F000C34980 /* PeachComposeTextView.swift */,
+			);
+			name = Window/View;
+			sourceTree = "<group>";
+		};
+		281227301C5E701300128D00 /* Attachments */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Attachments;
+			sourceTree = "<group>";
+		};
 		282CA58A1C45C2E50075AE9A /* Stream */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,10 +627,9 @@
 		28A1DA6B1C457047004198A0 /* Compose */ = {
 			isa = PBXGroup;
 			children = (
+				281227301C5E701300128D00 /* Attachments */,
+				2812272F1C5E700700128D00 /* Window/View */,
 				2812272A1C5E642E00128D00 /* Toolbar */,
-				28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */,
-				28A8C0301C457F1F006DA6FC /* ComposeWindowController.swift */,
-				285DFB9B1C5446F000C34980 /* PeachComposeTextView.swift */,
 			);
 			name = Compose;
 			sourceTree = "<group>";
