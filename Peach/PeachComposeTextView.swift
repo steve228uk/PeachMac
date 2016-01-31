@@ -10,6 +10,9 @@ import Cocoa
 
 class PeachComposeTextView: NSTextView {
     
+    
+    // MARK: - Initialisers
+    
     override init(frame frameRect: NSRect, textContainer container: NSTextContainer?) {
         super.init(frame: frameRect, textContainer: container)
         sharedInit()
@@ -24,6 +27,8 @@ class PeachComposeTextView: NSTextView {
         importsGraphics = true
         textContainerInset = NSMakeSize(10, 10)
     }
+    
+    // MARK: - Fragments
     
     /**
      Fetch the attachement fragments from the text view

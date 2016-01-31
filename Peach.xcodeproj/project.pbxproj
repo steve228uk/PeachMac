@@ -12,6 +12,8 @@
 		281227291C5D961900128D00 /* LoginButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281227281C5D961900128D00 /* LoginButtonCell.swift */; };
 		2812272C1C5E644000128D00 /* ComposeToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2812272B1C5E644000128D00 /* ComposeToolbarViewController.swift */; };
 		2812272E1C5E644E00128D00 /* ComposeToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2812272D1C5E644E00128D00 /* ComposeToolbarView.swift */; };
+		281227341C5E752800128D00 /* ComposeViewController+MoveButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281227331C5E752800128D00 /* ComposeViewController+MoveButtons.swift */; };
+		281227381C5E770B00128D00 /* ComposeViewController+NSTextStorageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281227371C5E770B00128D00 /* ComposeViewController+NSTextStorageDelegate.swift */; };
 		282CA58C1C45C3A50075AE9A /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282CA58B1C45C3A50075AE9A /* StreamViewController.swift */; };
 		282D92C31C42CCAF00B83109 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D92C21C42CCAF00B83109 /* AppDelegate.swift */; };
 		282D92C71C42CCAF00B83109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 282D92C61C42CCAF00B83109 /* Assets.xcassets */; };
@@ -148,6 +150,8 @@
 		281227281C5D961900128D00 /* LoginButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButtonCell.swift; sourceTree = "<group>"; };
 		2812272B1C5E644000128D00 /* ComposeToolbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeToolbarViewController.swift; sourceTree = "<group>"; };
 		2812272D1C5E644E00128D00 /* ComposeToolbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeToolbarView.swift; sourceTree = "<group>"; };
+		281227331C5E752800128D00 /* ComposeViewController+MoveButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ComposeViewController+MoveButtons.swift"; sourceTree = "<group>"; };
+		281227371C5E770B00128D00 /* ComposeViewController+NSTextStorageDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ComposeViewController+NSTextStorageDelegate.swift"; sourceTree = "<group>"; };
 		282829758513A60968535014 /* Pods-GiphyKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GiphyKit/Pods-GiphyKit.debug.xcconfig"; sourceTree = "<group>"; };
 		282CA58B1C45C3A50075AE9A /* StreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
 		282D92BF1C42CCAF00B83109 /* Peach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peach.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -340,7 +344,7 @@
 		2812272F1C5E700700128D00 /* Window/View */ = {
 			isa = PBXGroup;
 			children = (
-				28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */,
+				281227311C5E750600128D00 /* ComposeViewController */,
 				28A8C0301C457F1F006DA6FC /* ComposeWindowController.swift */,
 				285DFB9B1C5446F000C34980 /* PeachComposeTextView.swift */,
 			);
@@ -352,6 +356,16 @@
 			children = (
 			);
 			name = Attachments;
+			sourceTree = "<group>";
+		};
+		281227311C5E750600128D00 /* ComposeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */,
+				281227331C5E752800128D00 /* ComposeViewController+MoveButtons.swift */,
+				281227371C5E770B00128D00 /* ComposeViewController+NSTextStorageDelegate.swift */,
+			);
+			name = ComposeViewController;
 			sourceTree = "<group>";
 		};
 		282CA58A1C45C2E50075AE9A /* Stream */ = {
@@ -1025,6 +1039,7 @@
 				28A8C0331C45AD01006DA6FC /* PeachTabViewController.swift in Sources */,
 				288D9B4E1C597768008F6608 /* +MoveButtons.swift in Sources */,
 				28515AA41C4AE02000F0ABE8 /* PostActionsItem.swift in Sources */,
+				281227341C5E752800128D00 /* ComposeViewController+MoveButtons.swift in Sources */,
 				28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */,
 				285DFB9C1C5446F000C34980 /* PeachComposeTextView.swift in Sources */,
 				28630CB91C4B151C002906F3 /* String+EstimatedHeight.swift in Sources */,
@@ -1039,6 +1054,7 @@
 				2812272E1C5E644E00128D00 /* ComposeToolbarView.swift in Sources */,
 				28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */,
 				2812272C1C5E644000128D00 /* ComposeToolbarViewController.swift in Sources */,
+				281227381C5E770B00128D00 /* ComposeViewController+NSTextStorageDelegate.swift in Sources */,
 				2874F7311C42EE5800D06D34 /* LoginTextField.swift in Sources */,
 				28A8C0311C457F1F006DA6FC /* ComposeWindowController.swift in Sources */,
 				285DFB891C52C31900C34980 /* PostLinkItem.swift in Sources */,

@@ -14,12 +14,30 @@ class ComposeViewController: NSViewController {
     
     @IBOutlet var textView: PeachComposeTextView!
     
+    @IBOutlet weak var magicButton: NSButton!
+    
     /// These are the message fragments that will be posted to Peach
     var messages: [Message] = []
+    
+    let magicWords = [
+        "gif": "Search GIFs",
+        "image": "Search Images",
+        "time": "Current Time"
+    ]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        textView.textStorage?.delegate = self
+    }
     
     
     // MARK: - Save Action
     
+    /**
+    Process the fragments, upload any images etc.
+    
+    - parameter callback: Callback with optional `NSError`
+    */
     func save(callback: (NSError?) -> Void) {
         
         let fragments = textView.getFragments()
@@ -71,6 +89,11 @@ class ComposeViewController: NSViewController {
     }
     
     
+    /**
+     Send the message to Peach
+     
+     - parameter callback: Callback with optional `NSError`
+     */
     func saveMessage(callback: (NSError?) -> Void) {
         
         Peach.createPost(messages) { error in
@@ -83,39 +106,5 @@ class ComposeViewController: NSViewController {
         
     }
     
-    
-    
-    // MARK: - Moving buttons
-    
-    override func viewDidLayout() {
-        super.viewDidLayout()
-        moveButtons()
-    }
-    
-    func moveButtons() {
-        if let btn = view.window?.standardWindowButton(.CloseButton) {
-            btn.removeFromSuperview()
-            btn.setFrameOrigin(NSPoint(x: 12, y: view.frame.size.height-28))
-            view.addSubview(btn)
-        }
-        
-        if let btn = view.window?.standardWindowButton(.MiniaturizeButton) {
-            btn.removeFromSuperview()
-            btn.setFrameOrigin(NSPoint(x: 32, y: view.frame.size.height-28))
-            view.addSubview(btn)
-        }
-        
-        if let btn = view.window?.standardWindowButton(.ZoomButton) {
-            btn.removeFromSuperview()
-            btn.setFrameOrigin(NSPoint(x: 52, y: view.frame.size.height-28))
-            view.addSubview(btn)
-        }
-        
-        if let btn = view.window?.standardWindowButton(.FullScreenButton) {
-            btn.removeFromSuperview()
-            btn.setFrameOrigin(NSPoint(x: 52, y: view.frame.size.height-28))
-            view.addSubview(btn)
-        }
-    }
     
 }
