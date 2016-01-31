@@ -737,7 +737,7 @@ DQ
                 </viewController>
                 <customObject id="9Vt-Sz-t1l" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.5" y="845"/>
+            <point key="canvasLocation" x="75.5" y="845"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="GY9-9B-oiX">
@@ -895,7 +895,7 @@ DQ
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="4Hy-Eo-0FC"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="dZ7-1U-Ec7"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="mpQ-7m-0OC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="400" id="mpQ-7m-0OC"/>
                                 </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="XAx-yR-fbV">
                                     <rect key="frame" x="1" y="144" width="233" height="15"/>

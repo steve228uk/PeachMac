@@ -20,6 +20,7 @@ extension PeachContainerViewController: LoginDelegate {
             if let vc = loginController {
                 vc.delegate = self
                 vc.view.translatesAutoresizingMaskIntoConstraints = false
+                vc.view.frame = view.bounds
                 view.addSubview(vc.view)
                 
                 let views = ["login": vc.view]

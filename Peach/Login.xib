@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
@@ -32,22 +32,12 @@
                         <action selector="login:" target="-2" id="Gzi-bm-CQ5"/>
                     </connections>
                 </textField>
-                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="02K-DF-VUa" customClass="LoginButton" customModule="Peach" customModuleProvider="target">
-                    <rect key="frame" x="14" y="208" width="385" height="32"/>
-                    <buttonCell key="cell" type="push" title="Sign In" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cg9-kc-gHH">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="login:" target="-2" id="zdL-iH-Vlj"/>
-                    </connections>
-                </button>
-                <secureTextField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PnT-UD-iyB">
-                    <rect key="frame" x="20" y="299" width="371" height="42"/>
+                <secureTextField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PnT-UD-iyB" customClass="LoginSecureTextField" customModule="Peach" customModuleProvider="target">
+                    <rect key="frame" x="20" y="302" width="371" height="39"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="42" id="iGy-sb-1hl"/>
+                        <constraint firstAttribute="height" constant="39" id="iGy-sb-1hl"/>
                     </constraints>
-                    <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" focusRingType="none" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="hJY-4v-81d">
+                    <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" focusRingType="none" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="hJY-4v-81d" customClass="LoginSecureTextFieldCell" customModule="Peach" customModuleProvider="target">
                         <font key="font" metaFont="system" size="18"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,29 +54,39 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="4ZQ-AR-3qV"/>
                     </constraints>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="See what's new with your favorite people." id="BOy-6l-1Rs">
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="See what's new with your favorite people." drawsBackground="YES" id="BOy-6l-1Rs">
                         <font key="font" metaFont="system" size="16"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ie0-8e-2Ln">
-                    <rect key="frame" x="166" y="467" width="81" height="29"/>
+                    <rect key="frame" x="168" y="467" width="77" height="29"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="29" id="aNk-mp-xJ5"/>
                         <constraint firstAttribute="width" constant="77" id="hMb-JH-6XO"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Peach" id="0yG-tK-4dy">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Peach" drawsBackground="YES" id="0yG-tK-4dy">
                         <font key="font" metaFont="systemSemibold" size="26"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="02K-DF-VUa" customClass="LoginButton" customModule="Peach" customModuleProvider="target">
+                    <rect key="frame" x="14" y="227" width="385" height="32"/>
+                    <buttonCell key="cell" type="push" title="Sign In" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cg9-kc-gHH">
+                        <behavior key="behavior" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="login:" target="-2" id="Hc8-Bk-CiA"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="ICp-hb-cvv" secondAttribute="trailing" constant="22" id="2nQ-he-RZZ"/>
                 <constraint firstItem="ICp-hb-cvv" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="3th-Lv-omL"/>
-                <constraint firstItem="IUZ-Lp-eG4" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="AcT-ol-8Pt"/>
+                <constraint firstItem="IUZ-Lp-eG4" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="18" id="AcT-ol-8Pt"/>
                 <constraint firstItem="PnT-UD-iyB" firstAttribute="top" secondItem="ICp-hb-cvv" secondAttribute="bottom" constant="10" id="GFQ-3I-MgO"/>
                 <constraint firstItem="02K-DF-VUa" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="K5n-37-g9t"/>
                 <constraint firstItem="Ie0-8e-2Ln" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="Nch-hV-aR3"/>
@@ -94,8 +94,8 @@
                 <constraint firstItem="PnT-UD-iyB" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="TYJ-CL-VbZ"/>
                 <constraint firstAttribute="trailing" secondItem="02K-DF-VUa" secondAttribute="trailing" constant="20" id="Tep-g9-BSw"/>
                 <constraint firstAttribute="trailing" secondItem="PnT-UD-iyB" secondAttribute="trailing" constant="22" id="XEo-jI-AEz"/>
-                <constraint firstItem="02K-DF-VUa" firstAttribute="top" secondItem="PnT-UD-iyB" secondAttribute="bottom" constant="63" id="eu2-np-E4G"/>
-                <constraint firstAttribute="trailing" secondItem="IUZ-Lp-eG4" secondAttribute="trailing" constant="22" id="pRy-yq-FEl"/>
+                <constraint firstItem="02K-DF-VUa" firstAttribute="top" secondItem="PnT-UD-iyB" secondAttribute="bottom" constant="47" id="eu2-np-E4G"/>
+                <constraint firstAttribute="trailing" secondItem="IUZ-Lp-eG4" secondAttribute="trailing" constant="20" id="pRy-yq-FEl"/>
                 <constraint firstItem="Ie0-8e-2Ln" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="82" id="vNm-PV-m9m"/>
                 <constraint firstItem="IUZ-Lp-eG4" firstAttribute="top" secondItem="Ie0-8e-2Ln" secondAttribute="bottom" constant="15" id="zbM-IX-xqw"/>
             </constraints>

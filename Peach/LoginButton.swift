@@ -28,7 +28,12 @@ class LoginButton: NSButton {
         para.alignment = .Center
         
         attributedTitle = NSAttributedString(string: title, attributes: [NSForegroundColorAttributeName: NSColor.whiteColor(), NSFontAttributeName: NSFont.systemFontOfSize(18), NSParagraphStyleAttributeName: para])
-    
+        
+        let cell = LoginButtonCell()
+        cell.attributedTitle = attributedTitle
+        cell.action = action
+        self.cell = cell
+        
     }
     
 }

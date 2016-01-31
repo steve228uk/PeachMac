@@ -1,15 +1,15 @@
 //
-//  LoginTextField.swift
+//  LoginSecureTextField.swift
 //  Peach
 //
-//  Created by Stephen Radford on 10/01/2016.
+//  Created by Stephen Radford on 31/01/2016.
 //  Copyright © 2016 Cocoon Development Ltd. All rights reserved.
 //
 
 import Cocoa
 
-class LoginTextField: NSTextField {
-    
+class LoginSecureTextField: NSSecureTextField {
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         sharedInit()
@@ -26,8 +26,8 @@ class LoginTextField: NSTextField {
         layer?.cornerRadius = 5
         layer?.masksToBounds = true
         
-        let cell = LoginTextFieldCell(textCell: "")
-        cell.placeholderString = "Email Address"
+        let cell = LoginSecureTextFieldCell(textCell: "")
+        cell.placeholderString = "Password"
         self.cell = cell
     }
     

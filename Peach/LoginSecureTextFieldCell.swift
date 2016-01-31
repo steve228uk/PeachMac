@@ -1,15 +1,15 @@
 //
-//  LoginTextFieldCell.swift
+//  LoginSecureTextFieldCell.swift
 //  Peach
 //
-//  Created by Stephen Radford on 10/01/2016.
+//  Created by Stephen Radford on 31/01/2016.
 //  Copyright © 2016 Cocoon Development Ltd. All rights reserved.
 //
 
 import Cocoa
 
-class LoginTextFieldCell: NSTextFieldCell {
-    
+class LoginSecureTextFieldCell: NSSecureTextFieldCell {
+
     override func drawWithFrame(cellFrame: NSRect, inView controlView: NSView) {
         let rect = NSMakeRect(cellFrame.origin.x + 10, cellFrame.origin.y + 7, cellFrame.size.width - 20, cellFrame.size.height - 14)
         super.drawWithFrame(rect, inView: controlView)

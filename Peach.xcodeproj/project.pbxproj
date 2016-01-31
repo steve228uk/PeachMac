@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281227221C5D902300128D00 /* LoginSecureTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281227211C5D902300128D00 /* LoginSecureTextFieldCell.swift */; };
+		281227241C5D905200128D00 /* LoginSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281227231C5D905200128D00 /* LoginSecureTextField.swift */; };
+		281227291C5D961900128D00 /* LoginButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281227281C5D961900128D00 /* LoginButtonCell.swift */; };
 		282CA58C1C45C3A50075AE9A /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282CA58B1C45C3A50075AE9A /* StreamViewController.swift */; };
 		282D92C31C42CCAF00B83109 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D92C21C42CCAF00B83109 /* AppDelegate.swift */; };
 		282D92C71C42CCAF00B83109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 282D92C61C42CCAF00B83109 /* Assets.xcassets */; };
@@ -138,6 +141,9 @@
 
 /* Begin PBXFileReference section */
 		213A6028654D68E8497E096D /* Pods-ImgurKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImgurKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImgurKit/Pods-ImgurKit.debug.xcconfig"; sourceTree = "<group>"; };
+		281227211C5D902300128D00 /* LoginSecureTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSecureTextFieldCell.swift; sourceTree = "<group>"; };
+		281227231C5D905200128D00 /* LoginSecureTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSecureTextField.swift; sourceTree = "<group>"; };
+		281227281C5D961900128D00 /* LoginButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButtonCell.swift; sourceTree = "<group>"; };
 		282829758513A60968535014 /* Pods-GiphyKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GiphyKit/Pods-GiphyKit.debug.xcconfig"; sourceTree = "<group>"; };
 		282CA58B1C45C3A50075AE9A /* StreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
 		282D92BF1C42CCAF00B83109 /* Peach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peach.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -291,6 +297,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		281227251C5D946C00128D00 /* Email Field */ = {
+			isa = PBXGroup;
+			children = (
+				2874F7301C42EE5800D06D34 /* LoginTextField.swift */,
+				2874F7321C42F13C00D06D34 /* LoginTextFieldCell.swift */,
+			);
+			name = "Email Field";
+			sourceTree = "<group>";
+		};
+		281227261C5D947D00128D00 /* Password Field */ = {
+			isa = PBXGroup;
+			children = (
+				281227211C5D902300128D00 /* LoginSecureTextFieldCell.swift */,
+				281227231C5D905200128D00 /* LoginSecureTextField.swift */,
+			);
+			name = "Password Field";
+			sourceTree = "<group>";
+		};
+		281227271C5D960500128D00 /* Login Button */ = {
+			isa = PBXGroup;
+			children = (
+				2874F72E1C42E9BB00D06D34 /* LoginButton.swift */,
+				281227281C5D961900128D00 /* LoginButtonCell.swift */,
+			);
+			name = "Login Button";
+			sourceTree = "<group>";
+		};
 		282CA58A1C45C2E50075AE9A /* Stream */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +374,7 @@
 				282CA58A1C45C2E50075AE9A /* Stream */,
 				28A1DA6B1C457047004198A0 /* Compose */,
 				28DBACFB1C4301EA00CC66CB /* Connections */,
+				2874F71E1C42D71800D06D34 /* Login */,
 				2874F7271C42E5E100D06D34 /* Global */,
 				282D92C21C42CCAF00B83109 /* AppDelegate.swift */,
 				282D92C61C42CCAF00B83109 /* Assets.xcassets */,
@@ -497,11 +531,11 @@
 		2874F71E1C42D71800D06D34 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				281227271C5D960500128D00 /* Login Button */,
+				281227261C5D947D00128D00 /* Password Field */,
+				281227251C5D946C00128D00 /* Email Field */,
 				2874F71F1C42D73400D06D34 /* LoginViewController.swift */,
 				2874F7251C42E57700D06D34 /* LoginView.swift */,
-				2874F72E1C42E9BB00D06D34 /* LoginButton.swift */,
-				2874F7301C42EE5800D06D34 /* LoginTextField.swift */,
-				2874F7321C42F13C00D06D34 /* LoginTextFieldCell.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -509,7 +543,6 @@
 		2874F7271C42E5E100D06D34 /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				2874F71E1C42D71800D06D34 /* Login */,
 				288D9B4F1C5977C1008F6608 /* Container View */,
 				2899A75B1C558DB90045C4F9 /* Toolbar */,
 				28A1DA701C457165004198A0 /* PeachViewController.swift */,
@@ -972,12 +1005,14 @@
 				285DFB961C52DF1400C34980 /* ConnectionsLoadingView.swift in Sources */,
 				288D9B4C1C5976F9008F6608 /* AvatarView.swift in Sources */,
 				2856A0A21C5D5EDC00B2BB21 /* ActivityViewController.swift in Sources */,
+				281227241C5D905200128D00 /* LoginSecureTextField.swift in Sources */,
 				28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */,
 				2874F7311C42EE5800D06D34 /* LoginTextField.swift in Sources */,
 				28A8C0311C457F1F006DA6FC /* ComposeWindowController.swift in Sources */,
 				285DFB891C52C31900C34980 /* PostLinkItem.swift in Sources */,
 				2874F7201C42D73400D06D34 /* LoginViewController.swift in Sources */,
 				28515A8F1C49CE5A00F0ABE8 /* PostImageItem.swift in Sources */,
+				281227221C5D902300128D00 /* LoginSecureTextFieldCell.swift in Sources */,
 				2874F7331C42F13C00D06D34 /* LoginTextFieldCell.swift in Sources */,
 				282D92C31C42CCAF00B83109 /* AppDelegate.swift in Sources */,
 				2899A75F1C558DE00045C4F9 /* PeachToolbarView.swift in Sources */,
@@ -991,6 +1026,7 @@
 				28A1DA6E1C4570E7004198A0 /* ComposeViewController.swift in Sources */,
 				28515A921C49D04A00F0ABE8 /* PostTextCollectionViewItem.swift in Sources */,
 				2867DC261C5CF78200FC0355 /* GIFPlayer.swift in Sources */,
+				281227291C5D961900128D00 /* LoginButtonCell.swift in Sources */,
 				282DD0B11C5ACA1B004AE18D /* PostActionsView.swift in Sources */,
 				285DFB801C518FA400C34980 /* PostVideoItem.swift in Sources */,
 				28C7A1EA1C485FF3004D8FD0 /* ConnectionCell.swift in Sources */,
