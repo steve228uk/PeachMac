@@ -20,26 +20,26 @@ class ComposeViewController: NSViewController {
     var messages: [Message] = []
     
     let magicWords = [
-        "gif": "Search for a GIF",
-        "image": "Search for images",
+//        "gif": "Search for a GIF",
+//        "image": "Search for images",
         "time": "Add current time",
-        "weather": "Add current weather",
+//        "weather": "Add current weather",
         "goodnight": "Good night!",
-        "goodmorning": "Good morning!",
-        "here": "Add current location",
-        "mood": "How are you feeling?",
-        "rate": "Rate something 1-5 stars",
-        "battery": "Current charge %",
-        "dice": "Roll the dice",
-        "date": "Add the current date",
-        "movie": "Add movie",
-        "tv": "Add TV show",
-        "game": "Add video game",
-        "book": "Add book",
-        "events": "# of events today",
-        "song": "What's currently playing",
-        "draw": "Draw something",
-        "shout": "Say something with big words"
+//        "goodmorning": "Good morning!",
+//        "here": "Add current location",
+//        "mood": "How are you feeling?",
+//        "rate": "Rate something 1-5 stars",
+//        "battery": "Current charge %",
+//        "dice": "Roll the dice",
+//        "date": "Add the current date",
+//        "movie": "Add movie",
+//        "tv": "Add TV show",
+//        "game": "Add video game",
+//        "book": "Add book",
+//        "events": "# of events today",
+//        "song": "What's currently playing",
+//        "draw": "Draw something",
+//        "shout": "Say something with big words"
     ]
     
     override func viewDidLoad() {

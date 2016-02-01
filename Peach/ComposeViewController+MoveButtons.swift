@@ -8,12 +8,17 @@
 
 import Cocoa
 
-extension ComposeViewController {
+extension ComposeViewController: NSWindowDelegate {
     
     // MARK: - Moving buttons
     
-    override func viewDidLayout() {
-        super.viewDidLayout()
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        view.window?.delegate = self
+        moveButtons()
+    }
+    
+    func windowDidResize(notification: NSNotification) {
         moveButtons()
     }
     

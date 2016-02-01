@@ -87,7 +87,7 @@ extension ComposeViewController: NSTextStorageDelegate {
                 break
             case "goodnight":
                 let date = NSDate()
-                let attachment = PeachTextAttachment(string: "Goodnight! \(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))")
+                let attachment = PeachTextAttachment(string: "Good night. 😴\n\n\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))")
                 let attributedString = NSAttributedString(attachment: attachment)
                 textView.textStorage?.appendAttributedString(attributedString)
             default:

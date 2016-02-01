@@ -10,7 +10,6 @@ import Cocoa
 
 class PeachComposeTextView: NSTextView {
     
-    
     // MARK: - Initialisers
     
     override init(frame frameRect: NSRect, textContainer container: NSTextContainer?) {
