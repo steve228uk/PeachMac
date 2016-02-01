@@ -56,10 +56,6 @@ extension ComposeViewController: NSTextStorageDelegate {
      */
     func showMagicButtonForWord(word: String) {
         
-        guard magicButton.hidden else {
-            return
-        }
-        
         if let label = magicWords[word] {
             let para = NSMutableParagraphStyle()
             para.alignment = .Center
