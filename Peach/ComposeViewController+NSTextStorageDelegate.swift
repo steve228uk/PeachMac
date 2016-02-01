@@ -73,20 +73,6 @@ extension ComposeViewController: NSTextStorageDelegate {
         
     }
     
-    /**
-     Remove the last fragment as the user clicked the magic button
-     */
-    func removeLastFragment() {
-        if let text = textView.textStorage?.string {
-            let lines = text.componentsSeparatedByString("\n")
-            if let words = lines.last?.componentsSeparatedByString(" ") {
-                if let last = words.last {
-                    
-                    
-                }
-            }
-        }
-    }
     
     @IBAction func clickMagicButton(sender: AnyObject) {
         let components = magicButton.title.componentsSeparatedByString(":")
@@ -95,7 +81,7 @@ extension ComposeViewController: NSTextStorageDelegate {
             switch type {
             case "time":
                 let date = NSDate()
-                let attachment = PeachTextAttachment(string: "🕑 \(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))")
+                let attachment = PeachTextAttachment(string: "\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))")
                 let attributedString = NSAttributedString(attachment: attachment)
                 textView.textStorage?.appendAttributedString(attributedString)
                 break
