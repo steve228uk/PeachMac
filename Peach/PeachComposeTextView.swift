@@ -46,7 +46,11 @@ class PeachComposeTextView: NSTextView {
                 fragments.append(attString.attributedSubstringFromRange(range).string.stringByTrimmingCharactersInSet(.whitespaceAndNewlineCharacterSet()))
             } else {
                 
-                if let attachment = object as? NSTextAttachment {
+                if let attachment = object as? PeachTextAttachment {
+                    if let text = attachment.text {
+                        fragments.append(text)
+                    }
+                } else if let attachment = object as? NSTextAttachment {
                     if let data = attachment.fileWrapper?.regularFileContents {
                         fragments.append(data)
                     }
