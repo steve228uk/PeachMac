@@ -67,32 +67,48 @@ extension ComposeViewController: NSTextStorageDelegate {
             
             let attributedTitle = NSAttributedString(string: "\(word): \(label)", attributes: attributes)
             
-            magicButton.attributedTitle = attributedTitle            
+            magicButton.attributedTitle = attributedTitle
             magicButton.hidden = false
         }
         
     }
     
     
+    
     @IBAction func clickMagicButton(sender: AnyObject) {
         let components = magicButton.title.componentsSeparatedByString(":")
         
+        
         if let type = components.first {
-            switch type {
-            case "time":
-                let date = NSDate()
-                let attachment = PeachTextAttachment(string: "\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))")
-                let attributedString = NSAttributedString(attachment: attachment)
-                textView.textStorage?.appendAttributedString(attributedString)
-                break
-            case "goodnight":
-                let date = NSDate()
-                let attachment = PeachTextAttachment(string: "Good night. 😴\n\n\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))")
-                let attributedString = NSAttributedString(attachment: attachment)
-                textView.textStorage?.appendAttributedString(attributedString)
-            default:
-                break
+            
+            var attachmentString: NSAttributedString {
+                switch type {
+                case "time":
+                    let date = NSDate()
+                    let attachment = PeachTextAttachment(string: "\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))")
+                    return NSAttributedString(attachment: attachment)
+                case "goodnight":
+                    let date = NSDate()
+                    let attachment = PeachTextAttachment(string: "Good night. 😴\n\n\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))")
+                    return NSAttributedString(attachment: attachment)
+                case "goodmorning":
+                    let date = NSDate()
+                    let attachment = PeachTextAttachment(string: "Good morning! 🌤\n\n\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))")
+                    return NSAttributedString(attachment: attachment)
+                case "dice":
+                    let string = "🎲 \(Int(arc4random_uniform(6) + 1)) 🎲 \(Int(arc4random_uniform(6) + 1))"
+                    let attachment = PeachTextAttachment(string: string)
+                    return NSAttributedString(attachment: attachment)
+                default:
+                    return NSAttributedString(string: "")
+                }
             }
+            
+            textView.textStorage?.setAttributedString(textView.attributedString().attributedStringByRemovingLastWord())
+            textView.textStorage?.appendAttributedString(NSAttributedString(string: "\n"))
+            textView.textStorage?.appendAttributedString(attachmentString)
+            textView.textStorage?.appendAttributedString(NSAttributedString(string: " "))
+            
         }
         
     }
