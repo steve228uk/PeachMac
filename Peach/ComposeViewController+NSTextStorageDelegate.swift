@@ -133,9 +133,8 @@ extension ComposeViewController: NSTextStorageDelegate {
             }
             
             textView.textStorage?.setAttributedString(textView.attributedString().attributedStringByRemovingLastWord())
-            textView.textStorage?.appendAttributedString(NSAttributedString(string: "\n"))
             textView.textStorage?.appendAttributedString(attachmentString)
-            textView.textStorage?.appendAttributedString(NSAttributedString(string: " "))
+            textView.textStorage?.appendAttributedString(NSAttributedString(string: "\n\n"))
             
         }
         
