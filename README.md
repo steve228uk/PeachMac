@@ -3,7 +3,7 @@ Just another peach.cool client for mac
 
 ## Download
 
-A recent signed build can be found [here](http://sht.tl/Hzf9Vk)
+A recent signed build can be found [here](http://sht.tl/F1BI2U)
 
 ## Setup
 
@@ -18,3 +18,4 @@ pod install
 
 ![Screenshot 1](http://sht.tl/AJdLaB)
 ![Screenshot 2](http://sht.tl/Ghj6Qc)
+![Screenshot 3](http://sht.tl/TSVwTI)
