@@ -83,21 +83,49 @@ extension ComposeViewController: NSTextStorageDelegate {
             
             var attachmentString: NSAttributedString {
                 switch type {
+                case "date":
+                    let date = NSDate()
+                    let dateFormatter = NSDateFormatter()
+                    dateFormatter.setLocalizedDateFormatFromTemplate("EEEE, d MMM YYYY")
+                    let dateString = dateFormatter.stringFromDate(date)
+                    let attachment = PeachTextAttachment(string: "📰 \(dateString)")
+                    return NSAttributedString(attachment: attachment)
                 case "time":
                     let date = NSDate()
-                    let attachment = PeachTextAttachment(string: "\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))")
+                    let string = "\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))"
+                    let attachment = PeachTextAttachment(string: string)
                     return NSAttributedString(attachment: attachment)
                 case "goodnight":
                     let date = NSDate()
-                    let attachment = PeachTextAttachment(string: "Good night. 😴\n\n\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))")
+                    let string = "Good night. 😴\n\n\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))"
+                    let attachment = PeachTextAttachment(string: string)
                     return NSAttributedString(attachment: attachment)
                 case "goodmorning":
                     let date = NSDate()
-                    let attachment = PeachTextAttachment(string: "Good morning! 🌤\n\n\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))")
+                    let string = "Good morning! 🌤\n\n\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))"
+                    let attachment = PeachTextAttachment(string: string)
                     return NSAttributedString(attachment: attachment)
                 case "dice":
                     let string = "🎲 \(Int(arc4random_uniform(6) + 1)) 🎲 \(Int(arc4random_uniform(6) + 1))"
                     let attachment = PeachTextAttachment(string: string)
+                    return NSAttributedString(attachment: attachment)
+                case "battery":
+                    let snapshot = IOPSCopyPowerSourcesInfo().takeRetainedValue()
+                    let sources = IOPSCopyPowerSourcesList(snapshot).takeRetainedValue() as Array
+                    var string: String?
+                    if sources.count > 0 {
+                        let ps = sources[0]
+                        let info = IOPSGetPowerSourceDescription(snapshot, ps).takeUnretainedValue() as Dictionary
+                        if let capacity = info[kIOPSCurrentCapacityKey] as? Int {
+                            string = "🔋 \(capacity)%"
+                        }
+                    }
+                    
+                    if string == nil {
+                        string = "🔋 100%" // Make it 100% for desktops
+                    }
+                    
+                    let attachment = PeachTextAttachment(string: string!)
                     return NSAttributedString(attachment: attachment)
                 default:
                     return NSAttributedString(string: "")

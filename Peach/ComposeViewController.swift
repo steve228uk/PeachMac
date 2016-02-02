@@ -9,6 +9,7 @@
 import Cocoa
 import PeachKit
 import ImgurKit
+import IOKit.ps
 
 class ComposeViewController: NSViewController {
     
@@ -29,9 +30,9 @@ class ComposeViewController: NSViewController {
 //        "here": "Add current location",
 //        "mood": "How are you feeling?",
 //        "rate": "Rate something 1-5 stars",
-//        "battery": "Current charge %",
+        "battery": "Current charge %",
         "dice": "Roll the dice",
-//        "date": "Add the current date",
+        "date": "Add the current date",
 //        "movie": "Add movie",
 //        "tv": "Add TV show",
 //        "game": "Add video game",
