@@ -88,26 +88,26 @@ extension ComposeViewController: NSTextStorageDelegate {
                     let dateFormatter = NSDateFormatter()
                     dateFormatter.setLocalizedDateFormatFromTemplate("EEEE, d MMM YYYY")
                     let dateString = dateFormatter.stringFromDate(date)
-                    let attachment = PeachTextAttachment(string: "📰 \(dateString)")
+                    let attachment = PeachTextAttachment(string: "📰 \(dateString)", textView: textView)
                     return NSAttributedString(attachment: attachment)
                 case "time":
                     let date = NSDate()
                     let string = "🕑 \(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))"
-                    let attachment = PeachTextAttachment(string: string)
+                    let attachment = PeachTextAttachment(string: string, textView: textView)
                     return NSAttributedString(attachment: attachment)
                 case "goodnight":
                     let date = NSDate()
                     let string = "Good night. 😴\n\n\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))"
-                    let attachment = PeachTextAttachment(string: string)
+                    let attachment = PeachTextAttachment(string: string, textView: textView)
                     return NSAttributedString(attachment: attachment)
                 case "goodmorning":
                     let date = NSDate()
                     let string = "Good morning! 🌤\n\n\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))"
-                    let attachment = PeachTextAttachment(string: string)
+                    let attachment = PeachTextAttachment(string: string, textView: textView)
                     return NSAttributedString(attachment: attachment)
                 case "dice":
                     let string = "🎲 \(Int(arc4random_uniform(6) + 1)) 🎲 \(Int(arc4random_uniform(6) + 1))"
-                    let attachment = PeachTextAttachment(string: string)
+                    let attachment = PeachTextAttachment(string: string, textView: textView)
                     return NSAttributedString(attachment: attachment)
                 case "battery":
                     let snapshot = IOPSCopyPowerSourcesInfo().takeRetainedValue()
@@ -125,7 +125,17 @@ extension ComposeViewController: NSTextStorageDelegate {
                         string = "🔋 100%" // Make it 100% for desktops
                     }
                     
-                    let attachment = PeachTextAttachment(string: string!)
+                    let attachment = PeachTextAttachment(string: string!, textView: textView)
+                    return NSAttributedString(attachment: attachment)
+                case "rate":
+                    let options = [
+                        "Rating: ⭐️⭐️⭐️⭐️⭐️ 5/5",
+                        "Rating: ⭐️⭐️⭐️⭐️ 4/5",
+                        "Rating: ⭐️⭐️⭐️ 3/5",
+                        "Rating: ⭐️⭐️ 2/5",
+                        "Rating: ⭐️ 1/5",
+                    ]
+                    let attachment = PeachTextOptionsAttachment(options: options, textView: textView)
                     return NSAttributedString(attachment: attachment)
                 default:
                     return NSAttributedString(string: "")

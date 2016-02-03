@@ -10,6 +10,13 @@ import Cocoa
 
 class PeachTextAttachmentCell: NSTextAttachmentCell {
 
+    var textView: NSTextView?
+    
+    convenience init(textCell: String, textView: NSTextView?) {
+        self.init(textCell: textCell)
+        self.textView = textView
+    }
+    
     override func drawWithFrame(cellFrame: NSRect, inView controlView: NSView?) {
         
         NSColor.init(hue: 0, saturation: 0, brightness: 0.9, alpha: 1).setStroke()
@@ -32,7 +39,11 @@ class PeachTextAttachmentCell: NSTextAttachmentCell {
     override func cellSize() -> NSSize {
         
         var textSize = attributedStringValue.size()
-        textSize.width += 15
+        if let view = textView {
+            textSize.width = view.frame.size.width
+        } else {
+            textSize.width += 15
+        }
         textSize.height += 10
         
         return textSize

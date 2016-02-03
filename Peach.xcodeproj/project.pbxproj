@@ -87,6 +87,9 @@
 		28A8C0311C457F1F006DA6FC /* ComposeWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A8C0301C457F1F006DA6FC /* ComposeWindowController.swift */; };
 		28A8C0331C45AD01006DA6FC /* PeachTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A8C0321C45AD01006DA6FC /* PeachTabViewController.swift */; };
 		28BE2CD01C615A37006A4392 /* NSAttributedString+RemoveLastWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE2CCF1C615A37006A4392 /* NSAttributedString+RemoveLastWord.swift */; };
+		28BE2CD31C628D74006A4392 /* PeachTextOptionsAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE2CD21C628D74006A4392 /* PeachTextOptionsAttachment.swift */; };
+		28BE2CD51C628D89006A4392 /* PeachTextOptionsAttachmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE2CD41C628D89006A4392 /* PeachTextOptionsAttachmentCell.swift */; };
+		28BE2CD71C629AA2006A4392 /* AttachmentButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BE2CD61C629AA2006A4392 /* AttachmentButtonCell.swift */; };
 		28C7A1E01C4830DE004D8FD0 /* FriendRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C7A1DF1C4830DE004D8FD0 /* FriendRequest.swift */; };
 		28C7A1E21C485396004D8FD0 /* ConnectionsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C7A1E11C485396004D8FD0 /* ConnectionsCollectionViewController.swift */; };
 		28C7A1E41C485702004D8FD0 /* ConnectionCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C7A1E31C485702004D8FD0 /* ConnectionCollectionViewItem.swift */; };
@@ -234,6 +237,9 @@
 		28A8C0301C457F1F006DA6FC /* ComposeWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeWindowController.swift; sourceTree = "<group>"; };
 		28A8C0321C45AD01006DA6FC /* PeachTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachTabViewController.swift; sourceTree = "<group>"; };
 		28BE2CCF1C615A37006A4392 /* NSAttributedString+RemoveLastWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+RemoveLastWord.swift"; sourceTree = "<group>"; };
+		28BE2CD21C628D74006A4392 /* PeachTextOptionsAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachTextOptionsAttachment.swift; sourceTree = "<group>"; };
+		28BE2CD41C628D89006A4392 /* PeachTextOptionsAttachmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachTextOptionsAttachmentCell.swift; sourceTree = "<group>"; };
+		28BE2CD61C629AA2006A4392 /* AttachmentButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentButtonCell.swift; sourceTree = "<group>"; };
 		28C7A1DF1C4830DE004D8FD0 /* FriendRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendRequest.swift; sourceTree = "<group>"; };
 		28C7A1E11C485396004D8FD0 /* ConnectionsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsCollectionViewController.swift; sourceTree = "<group>"; };
 		28C7A1E31C485702004D8FD0 /* ConnectionCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCollectionViewItem.swift; sourceTree = "<group>"; };
@@ -364,6 +370,7 @@
 		281227301C5E701300128D00 /* Attachments */ = {
 			isa = PBXGroup;
 			children = (
+				28BE2CD11C628D60006A4392 /* Text Options */,
 				28CC1E5D1C5ECE25001DD6EC /* Text */,
 			);
 			name = Attachments;
@@ -658,6 +665,16 @@
 				2812272A1C5E642E00128D00 /* Toolbar */,
 			);
 			name = Compose;
+			sourceTree = "<group>";
+		};
+		28BE2CD11C628D60006A4392 /* Text Options */ = {
+			isa = PBXGroup;
+			children = (
+				28BE2CD21C628D74006A4392 /* PeachTextOptionsAttachment.swift */,
+				28BE2CD41C628D89006A4392 /* PeachTextOptionsAttachmentCell.swift */,
+				28BE2CD61C629AA2006A4392 /* AttachmentButtonCell.swift */,
+			);
+			name = "Text Options";
 			sourceTree = "<group>";
 		};
 		28C7A1ED1C48691D004D8FD0 /* Extensions */ = {
@@ -1058,6 +1075,7 @@
 			files = (
 				28CC1E541C5E9F53001DD6EC /* MagicButton.swift in Sources */,
 				2874F72F1C42E9BB00D06D34 /* LoginButton.swift in Sources */,
+				28BE2CD71C629AA2006A4392 /* AttachmentButtonCell.swift in Sources */,
 				288D9B511C5977D8008F6608 /* +LoginView.swift in Sources */,
 				28C7A1EC1C4863E3004D8FD0 /* NSColor+CustomColors.swift in Sources */,
 				28A8C0331C45AD01006DA6FC /* PeachTabViewController.swift in Sources */,
@@ -1091,6 +1109,7 @@
 				28BE2CD01C615A37006A4392 /* NSAttributedString+RemoveLastWord.swift in Sources */,
 				28CC1E5F1C5ECE49001DD6EC /* PeachTextAttachmentCell.swift in Sources */,
 				2899A75F1C558DE00045C4F9 /* PeachToolbarView.swift in Sources */,
+				28BE2CD51C628D89006A4392 /* PeachTextOptionsAttachmentCell.swift in Sources */,
 				285DFB9A1C54184B00C34980 /* NSImage+CropToSquare.swift in Sources */,
 				28A1DA721C457165004198A0 /* PeachViewController.swift in Sources */,
 				28C7A1E41C485702004D8FD0 /* ConnectionCollectionViewItem.swift in Sources */,
@@ -1108,6 +1127,7 @@
 				28C7A1EA1C485FF3004D8FD0 /* ConnectionCell.swift in Sources */,
 				285DFB841C52C23E00C34980 /* PostLocationItem.swift in Sources */,
 				288D9B531C5A4197008F6608 /* NSView+HideWithAnimation.swift in Sources */,
+				28BE2CD31C628D74006A4392 /* PeachTextOptionsAttachment.swift in Sources */,
 				285DFB8E1C52D7F500C34980 /* PeachPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
