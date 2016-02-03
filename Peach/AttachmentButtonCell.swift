@@ -10,5 +10,8 @@ import Cocoa
 
 class AttachmentButtonCell: NSButtonCell {
 
+    func click() {
+        print("click")
+    }
     
 }

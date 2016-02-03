@@ -30,7 +30,7 @@ class PeachTextAttachmentCell: NSTextAttachmentCell {
             label.attributedStringValue = attributedStringValue
             label.bordered = false
             label.drawsBackground = false
-            let insetRect = NSInsetRect(cellFrame, 5, 5)
+            let insetRect = NSInsetRect(cellFrame, 10, 10)
             label.cell?.drawWithFrame(insetRect, inView: view)
         }
         
@@ -41,10 +41,8 @@ class PeachTextAttachmentCell: NSTextAttachmentCell {
         var textSize = attributedStringValue.size()
         if let view = textView {
             textSize.width = view.frame.size.width
-        } else {
-            textSize.width += 15
         }
-        textSize.height += 10
+        textSize.height += 20
         
         return textSize
     }

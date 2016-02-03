@@ -28,7 +28,7 @@ class ComposeViewController: NSViewController {
         "goodnight": "Good night!",
         "goodmorning": "Good morning!",
 //        "here": "Add current location",
-//        "mood": "How are you feeling?",
+        "mood": "How are you feeling?",
         "rate": "Rate something 1-5 stars",
         "battery": "Current charge %",
         "dice": "Roll the dice",

@@ -135,8 +135,34 @@ extension ComposeViewController: NSTextStorageDelegate {
                         "Rating: ⭐️⭐️ 2/5",
                         "Rating: ⭐️ 1/5",
                     ]
-                    let attachment = PeachTextOptionsAttachment(options: options, textView: textView)
-                    return NSAttributedString(attachment: attachment)
+                    return optionsAttachmentFromOptions(options)
+                case "mood":
+                    let options = [
+                        "Mood: 😀 happy",
+                        "Mood: 😇 blessed",
+                        "Mood: 😍 in love",
+                        "Mood: 😘 flirty",
+                        "Mood: 😂 laughing",
+                        "Mood: 😴 tired",
+                        "Mood: 😏 sneaky",
+                        "Mood: 😢 bored",
+                        "Mood: 😷 sick",
+                        "Mood: 😢 sad",
+                        "Mood: 😭 jealous",
+                        "Mood: 😓 stressed",
+                        "Mood: 😒 annoyed",
+                        "Mood: 😡 angry",
+                        "Mood: 💔 heartbroken",
+                        "Mood: 🌞 radiant",
+                        "Mood: 🐻 hungry",
+                        "Mood: 🍀 lucky",
+                        "Mood: 🐔 scared",
+                        "Mood: 🙅 nope",
+                        "Mood: 😈 mischievous",
+                        "Mood: 🐑 sheepish",
+                        "Mood: 💀 dead"
+                    ]
+                    return optionsAttachmentFromOptions(options)
                 default:
                     return NSAttributedString(string: "")
                 }
@@ -148,6 +174,18 @@ extension ComposeViewController: NSTextStorageDelegate {
             
         }
         
+    }
+    
+    /**
+     Generate an options attachment from an array of strings
+     
+     - parameter options: Array of string options
+     
+     - returns: A `PeachTextOptionsAttachment` wrapped in an attributed string
+     */
+    func optionsAttachmentFromOptions(options: [String]) -> NSAttributedString {
+        let attachment = PeachTextOptionsAttachment(options: options, textView: textView)
+        return NSAttributedString(attachment: attachment)
     }
     
     

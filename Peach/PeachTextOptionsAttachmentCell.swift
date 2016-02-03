@@ -38,11 +38,12 @@ class PeachTextOptionsAttachmentCell: NSTextAttachmentCell {
             label.attributedStringValue = attributedStringValue
             label.bordered = false
             label.drawsBackground = false
-            let insetRect = NSInsetRect(cellFrame, 20, 5)
+            let insetRect = NSInsetRect(cellFrame, 40, 8)
             label.cell?.drawWithFrame(insetRect, inView: view)
             
-            leftButton.cell?.drawWithFrame(NSRect(x: cellFrame.origin.x, y: cellFrame.origin.y, width: 20, height: 20), inView: view)
-            rightButton.cell?.drawWithFrame(NSRect(x: cellFrame.origin.x+cellFrame.size.width-25, y: cellFrame.origin.y, width: 20, height: 20), inView: view)
+            leftButton.cell?.drawWithFrame(NSRect(x: cellFrame.origin.x+5, y: cellFrame.origin.y+8, width: 20, height: 20), inView: view)
+            rightButton.cell?.drawWithFrame(NSRect(x: cellFrame.origin.x+cellFrame.size.width-25, y: cellFrame.origin.y+8, width: 20, height: 20), inView: view)
+            
         }
         
     }
@@ -60,7 +61,7 @@ class PeachTextOptionsAttachmentCell: NSTextAttachmentCell {
     
         if let view = controlView {
             
-            let rightRect = NSRect(x: cellFrame.origin.x, y: cellFrame.origin.y, width: 20, height: 20)
+            let rightRect = NSRect(x: cellFrame.origin.x+cellFrame.size.width-25, y: cellFrame.origin.y+8, width: 20, height: 20)
             let rightHitType = hitTestForEvent(theEvent, inRect: rightRect, ofView: view)
             let rightButtonClick = (rightHitType == NSCellHitResult.ContentArea || rightHitType == NSCellHitResult.TrackableArea)
             
