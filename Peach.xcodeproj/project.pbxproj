@@ -370,6 +370,7 @@
 		281227301C5E701300128D00 /* Attachments */ = {
 			isa = PBXGroup;
 			children = (
+				28BE2CD81C62C2C8006A4392 /* GIF */,
 				28BE2CD11C628D60006A4392 /* Text Options */,
 				28CC1E5D1C5ECE25001DD6EC /* Text */,
 			);
@@ -675,6 +676,13 @@
 				28BE2CD61C629AA2006A4392 /* AttachmentButtonCell.swift */,
 			);
 			name = "Text Options";
+			sourceTree = "<group>";
+		};
+		28BE2CD81C62C2C8006A4392 /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = GIF;
 			sourceTree = "<group>";
 		};
 		28C7A1ED1C48691D004D8FD0 /* Extensions */ = {

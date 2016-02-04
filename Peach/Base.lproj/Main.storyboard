@@ -801,7 +801,7 @@ DQ
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="0.5" horizontal="NO" id="3nC-ZW-rRg">
-                                    <rect key="frame" x="316" y="0.0" width="16" height="187"/>
+                                    <rect key="frame" x="317" y="0.0" width="15" height="187"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>

@@ -130,10 +130,10 @@ extension ComposeViewController: NSTextStorageDelegate {
                 case "rate":
                     let options = [
                         "Rating: ⭐️⭐️⭐️⭐️⭐️ 5/5",
-                        "Rating: ⭐️⭐️⭐️⭐️ 4/5",
-                        "Rating: ⭐️⭐️⭐️ 3/5",
-                        "Rating: ⭐️⭐️ 2/5",
                         "Rating: ⭐️ 1/5",
+                        "Rating: ⭐️⭐️ 2/5",
+                        "Rating: ⭐️⭐️⭐️ 3/5",
+                        "Rating: ⭐️⭐️⭐️⭐️ 4/5",
                     ]
                     return optionsAttachmentFromOptions(options)
                 case "mood":
