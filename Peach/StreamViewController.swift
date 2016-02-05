@@ -77,12 +77,6 @@ class StreamViewController: PeachViewController, PeachNavigationDelegate {
         
     }
     
-    override func viewDidDisappear() {
-        stream = nil
-        collectionView.reloadData()
-        headerView.nameLabel.stringValue = ""
-    }
-    
     override func viewDidLayout() {
         super.viewDidLayout()
         collectionViewLayout.invalidateLayout()
@@ -93,6 +87,10 @@ class StreamViewController: PeachViewController, PeachNavigationDelegate {
     
     func sendNavigationBack(sender: AnyObject?) {
         tabController?.selectedTabViewItemIndex = 0
+        
+        stream = nil
+        collectionView.reloadData()
+        headerView.nameLabel.stringValue = ""
     }
     
     

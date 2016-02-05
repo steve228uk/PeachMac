@@ -14,8 +14,6 @@ class PostGIFItem: NSCollectionViewItem {
     
     @IBOutlet weak var gifPlayer: GIFPlayer!
     
-    @IBOutlet weak var poster: NSImageView!
-    
     let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
     
     override func viewDidLoad() {
@@ -27,27 +25,15 @@ class PostGIFItem: NSCollectionViewItem {
     var message: ImageMessage? {
         didSet {
             gifPlayer.imageData = nil
-            poster.image = nil
-            if let src = message?.src {
+  
+            dispatch_async(dispatch_get_global_queue(priority, 0)) {
                 
-                dispatch_async(dispatch_get_global_queue(priority, 0)) {
-                    
-                    let image = NSImage(byReferencingURL: NSURL(string: src)!)
-                    dispatch_async(dispatch_get_main_queue()) {
-                        self.poster.image = image
-                    }
-                
+                self.message?.getImageData { data in
+                    self.gifPlayer.imageData = data
                 }
                 
-                dispatch_async(dispatch_get_global_queue(priority, 0)) {
-                    
-                    self.message?.getImageData { data in
-                         self.gifPlayer.imageData = data
-                    }
-                    
-                }
-
             }
+
         }
     }
     
