@@ -12,7 +12,8 @@ class PostImageItem: NSCollectionViewItem {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView?.layer?.backgroundColor = NSColor.peachBorderColor().CGColor
+        view.wantsLayer = true
+        view.layer?.backgroundColor = NSColor.peachGreyColor().CGColor
     }
     
 }

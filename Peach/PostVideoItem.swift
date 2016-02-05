@@ -14,6 +14,12 @@ class PostVideoItem: NSCollectionViewItem {
 
     @IBOutlet weak var videoPlayer: PeachPlayerView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.wantsLayer = true
+        view.layer?.backgroundColor = NSColor.peachGreyColor().CGColor
+    }
+    
     var videoURL: String? {
         didSet {
             if let url = NSURL(string: videoURL!) where videoURL != nil {
