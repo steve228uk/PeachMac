@@ -1,5 +1,5 @@
 //
-//  FadingImageView.swift
+//  NSImageView+Transition.swift
 //  Peach
 //
 //  Created by Stephen Radford on 05/02/2016.
@@ -8,23 +8,16 @@
 
 import Cocoa
 
-class FadingImageView: NSImageView {
+extension NSImageView {
     
-    override var image: NSImage? {
-        willSet {
-            if image == nil {
-                addFadingAnimation()
-            }
-        }
-    }
-    
-    func addFadingAnimation() {
+    func transitionWithImage(image: NSImage) {
         let transition = CATransition()
         transition.duration = 0.25
         transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         transition.type = kCATransitionFade
         wantsLayer = true
         layer?.addAnimation(transition, forKey: kCATransition)
+        self.image = image
     }
     
 }

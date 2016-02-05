@@ -70,8 +70,9 @@ class StreamViewController: PeachViewController, PeachNavigationDelegate {
             self.collectionView.reloadData()
         }
         
+
         dispatch_async(dispatch_get_main_queue()) {
-            self.scrollView.contentView.scrollPoint(NSPoint(x: 0, y: self.collectionView.frame.height))
+            self.collectionView.scrollPoint(NSPoint(x: 0, y: self.collectionView.frame.height))
         }
         
     }

@@ -36,14 +36,16 @@ class PostGIFItem: NSCollectionViewItem {
                     dispatch_async(dispatch_get_main_queue()) {
                         self.poster.image = image
                     }
+                
+                }
+                
+                dispatch_async(dispatch_get_global_queue(priority, 0)) {
                     
                     self.message?.getImageData { data in
                          self.gifPlayer.imageData = data
                     }
                     
                 }
-                
-                
 
             }
         }

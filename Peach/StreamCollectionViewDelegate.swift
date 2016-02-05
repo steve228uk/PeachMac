@@ -160,7 +160,7 @@ extension StreamViewController: NSCollectionViewDataSource {
             dispatch_async(dispatch_get_global_queue(priority, 0)) {
                 let image = NSImage(byReferencingURL: NSURL(string: src)!)
                 dispatch_async(dispatch_get_main_queue()) {
-                    item.imageView?.image = image
+                    item.imageView?.transitionWithImage(image)
                 }
             }
             
