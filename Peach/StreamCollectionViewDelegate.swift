@@ -46,11 +46,11 @@ extension StreamViewController: NSCollectionViewDataSource {
                     return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
                 }
             }
-        case .Image, .GIF:
+        case .Image, .GIF, .Shout, .Drawing:
             
             if let imageMessage = message as? ImageMessage {
                 guard imageMessage.width != nil else {
-                    return CGSizeMake(collectionView.frame.size.width, 80)
+                    return CGSizeMake(collectionView.frame.size.width, collectionView.frame.size.width)
                 }
                 
                 let width = CGFloat(imageMessage.width!)
@@ -59,10 +59,10 @@ extension StreamViewController: NSCollectionViewDataSource {
                 
                 return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
             }
-        case .Video :
+        case .Video, .LoopingPhoto:
             if let videoMessage = message as? VideoMessage {
                 guard videoMessage.width != nil else {
-                    return CGSizeMake(collectionView.frame.size.width, 80)
+                    return CGSizeMake(collectionView.frame.size.width, collectionView.frame.size.width)
                 }
                 
                 let width = CGFloat(videoMessage.width!)
@@ -71,10 +71,10 @@ extension StreamViewController: NSCollectionViewDataSource {
                 
                 return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
             }
-        case .Link :
+        case .Link:
             return CGSizeMake(collectionView.frame.size.width, 85)
-        default:
-            return CGSizeMake(collectionView.frame.size.width, 32)
+        case .Location:
+            return CGSizeMake(collectionView.frame.size.width, 85)
         }
         
         // final catch
