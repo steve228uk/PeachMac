@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class AvatarView: NSImageView {
+class AvatarView: FadingImageView {
 
     override func drawRect(dirtyRect: NSRect) {
         super.drawRect(dirtyRect)

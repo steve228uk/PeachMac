@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nbM-Df-Xkw">
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nbM-Df-Xkw" customClass="FadingImageView" customModule="Peach" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="tbT-ur-6Nz"/>
                 </imageView>

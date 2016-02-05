@@ -31,6 +31,7 @@ extension StreamViewController: NSCollectionViewDataSource {
         
         switch message.type {
         case .Text:
+            
             if let textMessage = message as? TextMessage {
                 if let text = textMessage.text {
                     let calculatedHeight = text.calculatedHeightForFont(NSFont.systemFontOfSize(14), width: collectionView.frame.size.width-40)
@@ -38,7 +39,9 @@ extension StreamViewController: NSCollectionViewDataSource {
                     return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
                 }
             }
+            
         case .Music:
+            
             if let textMessage = message as? MusicMessage {
                 if let text = textMessage.title {
                     let calculatedHeight = text.calculatedHeightForFont(NSFont.systemFontOfSize(14), width: collectionView.frame.size.width-40)
@@ -46,6 +49,7 @@ extension StreamViewController: NSCollectionViewDataSource {
                     return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
                 }
             }
+            
         case .Image, .GIF, .Shout, .Drawing:
             
             if let imageMessage = message as? ImageMessage {
@@ -59,7 +63,9 @@ extension StreamViewController: NSCollectionViewDataSource {
                 
                 return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
             }
+            
         case .Video, .LoopingPhoto:
+            
             if let videoMessage = message as? VideoMessage {
                 guard videoMessage.width != nil else {
                     return CGSizeMake(collectionView.frame.size.width, collectionView.frame.size.width)
@@ -71,10 +77,15 @@ extension StreamViewController: NSCollectionViewDataSource {
                 
                 return CGSizeMake(collectionView.frame.size.width, calculatedHeight)
             }
+            
         case .Link:
+            
             return CGSizeMake(collectionView.frame.size.width, 85)
+            
         case .Location:
+            
             return CGSizeMake(collectionView.frame.size.width, 85)
+            
         }
         
         // final catch

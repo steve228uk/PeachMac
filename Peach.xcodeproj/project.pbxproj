@@ -70,6 +70,7 @@
 		2874F7381C42FF7B00D06D34 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F7371C42FF7B00D06D34 /* Stream.swift */; };
 		2879B8831C4C1BA600BC7058 /* TextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879B8821C4C1BA600BC7058 /* TextMessage.swift */; };
 		2879B8851C4C1C1D00BC7058 /* ImageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879B8841C4C1C1D00BC7058 /* ImageMessage.swift */; };
+		2884D1961C65398B00035B82 /* FadingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2884D1951C65398B00035B82 /* FadingImageView.swift */; };
 		288D9B4A1C597584008F6608 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 288D9B491C597584008F6608 /* Login.xib */; };
 		288D9B4C1C5976F9008F6608 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D9B4B1C5976F8008F6608 /* AvatarView.swift */; };
 		288D9B4E1C597768008F6608 /* +MoveButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D9B4D1C597768008F6608 /* +MoveButtons.swift */; };
@@ -220,6 +221,7 @@
 		2874F7371C42FF7B00D06D34 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		2879B8821C4C1BA600BC7058 /* TextMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMessage.swift; sourceTree = "<group>"; };
 		2879B8841C4C1C1D00BC7058 /* ImageMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMessage.swift; sourceTree = "<group>"; };
+		2884D1951C65398B00035B82 /* FadingImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadingImageView.swift; sourceTree = "<group>"; };
 		288D9B491C597584008F6608 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 		288D9B4B1C5976F8008F6608 /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		288D9B4D1C597768008F6608 /* +MoveButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "+MoveButtons.swift"; sourceTree = "<group>"; };
@@ -612,6 +614,7 @@
 				28A1DA701C457165004198A0 /* PeachViewController.swift */,
 				28A8C0321C45AD01006DA6FC /* PeachTabViewController.swift */,
 				28D6FA151C56EFC200CCC319 /* MainWindowController.swift */,
+				2884D1951C65398B00035B82 /* FadingImageView.swift */,
 			);
 			name = Global;
 			sourceTree = "<group>";
@@ -1124,6 +1127,7 @@
 				282CA58C1C45C3A50075AE9A /* StreamViewController.swift in Sources */,
 				28D6FA161C56EFC200CCC319 /* MainWindowController.swift in Sources */,
 				28C7A1E21C485396004D8FD0 /* ConnectionsCollectionViewController.swift in Sources */,
+				2884D1961C65398B00035B82 /* FadingImageView.swift in Sources */,
 				285DFB7B1C518DF600C34980 /* StreamCollectionViewDelegate.swift in Sources */,
 				28A1DA6E1C4570E7004198A0 /* ComposeViewController.swift in Sources */,
 				28515A921C49D04A00F0ABE8 /* PostTextCollectionViewItem.swift in Sources */,
