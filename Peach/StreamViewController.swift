@@ -58,28 +58,22 @@ class StreamViewController: PeachViewController, PeachNavigationDelegate {
         if let name = stream?.displayName {
             headerView.nameLabel.stringValue = name
         }
-    }
-    
-    override func viewDidAppear() {
-        super.viewDidAppear()
-        
-        // This feels really hacky… But it works!
-        // http://stackoverflow.com/questions/14020027/how-do-i-know-that-the-uicollectionview-has-been-loaded-completely
-        
-        dispatch_async(dispatch_get_main_queue()) {
-            self.collectionView.reloadData()
-        }
-        
-
-        dispatch_async(dispatch_get_main_queue()) {
-            self.collectionView.scrollPoint(NSPoint(x: 0, y: self.collectionView.frame.height))
-        }
         
     }
     
     override func viewDidLayout() {
         super.viewDidLayout()
         collectionViewLayout.invalidateLayout()
+    }
+    
+    func reloadAndScroll() {
+        dispatch_async(dispatch_get_main_queue()) {
+            self.collectionView.reloadData()
+        }
+        
+        dispatch_async(dispatch_get_main_queue()) {
+            self.collectionView.scrollPoint(NSPoint(x: 0, y: self.collectionView.frame.height))
+        }
     }
     
     

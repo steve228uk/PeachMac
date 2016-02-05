@@ -90,6 +90,7 @@ class ConnectionsCollectionViewController: PeachViewController, PeachContainerDe
                     let stream = streams[item]
                     vc.stream = stream
                     tc.selectedTabViewItemIndex = 1
+                    vc.reloadAndScroll()
                 }
             }
         }
