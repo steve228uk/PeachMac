@@ -16,12 +16,15 @@ enum GIFPlayerScaleType {
 
 class GIFPlayer: NSView {
 
+    let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+    
     /// The image data that will be converted into animation
     var imageData: NSData? {
         didSet {
             if let data = imageData {
                 
-                image = NSImage(data: data)
+                
+                self.image = NSImage(data: data)
                 
                 guard let imageSource = CGImageSourceCreateWithData(data, nil) else {
                     Swift.print("Image source could not be loaded")
@@ -38,8 +41,8 @@ class GIFPlayer: NSView {
                     Swift.print("Image data is not a valid GIF")
                     return
                 }
-
-                if let img = image {
+                
+                if let img = self.image {
                     let reps = img.representations
                     
                     for rep in reps {
@@ -57,7 +60,7 @@ class GIFPlayer: NSView {
                             
                             // we will increment this in our loop below to set total animation length
                             var animationDuration: NSTimeInterval = 0.0
-                        
+                            
                             for var i = 0; i < frameCount; i++ {
                                 
                                 // set the current frame we're operating on
@@ -98,16 +101,18 @@ class GIFPlayer: NSView {
                             animation.calculationMode = "discrete"
                             animation.duration = animationDuration - delayTimes.last!.doubleValue
                             animation.repeatCount = Float.infinity
-                            animationLayer.addAnimation(animation, forKey: "contents")
+                            self.animationLayer.addAnimation(animation, forKey: "contents")
                             
                             break
                             
                         }
                     }
                     
-                    resizeSubviewsWithOldSize(frame.size)
+                    
+                    self.resizeSubviewsWithOldSize(self.frame.size)
                     
                 }
+                
                 
             } else {
                 image = nil

@@ -12,20 +12,29 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nbM-Df-Xkw">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="tbT-ur-6Nz"/>
+                </imageView>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="mdN-Jd-7M5" customClass="GIFPlayer" customModule="Peach" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
                 </customView>
             </subviews>
             <constraints>
+                <constraint firstItem="nbM-Df-Xkw" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="5Y2-oJ-wHd"/>
                 <constraint firstAttribute="trailing" secondItem="mdN-Jd-7M5" secondAttribute="trailing" id="7oP-he-3Zu"/>
                 <constraint firstItem="mdN-Jd-7M5" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="Eyd-5d-gS3"/>
+                <constraint firstAttribute="bottom" secondItem="nbM-Df-Xkw" secondAttribute="bottom" id="LUr-lp-cG0"/>
                 <constraint firstAttribute="bottom" secondItem="mdN-Jd-7M5" secondAttribute="bottom" id="TEZ-xY-a6k"/>
                 <constraint firstItem="mdN-Jd-7M5" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="TFV-zd-4XX"/>
+                <constraint firstAttribute="trailing" secondItem="nbM-Df-Xkw" secondAttribute="trailing" id="w7N-Oz-Wi9"/>
+                <constraint firstItem="nbM-Df-Xkw" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="yfy-EA-yL5"/>
             </constraints>
         </customView>
         <collectionViewItem id="jWR-fW-x0X" customClass="PostGIFItem" customModule="Peach" customModuleProvider="target">
             <connections>
                 <outlet property="gifPlayer" destination="mdN-Jd-7M5" id="Obu-or-DBs"/>
+                <outlet property="poster" destination="nbM-Df-Xkw" id="pkz-6f-3vQ"/>
                 <outlet property="view" destination="c22-O7-iKe" id="Ivc-54-OqC"/>
             </connections>
         </collectionViewItem>
