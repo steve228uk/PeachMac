@@ -12,12 +12,17 @@ import Alamofire
 
 class PostGIFItem: NSCollectionViewItem {
     
-    
     @IBOutlet weak var gifPlayer: GIFPlayer!
     
     @IBOutlet weak var poster: NSImageView!
     
     let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.wantsLayer = true
+        view.layer?.backgroundColor = NSColor.peachGreyColor().CGColor
+    }
     
     var message: ImageMessage? {
         didSet {

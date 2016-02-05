@@ -18,4 +18,8 @@ extension NSColor {
         return NSColor(calibratedHue:0.07, saturation:0.08, brightness:0.94, alpha:1)
     }
     
+    class func peachGreyColor() -> NSColor {
+        return NSColor(calibratedHue:0, saturation:0, brightness:0.90, alpha:1)
+    }
+    
 }
