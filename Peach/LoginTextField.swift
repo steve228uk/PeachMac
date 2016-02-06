@@ -27,7 +27,7 @@ class LoginTextField: NSTextField {
         layer?.masksToBounds = true
         
         let cell = LoginTextFieldCell(textCell: "")
-        cell.placeholderString = "Email Address"
+        cell.placeholderString = "Username or Email Address"
         self.cell = cell
     }
     
