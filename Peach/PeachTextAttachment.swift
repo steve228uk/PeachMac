@@ -13,13 +13,6 @@ class PeachTextAttachment: NSTextAttachment {
     var text: String?
     var textView: NSTextView?
     
-    /// Attachement wrapped in an attributed string
-    var attributedString: NSAttributedString {
-        get {
-            return NSAttributedString(attachment: self)
-        }
-    }
-    
     init(string: String, textView: NSTextView?) {
         super.init(data: nil, ofType: nil)
         self.textView = textView

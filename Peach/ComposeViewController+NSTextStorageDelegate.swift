@@ -105,17 +105,19 @@ extension ComposeViewController: NSTextStorageDelegate {
      */
     func handleAttachmentWithInputForType(type: String) {
         
-        var handler: MagicInputDelegate? {
+        var handler: MagicInputHandler? {
             switch type {
             case "gif":
-                return GIFSearch()
+                let handler = GIFSearch(textView: textView)
+                handler.delegate = self
+                return handler
             default:
                 return nil
             }
         }
         
-        magicInputController?.delegate = handler
         
+        magicInputController?.delegate = handler
     }
     
     /**

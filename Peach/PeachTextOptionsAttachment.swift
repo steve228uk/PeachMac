@@ -14,13 +14,6 @@ class PeachTextOptionsAttachment: NSTextAttachment {
     var textView: NSTextView?
     var options: [String]?
     
-    /// Attachement wrapped in an attributed string
-    var attributedString: NSAttributedString {
-        get {
-            return NSAttributedString(attachment: self)
-        }
-    }
-    
     init(options: [String], textView: NSTextView?) {
         super.init(data: nil, ofType: nil)
         

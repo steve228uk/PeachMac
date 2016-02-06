@@ -9,11 +9,13 @@
 import Cocoa
 import GiphyKit
 
-class GIFSearch: MagicInputDelegate {
+class GIFSearch: MagicInputHandler {
     
-    func handleAction(input: String) {
+    override func handleAction(input: String) {
         Giphy.search(input) { gifs, error in
             print(gifs)
+            let attachment = TimeAttachment(textView: self.textView)
+            self.delegate?.appendComplexAttachment(attachment)
         }
     }
     

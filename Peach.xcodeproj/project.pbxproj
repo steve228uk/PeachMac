@@ -40,6 +40,8 @@
 		284F9EFC1C6618AB00BAB6C5 /* GoodMorningAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EFB1C6618AB00BAB6C5 /* GoodMorningAttachment.swift */; };
 		284F9EFF1C6618FA00BAB6C5 /* GoodNightAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EFE1C6618FA00BAB6C5 /* GoodNightAttachment.swift */; };
 		284F9F011C661D0300BAB6C5 /* GIFSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9F001C661D0300BAB6C5 /* GIFSearch.swift */; };
+		284F9F051C66231000BAB6C5 /* MagicInputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9F041C66231000BAB6C5 /* MagicInputHandler.swift */; };
+		284F9F071C6625AB00BAB6C5 /* ComposeViewController+MagicInputHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9F061C6625AB00BAB6C5 /* ComposeViewController+MagicInputHandlerDelegate.swift */; };
 		28515A891C49CD1500F0ABE8 /* PostTextItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515A881C49CD1500F0ABE8 /* PostTextItem.xib */; };
 		28515A8D1C49CE4900F0ABE8 /* PostImageItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515A8C1C49CE4900F0ABE8 /* PostImageItem.xib */; };
 		28515A8F1C49CE5A00F0ABE8 /* PostImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28515A8E1C49CE5A00F0ABE8 /* PostImageItem.swift */; };
@@ -117,6 +119,7 @@
 		28DBAD031C430BA800CC66CB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD021C430BA800CC66CB /* Post.swift */; };
 		28DBAD051C430CB700CC66CB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD041C430CB700CC66CB /* Comment.swift */; };
 		28DBAD071C430CD900CC66CB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD061C430CD900CC66CB /* Message.swift */; };
+		28EF93A01C66267D0073C5FB /* NSTextAttachment+AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EF939F1C66267D0073C5FB /* NSTextAttachment+AttributedString.swift */; };
 		2D71EE244C17D63F4EFB25CC /* Pods_GiphyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD8ED98CC3162765C81FD46 /* Pods_GiphyKit.framework */; };
 		4DA2601533C28E980B96A863 /* Pods_Peach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E22E0C5D18D00CEFEECF45 /* Pods_Peach.framework */; };
 		9FFD3FF434E1B26138D76ECB /* Pods_ImgurKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94AD6CE16186EDA6D97F0AA6 /* Pods_ImgurKit.framework */; };
@@ -201,6 +204,8 @@
 		284F9EFB1C6618AB00BAB6C5 /* GoodMorningAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodMorningAttachment.swift; sourceTree = "<group>"; };
 		284F9EFE1C6618FA00BAB6C5 /* GoodNightAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodNightAttachment.swift; sourceTree = "<group>"; };
 		284F9F001C661D0300BAB6C5 /* GIFSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFSearch.swift; sourceTree = "<group>"; };
+		284F9F041C66231000BAB6C5 /* MagicInputHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicInputHandler.swift; sourceTree = "<group>"; };
+		284F9F061C6625AB00BAB6C5 /* ComposeViewController+MagicInputHandlerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ComposeViewController+MagicInputHandlerDelegate.swift"; sourceTree = "<group>"; };
 		28515A881C49CD1500F0ABE8 /* PostTextItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTextItem.xib; sourceTree = "<group>"; };
 		28515A8C1C49CE4900F0ABE8 /* PostImageItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostImageItem.xib; sourceTree = "<group>"; };
 		28515A8E1C49CE5A00F0ABE8 /* PostImageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageItem.swift; sourceTree = "<group>"; };
@@ -279,6 +284,7 @@
 		28DBAD021C430BA800CC66CB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		28DBAD041C430CB700CC66CB /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		28DBAD061C430CD900CC66CB /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		28EF939F1C66267D0073C5FB /* NSTextAttachment+AttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextAttachment+AttributedString.swift"; sourceTree = "<group>"; };
 		29B9474D3E7C8CFB943A64C0 /* Pods-Peach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Peach/Pods-Peach.debug.xcconfig"; sourceTree = "<group>"; };
 		29E22E0C5D18D00CEFEECF45 /* Pods_Peach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Peach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA88244C05E57D92E436D2C /* Pods-GiphyKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiphyKit/Pods-GiphyKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -387,6 +393,7 @@
 				281227311C5E750600128D00 /* ComposeViewController */,
 				28A8C0301C457F1F006DA6FC /* ComposeWindowController.swift */,
 				285DFB9B1C5446F000C34980 /* PeachComposeTextView.swift */,
+				28CC1E531C5E9F53001DD6EC /* MagicButton.swift */,
 				284F9EE61C66127C00BAB6C5 /* MagicInputViewController.swift */,
 			);
 			name = Window/View;
@@ -406,6 +413,7 @@
 				28BE2CD81C62C2C8006A4392 /* GIF */,
 				28BE2CD11C628D60006A4392 /* Text Options */,
 				28CC1E5D1C5ECE25001DD6EC /* Text */,
+				284F9F041C66231000BAB6C5 /* MagicInputHandler.swift */,
 			);
 			name = Attachments;
 			sourceTree = "<group>";
@@ -416,7 +424,7 @@
 				28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */,
 				281227331C5E752800128D00 /* ComposeViewController+MoveButtons.swift */,
 				281227371C5E770B00128D00 /* ComposeViewController+NSTextStorageDelegate.swift */,
-				28CC1E531C5E9F53001DD6EC /* MagicButton.swift */,
+				284F9F061C6625AB00BAB6C5 /* ComposeViewController+MagicInputHandlerDelegate.swift */,
 			);
 			name = ComposeViewController;
 			sourceTree = "<group>";
@@ -794,6 +802,7 @@
 				28CC1E601C5ED56B001DD6EC /* NSDate+ConvenienceMethods.swift */,
 				28BE2CCF1C615A37006A4392 /* NSAttributedString+RemoveLastWord.swift */,
 				2884D1971C653CCF00035B82 /* NSImageView+Transition.swift */,
+				28EF939F1C66267D0073C5FB /* NSTextAttachment+AttributedString.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1196,6 +1205,7 @@
 				281227341C5E752800128D00 /* ComposeViewController+MoveButtons.swift in Sources */,
 				284F9EEA1C66154A00BAB6C5 /* BatteryAttachment.swift in Sources */,
 				284F9F011C661D0300BAB6C5 /* GIFSearch.swift in Sources */,
+				284F9F051C66231000BAB6C5 /* MagicInputHandler.swift in Sources */,
 				28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */,
 				285DFB9C1C5446F000C34980 /* PeachComposeTextView.swift in Sources */,
 				2884D1981C653CCF00035B82 /* NSImageView+Transition.swift in Sources */,
@@ -1212,12 +1222,14 @@
 				281227241C5D905200128D00 /* LoginSecureTextField.swift in Sources */,
 				2812272E1C5E644E00128D00 /* ComposeToolbarView.swift in Sources */,
 				28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */,
+				28EF93A01C66267D0073C5FB /* NSTextAttachment+AttributedString.swift in Sources */,
 				2812272C1C5E644000128D00 /* ComposeToolbarViewController.swift in Sources */,
 				281227381C5E770B00128D00 /* ComposeViewController+NSTextStorageDelegate.swift in Sources */,
 				284F9EE71C66127C00BAB6C5 /* MagicInputViewController.swift in Sources */,
 				2874F7311C42EE5800D06D34 /* LoginTextField.swift in Sources */,
 				28A8C0311C457F1F006DA6FC /* ComposeWindowController.swift in Sources */,
 				284F9EFF1C6618FA00BAB6C5 /* GoodNightAttachment.swift in Sources */,
+				284F9F071C6625AB00BAB6C5 /* ComposeViewController+MagicInputHandlerDelegate.swift in Sources */,
 				285DFB891C52C31900C34980 /* PostLinkItem.swift in Sources */,
 				2874F7201C42D73400D06D34 /* LoginViewController.swift in Sources */,
 				28515A8F1C49CE5A00F0ABE8 /* PostImageItem.swift in Sources */,
