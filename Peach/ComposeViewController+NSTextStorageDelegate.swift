@@ -88,6 +88,7 @@ extension ComposeViewController: NSTextStorageDelegate {
             if requiresInput.contains(type) {
                 sender.hidden = true
                 magicInputController?.textField.placeholderString = magicWords[type]
+                magicInputController?.textField.stringValue = ""
                 magicInputController?.view.hidden = false
                 magicInputController?.textField.becomeFirstResponder()
                 handleAttachmentWithInputForType(type)

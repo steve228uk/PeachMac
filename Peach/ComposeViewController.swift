@@ -24,7 +24,7 @@ class ComposeViewController: NSViewController {
     
     let magicWords = [
         "gif": "Search for a GIF",
-//        "image": "Search for images",
+        "image": "Search for images",
         "time": "Add current time",
 //        "weather": "Add current weather",
         "goodnight": "Good night!",
@@ -35,10 +35,10 @@ class ComposeViewController: NSViewController {
         "battery": "Current charge %",
         "dice": "Roll the dice",
         "date": "Add the current date",
-//        "movie": "Add movie",
-//        "tv": "Add TV show",
-//        "game": "Add video game",
-//        "book": "Add book",
+        "movie": "Add movie",
+        "tv": "Add TV show",
+        "game": "Add video game",
+        "book": "Add book",
 //        "events": "# of events today",
 //        "song": "What's currently playing",
 //        "draw": "Draw something",

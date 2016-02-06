@@ -17,7 +17,6 @@ extension ComposeViewController: MagicInputHandlerDelegate {
         textView.textStorage?.appendAttributedString(NSAttributedString(string: "\n\n"))
         
         magicInputController?.view.hidden = true
-        magicInputController?.textField.stringValue = ""
         
         view.window?.makeFirstResponder(textView)
         
