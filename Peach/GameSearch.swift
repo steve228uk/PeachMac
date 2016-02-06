@@ -31,6 +31,8 @@ class GameSearch: MagicInputHandler {
                             self.delegate?.appendComplexAttachment(attachment)
                         }
                     }
+                    
+                    // TODO: show alert if no games found!
                 }
             }
         

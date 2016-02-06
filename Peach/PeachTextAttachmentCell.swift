@@ -30,6 +30,8 @@ class PeachTextAttachmentCell: NSTextAttachmentCell {
             label.attributedStringValue = attributedStringValue
             label.bordered = false
             label.drawsBackground = false
+            label.cell?.truncatesLastVisibleLine = true
+            label.cell?.lineBreakMode = .ByCharWrapping
             let insetRect = NSInsetRect(cellFrame, 10, 10)
             label.cell?.drawWithFrame(insetRect, inView: view)
         }
