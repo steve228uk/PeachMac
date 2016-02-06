@@ -78,6 +78,15 @@ class ComposeViewController: NSViewController {
                 messages.append(msg)
             }
             
+            // If this is a dictionary then we can do a few things
+            if let dict = frag as? [String:String] {
+                if let track = dict["track"] {
+                    let msg = MusicMessage()
+                    msg.title = track
+                    messages.append(msg)
+                }
+            }
+            
             // Handle an image fragment upload
             if let img = frag as? NSData {
                 messages.append(ImageMessage())

@@ -45,7 +45,13 @@ class PeachComposeTextView: NSTextView {
                 fragments.append(attString.attributedSubstringFromRange(range).string.stringByTrimmingCharactersInSet(.whitespaceAndNewlineCharacterSet()))
             } else {
                 
-                if let attachment = object as? PeachTextAttachment {
+                if let attachment = object as? SongAttachment {
+                    if let track = attachment.track {
+                        fragments.append(["track": track])
+                    } else if let text = attachment.text {
+                        fragments.append(text)
+                    }
+                } else if let attachment = object as? PeachTextAttachment {
                     if let text = attachment.text {
                         fragments.append(text)
                     }

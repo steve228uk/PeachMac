@@ -11,10 +11,11 @@ import ScriptingBridge
 
 class SongAttachment: PeachTextAttachment {
 
+    var track: String?
+    
     init(textView: NSTextView?) {
         
         var string: String? = nil
-        
         
         // Check if Spotify or iTunes is open
         
@@ -40,6 +41,7 @@ class SongAttachment: PeachTextAttachment {
                     if let name = track.valueForKey("name") as? String {
                         if let artist = track.valueForKey("artist") as? String {
                             string = "🎵 \(artist) - \(name)"
+                            self.track = string
                         }
                     }
                 }
@@ -53,6 +55,7 @@ class SongAttachment: PeachTextAttachment {
                         if let name = track.valueForKey("name") as? String {
                             if let artist = track.valueForKey("artist") as? String {
                                 string = "🎵 \(artist) - \(name)"
+                                self.track = string
                             }
                         }
                     }
