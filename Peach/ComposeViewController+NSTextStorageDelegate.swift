@@ -14,6 +14,9 @@ extension ComposeViewController: NSTextStorageDelegate {
     
     override func textStorageDidProcessEditing(notification: NSNotification) {
         
+        magicButton.hidden = true
+        magicInputController?.view.hidden = true
+        
         if let text = textView.textStorage?.string.lowercaseString {
 
             let lines = text.componentsSeparatedByString("\n")
@@ -73,13 +76,17 @@ extension ComposeViewController: NSTextStorageDelegate {
         
     }
     
-    
-    
-    @IBAction func clickMagicButton(sender: AnyObject) {
+    /**
+     Controls what to do when the magic button is clicked. Should a simple attachement be added or is input required?
+     
+     - parameter sender: The magic button
+     */
+    @IBAction func clickMagicButton(sender: NSButton) {
         let components = magicButton.title.componentsSeparatedByString(":")
         
         if let type = components.first {
             if requiresInput.contains(type) {
+                sender.hidden = true
                 magicInputController?.view.hidden = false
             } else {
                 addSimpleAttachmentFromType(type)
