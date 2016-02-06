@@ -45,8 +45,6 @@ class ConnectionsCollectionViewController: PeachViewController, PeachContainerDe
         container?.delegate = self
         
         loadStreams()
-        
-        view.window?.toolbar?.removeItemAtIndex(0)
     }
     
     func successfullyLoggedIn() {

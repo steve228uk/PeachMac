@@ -84,85 +84,21 @@ extension ComposeViewController: NSTextStorageDelegate {
             var attachmentString: NSAttributedString {
                 switch type {
                 case "date":
-                    let date = NSDate()
-                    let dateFormatter = NSDateFormatter()
-                    dateFormatter.setLocalizedDateFormatFromTemplate("EEEE, d MMM YYYY")
-                    let dateString = dateFormatter.stringFromDate(date)
-                    let attachment = PeachTextAttachment(string: "📰 \(dateString)", textView: textView)
-                    return NSAttributedString(attachment: attachment)
+                    return DateAttachment(textView: textView).attributedString
                 case "time":
-                    let date = NSDate()
-                    let string = "🕑 \(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))"
-                    let attachment = PeachTextAttachment(string: string, textView: textView)
-                    return NSAttributedString(attachment: attachment)
+                    return TimeAttachment(textView: textView).attributedString
                 case "goodnight":
-                    let date = NSDate()
-                    let string = "Good night. 😴\n\n\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))"
-                    let attachment = PeachTextAttachment(string: string, textView: textView)
-                    return NSAttributedString(attachment: attachment)
+                    return GoodNightAttachment(textView: textView).attributedString
                 case "goodmorning":
-                    let date = NSDate()
-                    let string = "Good morning! 🌤\n\n\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))"
-                    let attachment = PeachTextAttachment(string: string, textView: textView)
-                    return NSAttributedString(attachment: attachment)
+                    return GoodMorningAttachment(textView: textView).attributedString
                 case "dice":
-                    let string = "🎲 \(Int(arc4random_uniform(6) + 1)) 🎲 \(Int(arc4random_uniform(6) + 1))"
-                    let attachment = PeachTextAttachment(string: string, textView: textView)
-                    return NSAttributedString(attachment: attachment)
+                    return DiceAttachment(textView: textView).attributedString
                 case "battery":
-                    let snapshot = IOPSCopyPowerSourcesInfo().takeRetainedValue()
-                    let sources = IOPSCopyPowerSourcesList(snapshot).takeRetainedValue() as Array
-                    var string: String?
-                    if sources.count > 0 {
-                        let ps = sources[0]
-                        let info = IOPSGetPowerSourceDescription(snapshot, ps).takeUnretainedValue() as Dictionary
-                        if let capacity = info[kIOPSCurrentCapacityKey] as? Int {
-                            string = "🔋 \(capacity)%"
-                        }
-                    }
-                    
-                    if string == nil {
-                        string = "🔋 100%" // Make it 100% for desktops
-                    }
-                    
-                    let attachment = PeachTextAttachment(string: string!, textView: textView)
-                    return NSAttributedString(attachment: attachment)
+                    return BatteryAttachment(textView: textView).attributedString
                 case "rate":
-                    let options = [
-                        "Rating: ⭐️⭐️⭐️⭐️⭐️ 5/5",
-                        "Rating: ⭐️ 1/5",
-                        "Rating: ⭐️⭐️ 2/5",
-                        "Rating: ⭐️⭐️⭐️ 3/5",
-                        "Rating: ⭐️⭐️⭐️⭐️ 4/5",
-                    ]
-                    return optionsAttachmentFromOptions(options)
+                    return RatingAttachment(textView: textView).attributedString
                 case "mood":
-                    let options = [
-                        "Mood: 😀 happy",
-                        "Mood: 😇 blessed",
-                        "Mood: 😍 in love",
-                        "Mood: 😘 flirty",
-                        "Mood: 😂 laughing",
-                        "Mood: 😴 tired",
-                        "Mood: 😏 sneaky",
-                        "Mood: 😢 bored",
-                        "Mood: 😷 sick",
-                        "Mood: 😢 sad",
-                        "Mood: 😭 jealous",
-                        "Mood: 😓 stressed",
-                        "Mood: 😒 annoyed",
-                        "Mood: 😡 angry",
-                        "Mood: 💔 heartbroken",
-                        "Mood: 🌞 radiant",
-                        "Mood: 🐻 hungry",
-                        "Mood: 🍀 lucky",
-                        "Mood: 🐔 scared",
-                        "Mood: 🙅 nope",
-                        "Mood: 😈 mischievous",
-                        "Mood: 🐑 sheepish",
-                        "Mood: 💀 dead"
-                    ]
-                    return optionsAttachmentFromOptions(options)
+                    return MoodAttachment(textView: textView).attributedString
                 default:
                     return NSAttributedString(string: "")
                 }

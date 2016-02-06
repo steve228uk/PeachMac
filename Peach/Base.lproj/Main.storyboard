@@ -605,7 +605,7 @@ DQ
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Peach" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58.5" y="-267"/>
+            <point key="canvasLocation" x="58.5" y="-241"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -769,7 +769,7 @@ DQ
                                     <constraint firstAttribute="height" constant="40" id="cwb-gS-KW3"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="Jv3-Ci-LZU" kind="embed" id="Gts-l2-6MR"/>
+                                    <segue destination="Jv3-Ci-LZU" kind="embed" identifier="embedToolbar" id="Gts-l2-6MR"/>
                                 </connections>
                             </containerView>
                             <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nJ-n9-qAv">
@@ -801,7 +801,7 @@ DQ
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="0.5" horizontal="NO" id="3nC-ZW-rRg">
-                                    <rect key="frame" x="316" y="0.0" width="16" height="187"/>
+                                    <rect key="frame" x="317" y="0.0" width="15" height="187"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -815,13 +815,23 @@ DQ
                                     <action selector="clickMagicButton:" target="kaE-7v-6VR" id="Mwm-wF-hSw"/>
                                 </connections>
                             </button>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="1PE-bT-lQS">
+                                <rect key="frame" x="0.0" y="0.0" width="332" height="37"/>
+                                <connections>
+                                    <segue destination="f1U-a1-Za8" kind="embed" identifier="embedInput" id="OnD-nF-sT6"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="rGt-Dd-TIv" firstAttribute="top" secondItem="9VL-Ht-YRb" secondAttribute="top" id="5ZH-wV-ywm"/>
                             <constraint firstItem="rGt-Dd-TIv" firstAttribute="leading" secondItem="9VL-Ht-YRb" secondAttribute="leading" id="A32-9b-Phw"/>
                             <constraint firstAttribute="trailing" secondItem="rGt-Dd-TIv" secondAttribute="trailing" id="Dpt-tu-OQZ"/>
+                            <constraint firstAttribute="bottom" secondItem="1PE-bT-lQS" secondAttribute="bottom" id="Flz-O9-Xy6"/>
                             <constraint firstItem="fRf-Hr-xGO" firstAttribute="top" secondItem="1nJ-n9-qAv" secondAttribute="bottom" constant="7" id="GDm-bR-3R7"/>
+                            <constraint firstAttribute="trailing" secondItem="1PE-bT-lQS" secondAttribute="trailing" id="GXI-zf-tGF"/>
                             <constraint firstAttribute="bottom" secondItem="fRf-Hr-xGO" secondAttribute="bottom" constant="9" id="U3e-nS-JRj"/>
+                            <constraint firstItem="1PE-bT-lQS" firstAttribute="top" secondItem="1nJ-n9-qAv" secondAttribute="bottom" id="V7i-DJ-gzA"/>
+                            <constraint firstItem="1PE-bT-lQS" firstAttribute="leading" secondItem="9VL-Ht-YRb" secondAttribute="leading" id="YOu-LW-EyA"/>
                             <constraint firstItem="1nJ-n9-qAv" firstAttribute="top" secondItem="rGt-Dd-TIv" secondAttribute="bottom" id="a3j-Kn-VGc"/>
                             <constraint firstItem="fRf-Hr-xGO" firstAttribute="centerX" secondItem="9VL-Ht-YRb" secondAttribute="centerX" id="dJb-eG-3Zk"/>
                             <constraint firstAttribute="trailing" secondItem="1nJ-n9-qAv" secondAttribute="trailing" id="ugA-RO-I06"/>
@@ -835,7 +845,7 @@ DQ
                 </viewController>
                 <customObject id="DXS-l1-FSb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1228" y="89.5"/>
+            <point key="canvasLocation" x="1228" y="89"/>
         </scene>
         <!--Connections-->
         <scene sceneID="GXT-fM-BAI">
@@ -1110,7 +1120,7 @@ DQ
                 </viewController>
                 <customObject id="o8G-ad-htl" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="590" y="576"/>
+            <point key="canvasLocation" x="595" y="576"/>
         </scene>
         <!--Compose Toolbar View Controller-->
         <scene sceneID="gyI-0A-gt5">
@@ -1175,6 +1185,50 @@ DQ
                 <customObject id="2UW-1K-bB9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1228" y="398"/>
+        </scene>
+        <!--Magic Input View Controller-->
+        <scene sceneID="zZY-8j-eDp">
+            <objects>
+                <viewController id="f1U-a1-Za8" customClass="MagicInputViewController" customModule="Peach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Vze-lW-XNn">
+                        <rect key="frame" x="0.0" y="0.0" width="332" height="37"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LS6-Gx-MED">
+                                <rect key="frame" x="20" y="7" width="233" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="vOT-f4-Z8P"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="SCL-EX-h7M">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GLm-9i-Q5y">
+                                <rect key="frame" x="255" y="1" width="63" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="STE-vz-S80"/>
+                                    <constraint firstAttribute="height" constant="21" id="jg1-HB-zJJ"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Send" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1pq-uh-Lpm">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="LS6-Gx-MED" firstAttribute="centerY" secondItem="Vze-lW-XNn" secondAttribute="centerY" id="Sgc-cX-cJJ"/>
+                            <constraint firstItem="LS6-Gx-MED" firstAttribute="leading" secondItem="Vze-lW-XNn" secondAttribute="leading" constant="20" id="UvA-Yy-d01"/>
+                            <constraint firstAttribute="trailing" secondItem="GLm-9i-Q5y" secondAttribute="trailing" constant="20" id="a1U-Ma-f23"/>
+                            <constraint firstItem="GLm-9i-Q5y" firstAttribute="centerY" secondItem="Vze-lW-XNn" secondAttribute="centerY" id="aZP-gZ-Ysm"/>
+                            <constraint firstItem="GLm-9i-Q5y" firstAttribute="leading" secondItem="LS6-Gx-MED" secondAttribute="trailing" constant="8" id="zcG-jS-2Sw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="b5r-Oi-O7R" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1678" y="202.5"/>
         </scene>
     </scenes>
     <resources>

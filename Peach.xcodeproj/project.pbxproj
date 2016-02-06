@@ -30,6 +30,15 @@
 		2833B0B61C55000500E945A5 /* Imgur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2833B0B51C55000500E945A5 /* Imgur.swift */; };
 		2833B0B81C5500C900E945A5 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2833B0B71C5500C900E945A5 /* Upload.swift */; };
 		2833B0BA1C55011900E945A5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2833B0B91C55011900E945A5 /* API.swift */; };
+		284F9EE71C66127C00BAB6C5 /* MagicInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EE61C66127C00BAB6C5 /* MagicInputViewController.swift */; };
+		284F9EEA1C66154A00BAB6C5 /* BatteryAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EE91C66154A00BAB6C5 /* BatteryAttachment.swift */; };
+		284F9EED1C66167800BAB6C5 /* DiceAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EEC1C66167800BAB6C5 /* DiceAttachment.swift */; };
+		284F9EF01C6616EC00BAB6C5 /* TimeAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EEF1C6616EC00BAB6C5 /* TimeAttachment.swift */; };
+		284F9EF31C66173B00BAB6C5 /* DateAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EF21C66173B00BAB6C5 /* DateAttachment.swift */; };
+		284F9EF61C6617CB00BAB6C5 /* MoodAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EF51C6617CB00BAB6C5 /* MoodAttachment.swift */; };
+		284F9EF91C66185600BAB6C5 /* RatingAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EF81C66185600BAB6C5 /* RatingAttachment.swift */; };
+		284F9EFC1C6618AB00BAB6C5 /* GoodMorningAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EFB1C6618AB00BAB6C5 /* GoodMorningAttachment.swift */; };
+		284F9EFF1C6618FA00BAB6C5 /* GoodNightAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EFE1C6618FA00BAB6C5 /* GoodNightAttachment.swift */; };
 		28515A891C49CD1500F0ABE8 /* PostTextItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515A881C49CD1500F0ABE8 /* PostTextItem.xib */; };
 		28515A8D1C49CE4900F0ABE8 /* PostImageItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515A8C1C49CE4900F0ABE8 /* PostImageItem.xib */; };
 		28515A8F1C49CE5A00F0ABE8 /* PostImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28515A8E1C49CE5A00F0ABE8 /* PostImageItem.swift */; };
@@ -181,6 +190,15 @@
 		2833B0B51C55000500E945A5 /* Imgur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Imgur.swift; sourceTree = "<group>"; };
 		2833B0B71C5500C900E945A5 /* Upload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
 		2833B0B91C55011900E945A5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		284F9EE61C66127C00BAB6C5 /* MagicInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicInputViewController.swift; sourceTree = "<group>"; };
+		284F9EE91C66154A00BAB6C5 /* BatteryAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryAttachment.swift; sourceTree = "<group>"; };
+		284F9EEC1C66167800BAB6C5 /* DiceAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceAttachment.swift; sourceTree = "<group>"; };
+		284F9EEF1C6616EC00BAB6C5 /* TimeAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAttachment.swift; sourceTree = "<group>"; };
+		284F9EF21C66173B00BAB6C5 /* DateAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateAttachment.swift; sourceTree = "<group>"; };
+		284F9EF51C6617CB00BAB6C5 /* MoodAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodAttachment.swift; sourceTree = "<group>"; };
+		284F9EF81C66185600BAB6C5 /* RatingAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingAttachment.swift; sourceTree = "<group>"; };
+		284F9EFB1C6618AB00BAB6C5 /* GoodMorningAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodMorningAttachment.swift; sourceTree = "<group>"; };
+		284F9EFE1C6618FA00BAB6C5 /* GoodNightAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodNightAttachment.swift; sourceTree = "<group>"; };
 		28515A881C49CD1500F0ABE8 /* PostTextItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTextItem.xib; sourceTree = "<group>"; };
 		28515A8C1C49CE4900F0ABE8 /* PostImageItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostImageItem.xib; sourceTree = "<group>"; };
 		28515A8E1C49CE5A00F0ABE8 /* PostImageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageItem.swift; sourceTree = "<group>"; };
@@ -367,6 +385,7 @@
 				281227311C5E750600128D00 /* ComposeViewController */,
 				28A8C0301C457F1F006DA6FC /* ComposeWindowController.swift */,
 				285DFB9B1C5446F000C34980 /* PeachComposeTextView.swift */,
+				284F9EE61C66127C00BAB6C5 /* MagicInputViewController.swift */,
 			);
 			name = Window/View;
 			sourceTree = "<group>";
@@ -374,6 +393,14 @@
 		281227301C5E701300128D00 /* Attachments */ = {
 			isa = PBXGroup;
 			children = (
+				284F9EFD1C6618EB00BAB6C5 /* Good Night */,
+				284F9EFA1C66189500BAB6C5 /* Good Morning */,
+				284F9EF71C66184400BAB6C5 /* Rating */,
+				284F9EF41C6617AB00BAB6C5 /* Mood */,
+				284F9EF11C66172900BAB6C5 /* Date */,
+				284F9EEE1C6616E000BAB6C5 /* Time */,
+				284F9EEB1C66166C00BAB6C5 /* Dice */,
+				284F9EE81C66152D00BAB6C5 /* Battery */,
 				28BE2CD81C62C2C8006A4392 /* GIF */,
 				28BE2CD11C628D60006A4392 /* Text Options */,
 				28CC1E5D1C5ECE25001DD6EC /* Text */,
@@ -489,6 +516,70 @@
 				2833B0B91C55011900E945A5 /* API.swift */,
 			);
 			path = ImgurKit;
+			sourceTree = "<group>";
+		};
+		284F9EE81C66152D00BAB6C5 /* Battery */ = {
+			isa = PBXGroup;
+			children = (
+				284F9EE91C66154A00BAB6C5 /* BatteryAttachment.swift */,
+			);
+			name = Battery;
+			sourceTree = "<group>";
+		};
+		284F9EEB1C66166C00BAB6C5 /* Dice */ = {
+			isa = PBXGroup;
+			children = (
+				284F9EEC1C66167800BAB6C5 /* DiceAttachment.swift */,
+			);
+			name = Dice;
+			sourceTree = "<group>";
+		};
+		284F9EEE1C6616E000BAB6C5 /* Time */ = {
+			isa = PBXGroup;
+			children = (
+				284F9EEF1C6616EC00BAB6C5 /* TimeAttachment.swift */,
+			);
+			name = Time;
+			sourceTree = "<group>";
+		};
+		284F9EF11C66172900BAB6C5 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				284F9EF21C66173B00BAB6C5 /* DateAttachment.swift */,
+			);
+			name = Date;
+			sourceTree = "<group>";
+		};
+		284F9EF41C6617AB00BAB6C5 /* Mood */ = {
+			isa = PBXGroup;
+			children = (
+				284F9EF51C6617CB00BAB6C5 /* MoodAttachment.swift */,
+			);
+			name = Mood;
+			sourceTree = "<group>";
+		};
+		284F9EF71C66184400BAB6C5 /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				284F9EF81C66185600BAB6C5 /* RatingAttachment.swift */,
+			);
+			name = Rating;
+			sourceTree = "<group>";
+		};
+		284F9EFA1C66189500BAB6C5 /* Good Morning */ = {
+			isa = PBXGroup;
+			children = (
+				284F9EFB1C6618AB00BAB6C5 /* GoodMorningAttachment.swift */,
+			);
+			name = "Good Morning";
+			sourceTree = "<group>";
+		};
+		284F9EFD1C6618EB00BAB6C5 /* Good Night */ = {
+			isa = PBXGroup;
+			children = (
+				284F9EFE1C6618FA00BAB6C5 /* GoodNightAttachment.swift */,
+			);
+			name = "Good Night";
 			sourceTree = "<group>";
 		};
 		28515A901C49D03200F0ABE8 /* Text */ = {
@@ -1090,13 +1181,17 @@
 				28CC1E541C5E9F53001DD6EC /* MagicButton.swift in Sources */,
 				2874F72F1C42E9BB00D06D34 /* LoginButton.swift in Sources */,
 				28BE2CD71C629AA2006A4392 /* AttachmentButtonCell.swift in Sources */,
+				284F9EF91C66185600BAB6C5 /* RatingAttachment.swift in Sources */,
+				284F9EF31C66173B00BAB6C5 /* DateAttachment.swift in Sources */,
 				288D9B511C5977D8008F6608 /* +LoginView.swift in Sources */,
 				28C7A1EC1C4863E3004D8FD0 /* NSColor+CustomColors.swift in Sources */,
 				28A8C0331C45AD01006DA6FC /* PeachTabViewController.swift in Sources */,
+				284F9EF61C6617CB00BAB6C5 /* MoodAttachment.swift in Sources */,
 				28CC1E611C5ED56C001DD6EC /* NSDate+ConvenienceMethods.swift in Sources */,
 				288D9B4E1C597768008F6608 /* +MoveButtons.swift in Sources */,
 				28515AA41C4AE02000F0ABE8 /* PostActionsItem.swift in Sources */,
 				281227341C5E752800128D00 /* ComposeViewController+MoveButtons.swift in Sources */,
+				284F9EEA1C66154A00BAB6C5 /* BatteryAttachment.swift in Sources */,
 				28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */,
 				285DFB9C1C5446F000C34980 /* PeachComposeTextView.swift in Sources */,
 				2884D1981C653CCF00035B82 /* NSImageView+Transition.swift in Sources */,
@@ -1109,17 +1204,21 @@
 				285DFB961C52DF1400C34980 /* ConnectionsLoadingView.swift in Sources */,
 				288D9B4C1C5976F9008F6608 /* AvatarView.swift in Sources */,
 				2856A0A21C5D5EDC00B2BB21 /* ActivityViewController.swift in Sources */,
+				284F9EFC1C6618AB00BAB6C5 /* GoodMorningAttachment.swift in Sources */,
 				281227241C5D905200128D00 /* LoginSecureTextField.swift in Sources */,
 				2812272E1C5E644E00128D00 /* ComposeToolbarView.swift in Sources */,
 				28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */,
 				2812272C1C5E644000128D00 /* ComposeToolbarViewController.swift in Sources */,
 				281227381C5E770B00128D00 /* ComposeViewController+NSTextStorageDelegate.swift in Sources */,
+				284F9EE71C66127C00BAB6C5 /* MagicInputViewController.swift in Sources */,
 				2874F7311C42EE5800D06D34 /* LoginTextField.swift in Sources */,
 				28A8C0311C457F1F006DA6FC /* ComposeWindowController.swift in Sources */,
+				284F9EFF1C6618FA00BAB6C5 /* GoodNightAttachment.swift in Sources */,
 				285DFB891C52C31900C34980 /* PostLinkItem.swift in Sources */,
 				2874F7201C42D73400D06D34 /* LoginViewController.swift in Sources */,
 				28515A8F1C49CE5A00F0ABE8 /* PostImageItem.swift in Sources */,
 				281227221C5D902300128D00 /* LoginSecureTextFieldCell.swift in Sources */,
+				284F9EF01C6616EC00BAB6C5 /* TimeAttachment.swift in Sources */,
 				2874F7331C42F13C00D06D34 /* LoginTextFieldCell.swift in Sources */,
 				282D92C31C42CCAF00B83109 /* AppDelegate.swift in Sources */,
 				28BE2CD01C615A37006A4392 /* NSAttributedString+RemoveLastWord.swift in Sources */,
@@ -1135,6 +1234,7 @@
 				285DFB7B1C518DF600C34980 /* StreamCollectionViewDelegate.swift in Sources */,
 				28A1DA6E1C4570E7004198A0 /* ComposeViewController.swift in Sources */,
 				28515A921C49D04A00F0ABE8 /* PostTextCollectionViewItem.swift in Sources */,
+				284F9EED1C66167800BAB6C5 /* DiceAttachment.swift in Sources */,
 				28CC1E5C1C5ECAA6001DD6EC /* PeachTextAttachment.swift in Sources */,
 				2867DC261C5CF78200FC0355 /* GIFPlayer.swift in Sources */,
 				281227291C5D961900128D00 /* LoginButtonCell.swift in Sources */,
@@ -1309,6 +1409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -1329,6 +1430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;

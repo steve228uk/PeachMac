@@ -9,7 +9,6 @@
 import Cocoa
 import PeachKit
 import ImgurKit
-import IOKit.ps
 
 class ComposeViewController: NSViewController {
     
@@ -17,11 +16,14 @@ class ComposeViewController: NSViewController {
     
     @IBOutlet weak var magicButton: MagicButton!
     
+    /// The controller that we can interact with to create some magic input ✨
+    var magicInputController: MagicInputViewController?
+    
     /// These are the message fragments that will be posted to Peach
     var messages: [Message] = []
     
     let magicWords = [
-//        "gif": "Search for a GIF",
+        "gif": "Search for a GIF",
 //        "image": "Search for images",
         "time": "Add current time",
 //        "weather": "Add current weather",
@@ -122,6 +124,13 @@ class ComposeViewController: NSViewController {
             }
         }
         
+    }
+    
+    override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "embedInput" {
+            magicInputController = segue.destinationController as? MagicInputViewController
+            magicInputController?.view.hidden = true
+        }
     }
     
     
