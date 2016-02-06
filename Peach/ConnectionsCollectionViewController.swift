@@ -21,6 +21,8 @@ class ConnectionsCollectionViewController: PeachViewController, PeachContainerDe
     /// The streams that were fetched from Peach
     var streams: [Stream] = []
     
+    var selectedPath: NSIndexPath?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -83,21 +85,27 @@ class ConnectionsCollectionViewController: PeachViewController, PeachContainerDe
     }
     
     func collectionView(collectionView: NSCollectionView, didSelectItemsAtIndexPaths indexPaths: Set<NSIndexPath>) {
-        if indexPaths.count == 1 {
-            if let tc = parentViewController as? PeachTabViewController {
-                if let vc = tc.childViewControllers[1] as? StreamViewController {
-                    let item = indexPaths[indexPaths.startIndex].item
-                    let stream = streams[item]
-                    vc.stream = stream
-                    tc.selectedTabViewItemIndex = 1
-                    vc.reloadAndScroll()
-                }
-            }
+        if indexPaths.count == 1 {   
+            selectedPath = indexPaths[indexPaths.startIndex]
+            performSegueWithIdentifier("Show Single Stream", sender: self)
         }
     }
     
     func collectionView(collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> NSSize {
         return CGSizeMake(collectionView.frame.size.width, 80)
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        if let vc = segue.destinationController as? StreamViewController {
+            if let path = selectedPath {
+                let stream = streams[path.item]
+                vc.stream = stream
+//                vc.reloadAndScroll()
+            }
+        }
     }
     
 }

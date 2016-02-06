@@ -59,6 +59,8 @@ class StreamViewController: PeachViewController, PeachNavigationDelegate {
             headerView.nameLabel.stringValue = name
         }
         
+        reloadAndScroll()
+        
     }
     
     override func viewDidLayout() {
@@ -80,11 +82,13 @@ class StreamViewController: PeachViewController, PeachNavigationDelegate {
     // MARK: - PeachMainWindowControllerDelegate
     
     func sendNavigationBack(sender: AnyObject?) {
-        tabController?.selectedTabViewItemIndex = 0
         
-        stream = nil
-        collectionView.reloadData()
-        headerView.nameLabel.stringValue = ""
+        container?.toolbar?.backButton.hidden = true
+        container?.toolbar?.title = "Friends"
+        container?.toolbar?.borderVisible = true
+        container?.toolbar?.delegate = parentViewController as? PeachNavigationDelegate
+        
+        dismissViewController(self)
     }
     
     

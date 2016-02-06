@@ -843,7 +843,6 @@ DQ
                 <tabViewController title="Connections" selectedTabViewItemIndex="0" tabStyle="unspecified" id="HVx-Z8-luW" customClass="PeachTabViewController" customModule="Peach" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem id="EVD-Y7-XEN"/>
-                        <tabViewItem id="eJi-Ib-Qyg"/>
                         <tabViewItem id="Bx6-lu-uMH"/>
                     </tabViewItems>
                     <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
@@ -855,7 +854,6 @@ DQ
                     </tabView>
                     <connections>
                         <segue destination="kW8-u5-YCa" kind="relationship" relationship="tabItems" id="vIb-gV-VqN"/>
-                        <segue destination="B6W-lf-Uy4" kind="relationship" relationship="tabItems" id="tHx-dm-1Yd"/>
                         <segue destination="J3L-sW-t61" kind="relationship" relationship="tabItems" id="SYA-Le-jj7"/>
                     </connections>
                 </tabViewController>
@@ -940,6 +938,7 @@ DQ
                         <outlet property="collectionView" destination="Spo-4T-tX4" id="vAw-DZ-La8"/>
                         <outlet property="collectionViewLayout" destination="UVS-DC-Z2U" id="dQe-Lo-IAK"/>
                         <outlet property="loadingView" destination="NEY-Ls-ZD3" id="aAT-qb-CUv"/>
+                        <segue destination="B6W-lf-Uy4" kind="custom" identifier="Show Single Stream" customClass="PushSegue" customModule="Peach" customModuleProvider="target" id="jyb-7C-tsA"/>
                     </connections>
                 </viewController>
                 <customObject id="L1U-MA-RxV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1044,7 +1043,7 @@ DQ
                 </viewController>
                 <customObject id="Yj7-oW-K3V" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844" y="1599"/>
+            <point key="canvasLocation" x="895" y="1575"/>
         </scene>
         <!--Peach Toolbar View Controller-->
         <scene sceneID="Jhb-kI-hLv">

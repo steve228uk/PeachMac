@@ -10,11 +10,6 @@ import Cocoa
 
 class PeachViewController: NSViewController {
     
-    override func viewDidAppear() {
-        super.viewDidAppear()
-        
-    }
-    
     var tabController: PeachTabViewController? {
         get {
             return parentViewController as? PeachTabViewController
@@ -23,7 +18,7 @@ class PeachViewController: NSViewController {
     
     var container: PeachContainerViewController? {
         get {
-            return tabController?.parentViewController as? PeachContainerViewController
+            return NSApplication.sharedApplication().windows[0].contentViewController as? PeachContainerViewController
         }
     }
     

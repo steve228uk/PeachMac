@@ -38,6 +38,7 @@ class PeachContainerViewController: NSViewController {
     
     @IBOutlet weak var friendsBtn: NSButton!
     
+    
     // MARK: - Methods
     
     override func viewDidLoad() {
@@ -100,7 +101,7 @@ class PeachContainerViewController: NSViewController {
     }
     
     @IBAction func showActivity(sender: AnyObject) {
-        tabView?.selectedTabViewItemIndex = 2
+        tabView?.selectedTabViewItemIndex = 1
     }
     
     @IBAction func showProfile(sender: AnyObject) {

@@ -71,6 +71,7 @@
 		2879B8831C4C1BA600BC7058 /* TextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879B8821C4C1BA600BC7058 /* TextMessage.swift */; };
 		2879B8851C4C1C1D00BC7058 /* ImageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879B8841C4C1C1D00BC7058 /* ImageMessage.swift */; };
 		2884D1981C653CCF00035B82 /* NSImageView+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2884D1971C653CCF00035B82 /* NSImageView+Transition.swift */; };
+		2884D19E1C65706800035B82 /* PushSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2884D19D1C65706800035B82 /* PushSegue.swift */; };
 		288D9B4A1C597584008F6608 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 288D9B491C597584008F6608 /* Login.xib */; };
 		288D9B4C1C5976F9008F6608 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D9B4B1C5976F8008F6608 /* AvatarView.swift */; };
 		288D9B4E1C597768008F6608 /* +MoveButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D9B4D1C597768008F6608 /* +MoveButtons.swift */; };
@@ -222,6 +223,7 @@
 		2879B8821C4C1BA600BC7058 /* TextMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMessage.swift; sourceTree = "<group>"; };
 		2879B8841C4C1C1D00BC7058 /* ImageMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMessage.swift; sourceTree = "<group>"; };
 		2884D1971C653CCF00035B82 /* NSImageView+Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImageView+Transition.swift"; sourceTree = "<group>"; };
+		2884D19D1C65706800035B82 /* PushSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushSegue.swift; sourceTree = "<group>"; };
 		288D9B491C597584008F6608 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 		288D9B4B1C5976F8008F6608 /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		288D9B4D1C597768008F6608 /* +MoveButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "+MoveButtons.swift"; sourceTree = "<group>"; };
@@ -614,6 +616,7 @@
 				28A1DA701C457165004198A0 /* PeachViewController.swift */,
 				28A8C0321C45AD01006DA6FC /* PeachTabViewController.swift */,
 				28D6FA151C56EFC200CCC319 /* MainWindowController.swift */,
+				2884D19D1C65706800035B82 /* PushSegue.swift */,
 			);
 			name = Global;
 			sourceTree = "<group>";
@@ -1097,6 +1100,7 @@
 				28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */,
 				285DFB9C1C5446F000C34980 /* PeachComposeTextView.swift in Sources */,
 				2884D1981C653CCF00035B82 /* NSImageView+Transition.swift in Sources */,
+				2884D19E1C65706800035B82 /* PushSegue.swift in Sources */,
 				28630CB91C4B151C002906F3 /* String+EstimatedHeight.swift in Sources */,
 				2899A75D1C558DD30045C4F9 /* PeachToolbarViewController.swift in Sources */,
 				2868BC711C499278007A01B7 /* StreamHeaderView.swift in Sources */,
