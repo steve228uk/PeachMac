@@ -87,11 +87,34 @@ extension ComposeViewController: NSTextStorageDelegate {
         if let type = components.first {
             if requiresInput.contains(type) {
                 sender.hidden = true
+                magicInputController?.textField.placeholderString = magicWords[type]
                 magicInputController?.view.hidden = false
+                magicInputController?.textField.becomeFirstResponder()
+                handleAttachmentWithInputForType(type)
             } else {
-                addSimpleAttachmentFromType(type)
+                addSimpleAttachmentForType(type)
             }
         }
+        
+    }
+    
+    /**
+     Handle the attachment with input by hooking up the search of the magic input view.
+     
+     - parameter type: The type of attachement to handle
+     */
+    func handleAttachmentWithInputForType(type: String) {
+        
+        var handler: MagicInputDelegate? {
+            switch type {
+            case "gif":
+                return GIFSearch()
+            default:
+                return nil
+            }
+        }
+        
+        magicInputController?.delegate = handler
         
     }
     
@@ -100,7 +123,7 @@ extension ComposeViewController: NSTextStorageDelegate {
      
      - parameter type: The type of attachment to add
      */
-    func addSimpleAttachmentFromType(type: String) {
+    func addSimpleAttachmentForType(type: String) {
         var attachmentString: NSAttributedString {
             switch type {
             case "date":
@@ -127,18 +150,6 @@ extension ComposeViewController: NSTextStorageDelegate {
         textView.textStorage?.setAttributedString(textView.attributedString().attributedStringByRemovingLastWord())
         textView.textStorage?.appendAttributedString(attachmentString)
         textView.textStorage?.appendAttributedString(NSAttributedString(string: "\n\n"))
-    }
-    
-    /**
-     Generate an options attachment from an array of strings
-     
-     - parameter options: Array of string options
-     
-     - returns: A `PeachTextOptionsAttachment` wrapped in an attributed string
-     */
-    func optionsAttachmentFromOptions(options: [String]) -> NSAttributedString {
-        let attachment = PeachTextOptionsAttachment(options: options, textView: textView)
-        return NSAttributedString(attachment: attachment)
     }
     
     

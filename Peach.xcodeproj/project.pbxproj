@@ -39,6 +39,7 @@
 		284F9EF91C66185600BAB6C5 /* RatingAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EF81C66185600BAB6C5 /* RatingAttachment.swift */; };
 		284F9EFC1C6618AB00BAB6C5 /* GoodMorningAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EFB1C6618AB00BAB6C5 /* GoodMorningAttachment.swift */; };
 		284F9EFF1C6618FA00BAB6C5 /* GoodNightAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EFE1C6618FA00BAB6C5 /* GoodNightAttachment.swift */; };
+		284F9F011C661D0300BAB6C5 /* GIFSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9F001C661D0300BAB6C5 /* GIFSearch.swift */; };
 		28515A891C49CD1500F0ABE8 /* PostTextItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515A881C49CD1500F0ABE8 /* PostTextItem.xib */; };
 		28515A8D1C49CE4900F0ABE8 /* PostImageItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515A8C1C49CE4900F0ABE8 /* PostImageItem.xib */; };
 		28515A8F1C49CE5A00F0ABE8 /* PostImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28515A8E1C49CE5A00F0ABE8 /* PostImageItem.swift */; };
@@ -199,6 +200,7 @@
 		284F9EF81C66185600BAB6C5 /* RatingAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingAttachment.swift; sourceTree = "<group>"; };
 		284F9EFB1C6618AB00BAB6C5 /* GoodMorningAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodMorningAttachment.swift; sourceTree = "<group>"; };
 		284F9EFE1C6618FA00BAB6C5 /* GoodNightAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodNightAttachment.swift; sourceTree = "<group>"; };
+		284F9F001C661D0300BAB6C5 /* GIFSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFSearch.swift; sourceTree = "<group>"; };
 		28515A881C49CD1500F0ABE8 /* PostTextItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTextItem.xib; sourceTree = "<group>"; };
 		28515A8C1C49CE4900F0ABE8 /* PostImageItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostImageItem.xib; sourceTree = "<group>"; };
 		28515A8E1C49CE5A00F0ABE8 /* PostImageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageItem.swift; sourceTree = "<group>"; };
@@ -777,6 +779,7 @@
 		28BE2CD81C62C2C8006A4392 /* GIF */ = {
 			isa = PBXGroup;
 			children = (
+				284F9F001C661D0300BAB6C5 /* GIFSearch.swift */,
 			);
 			name = GIF;
 			sourceTree = "<group>";
@@ -1192,6 +1195,7 @@
 				28515AA41C4AE02000F0ABE8 /* PostActionsItem.swift in Sources */,
 				281227341C5E752800128D00 /* ComposeViewController+MoveButtons.swift in Sources */,
 				284F9EEA1C66154A00BAB6C5 /* BatteryAttachment.swift in Sources */,
+				284F9F011C661D0300BAB6C5 /* GIFSearch.swift in Sources */,
 				28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */,
 				285DFB9C1C5446F000C34980 /* PeachComposeTextView.swift in Sources */,
 				2884D1981C653CCF00035B82 /* NSImageView+Transition.swift in Sources */,

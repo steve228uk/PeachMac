@@ -1215,6 +1215,9 @@ DQ
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="sendButtonClicked:" target="f1U-a1-Za8" id="aNg-vU-Pyg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -1225,6 +1228,10 @@ DQ
                             <constraint firstItem="GLm-9i-Q5y" firstAttribute="leading" secondItem="LS6-Gx-MED" secondAttribute="trailing" constant="8" id="zcG-jS-2Sw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sendButton" destination="GLm-9i-Q5y" id="JNS-m6-o6f"/>
+                        <outlet property="textField" destination="LS6-Gx-MED" id="DFi-A5-Oay"/>
+                    </connections>
                 </viewController>
                 <customObject id="b5r-Oi-O7R" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

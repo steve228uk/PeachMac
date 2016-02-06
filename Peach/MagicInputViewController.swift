@@ -8,11 +8,22 @@
 
 import Cocoa
 
-class MagicInputViewController: NSViewController {
+protocol MagicInputDelegate {
+    
+    func handleAction(input: String)
+    
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
+class MagicInputViewController: NSViewController {
+    
+    var delegate: MagicInputDelegate?
+
+    @IBOutlet weak var textField: NSTextField!
+    
+    @IBOutlet weak var sendButton: NSButton!
+    
+    @IBAction func sendButtonClicked(sender: AnyObject) {
+        delegate?.handleAction(textField.stringValue)
     }
     
 }
