@@ -806,7 +806,10 @@ DQ
                                 </scroller>
                             </scrollView>
                             <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fRf-Hr-xGO" customClass="MagicButton" customModule="Peach" customModuleProvider="target">
-                                <rect key="frame" x="106" y="2" width="121" height="32"/>
+                                <rect key="frame" x="14" y="2" width="304" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="292" id="gPa-XS-R1a"/>
+                                </constraints>
                                 <buttonCell key="cell" type="push" title="Magic Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hT3-it-EPn">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
