@@ -162,6 +162,8 @@ extension ComposeViewController: NSTextStorageDelegate {
                 return RatingAttachment(textView: textView).attributedString
             case "mood":
                 return MoodAttachment(textView: textView).attributedString
+            case "song":
+                return SongAttachment(textView: textView).attributedString
             default:
                 return NSAttributedString(string: "")
             }

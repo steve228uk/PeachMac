@@ -40,7 +40,7 @@ class ComposeViewController: NSViewController {
         "game": "Add video game",
         "book": "Add book",
 //        "events": "# of events today",
-//        "song": "What's currently playing",
+        "song": "What's currently playing",
 //        "draw": "Draw something",
 //        "shout": "Say something with big words"
     ]
@@ -49,7 +49,7 @@ class ComposeViewController: NSViewController {
     let requiresInput = ["gif", "image", "movie", "tv", "game", "book"]
     
     /// These are magic words that access async services
-    let deferred = ["goodmorning", "weather", "song"]
+    let deferred = ["goodmorning", "weather"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

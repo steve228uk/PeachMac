@@ -14,6 +14,7 @@
 		2812272E1C5E644E00128D00 /* ComposeToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2812272D1C5E644E00128D00 /* ComposeToolbarView.swift */; };
 		281227341C5E752800128D00 /* ComposeViewController+MoveButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281227331C5E752800128D00 /* ComposeViewController+MoveButtons.swift */; };
 		281227381C5E770B00128D00 /* ComposeViewController+NSTextStorageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281227371C5E770B00128D00 /* ComposeViewController+NSTextStorageDelegate.swift */; };
+		2827492D1C66B13700A8F282 /* SongAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2827492C1C66B13700A8F282 /* SongAttachment.swift */; };
 		282CA58C1C45C3A50075AE9A /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282CA58B1C45C3A50075AE9A /* StreamViewController.swift */; };
 		282D92C31C42CCAF00B83109 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D92C21C42CCAF00B83109 /* AppDelegate.swift */; };
 		282D92C71C42CCAF00B83109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 282D92C61C42CCAF00B83109 /* Assets.xcassets */; };
@@ -179,6 +180,7 @@
 		2812272D1C5E644E00128D00 /* ComposeToolbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeToolbarView.swift; sourceTree = "<group>"; };
 		281227331C5E752800128D00 /* ComposeViewController+MoveButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ComposeViewController+MoveButtons.swift"; sourceTree = "<group>"; };
 		281227371C5E770B00128D00 /* ComposeViewController+NSTextStorageDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ComposeViewController+NSTextStorageDelegate.swift"; sourceTree = "<group>"; };
+		2827492C1C66B13700A8F282 /* SongAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongAttachment.swift; sourceTree = "<group>"; };
 		282829758513A60968535014 /* Pods-GiphyKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GiphyKit/Pods-GiphyKit.debug.xcconfig"; sourceTree = "<group>"; };
 		282CA58B1C45C3A50075AE9A /* StreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
 		282D92BF1C42CCAF00B83109 /* Peach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peach.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -410,6 +412,7 @@
 		281227301C5E701300128D00 /* Attachments */ = {
 			isa = PBXGroup;
 			children = (
+				2827492B1C66B0E800A8F282 /* Song */,
 				28EF93B61C66607B0073C5FB /* Weather */,
 				28EF93A21C6632010073C5FB /* Game */,
 				284F9EFD1C6618EB00BAB6C5 /* Good Night */,
@@ -439,6 +442,14 @@
 				284F9F061C6625AB00BAB6C5 /* ComposeViewController+DeferredAttachmentDelegate.swift */,
 			);
 			name = ComposeViewController;
+			sourceTree = "<group>";
+		};
+		2827492B1C66B0E800A8F282 /* Song */ = {
+			isa = PBXGroup;
+			children = (
+				2827492C1C66B13700A8F282 /* SongAttachment.swift */,
+			);
+			name = Song;
 			sourceTree = "<group>";
 		};
 		282CA58A1C45C2E50075AE9A /* Stream */ = {
@@ -1276,6 +1287,7 @@
 				28CC1E5F1C5ECE49001DD6EC /* PeachTextAttachmentCell.swift in Sources */,
 				2899A75F1C558DE00045C4F9 /* PeachToolbarView.swift in Sources */,
 				28BE2CD51C628D89006A4392 /* PeachTextOptionsAttachmentCell.swift in Sources */,
+				2827492D1C66B13700A8F282 /* SongAttachment.swift in Sources */,
 				285DFB9A1C54184B00C34980 /* NSImage+CropToSquare.swift in Sources */,
 				28A1DA721C457165004198A0 /* PeachViewController.swift in Sources */,
 				28C7A1E41C485702004D8FD0 /* ConnectionCollectionViewItem.swift in Sources */,
