@@ -1,5 +1,5 @@
 //
-//  MagicInputHandler.swift
+//  DeferredAttachmentHandler.swift
 //  Peach
 //
 //  Created by Stephen Radford on 06/02/2016.
@@ -8,16 +8,18 @@
 
 import Cocoa
 
-class MagicInputHandler: MagicInputDelegate {
+class DeferredAttachmentHandler: NSObject {
     
-    var textView: NSTextView
+    var textView: NSTextView?
     
     var delegate: DeferredAttachmentDelegate?
     
     init(textView: NSTextView) {
+        super.init()
         self.textView = textView
+        handle()
     }
     
-    func handleAction(input: String) {    }
+    func handle() { }
     
 }

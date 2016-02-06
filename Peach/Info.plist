@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string></string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIconFile</key>
@@ -33,6 +35,12 @@
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2016 Cocoon Development Ltd. All rights reserved.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Used for the "here" and "weather" magic words.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Used for the "here" and "weather" magic words.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Used for the "here" and "weather" magic words.</string>
 	<key>NSMainStoryboardFile</key>
 	<string>Main</string>
 	<key>NSPrincipalClass</key>

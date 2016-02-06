@@ -41,7 +41,7 @@
 		284F9EFF1C6618FA00BAB6C5 /* GoodNightAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EFE1C6618FA00BAB6C5 /* GoodNightAttachment.swift */; };
 		284F9F011C661D0300BAB6C5 /* GIFSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9F001C661D0300BAB6C5 /* GIFSearch.swift */; };
 		284F9F051C66231000BAB6C5 /* MagicInputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9F041C66231000BAB6C5 /* MagicInputHandler.swift */; };
-		284F9F071C6625AB00BAB6C5 /* ComposeViewController+MagicInputHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9F061C6625AB00BAB6C5 /* ComposeViewController+MagicInputHandlerDelegate.swift */; };
+		284F9F071C6625AB00BAB6C5 /* ComposeViewController+DeferredAttachmentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9F061C6625AB00BAB6C5 /* ComposeViewController+DeferredAttachmentDelegate.swift */; };
 		28515A891C49CD1500F0ABE8 /* PostTextItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515A881C49CD1500F0ABE8 /* PostTextItem.xib */; };
 		28515A8D1C49CE4900F0ABE8 /* PostImageItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28515A8C1C49CE4900F0ABE8 /* PostImageItem.xib */; };
 		28515A8F1C49CE5A00F0ABE8 /* PostImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28515A8E1C49CE5A00F0ABE8 /* PostImageItem.swift */; };
@@ -121,9 +121,9 @@
 		28DBAD071C430CD900CC66CB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD061C430CD900CC66CB /* Message.swift */; };
 		28EF93A01C66267D0073C5FB /* NSTextAttachment+AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EF939F1C66267D0073C5FB /* NSTextAttachment+AttributedString.swift */; };
 		28EF93A41C66320B0073C5FB /* GameSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EF93A31C66320B0073C5FB /* GameSearch.swift */; };
-		28EF93AD1C665CAF0073C5FB /* OWMKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 28EF93AC1C665CAF0073C5FB /* OWMKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28EF93B11C665CAF0073C5FB /* OWMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EF93AA1C665CAF0073C5FB /* OWMKit.framework */; };
-		28EF93B21C665CAF0073C5FB /* OWMKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28EF93AA1C665CAF0073C5FB /* OWMKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		28EF93BA1C6687670073C5FB /* WeatherAttachmentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EF93B91C6687670073C5FB /* WeatherAttachmentHandler.swift */; };
+		28EF93BC1C6687990073C5FB /* DeferredAttachmentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EF93BB1C6687990073C5FB /* DeferredAttachmentHandler.swift */; };
+		28EF93BE1C6688750073C5FB /* DeferredAttachmentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EF93BD1C6688750073C5FB /* DeferredAttachmentDelegate.swift */; };
 		2D71EE244C17D63F4EFB25CC /* Pods_GiphyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD8ED98CC3162765C81FD46 /* Pods_GiphyKit.framework */; };
 		4DA2601533C28E980B96A863 /* Pods_Peach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E22E0C5D18D00CEFEECF45 /* Pods_Peach.framework */; };
 		9FFD3FF434E1B26138D76ECB /* Pods_ImgurKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94AD6CE16186EDA6D97F0AA6 /* Pods_ImgurKit.framework */; };
@@ -152,13 +152,6 @@
 			remoteGlobalIDString = 286CBA371C491B3500D3B902;
 			remoteInfo = GiphyKit;
 		};
-		28EF93AF1C665CAF0073C5FB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 282D92B71C42CCAF00B83109 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 28EF93A91C665CAF0073C5FB;
-			remoteInfo = OWMKit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -171,7 +164,6 @@
 				2833B0B11C54FE2D00E945A5 /* ImgurKit.framework in Embed Frameworks */,
 				282D92DE1C42CDD900B83109 /* PeachKit.framework in Embed Frameworks */,
 				286CBA401C491B3500D3B902 /* GiphyKit.framework in Embed Frameworks */,
-				28EF93B21C665CAF0073C5FB /* OWMKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +209,7 @@
 		284F9EFE1C6618FA00BAB6C5 /* GoodNightAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodNightAttachment.swift; sourceTree = "<group>"; };
 		284F9F001C661D0300BAB6C5 /* GIFSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFSearch.swift; sourceTree = "<group>"; };
 		284F9F041C66231000BAB6C5 /* MagicInputHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicInputHandler.swift; sourceTree = "<group>"; };
-		284F9F061C6625AB00BAB6C5 /* ComposeViewController+MagicInputHandlerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ComposeViewController+MagicInputHandlerDelegate.swift"; sourceTree = "<group>"; };
+		284F9F061C6625AB00BAB6C5 /* ComposeViewController+DeferredAttachmentDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ComposeViewController+DeferredAttachmentDelegate.swift"; sourceTree = "<group>"; };
 		28515A881C49CD1500F0ABE8 /* PostTextItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTextItem.xib; sourceTree = "<group>"; };
 		28515A8C1C49CE4900F0ABE8 /* PostImageItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostImageItem.xib; sourceTree = "<group>"; };
 		28515A8E1C49CE5A00F0ABE8 /* PostImageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageItem.swift; sourceTree = "<group>"; };
@@ -298,9 +290,9 @@
 		28DBAD061C430CD900CC66CB /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		28EF939F1C66267D0073C5FB /* NSTextAttachment+AttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextAttachment+AttributedString.swift"; sourceTree = "<group>"; };
 		28EF93A31C66320B0073C5FB /* GameSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSearch.swift; sourceTree = "<group>"; };
-		28EF93AA1C665CAF0073C5FB /* OWMKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OWMKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		28EF93AC1C665CAF0073C5FB /* OWMKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWMKit.h; sourceTree = "<group>"; };
-		28EF93AE1C665CAF0073C5FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28EF93B91C6687670073C5FB /* WeatherAttachmentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherAttachmentHandler.swift; sourceTree = "<group>"; };
+		28EF93BB1C6687990073C5FB /* DeferredAttachmentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeferredAttachmentHandler.swift; sourceTree = "<group>"; };
+		28EF93BD1C6688750073C5FB /* DeferredAttachmentDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeferredAttachmentDelegate.swift; sourceTree = "<group>"; };
 		29B9474D3E7C8CFB943A64C0 /* Pods-Peach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Peach/Pods-Peach.debug.xcconfig"; sourceTree = "<group>"; };
 		29E22E0C5D18D00CEFEECF45 /* Pods_Peach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Peach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA88244C05E57D92E436D2C /* Pods-GiphyKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiphyKit/Pods-GiphyKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -318,7 +310,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28EF93B11C665CAF0073C5FB /* OWMKit.framework in Frameworks */,
 				282D92DD1C42CDD900B83109 /* PeachKit.framework in Frameworks */,
 				4DA2601533C28E980B96A863 /* Pods_Peach.framework in Frameworks */,
 				2833B0B01C54FE2D00E945A5 /* ImgurKit.framework in Frameworks */,
@@ -347,13 +338,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D71EE244C17D63F4EFB25CC /* Pods_GiphyKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		28EF93A61C665CAF0073C5FB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +410,7 @@
 		281227301C5E701300128D00 /* Attachments */ = {
 			isa = PBXGroup;
 			children = (
+				28EF93B61C66607B0073C5FB /* Weather */,
 				28EF93A21C6632010073C5FB /* Game */,
 				284F9EFD1C6618EB00BAB6C5 /* Good Night */,
 				284F9EFA1C66189500BAB6C5 /* Good Morning */,
@@ -439,6 +424,8 @@
 				28BE2CD11C628D60006A4392 /* Text Options */,
 				28CC1E5D1C5ECE25001DD6EC /* Text */,
 				284F9F041C66231000BAB6C5 /* MagicInputHandler.swift */,
+				28EF93BB1C6687990073C5FB /* DeferredAttachmentHandler.swift */,
+				28EF93BD1C6688750073C5FB /* DeferredAttachmentDelegate.swift */,
 			);
 			name = Attachments;
 			sourceTree = "<group>";
@@ -449,7 +436,7 @@
 				28A1DA6C1C4570E7004198A0 /* ComposeViewController.swift */,
 				281227331C5E752800128D00 /* ComposeViewController+MoveButtons.swift */,
 				281227371C5E770B00128D00 /* ComposeViewController+NSTextStorageDelegate.swift */,
-				284F9F061C6625AB00BAB6C5 /* ComposeViewController+MagicInputHandlerDelegate.swift */,
+				284F9F061C6625AB00BAB6C5 /* ComposeViewController+DeferredAttachmentDelegate.swift */,
 			);
 			name = ComposeViewController;
 			sourceTree = "<group>";
@@ -478,7 +465,6 @@
 				282D92D71C42CDD800B83109 /* PeachKit */,
 				286CBA391C491B3500D3B902 /* GiphyKit */,
 				2833B0AA1C54FE2D00E945A5 /* ImgurKit */,
-				28EF93AB1C665CAF0073C5FB /* OWMKit */,
 				282D92C01C42CCAF00B83109 /* Products */,
 				0F5830214DA42C3866A389BF /* Pods */,
 				9ECED47B12594D2416A13B86 /* Frameworks */,
@@ -492,7 +478,6 @@
 				282D92D61C42CDD800B83109 /* PeachKit.framework */,
 				286CBA381C491B3500D3B902 /* GiphyKit.framework */,
 				2833B0A91C54FE2D00E945A5 /* ImgurKit.framework */,
-				28EF93AA1C665CAF0073C5FB /* OWMKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -862,13 +847,12 @@
 			name = Game;
 			sourceTree = "<group>";
 		};
-		28EF93AB1C665CAF0073C5FB /* OWMKit */ = {
+		28EF93B61C66607B0073C5FB /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				28EF93AC1C665CAF0073C5FB /* OWMKit.h */,
-				28EF93AE1C665CAF0073C5FB /* Info.plist */,
+				28EF93B91C6687670073C5FB /* WeatherAttachmentHandler.swift */,
 			);
-			path = OWMKit;
+			name = Weather;
 			sourceTree = "<group>";
 		};
 		9ECED47B12594D2416A13B86 /* Frameworks */ = {
@@ -909,14 +893,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28EF93A71C665CAF0073C5FB /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28EF93AD1C665CAF0073C5FB /* OWMKit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -938,7 +914,6 @@
 				282D92DC1C42CDD900B83109 /* PBXTargetDependency */,
 				286CBA3E1C491B3500D3B902 /* PBXTargetDependency */,
 				2833B0AF1C54FE2D00E945A5 /* PBXTargetDependency */,
-				28EF93B01C665CAF0073C5FB /* PBXTargetDependency */,
 			);
 			name = Peach;
 			productName = Peach;
@@ -1005,24 +980,6 @@
 			productReference = 286CBA381C491B3500D3B902 /* GiphyKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		28EF93A91C665CAF0073C5FB /* OWMKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 28EF93B31C665CB00073C5FB /* Build configuration list for PBXNativeTarget "OWMKit" */;
-			buildPhases = (
-				28EF93A51C665CAF0073C5FB /* Sources */,
-				28EF93A61C665CAF0073C5FB /* Frameworks */,
-				28EF93A71C665CAF0073C5FB /* Headers */,
-				28EF93A81C665CAF0073C5FB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = OWMKit;
-			productName = OWMKit;
-			productReference = 28EF93AA1C665CAF0073C5FB /* OWMKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1040,6 +997,9 @@
 							com.apple.Keychain = {
 								enabled = 0;
 							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
 						};
 					};
 					282D92D51C42CDD800B83109 = {
@@ -1050,10 +1010,6 @@
 						DevelopmentTeam = B598AEF9ZM;
 					};
 					286CBA371C491B3500D3B902 = {
-						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = B598AEF9ZM;
-					};
-					28EF93A91C665CAF0073C5FB = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = B598AEF9ZM;
 					};
@@ -1076,7 +1032,6 @@
 				282D92D51C42CDD800B83109 /* PeachKit */,
 				286CBA371C491B3500D3B902 /* GiphyKit */,
 				2833B0A81C54FE2D00E945A5 /* ImgurKit */,
-				28EF93A91C665CAF0073C5FB /* OWMKit */,
 			);
 		};
 /* End PBXProject section */
@@ -1115,13 +1070,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		286CBA361C491B3500D3B902 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		28EF93A81C665CAF0073C5FB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1289,6 +1237,7 @@
 				281227341C5E752800128D00 /* ComposeViewController+MoveButtons.swift in Sources */,
 				284F9EEA1C66154A00BAB6C5 /* BatteryAttachment.swift in Sources */,
 				284F9F011C661D0300BAB6C5 /* GIFSearch.swift in Sources */,
+				28EF93BA1C6687670073C5FB /* WeatherAttachmentHandler.swift in Sources */,
 				284F9F051C66231000BAB6C5 /* MagicInputHandler.swift in Sources */,
 				28A1DA6A1C456B18004198A0 /* PeachContainerViewController.swift in Sources */,
 				285DFB9C1C5446F000C34980 /* PeachComposeTextView.swift in Sources */,
@@ -1308,13 +1257,15 @@
 				28DBACFF1C43055F00CC66CB /* ConnectionsView.swift in Sources */,
 				28EF93A01C66267D0073C5FB /* NSTextAttachment+AttributedString.swift in Sources */,
 				2812272C1C5E644000128D00 /* ComposeToolbarViewController.swift in Sources */,
+				28EF93BE1C6688750073C5FB /* DeferredAttachmentDelegate.swift in Sources */,
 				281227381C5E770B00128D00 /* ComposeViewController+NSTextStorageDelegate.swift in Sources */,
 				284F9EE71C66127C00BAB6C5 /* MagicInputViewController.swift in Sources */,
 				2874F7311C42EE5800D06D34 /* LoginTextField.swift in Sources */,
 				28A8C0311C457F1F006DA6FC /* ComposeWindowController.swift in Sources */,
 				284F9EFF1C6618FA00BAB6C5 /* GoodNightAttachment.swift in Sources */,
-				284F9F071C6625AB00BAB6C5 /* ComposeViewController+MagicInputHandlerDelegate.swift in Sources */,
+				284F9F071C6625AB00BAB6C5 /* ComposeViewController+DeferredAttachmentDelegate.swift in Sources */,
 				285DFB891C52C31900C34980 /* PostLinkItem.swift in Sources */,
+				28EF93BC1C6687990073C5FB /* DeferredAttachmentHandler.swift in Sources */,
 				2874F7201C42D73400D06D34 /* LoginViewController.swift in Sources */,
 				28515A8F1C49CE5A00F0ABE8 /* PostImageItem.swift in Sources */,
 				281227221C5D902300128D00 /* LoginSecureTextFieldCell.swift in Sources */,
@@ -1391,13 +1342,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28EF93A51C665CAF0073C5FB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1415,11 +1359,6 @@
 			isa = PBXTargetDependency;
 			target = 286CBA371C491B3500D3B902 /* GiphyKit */;
 			targetProxy = 286CBA3D1C491B3500D3B902 /* PBXContainerItemProxy */;
-		};
-		28EF93B01C665CAF0073C5FB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 28EF93A91C665CAF0073C5FB /* OWMKit */;
-			targetProxy = 28EF93AF1C665CAF0073C5FB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1521,7 +1460,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -1542,7 +1480,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -1703,52 +1640,6 @@
 			};
 			name = Release;
 		};
-		28EF93B41C665CB00073C5FB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = OWMKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.wearecocoon.OWMKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		28EF93B51C665CB00073C5FB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = OWMKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.wearecocoon.OWMKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1796,14 +1687,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		28EF93B31C665CB00073C5FB /* Build configuration list for PBXNativeTarget "OWMKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				28EF93B41C665CB00073C5FB /* Debug */,
-				28EF93B51C665CB00073C5FB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

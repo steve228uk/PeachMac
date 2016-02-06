@@ -28,7 +28,7 @@ class GameSearch: MagicInputHandler {
                                 let string = "🎮 \(games[0]["name"].string!)"
                                 attachment = PeachTextAttachment(string: string, textView: self.textView)
                             }
-                            self.delegate?.appendComplexAttachment(attachment)
+                            self.delegate?.appendDeferredAttachment(attachment)
                         }
                     }
                     

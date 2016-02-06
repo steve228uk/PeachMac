@@ -15,7 +15,7 @@ class GIFSearch: MagicInputHandler {
         Giphy.search(input) { gifs, error in
             print(gifs)
             let attachment = TimeAttachment(textView: self.textView)
-            self.delegate?.appendComplexAttachment(attachment)
+            self.delegate?.appendDeferredAttachment(attachment)
         }
     }
     

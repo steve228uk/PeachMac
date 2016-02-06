@@ -15,6 +15,7 @@ extension ComposeViewController: NSTextStorageDelegate {
     override func textStorageDidProcessEditing(notification: NSNotification) {
         
         magicButton.hidden = true
+        magicButton.enabled = true
         magicInputController?.view.hidden = true
         
         if let text = textView.textStorage?.string.lowercaseString {
@@ -92,11 +93,26 @@ extension ComposeViewController: NSTextStorageDelegate {
                 magicInputController?.view.hidden = false
                 magicInputController?.textField.becomeFirstResponder()
                 handleAttachmentWithInputForType(type)
+            } else if deferred.contains(type) {
+                sender.enabled = false
+                sender.title = "Working..."
+                handleDeferredAttachmentForType(type)
             } else {
                 addSimpleAttachmentForType(type)
             }
         }
         
+    }
+    
+    func handleDeferredAttachmentForType(type: String) {
+        switch type {
+        case "weather":
+            let handler = WeatherAttachmentHandler(textView: textView)
+            handler.delegate = self
+            break
+        default:
+            break
+        }
     }
     
     /**
@@ -121,7 +137,6 @@ extension ComposeViewController: NSTextStorageDelegate {
             }
         }
         
-        
         magicInputController?.delegate = handler
     }
     
@@ -139,8 +154,6 @@ extension ComposeViewController: NSTextStorageDelegate {
                 return TimeAttachment(textView: textView).attributedString
             case "goodnight":
                 return GoodNightAttachment(textView: textView).attributedString
-            case "goodmorning":
-                return GoodMorningAttachment(textView: textView).attributedString
             case "dice":
                 return DiceAttachment(textView: textView).attributedString
             case "battery":

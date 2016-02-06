@@ -8,15 +8,16 @@
 
 import Cocoa
 
-extension ComposeViewController: MagicInputHandlerDelegate {
+extension ComposeViewController: DeferredAttachmentDelegate {
     
-    func appendComplexAttachment(attachment: NSTextAttachment) {
+    func appendDeferredAttachment(attachment: NSTextAttachment) {
         
         textView.textStorage?.setAttributedString(textView.attributedString().attributedStringByRemovingLastWord())
         textView.textStorage?.appendAttributedString(attachment.attributedString)
         textView.textStorage?.appendAttributedString(NSAttributedString(string: "\n\n"))
         
         magicInputController?.view.hidden = true
+        magicButton.hidden = true
         
         view.window?.makeFirstResponder(textView)
         
