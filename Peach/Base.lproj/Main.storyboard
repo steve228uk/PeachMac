@@ -845,7 +845,7 @@ DQ
                 </viewController>
                 <customObject id="DXS-l1-FSb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1228" y="89"/>
+            <point key="canvasLocation" x="1228" y="108"/>
         </scene>
         <!--Connections-->
         <scene sceneID="GXT-fM-BAI">
@@ -1238,7 +1238,7 @@ DQ
                 </viewController>
                 <customObject id="b5r-Oi-O7R" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1678" y="202.5"/>
+            <point key="canvasLocation" x="1676" y="221.5"/>
         </scene>
     </scenes>
     <resources>

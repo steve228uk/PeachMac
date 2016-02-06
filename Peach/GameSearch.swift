@@ -20,8 +20,14 @@ class GameSearch: MagicInputHandler {
                     let json = JSON(response.result.value!)
                     if let games = json["games"].array {
                         if games.count > 0 {
-                            let options = games.map { return "🎮 \($0["name"].string!)" }
-                            let attachment = PeachTextOptionsAttachment(options: options, textView: self.textView)
+                            var attachment: NSTextAttachment!
+                            if games.count > 1 {
+                                let options = games.map { return "🎮 \($0["name"].string!)" }
+                                attachment = PeachTextOptionsAttachment(options: options, textView: self.textView)
+                            } else {
+                                let string = "🎮 \(games[0]["name"].string!)"
+                                attachment = PeachTextAttachment(string: string, textView: self.textView)
+                            }
                             self.delegate?.appendComplexAttachment(attachment)
                         }
                     }
