@@ -120,6 +120,7 @@
 		28DBAD051C430CB700CC66CB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD041C430CB700CC66CB /* Comment.swift */; };
 		28DBAD071C430CD900CC66CB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBAD061C430CD900CC66CB /* Message.swift */; };
 		28EF93A01C66267D0073C5FB /* NSTextAttachment+AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EF939F1C66267D0073C5FB /* NSTextAttachment+AttributedString.swift */; };
+		28EF93A41C66320B0073C5FB /* GameSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EF93A31C66320B0073C5FB /* GameSearch.swift */; };
 		2D71EE244C17D63F4EFB25CC /* Pods_GiphyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD8ED98CC3162765C81FD46 /* Pods_GiphyKit.framework */; };
 		4DA2601533C28E980B96A863 /* Pods_Peach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E22E0C5D18D00CEFEECF45 /* Pods_Peach.framework */; };
 		9FFD3FF434E1B26138D76ECB /* Pods_ImgurKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94AD6CE16186EDA6D97F0AA6 /* Pods_ImgurKit.framework */; };
@@ -285,6 +286,7 @@
 		28DBAD041C430CB700CC66CB /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		28DBAD061C430CD900CC66CB /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		28EF939F1C66267D0073C5FB /* NSTextAttachment+AttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextAttachment+AttributedString.swift"; sourceTree = "<group>"; };
+		28EF93A31C66320B0073C5FB /* GameSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSearch.swift; sourceTree = "<group>"; };
 		29B9474D3E7C8CFB943A64C0 /* Pods-Peach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peach.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Peach/Pods-Peach.debug.xcconfig"; sourceTree = "<group>"; };
 		29E22E0C5D18D00CEFEECF45 /* Pods_Peach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Peach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA88244C05E57D92E436D2C /* Pods-GiphyKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiphyKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiphyKit/Pods-GiphyKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 		281227301C5E701300128D00 /* Attachments */ = {
 			isa = PBXGroup;
 			children = (
+				28EF93A21C6632010073C5FB /* Game */,
 				284F9EFD1C6618EB00BAB6C5 /* Good Night */,
 				284F9EFA1C66189500BAB6C5 /* Good Morning */,
 				284F9EF71C66184400BAB6C5 /* Rating */,
@@ -827,6 +830,14 @@
 			name = Connections;
 			sourceTree = "<group>";
 		};
+		28EF93A21C6632010073C5FB /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				28EF93A31C66320B0073C5FB /* GameSearch.swift */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
 		9ECED47B12594D2416A13B86 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1193,6 +1204,7 @@
 				28CC1E541C5E9F53001DD6EC /* MagicButton.swift in Sources */,
 				2874F72F1C42E9BB00D06D34 /* LoginButton.swift in Sources */,
 				28BE2CD71C629AA2006A4392 /* AttachmentButtonCell.swift in Sources */,
+				28EF93A41C66320B0073C5FB /* GameSearch.swift in Sources */,
 				284F9EF91C66185600BAB6C5 /* RatingAttachment.swift in Sources */,
 				284F9EF31C66173B00BAB6C5 /* DateAttachment.swift in Sources */,
 				288D9B511C5977D8008F6608 /* +LoginView.swift in Sources */,

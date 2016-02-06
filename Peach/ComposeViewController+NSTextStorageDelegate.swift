@@ -112,6 +112,10 @@ extension ComposeViewController: NSTextStorageDelegate {
                 let handler = GIFSearch(textView: textView)
                 handler.delegate = self
                 return handler
+            case "game":
+                let handler = GameSearch(textView: textView)
+                handler.delegate = self
+                return handler
             default:
                 return nil
             }
