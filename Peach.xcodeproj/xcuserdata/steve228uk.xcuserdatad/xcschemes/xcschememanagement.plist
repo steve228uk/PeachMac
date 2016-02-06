@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
+		<key>OWMKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
 		<key>Peach.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -43,6 +48,11 @@
 			<true/>
 		</dict>
 		<key>286CBA371C491B3500D3B902</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>28EF93A91C665CAF0073C5FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
