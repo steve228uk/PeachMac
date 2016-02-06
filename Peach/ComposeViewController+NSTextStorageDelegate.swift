@@ -78,38 +78,48 @@ extension ComposeViewController: NSTextStorageDelegate {
     @IBAction func clickMagicButton(sender: AnyObject) {
         let components = magicButton.title.componentsSeparatedByString(":")
         
-        
         if let type = components.first {
-            
-            var attachmentString: NSAttributedString {
-                switch type {
-                case "date":
-                    return DateAttachment(textView: textView).attributedString
-                case "time":
-                    return TimeAttachment(textView: textView).attributedString
-                case "goodnight":
-                    return GoodNightAttachment(textView: textView).attributedString
-                case "goodmorning":
-                    return GoodMorningAttachment(textView: textView).attributedString
-                case "dice":
-                    return DiceAttachment(textView: textView).attributedString
-                case "battery":
-                    return BatteryAttachment(textView: textView).attributedString
-                case "rate":
-                    return RatingAttachment(textView: textView).attributedString
-                case "mood":
-                    return MoodAttachment(textView: textView).attributedString
-                default:
-                    return NSAttributedString(string: "")
-                }
+            if requiresInput.contains(type) {
+                magicInputController?.view.hidden = false
+            } else {
+                addSimpleAttachmentFromType(type)
             }
-            
-            textView.textStorage?.setAttributedString(textView.attributedString().attributedStringByRemovingLastWord())
-            textView.textStorage?.appendAttributedString(attachmentString)
-            textView.textStorage?.appendAttributedString(NSAttributedString(string: "\n\n"))
-            
         }
         
+    }
+    
+    /**
+     Add a 'simple' attachement to the textview. That is one that doesn't require input.
+     
+     - parameter type: The type of attachment to add
+     */
+    func addSimpleAttachmentFromType(type: String) {
+        var attachmentString: NSAttributedString {
+            switch type {
+            case "date":
+                return DateAttachment(textView: textView).attributedString
+            case "time":
+                return TimeAttachment(textView: textView).attributedString
+            case "goodnight":
+                return GoodNightAttachment(textView: textView).attributedString
+            case "goodmorning":
+                return GoodMorningAttachment(textView: textView).attributedString
+            case "dice":
+                return DiceAttachment(textView: textView).attributedString
+            case "battery":
+                return BatteryAttachment(textView: textView).attributedString
+            case "rate":
+                return RatingAttachment(textView: textView).attributedString
+            case "mood":
+                return MoodAttachment(textView: textView).attributedString
+            default:
+                return NSAttributedString(string: "")
+            }
+        }
+        
+        textView.textStorage?.setAttributedString(textView.attributedString().attributedStringByRemovingLastWord())
+        textView.textStorage?.appendAttributedString(attachmentString)
+        textView.textStorage?.appendAttributedString(NSAttributedString(string: "\n\n"))
     }
     
     /**

@@ -45,6 +45,8 @@ class ComposeViewController: NSViewController {
 //        "shout": "Say something with big words"
     ]
     
+    let requiresInput = ["gif", "image", "movie", "tv", "game", "book"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.textStorage?.delegate = self
