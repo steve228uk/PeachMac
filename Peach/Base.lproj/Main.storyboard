@@ -760,11 +760,11 @@ DQ
             <objects>
                 <viewController title="Compose" id="kaE-7v-6VR" customClass="ComposeViewController" customModule="Peach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="9VL-Ht-YRb" customClass="ConnectionsView" customModule="Peach" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="332" height="264"/>
+                        <rect key="frame" x="0.0" y="0.0" width="332" height="275"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="rGt-Dd-TIv">
-                                <rect key="frame" x="0.0" y="224" width="332" height="40"/>
+                                <rect key="frame" x="0.0" y="235" width="332" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="cwb-gS-KW3"/>
                                 </constraints>
@@ -773,19 +773,19 @@ DQ
                                 </connections>
                             </containerView>
                             <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nJ-n9-qAv">
-                                <rect key="frame" x="0.0" y="37" width="332" height="187"/>
+                                <rect key="frame" x="0.0" y="43" width="332" height="192"/>
                                 <clipView key="contentView" id="Ah2-T7-49N">
-                                    <rect key="frame" x="0.0" y="0.0" width="332" height="187"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="332" height="192"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView importsGraphics="NO" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="T8Z-4C-XMr" customClass="PeachComposeTextView" customModule="Peach" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="332" height="187"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="332" height="192"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="332" height="187"/>
+                                            <size key="minSize" width="332" height="192"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="332" height="187"/>
+                                            <size key="minSize" width="332" height="192"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                         </textView>
                                     </subviews>
@@ -796,17 +796,17 @@ DQ
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="187" id="Qya-BO-pp9"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="800" id="hnp-PD-z45"/>
                                 </constraints>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="9MR-0p-n7F">
-                                    <rect key="frame" x="0.0" y="171" width="332" height="16"/>
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="9MR-0p-n7F">
+                                    <rect key="frame" x="0.0" y="176" width="332" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="0.5" horizontal="NO" id="3nC-ZW-rRg">
-                                    <rect key="frame" x="317" y="0.0" width="15" height="187"/>
+                                    <rect key="frame" x="316" y="0.0" width="16" height="192"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fRf-Hr-xGO" customClass="MagicButton" customModule="Peach" customModuleProvider="target">
-                                <rect key="frame" x="14" y="2" width="304" height="32"/>
+                                <rect key="frame" x="14" y="8" width="304" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="292" id="gPa-XS-R1a"/>
                                 </constraints>
@@ -819,7 +819,7 @@ DQ
                                 </connections>
                             </button>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="1PE-bT-lQS">
-                                <rect key="frame" x="0.0" y="0.0" width="332" height="37"/>
+                                <rect key="frame" x="0.0" y="0.0" width="332" height="43"/>
                                 <connections>
                                     <segue destination="f1U-a1-Za8" kind="embed" identifier="embedInput" id="OnD-nF-sT6"/>
                                 </connections>
@@ -832,7 +832,7 @@ DQ
                             <constraint firstAttribute="bottom" secondItem="1PE-bT-lQS" secondAttribute="bottom" id="Flz-O9-Xy6"/>
                             <constraint firstItem="fRf-Hr-xGO" firstAttribute="top" secondItem="1nJ-n9-qAv" secondAttribute="bottom" constant="7" id="GDm-bR-3R7"/>
                             <constraint firstAttribute="trailing" secondItem="1PE-bT-lQS" secondAttribute="trailing" id="GXI-zf-tGF"/>
-                            <constraint firstAttribute="bottom" secondItem="fRf-Hr-xGO" secondAttribute="bottom" constant="9" id="U3e-nS-JRj"/>
+                            <constraint firstAttribute="bottom" secondItem="fRf-Hr-xGO" secondAttribute="bottom" constant="15" id="U3e-nS-JRj"/>
                             <constraint firstItem="1PE-bT-lQS" firstAttribute="top" secondItem="1nJ-n9-qAv" secondAttribute="bottom" id="V7i-DJ-gzA"/>
                             <constraint firstItem="1PE-bT-lQS" firstAttribute="leading" secondItem="9VL-Ht-YRb" secondAttribute="leading" id="YOu-LW-EyA"/>
                             <constraint firstItem="1nJ-n9-qAv" firstAttribute="top" secondItem="rGt-Dd-TIv" secondAttribute="bottom" id="a3j-Kn-VGc"/>
