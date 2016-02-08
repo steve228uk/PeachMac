@@ -26,8 +26,8 @@ class ComposeViewController: NSViewController {
     let locationManager = LocationManager()
     
     let magicWords = [
-        "gif": "Search for a GIF",
-        "image": "Search for images",
+//        "gif": "Search for a GIF",
+//        "image": "Search for images",
         "time": "Add current time",
         "weather": "Add current weather",
         "goodnight": "Good night!",
@@ -41,7 +41,7 @@ class ComposeViewController: NSViewController {
         "movie": "Add movie",
         "tv": "Add TV show",
         "game": "Add video game",
-        "book": "Add book",
+//        "book": "Add book",
 //        "events": "# of events today",
         "song": "What's currently playing",
 //        "draw": "Draw something",
