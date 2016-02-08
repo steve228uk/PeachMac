@@ -8,11 +8,11 @@
 
 import Cocoa
 
-class GoodMorningAttachment: PeachTextAttachment {
+class GoodmorningAttachment: PeachTextAttachment {
 
-    init(textView: NSTextView?) {
+    init(weather: String, textView: NSTextView?) {
         let date = NSDate()
-        let string = "Good morning! 🌤\n\n\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))"
+        let string = "Good morning! \(weather)\n\n\(String(format: "%02d", date.hour())):\(String(format: "%02d", date.minute()))"
         super.init(string: string, textView: textView)
     }
     

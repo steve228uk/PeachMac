@@ -110,6 +110,10 @@ extension ComposeViewController: NSTextStorageDelegate {
             let handler = WeatherAttachmentHandler(textView: textView, locationManager: locationManager)
             handler.delegate = self
             break
+        case "goodmorning":
+            let handler = GoodmorningAttachmentHandler(textView: textView, locationManager: locationManager)
+            handler.delegate = self
+            break
         default:
             break
         }

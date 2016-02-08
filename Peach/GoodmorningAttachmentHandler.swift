@@ -1,14 +1,14 @@
 //
-//  WeatherAttachmentHandler.swift
+//  GoodmorningAttachmentHandler.swift
 //  Peach
 //
-//  Created by Stephen Radford on 06/02/2016.
+//  Created by Stephen Radford on 08/02/2016.
 //  Copyright © 2016 Cocoon Development Ltd. All rights reserved.
 //
 
 import Cocoa
 
-class WeatherAttachmentHandler: DeferredAttachmentHandler, LocationManagerDelegate {
+class GoodmorningAttachmentHandler: DeferredAttachmentHandler, LocationManagerDelegate {
     
     init(textView: NSTextView, locationManager: LocationManager) {
         super.init(textView: textView)
@@ -27,7 +27,7 @@ class WeatherAttachmentHandler: DeferredAttachmentHandler, LocationManagerDelega
     }
     
     func createAttachment(string: String){
-        let attachment = PeachTextAttachment(string: string, textView: self.textView)
+        let attachment = GoodmorningAttachment(weather: string, textView: self.textView)
         self.delegate?.appendDeferredAttachment(attachment)
     }
     
