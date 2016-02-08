@@ -15,6 +15,10 @@ class GIFAttachmentCell: NSTextAttachmentCell {
     
     var gifs: [GIF] = []
     
+    let player = GIFPlayer(frame: NSZeroRect)
+    
+    var delegate: GIFAttachmentCellDelegate?
+    
     convenience init(gifs: [GIF], textView: NSTextView?) {
         self.init(textCell: "")
         self.gifs = gifs
@@ -22,6 +26,7 @@ class GIFAttachmentCell: NSTextAttachmentCell {
     }
     
     override func drawWithFrame(cellFrame: NSRect, inView controlView: NSView?) {
+        
         
         NSColor.init(hue: 0, saturation: 0, brightness: 0.9, alpha: 1).setStroke()
         let insetRect = NSInsetRect(cellFrame, 1, 1)
@@ -36,9 +41,15 @@ class GIFAttachmentCell: NSTextAttachmentCell {
         
         let imgRect = NSRect(x: cellFrame.origin.x, y: cellFrame.origin.y, width: cellFrame.size.width, height: calculatedHeight)
         let insetRect2 = NSInsetRect(imgRect, 10, 10)
-        let image = NSImage(contentsOfURL: NSURL(string: img.url!)!)
         
-        image?.drawInRect(insetRect2)
+        player.frame = insetRect2
+        player.imageData = NSData(contentsOfURL: NSURL(string: img.url!)!)
+        player.animationLayer.removeFromSuperlayer()
+        player.animationLayer.frame = insetRect2
+        controlView?.layer?.addSublayer(player.animationLayer)
+        
+        delegate?.animationLayer = player.animationLayer
+        delegate?.imageData = player.imageData
         
     }
     

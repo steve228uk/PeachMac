@@ -59,6 +59,10 @@ class PeachComposeTextView: NSTextView {
                     if let text = attachment.text {
                         fragments.append(text)
                     }
+                } else if let attachment = object as? GIFAttachment {
+                    if let data = attachment.imageData {
+                        fragments.append(data)
+                    }
                 } else if let attachment = object as? NSTextAttachment {
                     if let data = attachment.fileWrapper?.regularFileContents {
                         fragments.append(data)
@@ -71,5 +75,5 @@ class PeachComposeTextView: NSTextView {
         
         return fragments
     }
-    
+
 }

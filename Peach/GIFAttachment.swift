@@ -9,15 +9,30 @@
 import Cocoa
 import GiphyKit
 
-class GIFAttachment: NSTextAttachment {
+protocol GIFAttachmentCellDelegate {
+    
+    var imageData: NSData? { get set }
+    
+    var animationLayer: CALayer? { get set }
+    
+}
+
+class GIFAttachment: NSTextAttachment, GIFAttachmentCellDelegate {
 
     var textView: NSTextView?
+    
+    var imageData: NSData?
+    
+    var animationLayer: CALayer?
     
     init(gifs: [GIF], textView: NSTextView) {
         super.init(data: nil, ofType: nil)
         self.textView = textView
         if gifs.count > 0 {
-            attachmentCell = GIFAttachmentCell(gifs: gifs, textView: textView)
+            let cell = GIFAttachmentCell(gifs: gifs, textView: textView)
+            cell.delegate = self
+            
+            attachmentCell = cell
         }
     }
 
