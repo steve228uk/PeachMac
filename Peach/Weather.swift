@@ -29,13 +29,9 @@ class Weather {
             .responseJSON { response in
                 if response.result.isSuccess {
                     let json = JSON(response.result.value!)
-                    if let main = json["main"].dictionary {
-                        if let temp = main["temp"]?.float {
-                            if let weather = json["weather"].array {
-                                if let icon = weather[0]["icon"].string {
-                                    callback("\(self.emojiForIcon(icon)) \(Int(round(temp)))°C")
-                                }
-                            }
+                    if let main = json["main"].dictionary, weather = json["weather"].array {
+                        if let temp = main["temp"]?.float, icon = weather[0]["icon"].string {
+                            callback("\(self.emojiForIcon(icon)) \(Int(round(temp)))°C")
                         }
                     }
                 }
