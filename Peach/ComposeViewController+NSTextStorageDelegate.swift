@@ -107,7 +107,7 @@ extension ComposeViewController: NSTextStorageDelegate {
     func handleDeferredAttachmentForType(type: String) {
         switch type {
         case "weather":
-            let handler = WeatherAttachmentHandler(textView: textView)
+            let handler = WeatherAttachmentHandler(textView: textView, locationManager: locationManager)
             handler.delegate = self
             break
         default:

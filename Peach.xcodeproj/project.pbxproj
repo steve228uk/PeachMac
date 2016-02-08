@@ -85,6 +85,7 @@
 		2879B8851C4C1C1D00BC7058 /* ImageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879B8841C4C1C1D00BC7058 /* ImageMessage.swift */; };
 		2884D1981C653CCF00035B82 /* NSImageView+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2884D1971C653CCF00035B82 /* NSImageView+Transition.swift */; };
 		2884D19E1C65706800035B82 /* PushSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2884D19D1C65706800035B82 /* PushSegue.swift */; };
+		288946201C690BF1005253CB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2889461F1C690BF1005253CB /* LocationManager.swift */; };
 		288D9B4A1C597584008F6608 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 288D9B491C597584008F6608 /* Login.xib */; };
 		288D9B4C1C5976F9008F6608 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D9B4B1C5976F8008F6608 /* AvatarView.swift */; };
 		288D9B4E1C597768008F6608 /* +MoveButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D9B4D1C597768008F6608 /* +MoveButtons.swift */; };
@@ -255,6 +256,7 @@
 		2879B8841C4C1C1D00BC7058 /* ImageMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMessage.swift; sourceTree = "<group>"; };
 		2884D1971C653CCF00035B82 /* NSImageView+Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImageView+Transition.swift"; sourceTree = "<group>"; };
 		2884D19D1C65706800035B82 /* PushSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushSegue.swift; sourceTree = "<group>"; };
+		2889461F1C690BF1005253CB /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		288D9B491C597584008F6608 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 		288D9B4B1C5976F8008F6608 /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		288D9B4D1C597768008F6608 /* +MoveButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "+MoveButtons.swift"; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 				284F9F041C66231000BAB6C5 /* MagicInputHandler.swift */,
 				28EF93BB1C6687990073C5FB /* DeferredAttachmentHandler.swift */,
 				28EF93BD1C6688750073C5FB /* DeferredAttachmentDelegate.swift */,
+				2889461F1C690BF1005253CB /* LocationManager.swift */,
 			);
 			name = Attachments;
 			sourceTree = "<group>";
@@ -1009,7 +1012,7 @@
 								enabled = 0;
 							};
 							com.apple.Sandbox = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -1235,6 +1238,7 @@
 				28CC1E541C5E9F53001DD6EC /* MagicButton.swift in Sources */,
 				2874F72F1C42E9BB00D06D34 /* LoginButton.swift in Sources */,
 				28BE2CD71C629AA2006A4392 /* AttachmentButtonCell.swift in Sources */,
+				288946201C690BF1005253CB /* LocationManager.swift in Sources */,
 				28EF93A41C66320B0073C5FB /* GameSearch.swift in Sources */,
 				284F9EF91C66185600BAB6C5 /* RatingAttachment.swift in Sources */,
 				284F9EF31C66173B00BAB6C5 /* DateAttachment.swift in Sources */,
@@ -1472,6 +1476,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Peach/Peach.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -1492,6 +1498,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Peach/Peach.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;

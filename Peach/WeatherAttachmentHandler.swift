@@ -11,42 +11,34 @@ import CoreLocation
 import Alamofire
 import SwiftyJSON
 
-class WeatherAttachmentHandler: DeferredAttachmentHandler, CLLocationManagerDelegate {
+class WeatherAttachmentHandler: DeferredAttachmentHandler, LocationManagerDelegate {
     
-    var locationManager: CLLocationManager?
-    
-    override func handle() {
-        print("handled")
+    init(textView: NSTextView, locationManager: LocationManager) {
+        super.init(textView: textView)
         
-        let status = CLLocationManager.authorizationStatus()
-        let enabled = CLLocationManager.locationServicesEnabled()
-        
-        if status != .Denied && status != .Restricted && enabled {
-            print("not restricted")
-            locationManager = CLLocationManager()
-            locationManager?.delegate = self
-            locationManager?.desiredAccuracy = kCLLocationAccuracyKilometer
-            locationManager?.distanceFilter = 500
-            locationManager?.startUpdatingLocation()
+        if let location = locationManager.location {
+            weatherFromLatLon(location.lat, lon: location.lon)
+        } else {
+            locationManager.delegate = self
+            locationManager.getLocation()
         }
+        
     }
     
-    // MARK: - Core Location
-    
-    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
-        print(newLocation)
+    func locationUpdated(lat: Double, lon: Double) {
+        weatherFromLatLon(lat, lon: lon)
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [AnyObject]) {
-        manager.stopUpdatingLocation()
-        
-        print(locations)
-        
-        let coordinates: CLLocationCoordinate2D = manager.location!.coordinate
-        
+    /**
+     Get the weather from OpenWeatherMapAPI
+     
+     - parameter lat: Latitude
+     - parameter lon: Longitude
+     */
+    func weatherFromLatLon(lat: Double, lon: Double) {
         let params = [
-            "lat": "\(coordinates.latitude)",
-            "lon": "\(coordinates.longitude)",
+            "lat": "\(lat)",
+            "lon": "\(lon)",
             "APPID": "a775ef77a0748604c315672eff912c5a"
         ]
         
@@ -63,14 +55,6 @@ class WeatherAttachmentHandler: DeferredAttachmentHandler, CLLocationManagerDele
                     }
                 }
         }
-    }
-    
-    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        print(status)
-    }
-    
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        print(error)
     }
     
 }

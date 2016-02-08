@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string></string>
+	<string>Peach</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIconFile</key>
@@ -35,12 +35,8 @@
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2016 Cocoon Development Ltd. All rights reserved.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Location is used for weather and here magic words.</string>
 	<key>NSLocationUsageDescription</key>
-	<string>Location is used for weather and here magic words.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Location is used for weather and here magic words.</string>
+	<string>Used for the Weather and Location magic words</string>
 	<key>NSMainStoryboardFile</key>
 	<string>Main</string>
 	<key>NSPrincipalClass</key>

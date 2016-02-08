@@ -22,6 +22,9 @@ class ComposeViewController: NSViewController {
     /// These are the message fragments that will be posted to Peach
     var messages: [Message] = []
     
+    /// The location manager for fetching the current location
+    let locationManager = LocationManager()
+    
     let magicWords = [
         "gif": "Search for a GIF",
         "image": "Search for images",
