@@ -13,8 +13,7 @@ class GIFSearch: MagicInputHandler {
     
     override func handleAction(input: String) {
         Giphy.search(input) { gifs, error in
-            print(gifs)
-            let attachment = TimeAttachment(textView: self.textView)
+            let attachment = GIFAttachment(gifs: gifs, textView: self.textView)
             self.delegate?.appendDeferredAttachment(attachment)
         }
     }

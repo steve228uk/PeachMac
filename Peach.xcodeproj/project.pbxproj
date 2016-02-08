@@ -83,6 +83,8 @@
 		2874F7381C42FF7B00D06D34 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874F7371C42FF7B00D06D34 /* Stream.swift */; };
 		287663901C69387D009C5021 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876638F1C69387D009C5021 /* Weather.swift */; };
 		287663921C693995009C5021 /* GoodmorningAttachmentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287663911C693995009C5021 /* GoodmorningAttachmentHandler.swift */; };
+		287663941C6945C7009C5021 /* GIFAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287663931C6945C7009C5021 /* GIFAttachment.swift */; };
+		287663961C69463D009C5021 /* GIFAttachmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287663951C69463D009C5021 /* GIFAttachmentCell.swift */; };
 		2879B8831C4C1BA600BC7058 /* TextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879B8821C4C1BA600BC7058 /* TextMessage.swift */; };
 		2879B8851C4C1C1D00BC7058 /* ImageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879B8841C4C1C1D00BC7058 /* ImageMessage.swift */; };
 		2884D1981C653CCF00035B82 /* NSImageView+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2884D1971C653CCF00035B82 /* NSImageView+Transition.swift */; };
@@ -256,6 +258,8 @@
 		2874F7371C42FF7B00D06D34 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		2876638F1C69387D009C5021 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		287663911C693995009C5021 /* GoodmorningAttachmentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodmorningAttachmentHandler.swift; sourceTree = "<group>"; };
+		287663931C6945C7009C5021 /* GIFAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFAttachment.swift; sourceTree = "<group>"; };
+		287663951C69463D009C5021 /* GIFAttachmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFAttachmentCell.swift; sourceTree = "<group>"; };
 		2879B8821C4C1BA600BC7058 /* TextMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMessage.swift; sourceTree = "<group>"; };
 		2879B8841C4C1C1D00BC7058 /* ImageMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMessage.swift; sourceTree = "<group>"; };
 		2884D1971C653CCF00035B82 /* NSImageView+Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImageView+Transition.swift"; sourceTree = "<group>"; };
@@ -819,6 +823,8 @@
 			isa = PBXGroup;
 			children = (
 				284F9F001C661D0300BAB6C5 /* GIFSearch.swift */,
+				287663931C6945C7009C5021 /* GIFAttachment.swift */,
+				287663951C69463D009C5021 /* GIFAttachmentCell.swift */,
 			);
 			name = GIF;
 			sourceTree = "<group>";
@@ -1304,6 +1310,7 @@
 				28A1DA721C457165004198A0 /* PeachViewController.swift in Sources */,
 				28C7A1E41C485702004D8FD0 /* ConnectionCollectionViewItem.swift in Sources */,
 				282CA58C1C45C3A50075AE9A /* StreamViewController.swift in Sources */,
+				287663961C69463D009C5021 /* GIFAttachmentCell.swift in Sources */,
 				28D6FA161C56EFC200CCC319 /* MainWindowController.swift in Sources */,
 				28C7A1E21C485396004D8FD0 /* ConnectionsCollectionViewController.swift in Sources */,
 				285DFB7B1C518DF600C34980 /* StreamCollectionViewDelegate.swift in Sources */,
@@ -1318,6 +1325,7 @@
 				28C7A1EA1C485FF3004D8FD0 /* ConnectionCell.swift in Sources */,
 				285DFB841C52C23E00C34980 /* PostLocationItem.swift in Sources */,
 				288D9B531C5A4197008F6608 /* NSView+HideWithAnimation.swift in Sources */,
+				287663941C6945C7009C5021 /* GIFAttachment.swift in Sources */,
 				28BE2CD31C628D74006A4392 /* PeachTextOptionsAttachment.swift in Sources */,
 				285DFB8E1C52D7F500C34980 /* PeachPlayerView.swift in Sources */,
 			);
