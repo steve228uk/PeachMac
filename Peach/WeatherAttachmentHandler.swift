@@ -39,6 +39,7 @@ class WeatherAttachmentHandler: DeferredAttachmentHandler, LocationManagerDelega
         let params = [
             "lat": "\(lat)",
             "lon": "\(lon)",
+            "units": "metric",
             "APPID": "a775ef77a0748604c315672eff912c5a"
         ]
         
@@ -46,11 +47,14 @@ class WeatherAttachmentHandler: DeferredAttachmentHandler, LocationManagerDelega
             .responseJSON { response in
                 if response.result.isSuccess {
                     let json = JSON(response.result.value!)
-                    if let weather = json["weather"].array {
-                        if let description = weather[0]["main"].string {
-                            print(description)
-                            let attachment = PeachTextAttachment(string: "\(description)", textView: self.textView)
-                            self.delegate?.appendDeferredAttachment(attachment)
+                    if let main = json["main"].dictionary {
+                        if let temp = main["temp"]?.float {
+                            if let weather = json["weather"].array {
+                                if let description = weather[0]["main"].string {
+                                    let attachment = PeachTextAttachment(string: "\(temp)°C \(description)", textView: self.textView)
+                                    self.delegate?.appendDeferredAttachment(attachment)
+                                }
+                            }
                         }
                     }
                 }
