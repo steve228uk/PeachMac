@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
@@ -801,7 +801,7 @@ DQ
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="0.5" horizontal="NO" id="3nC-ZW-rRg">
-                                    <rect key="frame" x="317" y="0.0" width="15" height="192"/>
+                                    <rect key="frame" x="316" y="0.0" width="16" height="192"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -819,7 +819,10 @@ DQ
                                 </connections>
                             </button>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="1PE-bT-lQS">
-                                <rect key="frame" x="0.0" y="0.0" width="332" height="43"/>
+                                <rect key="frame" x="20" y="0.0" width="292" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="292" id="1Qc-TA-2Ck"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="f1U-a1-Za8" kind="embed" identifier="embedInput" id="OnD-nF-sT6"/>
                                 </connections>
@@ -831,10 +834,9 @@ DQ
                             <constraint firstAttribute="trailing" secondItem="rGt-Dd-TIv" secondAttribute="trailing" id="Dpt-tu-OQZ"/>
                             <constraint firstAttribute="bottom" secondItem="1PE-bT-lQS" secondAttribute="bottom" id="Flz-O9-Xy6"/>
                             <constraint firstItem="fRf-Hr-xGO" firstAttribute="top" secondItem="1nJ-n9-qAv" secondAttribute="bottom" constant="7" id="GDm-bR-3R7"/>
-                            <constraint firstAttribute="trailing" secondItem="1PE-bT-lQS" secondAttribute="trailing" id="GXI-zf-tGF"/>
+                            <constraint firstItem="1PE-bT-lQS" firstAttribute="centerX" secondItem="9VL-Ht-YRb" secondAttribute="centerX" id="Gfn-aH-ur3"/>
                             <constraint firstAttribute="bottom" secondItem="fRf-Hr-xGO" secondAttribute="bottom" constant="15" id="U3e-nS-JRj"/>
                             <constraint firstItem="1PE-bT-lQS" firstAttribute="top" secondItem="1nJ-n9-qAv" secondAttribute="bottom" id="V7i-DJ-gzA"/>
-                            <constraint firstItem="1PE-bT-lQS" firstAttribute="leading" secondItem="9VL-Ht-YRb" secondAttribute="leading" id="YOu-LW-EyA"/>
                             <constraint firstItem="1nJ-n9-qAv" firstAttribute="top" secondItem="rGt-Dd-TIv" secondAttribute="bottom" id="a3j-Kn-VGc"/>
                             <constraint firstItem="fRf-Hr-xGO" firstAttribute="centerX" secondItem="9VL-Ht-YRb" secondAttribute="centerX" id="dJb-eG-3Zk"/>
                             <constraint firstAttribute="trailing" secondItem="1nJ-n9-qAv" secondAttribute="trailing" id="ugA-RO-I06"/>
@@ -848,7 +850,7 @@ DQ
                 </viewController>
                 <customObject id="DXS-l1-FSb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1228" y="108"/>
+            <point key="canvasLocation" x="1228" y="107.5"/>
         </scene>
         <!--Connections-->
         <scene sceneID="GXT-fM-BAI">
@@ -1198,7 +1200,7 @@ DQ
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LS6-Gx-MED">
-                                <rect key="frame" x="20" y="7" width="233" height="22"/>
+                                <rect key="frame" x="0.0" y="7" width="273" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="vOT-f4-Z8P"/>
                                 </constraints>
@@ -1212,7 +1214,7 @@ DQ
                                 </connections>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GLm-9i-Q5y">
-                                <rect key="frame" x="255" y="1" width="63" height="32"/>
+                                <rect key="frame" x="275" y="1" width="63" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="51" id="STE-vz-S80"/>
                                     <constraint firstAttribute="height" constant="21" id="jg1-HB-zJJ"/>
@@ -1228,8 +1230,8 @@ DQ
                         </subviews>
                         <constraints>
                             <constraint firstItem="LS6-Gx-MED" firstAttribute="centerY" secondItem="Vze-lW-XNn" secondAttribute="centerY" id="Sgc-cX-cJJ"/>
-                            <constraint firstItem="LS6-Gx-MED" firstAttribute="leading" secondItem="Vze-lW-XNn" secondAttribute="leading" constant="20" id="UvA-Yy-d01"/>
-                            <constraint firstAttribute="trailing" secondItem="GLm-9i-Q5y" secondAttribute="trailing" constant="20" id="a1U-Ma-f23"/>
+                            <constraint firstItem="LS6-Gx-MED" firstAttribute="leading" secondItem="Vze-lW-XNn" secondAttribute="leading" id="UvA-Yy-d01"/>
+                            <constraint firstAttribute="trailing" secondItem="GLm-9i-Q5y" secondAttribute="trailing" id="a1U-Ma-f23"/>
                             <constraint firstItem="GLm-9i-Q5y" firstAttribute="centerY" secondItem="Vze-lW-XNn" secondAttribute="centerY" id="aZP-gZ-Ysm"/>
                             <constraint firstItem="GLm-9i-Q5y" firstAttribute="leading" secondItem="LS6-Gx-MED" secondAttribute="trailing" constant="8" id="zcG-jS-2Sw"/>
                         </constraints>
