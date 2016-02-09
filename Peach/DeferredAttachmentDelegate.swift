@@ -8,7 +8,7 @@
 
 import Cocoa
 
-protocol DeferredAttachmentDelegate {
+protocol DeferredAttachmentDelegate: NSObjectProtocol {
     
     func appendDeferredAttachment(attachment: NSTextAttachment)
     
