@@ -71,8 +71,8 @@ class GIFPlayer: NSView {
                                 let framePropertiesGIF = frameProperties?.objectForKey(kCGImagePropertyGIFDictionary)
                                 
                                 // Try to use the unclamped delay time; fall back to the normal delay time.
-                                var delayTime = framePropertiesGIF?.objectForKey(kCGImagePropertyGIFUnclampedDelayTime) as? NSNumber
-                                if delayTime == nil {
+                                var delayTime = framePropertiesGIF?.objectForKey(kCGImagePropertyGIFDelayTime) as? NSNumber
+                                if delayTime == 0 {
                                     delayTime = framePropertiesGIF?.objectForKey(kCGImagePropertyGIFDelayTime) as? NSNumber
                                 }
                                 
