@@ -75,5 +75,18 @@ class PeachComposeTextView: NSTextView {
         
         return fragments
     }
+    
+    override func shouldChangeTextInRange(affectedCharRange: NSRange, replacementString: String?) -> Bool {
+        if replacementString == "" {
+            let attString = attributedString()
+            attString.enumerateAttribute(NSAttachmentAttributeName, inRange: affectedCharRange, options: []) { object, range, pointer in
+                if let attachment = object as? GIFAttachment {
+                    attachment.animationLayer?.removeFromSuperlayer()
+                }
+            }
+        }
+        
+        return true
+    }
 
 }
