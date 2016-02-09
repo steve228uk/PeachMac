@@ -12,7 +12,7 @@ class DeferredAttachmentHandler: NSObject {
     
     var textView: NSTextView?
     
-    var delegate: DeferredAttachmentDelegate?
+    weak var delegate: DeferredAttachmentDelegate?
     
     init(textView: NSTextView) {
         super.init()
