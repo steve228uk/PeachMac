@@ -20,4 +20,9 @@ class ComposeWindowController: NSWindowController {
         NSApplication.sharedApplication().menu?.itemWithTag(2)?.hidden = false
     }
     
+    deinit {
+        contentViewController?.view.removeFromSuperview()
+        contentViewController?.removeFromParentViewController()
+    }
+    
 }

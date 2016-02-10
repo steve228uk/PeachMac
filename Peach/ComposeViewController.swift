@@ -59,6 +59,11 @@ class ComposeViewController: NSViewController {
         textView.textStorage?.delegate = self
     }
     
+    deinit {
+        textView.textStorage?.setAttributedString(NSAttributedString(string: ""))
+        textView = nil
+    }
+    
     
     // MARK: - Save Action
     

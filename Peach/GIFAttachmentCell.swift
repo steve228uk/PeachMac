@@ -15,7 +15,7 @@ class GIFAttachmentCell: NSTextAttachmentCell {
     
     var gifs: [GIF] = []
     
-    let player = GIFPlayer(frame: NSZeroRect)
+    var player: GIFPlayer! = GIFPlayer(frame: NSZeroRect)
     
     weak var delegate: GIFAttachmentCellDelegate?
     
@@ -118,6 +118,10 @@ class GIFAttachmentCell: NSTextAttachmentCell {
         }
         
         return true
+    }
+    
+    deinit {
+        player = nil
     }
     
 }

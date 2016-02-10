@@ -18,6 +18,12 @@ class GIFPlayer: NSView {
 
     let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
     
+    deinit {
+        animationLayer.removeAllAnimations()
+        animationLayer.removeFromSuperlayer()
+        animationLayer = nil
+    }
+    
     /// The image data that will be converted into animation
     var imageData: NSData? {
         didSet {

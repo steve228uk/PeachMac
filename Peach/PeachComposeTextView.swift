@@ -26,6 +26,7 @@ class PeachComposeTextView: NSTextView {
         importsGraphics = true
         textContainerInset = NSMakeSize(10, 10)
     }
+
     
     // MARK: - Fragments
     
@@ -82,6 +83,7 @@ class PeachComposeTextView: NSTextView {
             attString.enumerateAttribute(NSAttachmentAttributeName, inRange: affectedCharRange, options: []) { object, range, pointer in
                 if let attachment = object as? GIFAttachment {
                     attachment.animationLayer?.removeFromSuperlayer()
+                    attachment.attachmentCell = nil
                 }
             }
         }
