@@ -9,7 +9,7 @@
 import Cocoa
 import GiphyKit
 
-protocol GIFAttachmentCellDelegate {
+protocol GIFAttachmentCellDelegate: class {
     
     var imageData: NSData? { get set }
     
@@ -38,6 +38,10 @@ class GIFAttachment: NSTextAttachment, GIFAttachmentCellDelegate {
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func attachmentBoundsForTextContainer(textContainer: NSTextContainer?, proposedLineFragment lineFrag: NSRect, glyphPosition position: CGPoint, characterIndex charIndex: Int) -> NSRect {
+        return NSRect(x: 0, y: 0, width: 100, height: 20)
     }
     
 }
