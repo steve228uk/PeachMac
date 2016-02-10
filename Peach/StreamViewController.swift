@@ -41,7 +41,6 @@ class StreamViewController: PeachViewController, PeachNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         collectionView.registerNib(NSNib(nibNamed: "PostTextItem", bundle: nil), forItemWithIdentifier: "textItem")
         collectionView.registerNib(NSNib(nibNamed: "PostImageItem", bundle: nil), forItemWithIdentifier: "imageItem")
         collectionView.registerNib(NSNib(nibNamed: "PostGIFItem", bundle: nil), forItemWithIdentifier: "GIFItem")
@@ -58,7 +57,6 @@ class StreamViewController: PeachViewController, PeachNavigationDelegate {
         container?.toolbar?.title = ""
         container?.toolbar?.borderVisible = false
         container?.toolbar?.delegate = self
-        
         
         if let name = stream?.displayName {
             headerView.nameLabel.stringValue = name
@@ -128,6 +126,10 @@ class StreamViewController: PeachViewController, PeachNavigationDelegate {
         
         stream = nil
         collectionView.reloadData()
+        
+        if let vc = parentViewController as? ConnectionsCollectionViewController {
+            vc.collectionView.hidden = false
+        }
         
         dismissViewController(self)
     }

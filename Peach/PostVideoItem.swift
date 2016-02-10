@@ -23,8 +23,8 @@ class PostVideoItem: NSCollectionViewItem {
     var videoURL: String? {
         didSet {
             if let url = NSURL(string: videoURL!) where videoURL != nil {
-                videoPlayer.player = AVPlayer(URL: url)
-                videoPlayer.player?.pause()
+                let player = AVPlayer(URL: url)
+                videoPlayer.player = player
             } else {
                 videoPlayer.player = nil
             }
