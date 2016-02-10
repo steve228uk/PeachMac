@@ -27,8 +27,6 @@ class PushSegueAnimator: NSObject, NSViewControllerPresentationAnimator {
         
         viewController.view.frame = NSMakeRect(NSWidth(fromViewController.view.frame), 0, NSWidth(fromViewController.view.frame), NSHeight(fromViewController.view.frame))
         
-        Swift.print(viewController)
-        
         viewController.view.autoresizingMask = [.ViewWidthSizable, .ViewHeightSizable]
         fromViewController.view.addSubview(viewController.view)
         
@@ -38,7 +36,11 @@ class PushSegueAnimator: NSObject, NSViewControllerPresentationAnimator {
             context.duration = 0.3
             context.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
             viewController.view.animator().frame = destinationRect
-        }, completionHandler: nil)
+        }) {
+            if let vc = viewController as? StreamViewController {
+                vc.reloadAndScroll()
+            }
+        }
         
     }
     
@@ -51,9 +53,9 @@ class PushSegueAnimator: NSObject, NSViewControllerPresentationAnimator {
             context.duration = 0.3
             context.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
             viewController.view.animator().frame = destinationRect
-        }, completionHandler: {
+        }) {
             viewController.view.removeFromSuperview()
-        })
+        }
         
     }
     

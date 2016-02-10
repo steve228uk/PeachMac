@@ -11,7 +11,7 @@ import PeachKit
 
 extension StreamViewController: NSCollectionViewDataSource {
     
-    // MARK: - NSCollectionViewDatasource & Delegate
+    // MARK: - NSCollectionViewDatasource
     
     func numberOfSectionsInCollectionView(collectionView: NSCollectionView) -> Int {
         return posts.count

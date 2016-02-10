@@ -801,7 +801,7 @@ DQ
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="0.5" horizontal="NO" id="3nC-ZW-rRg">
-                                    <rect key="frame" x="317" y="0.0" width="15" height="192"/>
+                                    <rect key="frame" x="316" y="0.0" width="16" height="192"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -1040,21 +1040,45 @@ DQ
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="ljK-Lz-7A2" customClass="ConnectionsLoadingView" customModule="Peach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="438" height="598"/>
+                                <subviews>
+                                    <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="PZ8-1T-gxg">
+                                        <rect key="frame" x="203" y="283" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="rfM-VT-0yj"/>
+                                            <constraint firstAttribute="height" constant="32" id="uBY-pe-0tq"/>
+                                        </constraints>
+                                    </progressIndicator>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="PZ8-1T-gxg" firstAttribute="centerY" secondItem="ljK-Lz-7A2" secondAttribute="centerY" id="KSP-jI-Pb9"/>
+                                    <constraint firstItem="PZ8-1T-gxg" firstAttribute="centerX" secondItem="ljK-Lz-7A2" secondAttribute="centerX" id="ldZ-eN-gbr"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="loadingIndicator" destination="PZ8-1T-gxg" id="PpO-4Y-MRD"/>
+                                </connections>
+                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="siR-Rc-L1t" firstAttribute="top" secondItem="T3y-PE-HAf" secondAttribute="top" id="3SY-cc-X8F"/>
+                            <constraint firstAttribute="bottom" secondItem="ljK-Lz-7A2" secondAttribute="bottom" id="5JL-mC-cQu"/>
+                            <constraint firstAttribute="trailing" secondItem="ljK-Lz-7A2" secondAttribute="trailing" id="9qD-72-m8c"/>
                             <constraint firstItem="5vR-Id-jS0" firstAttribute="leading" secondItem="T3y-PE-HAf" secondAttribute="leading" id="SFT-pH-bQ2"/>
                             <constraint firstItem="5vR-Id-jS0" firstAttribute="top" secondItem="siR-Rc-L1t" secondAttribute="bottom" id="fXc-CC-iWu"/>
                             <constraint firstAttribute="trailing" secondItem="siR-Rc-L1t" secondAttribute="trailing" id="iDH-UO-Kgi"/>
                             <constraint firstItem="siR-Rc-L1t" firstAttribute="leading" secondItem="T3y-PE-HAf" secondAttribute="leading" id="lVu-Pq-tBP"/>
                             <constraint firstAttribute="bottom" secondItem="5vR-Id-jS0" secondAttribute="bottom" id="mux-zw-fDW"/>
                             <constraint firstAttribute="trailing" secondItem="5vR-Id-jS0" secondAttribute="trailing" id="sL2-Vc-kQl"/>
+                            <constraint firstItem="ljK-Lz-7A2" firstAttribute="leading" secondItem="T3y-PE-HAf" secondAttribute="leading" id="vNw-mG-bDf"/>
+                            <constraint firstItem="ljK-Lz-7A2" firstAttribute="top" secondItem="T3y-PE-HAf" secondAttribute="top" id="xFJ-J4-u0F"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="VtE-az-cqC" id="sdo-nQ-fNI"/>
                         <outlet property="collectionViewLayout" destination="Es3-Om-NYf" id="CAI-DN-4sc"/>
                         <outlet property="headerView" destination="siR-Rc-L1t" id="b5K-iE-xO7"/>
+                        <outlet property="loadingView" destination="ljK-Lz-7A2" id="iX9-k9-7ON"/>
                         <outlet property="scrollView" destination="5vR-Id-jS0" id="5MR-zr-eBH"/>
                     </connections>
                 </viewController>

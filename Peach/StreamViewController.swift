@@ -19,6 +19,10 @@ class StreamViewController: PeachViewController, PeachNavigationDelegate {
     
     @IBOutlet weak var scrollView: NSScrollView!
     
+    @IBOutlet weak var loadingView: ConnectionsLoadingView!
+    
+    var firstLoad = true
+    
     var stream: Stream? {
         didSet {
             stream?.markAsRead()
@@ -55,12 +59,10 @@ class StreamViewController: PeachViewController, PeachNavigationDelegate {
         container?.toolbar?.borderVisible = false
         container?.toolbar?.delegate = self
         
+        
         if let name = stream?.displayName {
             headerView.nameLabel.stringValue = name
         }
-        
-        reloadAndScroll()
-        
     }
     
     override func viewDidLayout() {
@@ -69,15 +71,51 @@ class StreamViewController: PeachViewController, PeachNavigationDelegate {
     }
     
     func reloadAndScroll() {
-        dispatch_async(dispatch_get_main_queue()) {
-            self.collectionView.reloadData()
+        
+        loadingView.hidden = false
+        loadingView.loadingIndicator.startAnimation(self)
+        
+        
+        if !firstLoad {
+        
+            self.collectionView.performBatchUpdates({
+                
+                var paths: Set<NSIndexPath> = []
+                for section in 0...self.posts.count-1 {
+                    self.collectionView.insertSections(NSIndexSet(index: section))
+                    let item = self.posts[section].message.count-1
+                    paths.insert(NSIndexPath(forItem: item, inSection: section))
+                }
+                
+                self.collectionView.insertItemsAtIndexPaths(paths)
+                
+            }) { complete in
+                
+                if complete {
+                    let section = self.posts.count-1
+                    let item = self.posts[section].message.count
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.collectionView.selectItemsAtIndexPaths([NSIndexPath(forItem: item, inSection: section)], scrollPosition: .Bottom)
+                        self.loadingView.loadingIndicator.stopAnimation(self)
+                        self.loadingView.hideWithAnimation()
+                    }
+                }
+                
+            }
+            
+        } else {
+            collectionView.reloadData()
+            firstLoad = false
+            let section = self.posts.count-1
+            let item = self.posts[section].message.count
+            collectionView.selectItemsAtIndexPaths([NSIndexPath(forItem: item, inSection: section)], scrollPosition: .Bottom)
+            loadingView.loadingIndicator.stopAnimation(self)
+            self.loadingView.hideWithAnimation()
         }
         
-        dispatch_async(dispatch_get_main_queue()) {
-            self.collectionView.scrollPoint(NSPoint(x: 0, y: self.collectionView.frame.height))
-        }
+
+        
     }
-    
     
     // MARK: - PeachMainWindowControllerDelegate
     

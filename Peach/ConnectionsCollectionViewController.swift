@@ -105,7 +105,6 @@ class ConnectionsCollectionViewController: PeachViewController, PeachContainerDe
             if let path = selectedPath {
                 let stream = streams[path.item]
                 vc.stream = stream
-//                vc.reloadAndScroll()
             }
         }
     }
