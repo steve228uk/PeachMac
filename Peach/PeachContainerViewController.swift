@@ -26,6 +26,8 @@ class PeachContainerViewController: NSViewController {
     
     var delegate: PeachContainerDelegate?
     
+    var userStream: Stream?
+    
     // MARK: - Login Controller
     
     var loginController: LoginViewController?
@@ -80,6 +82,7 @@ class PeachContainerViewController: NSViewController {
     func loadUserStream() {
         if let id = Peach.streamID {
             Peach.getStreamByID(id) { stream, error in
+                self.userStream = stream
                 if let src = stream?.avatarSrc {
                     let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
                     dispatch_async(dispatch_get_global_queue(priority, 0)) {
@@ -104,5 +107,6 @@ class PeachContainerViewController: NSViewController {
     }
     
     @IBAction func showProfile(sender: AnyObject) {
+        
     }
 }
