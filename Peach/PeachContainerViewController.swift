@@ -38,7 +38,6 @@ class PeachContainerViewController: NSViewController {
     
     @IBOutlet weak var friendsBtn: NSButton!
     
-    
     // MARK: - Methods
     
     override func viewDidLoad() {

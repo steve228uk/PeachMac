@@ -88,6 +88,9 @@ class StreamViewController: PeachViewController, PeachNavigationDelegate {
         container?.toolbar?.borderVisible = true
         container?.toolbar?.delegate = parentViewController as? PeachNavigationDelegate
         
+        stream = nil
+        collectionView.reloadData()
+        
         dismissViewController(self)
     }
     

@@ -859,6 +859,7 @@ DQ
                     <tabViewItems>
                         <tabViewItem id="EVD-Y7-XEN"/>
                         <tabViewItem id="Bx6-lu-uMH"/>
+                        <tabViewItem id="DBq-1d-vSe"/>
                     </tabViewItems>
                     <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
                     <tabView key="tabView" drawsBackground="NO" allowsTruncatedLabels="NO" id="FVB-5H-1Rp">
@@ -870,6 +871,7 @@ DQ
                     <connections>
                         <segue destination="kW8-u5-YCa" kind="relationship" relationship="tabItems" id="vIb-gV-VqN"/>
                         <segue destination="J3L-sW-t61" kind="relationship" relationship="tabItems" id="SYA-Le-jj7"/>
+                        <segue destination="B6W-lf-Uy4" kind="relationship" relationship="tabItems" id="pdW-Fc-hGs"/>
                     </connections>
                 </tabViewController>
                 <customObject id="T2a-bz-8je" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1255,5 +1257,6 @@ DQ
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ulH-5k-Uuf"/>
+        <segue reference="jyb-7C-tsA"/>
     </inferredMetricsTieBreakers>
 </document>

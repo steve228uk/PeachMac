@@ -27,6 +27,8 @@ class PushSegueAnimator: NSObject, NSViewControllerPresentationAnimator {
         
         viewController.view.frame = NSMakeRect(NSWidth(fromViewController.view.frame), 0, NSWidth(fromViewController.view.frame), NSHeight(fromViewController.view.frame))
         
+        Swift.print(viewController)
+        
         viewController.view.autoresizingMask = [.ViewWidthSizable, .ViewHeightSizable]
         fromViewController.view.addSubview(viewController.view)
         

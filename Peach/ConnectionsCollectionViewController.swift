@@ -23,12 +23,15 @@ class ConnectionsCollectionViewController: PeachViewController, PeachContainerDe
     
     var selectedPath: NSIndexPath?
     
+    var streamSegue: NSStoryboardSegue!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loadingView.loadingIndicator.startAnimation(self)
-
         collectionView.registerNib(NSNib(nibNamed: "ConnectionCollectionViewItem", bundle: nil), forItemWithIdentifier: "connectionItem")
+        
+        let destination = tabController?.tabViewItems[2].viewController as! AnyObject
+        streamSegue = PushSegue(identifier: "Show Single Stream", source: self as AnyObject, destination: destination)
     }
     
     override func viewDidLayout() {
@@ -85,7 +88,8 @@ class ConnectionsCollectionViewController: PeachViewController, PeachContainerDe
     func collectionView(collectionView: NSCollectionView, didSelectItemsAtIndexPaths indexPaths: Set<NSIndexPath>) {
         if indexPaths.count == 1 {   
             selectedPath = indexPaths[indexPaths.startIndex]
-            performSegueWithIdentifier("Show Single Stream", sender: self)
+            prepareForSegue(streamSegue, sender: self)
+            streamSegue.perform()
         }
     }
     
