@@ -16,4 +16,9 @@ class PostImageItem: NSCollectionViewItem {
         view.layer?.backgroundColor = NSColor.peachGreyColor().CGColor
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView?.image = nil
+    }
+    
 }

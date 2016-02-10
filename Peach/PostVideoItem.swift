@@ -20,6 +20,11 @@ class PostVideoItem: NSCollectionViewItem {
         view.layer?.backgroundColor = NSColor.peachGreyColor().CGColor
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        videoPlayer.player = nil
+    }
+    
     var videoURL: String? {
         didSet {
             if let url = NSURL(string: videoURL!) where videoURL != nil {
