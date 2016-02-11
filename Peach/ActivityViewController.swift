@@ -55,7 +55,7 @@ class ActivityViewController: PeachViewController {
             var subtitle: String {
                 switch newActivities[0].type! {
                 case .Like:
-                    return "@\(newActivities[0].authorStream!.name) liked your post."
+                    return "\(newActivities[0].authorStream!.name!) liked your post"
                 default:
                     return "\(newActivities[0].message!)"
                 }
