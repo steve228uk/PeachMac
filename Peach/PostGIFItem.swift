@@ -22,6 +22,10 @@ class PostGIFItem: NSCollectionViewItem {
         view.layer?.backgroundColor = NSColor.peachGreyColor().CGColor
     }
     
+    override func prepareForReuse() {
+        gifPlayer.imageData = nil
+    }
+    
     var message: ImageMessage? {
         didSet {
             gifPlayer.imageData = nil

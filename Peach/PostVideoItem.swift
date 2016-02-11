@@ -22,6 +22,7 @@ class PostVideoItem: NSCollectionViewItem {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        videoPlayer.player?.replaceCurrentItemWithPlayerItem(nil)
         videoPlayer.player = nil
     }
     
@@ -35,5 +36,6 @@ class PostVideoItem: NSCollectionViewItem {
             }
         }
     }
+
     
 }

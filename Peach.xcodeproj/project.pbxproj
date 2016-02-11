@@ -31,6 +31,7 @@
 		2833B0B61C55000500E945A5 /* Imgur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2833B0B51C55000500E945A5 /* Imgur.swift */; };
 		2833B0B81C5500C900E945A5 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2833B0B71C5500C900E945A5 /* Upload.swift */; };
 		2833B0BA1C55011900E945A5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2833B0B91C55011900E945A5 /* API.swift */; };
+		28399B831C6D2B61007E045C /* StreamViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28399B821C6D2B61007E045C /* StreamViewController+Delegate.swift */; };
 		284F9EE71C66127C00BAB6C5 /* MagicInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EE61C66127C00BAB6C5 /* MagicInputViewController.swift */; };
 		284F9EEA1C66154A00BAB6C5 /* BatteryAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EE91C66154A00BAB6C5 /* BatteryAttachment.swift */; };
 		284F9EED1C66167800BAB6C5 /* DiceAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284F9EEC1C66167800BAB6C5 /* DiceAttachment.swift */; };
@@ -205,6 +206,7 @@
 		2833B0B51C55000500E945A5 /* Imgur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Imgur.swift; sourceTree = "<group>"; };
 		2833B0B71C5500C900E945A5 /* Upload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
 		2833B0B91C55011900E945A5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		28399B821C6D2B61007E045C /* StreamViewController+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StreamViewController+Delegate.swift"; sourceTree = "<group>"; };
 		284F9EE61C66127C00BAB6C5 /* MagicInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicInputViewController.swift; sourceTree = "<group>"; };
 		284F9EE91C66154A00BAB6C5 /* BatteryAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryAttachment.swift; sourceTree = "<group>"; };
 		284F9EEC1C66167800BAB6C5 /* DiceAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceAttachment.swift; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 				2868BC701C499278007A01B7 /* StreamHeaderView.swift */,
 				282CA58B1C45C3A50075AE9A /* StreamViewController.swift */,
 				285DFB7A1C518DF600C34980 /* StreamCollectionView+DataSource.swift */,
+				28399B821C6D2B61007E045C /* StreamViewController+Delegate.swift */,
 			);
 			name = Stream;
 			sourceTree = "<group>";
@@ -1300,6 +1303,7 @@
 				281227221C5D902300128D00 /* LoginSecureTextFieldCell.swift in Sources */,
 				284F9EF01C6616EC00BAB6C5 /* TimeAttachment.swift in Sources */,
 				2874F7331C42F13C00D06D34 /* LoginTextFieldCell.swift in Sources */,
+				28399B831C6D2B61007E045C /* StreamViewController+Delegate.swift in Sources */,
 				282D92C31C42CCAF00B83109 /* AppDelegate.swift in Sources */,
 				28BE2CD01C615A37006A4392 /* NSAttributedString+RemoveLastWord.swift in Sources */,
 				28CC1E5F1C5ECE49001DD6EC /* PeachTextAttachmentCell.swift in Sources */,
