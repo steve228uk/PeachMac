@@ -7,6 +7,3 @@
 [submodule "ImgurKit"]
 	path = ImgurKit
 	url = https://github.com/steve228uk/ImgurKit.git
-[submodule "OWMKit"]
-	path = OWMKit
-	url = https://github.com/steve228uk/OWMKit.git
