@@ -52,7 +52,15 @@ class ActivityViewController: PeachViewController {
         } else if newActivities.count == 1 {
             let notification = NSUserNotification()
             notification.title = "New Notification"
-            notification.subtitle = "\(newActivities[0].message!)"
+            var subtitle: String {
+                switch newActivities[0].type! {
+                case .Like:
+                    return "@\(newActivities[0].authorStream!.name) liked your post."
+                default:
+                    return "\(newActivities[0].message!)"
+                }
+            }
+            notification.subtitle = subtitle
             center.deliverNotification(notification)
         }
     }
