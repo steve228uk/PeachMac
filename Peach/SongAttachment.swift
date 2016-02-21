@@ -38,11 +38,9 @@ class SongAttachment: PeachTextAttachment {
         if iTunesOpen {
             if let iTunes = SBApplication(bundleIdentifier: "com.apple.iTunes") as? AnyObject {
                 if let track = iTunes.valueForKey("currentTrack") {
-                    if let name = track.valueForKey("name") as? String {
-                        if let artist = track.valueForKey("artist") as? String {
-                            string = "🎵 \(artist) - \(name)"
-                            self.track = string
-                        }
+                    if let name = track.valueForKey("name") as? String, artist = track.valueForKey("artist") as? String {
+                        string = "🎵 \(artist) - \(name)"
+                        self.track = string
                     }
                 }
             }
@@ -52,11 +50,9 @@ class SongAttachment: PeachTextAttachment {
             if string == nil {
                 if let spotify = SBApplication(bundleIdentifier: "com.spotify.client") as? AnyObject {
                     if let track = spotify.valueForKey("currentTrack") {
-                        if let name = track.valueForKey("name") as? String {
-                            if let artist = track.valueForKey("artist") as? String {
-                                string = "🎵 \(artist) - \(name)"
-                                self.track = string
-                            }
+                        if let name = track.valueForKey("name") as? String, artist = track.valueForKey("artist") as? String {
+                            string = "🎵 \(artist) - \(name)"
+                            self.track = string
                         }
                     }
                 }
